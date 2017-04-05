@@ -32,20 +32,20 @@
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
               <ul class="thumbnails">
-                <li class="span2"> <a> 
+                <li class="span3"> <a> 
                   <input style="display:none;" id="file-input1" name="photourl1" type='file' onchange="readURL(this);" required/>                    
                   <label for="file-input1">
-                    <i class="icon-camera"></i>.Main 2000 x 1324<br>
+                    <i class="icon-camera"></i>.Main 2000x1324<br>
                     <img id="blah" src="//placehold.it/100" alt="avatar" alt="your image" />
 
                   </label>
                   <div class="actions"><a id="preview1" class="lightbox_trigger" herf=""><i class="icon-search"></i></a> </div>
 
                 </li>
-                <li class="span2"> <a> 
+                <li class="span3"> <a> 
                  <input style="display:none;" id="file-input2" name="photourl2" type='file' onchange="readURL2(this);" />                    
                  <label for="file-input2">
-                  <i class="icon-camera"></i>.Tumb 400 x 300<br>
+                  <i class="icon-camera"></i>.Thum 400x300<br>
                   <img id="blah2" src="//placehold.it/100" alt="avatar" alt="your image" />
                 </label>
                 <div class="actions"> <a class="lightbox_trigger" href="blah2"><i class="icon-search"></i></a> </div>
