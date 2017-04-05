@@ -80,8 +80,8 @@ class PostsmyanmarController extends Controller {
 		$this->validate($request,[
 			'photourl1' => 'required',
 			'photourl2' => 'required',
-			'mname' => 'required|max:255',
-			'mdescription' => 'required|max:5000',
+			'name' => 'required|max:255',
+			'description' => 'required|max:5000',
 			
 			]);
 
