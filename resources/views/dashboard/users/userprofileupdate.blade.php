@@ -98,13 +98,13 @@
         <div class="control-group">
           <label class="control-label">Password:</label>
           <div class="controls">
-            <input class="span11" id="password1" name="password" value="{{ $user->password }}" type="password" required>
+            <input class="span11" id="password1" name="password" type="password">
           </div>
         </div>
         <div class="control-group">
           <label class="control-label">Confirm password:</label>
           <div class="controls">
-            <input class="span11" id="password2" name="password_confirmation" value="{{ $user->password }}" type="password" required>
+            <input class="span11" id="password2" name="password_confirmation" type="password">
           </div>
         </div>
 

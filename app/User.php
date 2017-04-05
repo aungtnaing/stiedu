@@ -33,17 +33,9 @@ protected $fillable = ['name', 'email', 'password','photourl','mediaid','fburl',
 	 */
 	protected $hidden = ['password', 'remember_token'];
 
-	public function media()
-    {
-        return $this->hasMany('Media');
-    }
+	
 
-    public function blogs()
-    {
-        return $this->hasMany('App\Blogs', 'userid');
-    }
-
-    public function posts()
+      public function posts()
     {
         return $this->hasMany('App\Posts', 'userid');
     }

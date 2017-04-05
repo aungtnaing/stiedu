@@ -28,7 +28,7 @@
 					<input name="_method" type="hidden" value="PATCH">
 					<input type="hidden" name="_token" value="{{ csrf_token() }}">
 					
-							<div class="row">
+						<div class="row">
 						<div class="col-sm-3"><div class="form-group">
 							
 							<input style="display:none;" id="file-input1" name="photourl1" type='file' onchange="readURL(this);"/>                    

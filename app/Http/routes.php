@@ -89,6 +89,7 @@
 				Route::resource('dashboard','DashboardController');
 				Route::resource('categorys','CategoryController');
 				Route::resource('userspannel','UserspannelController');
+				Route::resource('posts','PostsController');
 				
 					Route::get('dashboarduserprofile', [
 					'uses' => 'ProfilesController@dashboarduserindex'

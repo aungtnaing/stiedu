@@ -11,3 +11,11 @@
 <link href="<?php echo url(); ?>/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
 <link rel="stylesheet" href="<?php echo url(); ?>/assets/css/jquery.gritter.css" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" href="<?php echo url(); ?>/assets/css/colorpicker.css" />
+<link rel="stylesheet" href="<?php echo url(); ?>/assets/css/datepicker.css" />
+<link rel="stylesheet" href="<?php echo url(); ?>/assets/css/uniform.css" />
+<link rel="stylesheet" href="<?php echo url(); ?>/assets/css/select2.css" />
+
+<link rel="stylesheet" href="<?php echo url(); ?>/assets/css/bootstrap-wysihtml5.css" />

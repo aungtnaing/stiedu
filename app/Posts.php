@@ -13,5 +13,11 @@ class Posts extends Model {
         return $this->belongsTo('App\Category','categoryid');
     }
 
+    public function user()
+    {
+        return $this->belongsTo('App\User','userid');
+    }
+
+
   
 }

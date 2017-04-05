@@ -35,7 +35,9 @@ class CreatePostsTable extends Migration {
 			$table->string('caption3');
 			$table->string('photourl4');
 			$table->string('caption4');
-			
+
+			$table->boolean('mainslide');
+			$table->boolean('active');
 			$table->timestamps();
 
 

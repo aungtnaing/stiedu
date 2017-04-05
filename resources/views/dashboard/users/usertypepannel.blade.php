@@ -49,7 +49,7 @@
 										<form method="POST" action="{{ route("profiles.destroy", $user->id) }}" accept-charset="UTF-8">
 											<input name="_method" type="hidden" value="DELETE">
 											<input type="hidden" name="_token" value="{{ csrf_token() }}">
-											<input class="btn btn-danger" type="submit" value="Delete">
+											<input class="btn btn-mini btn-danger" type="submit" value="Delete">
 										</form>
 									</td>
 									@endif

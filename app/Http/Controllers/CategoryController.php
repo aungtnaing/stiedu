@@ -35,7 +35,7 @@ class CategoryController extends Controller {
 	public function create()
 	{
 	
-		return view("dashboard.category.create");
+		return view("dashboard.category.categorycreate");
 
 	}
 
@@ -89,7 +89,7 @@ class CategoryController extends Controller {
 		
 		$category = Category::find($id);
 
-		return view('dashboard.category.edit')->with('category',$category);
+		return view('dashboard.category.categoryedit')->with('category',$category);
 	}
 
 	/**

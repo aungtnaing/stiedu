@@ -40,7 +40,7 @@ class ProfilesController extends Controller {
 
 		$user = User::find($request->user()->id);
 
-		return view('dashboard.users.userprofile')->with('user',$user);
+		return view('dashboard.users.userprofileupdate')->with('user',$user);
 	}
 
 	/**
@@ -163,7 +163,7 @@ public function store(Request $request)
 				// 'address' => 'required',
 				'email' => 'required|unique:users|max:255',
 				// 'ph1' => 'required',
-				'password' => 'required',
+			
 				]);
 		}
 		else
@@ -171,9 +171,9 @@ public function store(Request $request)
 			$this->validate($request,[
 				'name' => 'required|max:255',
 				// 'address' => 'required',
-				// 'email' => 'required|unique:users|max:255',
+				'email' => 'required|max:255',
 				// 'ph1' => 'required',
-				'password' => 'required',
+				
 				]);
 
 		}
@@ -218,7 +218,10 @@ public function store(Request $request)
 	$user->ph1 = $request->input("ph1");
 	$user->ph2 = $request->input("ph2");
 	$user->email = $request->input("email");
-	$user->password = Hash::make($request->input("password"));
+	if($request->input("password")!="")
+	{
+		$user->password = Hash::make($request->input("password"));
+	}
 	$user->photourl = $photourl;
 	$user->save();
 

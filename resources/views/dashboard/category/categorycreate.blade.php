@@ -10,7 +10,7 @@
 	<div class="container-fluid">
 		<hr>
 		<div class="row-fluid">
-			<div class="span12">
+			<div class="span4">
 				<!-- <h3 class="panel-title">New Category</h3> -->
 				@if (count($errors) > 0)
 				<div class="alert alert-danger">

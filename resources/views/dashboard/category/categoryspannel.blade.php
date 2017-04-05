@@ -11,7 +11,7 @@
 		<hr>
 		<div class="row-fluid">
 			<div class="span12">
-						<a class="btn btn-info btn-large pull-right" href="{{ route("categorys.create") }}">Add New Category</a>
+						<a class="btn btn-mini btn-info pull-left" href="{{ route("categorys.create") }}">Add New Category</a>
 
 				<div class="widget-box">
 					<div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
@@ -37,14 +37,15 @@
 									<td>{{ $category->name }}</td>
 									<td>{{ $category->mname }}</td>
 									<td>
-										<a class="btn btn-info" href="{{ route("categorys.edit", $category->id ) }}">Edit</a>
+										<a class="btn btn-mini btn-primary" href="{{ route("categorys.edit", $category->id ) }}">Edit</a>
 									</td>
 									@if(Auth::user()->roleid==1)
 									<td>
 										<form method="POST" action="{{ route("categorys.destroy", $category->id) }}" accept-charset="UTF-8">
 											<input name="_method" type="hidden" value="DELETE">
 											<input type="hidden" name="_token" value="{{ csrf_token() }}">
-											<input class="btn btn-danger" type="submit" value="Delete">
+											<input class="btn btn-mini btn-danger" type="submit" value="Delete">
+											
 										</form>
 									</td>
 									@endif
