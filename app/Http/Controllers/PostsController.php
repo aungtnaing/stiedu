@@ -24,7 +24,7 @@ class PostsController extends Controller {
 	public function index(Request $request)
 	{
 		
-		$posts = Posts::orderBy('id', 'desc')->paginate(5);
+		$posts = Posts::All();
 		
 		return view("dashboard.posts.postspannel")
 		->with("posts", $posts);
@@ -81,7 +81,7 @@ class PostsController extends Controller {
 			'photourl1' => 'required',
 			'photourl2' => 'required',
 			'name' => 'required|max:255',
-			'description' => 'required|max:2500					',
+			'description' => 'required|max:5000',
 			
 			]);
 

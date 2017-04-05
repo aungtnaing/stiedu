@@ -56,13 +56,20 @@
 							</tbody>
 						</table>
 					</div>
-					{!! $categorys->render() !!}
+					
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-
+<script src="<?php echo url(); ?>/assets/js/jquery.min.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/jquery.ui.custom.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/bootstrap.min.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/jquery.uniform.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/select2.min.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/jquery.dataTables.min.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/matrix.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/matrix.tables.js"></script>
 
 @stop

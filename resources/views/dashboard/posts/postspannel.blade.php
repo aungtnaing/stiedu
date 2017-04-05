@@ -13,12 +13,15 @@
 			<div class="span12">
 				<a class="btn btn-primary btn-mini pull-left" href="{{ route("posts.create") }}">Add New Eng Post</a>
 				<a class="btn btn-info btn-mini pull-left" href="{{ route("posts.create") }}">Add New Myan Post</a>
+	
 				<div class="widget-box">
 					<div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
 						<h5>POSTS</h5>
 					</div>
-					<div class="widget-content nopadding	">
+					<div class="widget-content nopadding">
 						<table class="table table-bordered data-table">
+					
+
 							<thead>
 								<tr>
 									<th>#</th>
@@ -74,14 +77,24 @@
 
 							</tbody>
 						</table>
+
 					</div>
-					{!! $posts->render() !!}
+					
 				</div>
 			</div>
+
 		</div>
 	</div>
+
 </div>
 
-
+<script src="<?php echo url(); ?>/assets/js/jquery.min.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/jquery.ui.custom.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/bootstrap.min.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/jquery.uniform.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/select2.min.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/jquery.dataTables.min.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/matrix.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/matrix.tables.js"></script>
 
 @stop

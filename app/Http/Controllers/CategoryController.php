@@ -20,7 +20,7 @@ class CategoryController extends Controller {
 	public function index(Request $request)
 	{
 	
-		$categorys = Category::orderBy('id', 'desc')->paginate(10);
+		$categorys = Category::All();
     
 		return view("dashboard.category.categoryspannel")
 		->with("categorys", $categorys);
