@@ -82,20 +82,25 @@
 		Route::group(['middleware' => 'auth'],function()
 		{
 			
-			
-
-			Route::group(['middleware' => 'roleware'],function()
+			Route::group(['middleware' => 'roleware2'],function()
 			{
 				Route::resource('dashboard','DashboardController');
-				Route::resource('categorys','CategoryController');
-				Route::resource('userspannel','UserspannelController');
 				Route::resource('posts','PostsController');
-				Route::resource('postsmyanmar','PostsmyanmarController');
-				
-					Route::get('dashboarduserprofile', [
-					'uses' => 'ProfilesController@dashboarduserindex'
-					]);
-				
+					Route::resource('postsmyanmar','PostsmyanmarController');
+					
+						Route::get('dashboarduserprofile', [
+						'uses' => 'ProfilesController@dashboarduserindex'
+						]);
+
+						Route::group(['middleware' => 'roleware'],function()
+						{
+							
+							Route::resource('categorys','CategoryController');
+							Route::resource('userspannel','UserspannelController');
+							
+							
+						});
+
 			});
 			
 			

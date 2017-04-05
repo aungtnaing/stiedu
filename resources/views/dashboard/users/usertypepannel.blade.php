@@ -30,6 +30,7 @@
 									<th>Address</th>
 									<th>Fb</th>
 									<th></th>
+									<th></th>
 								</tr>
 							</thead>
 							<tbody>
@@ -43,6 +44,7 @@
 									<!-- <td>{{ $user->ph2 }}</td> -->
 									<td>{{ $user->address }}</td>
 									<td>{{ $user->fburl }}</td>
+									<td><a class="btn btn-mini btn-info" href="{{ route("profiles.show", $user->id ) }}">Role</a></td>
 									@if(Auth::user()->roleid==1)
 
 									<td class="center">

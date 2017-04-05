@@ -117,7 +117,16 @@ public function store(Request $request)
 	public function show($id)
 	{
 		
+		if(Auth::user()->roleid==1)
+		{
+			$user = User::find($id);
 
+			return view('dashboard.users.userrole')->with('user',$user);
+		}
+		else
+		{
+			return redirect()->action('HomeController@index');
+		}
 	}
 
 	/**

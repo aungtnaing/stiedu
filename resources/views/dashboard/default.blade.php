@@ -5,8 +5,11 @@
 </head>
 <body>
 	@include('dashboard.includes.header')
-
+  @if(Auth::user()->roleid==1)
 	@include('dashboard.includes.sidebar')
+  @else
+  @include('dashboard.includes.sidebarpublisher')
+  @endif
 		
 	
 			

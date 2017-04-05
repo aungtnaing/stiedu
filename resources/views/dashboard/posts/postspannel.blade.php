@@ -24,7 +24,7 @@
 
 							<thead>
 								<tr>
-									<th>#</th>
+									<th>sort</th>
 
 									<th>Post</th>
 									<th>Name</th>
@@ -48,7 +48,7 @@
 									<td>{{ $post->name }}</td>
 									<td>{{ $post->mname }}</td>
 									<td><?php echo $post->description ?></td>
-									<td>{{ $post->mdescription }}</td>
+									<td><?php echo $post->mdescription ?></td>
 									<td>{{ $post->category->name }}</td>
 									<td>{{ $post->user->name }}</td>
 									@if($post->active==1)
