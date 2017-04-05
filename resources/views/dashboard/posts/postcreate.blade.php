@@ -4,7 +4,7 @@
 
 <div id="content">
   <div id="content-header">
-    <div id="breadcrumb"> <a href="{{ url('/dashboard') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">create post</a> </div>
+    <div id="breadcrumb"> <a href="{{ url('/dashboard') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">create post english</a> </div>
 
   </div>
   <div class="container-fluid">
@@ -25,7 +25,7 @@
       <div class="span10">
         <div class="widget-box">
           <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-            <h5>Post-info</h5>
+            <h5>Post-info - English Type</h5>
           </div>
           <div class="widget-content">
             <form action="{{ route("posts.store") }}" method="POST" enctype="multipart/form-data">

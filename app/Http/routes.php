@@ -90,6 +90,7 @@
 				Route::resource('categorys','CategoryController');
 				Route::resource('userspannel','UserspannelController');
 				Route::resource('posts','PostsController');
+				Route::resource('postsmyanmar','PostsmyanmarController');
 				
 					Route::get('dashboarduserprofile', [
 					'uses' => 'ProfilesController@dashboarduserindex'

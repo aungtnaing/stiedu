@@ -12,7 +12,7 @@
 		<div class="row-fluid">
 			<div class="span12">
 				<a class="btn btn-primary btn-mini pull-left" href="{{ route("posts.create") }}">Add New Eng Post</a>
-				<a class="btn btn-info btn-mini pull-left" href="{{ route("posts.create") }}">Add New Myan Post</a>
+				<a class="btn btn-info btn-mini pull-left" href="{{ route("postsmyanmar.create") }}">Add New Myan Post</a>
 	
 				<div class="widget-box">
 					<div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
