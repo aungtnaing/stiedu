@@ -46,12 +46,22 @@ class WelcomeController extends Controller {
 		// $categorys = Category::orderBy('id', 'desc')->get();
 		$mainslides = Posts::where('active',1)
 			->where('mainslide', 1)
+			->where('name','!=','')
 			->orderBy('id','DESC')
 			->get();
 
 
 		$trvelsectorposts = Posts::where('active',1)
 			->where('categoryid', 1)
+			->where('name','!=','')
+			->orderBy('id','DESC')
+			->take(6)
+			->get();
+
+
+		$videoposts = Posts::where('active',1)
+			->where('categoryid', 2)
+			->where('name','!=','')
 			->orderBy('id','DESC')
 			->take(6)
 			->get();
@@ -59,6 +69,7 @@ class WelcomeController extends Controller {
 
 		return view('pages.home')
 				->with('travelsectorposts', $trvelsectorposts)
+				->with('videoposts', $videoposts)
 				->with('mainslides', $mainslides);
 				
 		 	

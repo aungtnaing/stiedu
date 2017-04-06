@@ -50,19 +50,29 @@ class HomeController extends Controller {
 	
 			$mainslides = Posts::where('active',1)
 			->where('mainslide', 1)
+			->where('name','!=','')
 			->orderBy('id','DESC')
 			->get();
 
 
-		$trvelsectorposts = Posts::where('active',1)
+			$trvelsectorposts = Posts::where('active',1)
 			->where('categoryid', 1)
-			->take(6)
+			->where('name','!=','')
 			->orderBy('id','DESC')
+			->take(6)
+			->get();
+
+	$videoposts = Posts::where('active',1)
+			->where('categoryid', 2)
+			->where('name','!=','')
+			->orderBy('id','DESC')
+			->take(6)
 			->get();
 
 
 		return view('pages.home')
 				->with('travelsectorposts', $trvelsectorposts)
+				->with('videoposts', $videoposts)
 				->with('mainslides', $mainslides);
 				
 		 	

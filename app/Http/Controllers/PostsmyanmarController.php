@@ -143,7 +143,7 @@ class PostsmyanmarController extends Controller {
 
 		$post->photourl1 = $photourl1;
 		$post->photourl2 = $photourl2;
-		
+			$post->youtubelink = $request->input("youtubelink");
 		
 		$post->save();
 		return redirect()->route("posts.index");
@@ -276,7 +276,7 @@ class PostsmyanmarController extends Controller {
 		$post->photourl1 = $photourl1;
 		$post->photourl2 = $photourl2;
 		
-		
+			$post->youtubelink = $request->input("youtubelink");
 		$post->save();
 				return redirect()->route("posts.index");
 			}

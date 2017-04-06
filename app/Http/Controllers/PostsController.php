@@ -152,6 +152,7 @@ class PostsController extends Controller {
 
 		$post->photourl1 = $photourl1;
 		$post->photourl2 = $photourl2;
+		$post->youtubelink = $request->input("youtubelink");
 		
 		
 		$post->save();
@@ -282,7 +283,7 @@ class PostsController extends Controller {
 		if (Input::get('mainslide') === ""){$post->mainslide = 1;}
 
 		$post->userid = $request->user()->id;
-
+			$post->youtubelink = $request->input("youtubelink");
 		$post->photourl1 = $photourl1;
 		$post->photourl2 = $photourl2;
 		

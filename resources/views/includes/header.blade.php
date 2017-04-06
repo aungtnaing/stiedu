@@ -21,8 +21,8 @@
 						<li><a href="#">Logout <i class="icon-signout"></i></a></li>
 					</ul> -->
 					
-					<li><a href="faqs.html">Eng</a></li>
-					<li><a href="contact.html">Myan</a></li>
+					<li><a href="<?php echo url(); ?>/en">Eng</a></li>
+					<li><a href="<?php echo url(); ?>/mn">Myan</a></li>
 					@if (Auth::guest())
 					<li><a href="{{ url('/auth/login') }}">Login</a>
 						<div class="top-link-section">

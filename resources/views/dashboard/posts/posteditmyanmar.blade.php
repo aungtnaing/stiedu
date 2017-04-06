@@ -92,6 +92,12 @@
               </div>
             </div>
 
+                  <div class="control-group">
+              <label class="control-label">YouTube Link :</label>
+              <div class="controls">
+                <input name="youtubelink" class="span11" value="{{ $post->youtubelink }}" placeholder="Enter Your Youtube linke" type="text">
+              </div>
+            </div>
 
 
 

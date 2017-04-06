@@ -1,13 +1,14 @@
 <?php namespace App\Http\Controllers;
 
 
-use App\Mainslide;
-use App\Homecontent;
+use App\Posts;
 use App\Category;
 
 use View;
 use Config;
 use Illuminate\Http\Request;
+
+
 
 
 
@@ -39,101 +40,129 @@ class LanguageController extends Controller {
 	public function changemn()
 	{
 	
-		$a = $_SERVER['HTTP_REFERER'];
+		// $a = $_SERVER['HTTP_REFERER'];
 		
-		$page = "pages.homemyanmar";
-		if (strpos($a, 'about') !== false)
-		{
-			// $page = "pages.aboutmyanmar";
-			 return redirect('aboutusmyanmar');
-		}
-		if (strpos($a, 'services') !== false)
-		{
-			 return redirect('servicesmyanmar');
-		}
-		if (strpos($a, 'contact') !== false)
-		{
-			 return redirect('contactusmyanmar');
-		}
+		// $page = "pages.homemyanmar";
+		// if (strpos($a, 'about') !== false)
+		// {
+		// 	// $page = "pages.aboutmyanmar";
+		// 	 return redirect('aboutusmyanmar');
+		// }
+		// if (strpos($a, 'services') !== false)
+		// {
+		// 	 return redirect('servicesmyanmar');
+		// }
+		// if (strpos($a, 'contact') !== false)
+		// {
+		// 	 return redirect('contactusmyanmar');
+		// }
 
-		if (strpos($a, 'projectdetail') !== false)
-		{
-			$var = explode("/", $a);
+		// if (strpos($a, 'projectdetail') !== false)
+		// {
+		// 	$var = explode("/", $a);
 			 
-			$projectid = $var[sizeof($var)-1];
+		// 	$projectid = $var[sizeof($var)-1];
 
-			return redirect()->action(
-				    'ProjectsController@projectdetailmyanmar', ['projectid' => $projectid]
-				);
+		// 	return redirect()->action(
+		// 		    'ProjectsController@projectdetailmyanmar', ['projectid' => $projectid]
+		// 		);
 		
-		}
+		// }
 
 
 
-		$mainslides = Mainslide::where('active',1)
-			->orderBy('slideno','asc')
-			->take(10)
+		// $mainslides = Mainslide::where('active',1)
+		// 	->orderBy('slideno','asc')
+		// 	->take(10)
+		// 	->get();
+
+		$mainslides = Posts::where('active',1)
+			->where('mainslide', 1)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
 			->get();
 
-	
-		
-		$categorys = Category::orderBy('id', 'desc')->get();
+
+		$trvelsectorposts = Posts::where('active',1)
+			->where('categoryid', 1)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(6)
+			->get();
+
+	$videoposts = Posts::where('active',1)
+			->where('categoryid', 2)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(6)
+			->get();
+
 
 		return view('pages.homemyanmar')
-			->with('mainslides', $mainslides)
-			->with('categorys', $categorys);
+				->with('travelsectorposts', $trvelsectorposts)
+				->with('videoposts', $videoposts)
+				->with('mainslides', $mainslides);
 		 	
 	}
 
 	public function changeen()
 	{
 		
-		$a = $_SERVER['HTTP_REFERER'];
+		// $a = $_SERVER['HTTP_REFERER'];
 
-		
-	
-		
+				
+		// $page = "pages.homemyanmar";
+		// if (strpos($a, 'about') !== false)
+		// {
+		// 	// $page = "pages.aboutmyanmar";
+		// 	 return redirect('aboutus');
+		// }
+		// if (strpos($a, 'services') !== false)
+		// {
+		// 	 return redirect('services');
+		// }
+		// if (strpos($a, 'contact') !== false)
+		// {
+		// 	 return redirect('contactus');
+		// }
 
-
-		
-		$page = "pages.homemyanmar";
-		if (strpos($a, 'about') !== false)
-		{
-			// $page = "pages.aboutmyanmar";
-			 return redirect('aboutus');
-		}
-		if (strpos($a, 'services') !== false)
-		{
-			 return redirect('services');
-		}
-		if (strpos($a, 'contact') !== false)
-		{
-			 return redirect('contactus');
-		}
-
-		if (strpos($a, 'projectdetail') !== false)
-		{
-			$var = explode("/", $a);
+		// if (strpos($a, 'projectdetail') !== false)
+		// {
+		// 	$var = explode("/", $a);
 			 
-			$projectid = $var[sizeof($var)-1];
+		// 	$projectid = $var[sizeof($var)-1];
 
-			return redirect()->action('ProjectsController@projectdetail', ['projectid' => $projectid]);
-		}
+		// 	return redirect()->action('ProjectsController@projectdetail', ['projectid' => $projectid]);
+		// }
 
 		
-
-		$mainslides = Mainslide::where('active',1)
-			->orderBy('slideno','asc')
-			->take(10)
+	$mainslides = Posts::where('active',1)
+			->where('mainslide', 1)
+			->where('name','!=','')
+			->orderBy('id','DESC')
 			->get();
 
-	
-		
-		$categorys = Category::orderBy('id', 'desc')->get();
+
+		$trvelsectorposts = Posts::where('active',1)
+			->where('categoryid', 1)
+			->where('name','!=','')
+			->orderBy('id','DESC')
+			->take(6)
+			->get();
+
+	$videoposts = Posts::where('active',1)
+			->where('categoryid', 2)
+			->where('name','!=','')
+			->orderBy('id','DESC')
+			->take(6)
+			->get();
+
 
 		return view('pages.home')
-			->with('mainslides', $mainslides)
-			->with('categorys', $categorys);
+				->with('travelsectorposts', $trvelsectorposts)
+				->with('videoposts', $videoposts)
+				->with('mainslides', $mainslides);
+				
 		 	
 	}
 
