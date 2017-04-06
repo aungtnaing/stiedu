@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 
 
 use App\Category;
+use App\Posts;
 
 
 use View;
@@ -47,11 +48,24 @@ class HomeController extends Controller {
 	public function index(Request $request)
 	{
 	
-		$categorys = Category::orderBy('id', 'desc')->get();
+			$mainslides = Posts::where('active',1)
+			->where('mainslide', 1)
+			->orderBy('id','DESC')
+			->get();
+
+
+		$trvelsectorposts = Posts::where('active',1)
+			->where('categoryid', 1)
+			->take(6)
+			->orderBy('id','DESC')
+			->get();
 
 
 		return view('pages.home')
-				->with('categorys', $categorys);
+				->with('travelsectorposts', $trvelsectorposts)
+				->with('mainslides', $mainslides);
+				
+		 	
 		 	
   	}
  

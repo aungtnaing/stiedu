@@ -22,9 +22,7 @@ class UserspannelController extends Controller {
 	{
 
 
-		$users = DB::table('users')->orderBy('id','desc')
-        		->paginate(10);
-
+		$users = User::All();
     		
          return view("dashboard.users.usertypepannel")
             ->with("users", $users);
@@ -84,9 +82,17 @@ class UserspannelController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, Request $request)
 	{
 		//
+			$user = User::find($id);
+
+			$user->roleid = $request->input("roleid");
+
+			$user->save();
+
+			
+			return redirect()->route("userspannel.index");
 	}
 
 	/**

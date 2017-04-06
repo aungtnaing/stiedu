@@ -11,8 +11,10 @@
 		<hr>
 		<div class="row-fluid">
 			<div class="span12">
+
+					<a class="btn btn-info btn-mini pull-left" href="{{ route("postsmyanmar.create") }}">Add New ျမန္မာ Post</a>
 				<a class="btn btn-primary btn-mini pull-left" href="{{ route("posts.create") }}">Add New Eng Post</a>
-				<a class="btn btn-info btn-mini pull-left" href="{{ route("postsmyanmar.create") }}">Add New Myan Post</a>
+			
 	
 				<div class="widget-box">
 					<div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
@@ -34,6 +36,7 @@
 									<th>Category</th>
 									<th>Writer</th>
 									<th>Active</th>
+									<th>Mslide</th>
 									<th>Myanmar</th>
 									<th>English</th>
 									<th></th>
@@ -55,12 +58,17 @@
 									<td><i class=" icon-check"></i></td>
 									@else
 									<td></td>
-									@endif	
+									@endif
+									@if($post->mainslide==1)
+									<td><i class=" icon-check"></i></td>
+									@else
+									<td></td>
+									@endif		
 									<td>
-										<a class="btn btn-mini btn-info" href="{{ route("posts.edit", $post->id ) }}">Edit</a>
+										<a class="btn btn-mini btn-info" href="{{ route("postsmyanmar.edit", $post->id ) }}">Edit</a>
 									</td>
 									<td>
-										<a class="btn btn-mini btn-info" href="{{ route("posts.edit", $post->id ) }}">Edit</a>
+										<a class="btn btn-mini btn-primary" href="{{ route("posts.edit", $post->id ) }}">Edit</a>
 									</td>
 									@if(Auth::user()->roleid==1)
 									<td>

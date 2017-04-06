@@ -98,7 +98,6 @@
 							Route::resource('categorys','CategoryController');
 							Route::resource('userspannel','UserspannelController');
 							
-							
 						});
 
 			});

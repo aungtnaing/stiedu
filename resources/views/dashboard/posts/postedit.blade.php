@@ -4,20 +4,20 @@
 
 <div id="content">
   <div id="content-header">
-    <div id="breadcrumb"> <a href="{{ url('/dashboard') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">create post english</a> </div>
+    <div id="breadcrumb"> <a href="{{ url('/dashboard') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">edit post english</a> </div>
 
   </div>
   <div class="container-fluid">
 
     @if (count($errors) > 0)
-    <div class="alert alert-danger">
-      <ul>
-        @foreach ($errors->all() as $error)
-        <li>{{ $error }}</li>
-        @endforeach
-      </ul>
-    </div>
-    @endif  
+        <div class="alert alert-danger">
+          <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+          </ul>
+        </div>
+        @endif  
     <hr>
   
     <div class="row-fluid">
@@ -28,27 +28,36 @@
             <h5>Post-info - English Type</h5>
           </div>
           <div class="widget-content">
-            <form action="{{ route("posts.store") }}" method="POST" enctype="multipart/form-data">
-              <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
+           <form action="{{ route("posts.update", $post->id) }}" method="POST" enctype="multipart/form-data">
+          <input name="_method" type="hidden" value="PATCH">
+          <input type="hidden" name="_token" value="{{ csrf_token() }}">
+          
               <ul class="thumbnails">
                 <li class="span3"> <a> 
-                  <input style="display:none;" id="file-input1" name="photourl1" type='file' onchange="readURL(this);" required/>                    
+                  <input style="display:none;" id="file-input1" name="photourl1" type='file' onchange="readURL(this);"/>                    
                   <label for="file-input1">
                     <i class="icon-camera"></i>.Main 2000x1324<br>
+                   
+                    @if($post->photourl1!="")
+                    <img id="blah" src= "{{ $post->photourl1 }}" width="100" height="100">
+                    @else
                     <img id="blah" src="//placehold.it/100" alt="avatar" alt="your image" />
-
+                    @endif
                   </label>
-                  <div class="actions"><a id="preview1" class="lightbox_trigger" herf=""><i class="icon-search"></i></a> </div>
+                    <div class="actions"> <a class="lightbox_trigger" href="{{ $post->photourl1 }}"><i class="icon-search"></i></a> </div>
 
                 </li>
                 <li class="span3"> <a> 
                  <input style="display:none;" id="file-input2" name="photourl2" type='file' onchange="readURL2(this);" />                    
                  <label for="file-input2">
                   <i class="icon-camera"></i>.Thum 400x300<br>
-                  <img id="blah2" src="//placehold.it/100" alt="avatar" alt="your image" />
+                    @if($post->photourl2!="")
+                    <img id="blah2" src= "{{ $post->photourl2 }}" width="100" height="100">
+                    @else
+                    <img id="blah2" src="//placehold.it/100" alt="avatar" alt="your image" />
+                    @endif
                 </label>
-                <div class="actions"> <a class="lightbox_trigger" href="blah2"><i class="icon-search"></i></a> </div>
+                <div class="actions"> <a class="lightbox_trigger" href="{{ $post->photourl2 }}"><i class="icon-search"></i></a> </div>
               </li>
 
             </ul>
@@ -56,7 +65,7 @@
             <div class="control-group">
               <label class="control-label">Photo Caption :</label>
               <div class="controls">
-                <input name="caption1" class="span11" placeholder="Enter Your Photo Caption" type="text">
+                <input name="caption1" value="{{ $post->caption1 }}" class="span11" placeholder="Enter Your Photo Caption" type="text">
               </div>
             </div>     
 
@@ -64,21 +73,21 @@
             <div class="control-group">
               <label class="control-label">Post Name :</label>
               <div class="controls">
-                <input name="name" class="span11" placeholder="Enter Your Post Name" type="text" required>
+                <input name="name" class="span11" value="{{ $post->name }}" placeholder="Enter Your Post Name" type="text" required>
               </div>
             </div>
 
             <div class="control-group">
               <label class="control-label">Sub Title :</label>
               <div class="controls">
-                <input name="subtitle" class="span11" placeholder="Enter Your Sub Title" type="text">
+                <input name="subtitle" class="span11" value="{{ $post->subtitle }}" placeholder="Enter Your Sub Title" type="text">
               </div>
             </div>
 
             <div class="control-group">
               <label class="control-label">Description:</label>
               <div class="controls">
-              <textarea class="textarea_editor span12" name="description" placeholder="Enter your post description" class="span11" rows="7"></textarea>
+              <textarea class="textarea_editor span12" name="description" placeholder="Enter your post description" class="span11" rows="7">{{ $post->description }}</textarea>
               
               </div>
             </div>
@@ -91,18 +100,33 @@
               <div class="controls">
                 <select name="category">
                   @foreach($categorys as $category)
-                  <option value="{{ $category->id }}">{{ $category->name }}</option>
-                  @endforeach 
+                @if($post->categoryid!=$category->id)
+                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @else
+                <option value="{{ $category->id }}" selected="selected">{{ $category->name }}</option>
+                @endif
+                @endforeach 
                 </select>
               </div>
             </div>
 
       <div class="control-group">
-          <input type="checkbox" name="mainslide" value="1" checked>Mainslide
+         
+
+            @if($post->mainslide==0)
+            <input type="checkbox" name="mainslide" value="">Mainslide<br>  
+            @else   
+            <input type="checkbox" name="mainslide" value="" checked>Mainslide<br>
+            @endif
         </div>
 
             <div class="control-group">
-          <input type="checkbox" name="active" value="1" checked>Active
+         
+          @if($post->active==0)
+            <input type="checkbox" name="active" value="">Active<br>  
+            @else   
+            <input type="checkbox" name="active" value="" checked>Active<br>
+            @endif
         </div>
 
 

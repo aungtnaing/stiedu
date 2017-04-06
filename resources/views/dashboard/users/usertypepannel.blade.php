@@ -25,6 +25,7 @@
 
 									<th>Name</th>
 									<th>Email</th>
+									<th>Role</th>
 									<th>Ph1</th>
 									<!-- <th>Ph2</th> -->
 									<th>Address</th>
@@ -40,6 +41,13 @@
 									<td>{{ $user->id }}</td>
 									<td>{{ $user->name }}</td>
 									<td>{{ $user->email }}</td>
+									@if($user->roleid==1)
+									<td>Admin</td>
+									@elseif($user->roleid==2)
+									<td>Publisher</td>
+									@else
+									<td>User</td>
+									@endif
 									<td>{{ $user->ph1 }}</td>
 									<!-- <td>{{ $user->ph2 }}</td> -->
 									<td>{{ $user->address }}</td>
@@ -54,13 +62,16 @@
 											<input class="btn btn-mini btn-danger" type="submit" value="Delete">
 										</form>
 									</td>
+									@else
+									<td></td>
 									@endif
+
 								</tr>
 								@endforeach
 							</tbody>
 						</table>
 					</div>
-					{!! $users->render() !!}
+					
 				</div>
 			</div>
 		</div>
@@ -68,5 +79,12 @@
 </div>
 
 
-
+<script src="<?php echo url(); ?>/assets/js/jquery.min.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/jquery.ui.custom.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/bootstrap.min.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/jquery.uniform.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/select2.min.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/jquery.dataTables.min.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/matrix.js"></script> 
+<script src="<?php echo url(); ?>/assets/js/matrix.tables.js"></script>s
 @stop

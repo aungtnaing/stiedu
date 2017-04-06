@@ -62,23 +62,23 @@
 
 
             <div class="control-group">
-              <label class="control-label">Post Name :</label>
+              <label class="control-label">Post Name : ျမန္မာ</label>
               <div class="controls">
-                <input name="name" class="span11" placeholder="Enter Your Post Name" type="text" required>
+                <input name="name" class="span11" placeholder="Enter Your Post Name(ျမန္မာ)" type="text" required>
               </div>
             </div>
 
             <div class="control-group">
-              <label class="control-label">Sub Title :</label>
+              <label class="control-label">Sub Title : ျမန္မာ</label>
               <div class="controls">
-                <input name="subtitle" class="span11" placeholder="Enter Your Sub Title" type="text">
+                <input name="subtitle" class="span11" placeholder="Enter Your Sub Title(ျမန္မာ)" type="text">
               </div>
             </div>
 
             <div class="control-group">
-              <label class="control-label">Description:</label>
+              <label class="control-label">Content : ျမန္မာ</label>
               <div class="controls">
-              <textarea class="textarea_editor span12" name="description" placeholder="Enter your post description" class="span11" rows="7"></textarea>
+              <textarea class="textarea_editor span12" name="description" placeholder="Enter your post content(ျမန္မာ)" class="span11" rows="7"></textarea>
               
               </div>
             </div>
