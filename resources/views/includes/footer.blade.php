@@ -36,8 +36,9 @@
 							<div class="widget widget_links clearfix">
 								<h4>Catagories</h4>
 								<ul>
-									<li><a href="#">Travel sector update</a></li>
-									<li><a href="#">Check In</a></li>
+									@foreach($categorys as $category)
+									<li><a href="#">{{ $category->name }}</a></li>
+									<!-- <li><a href="#">Check In</a></li>
 									<li><a href="#">Exposure</a></li>
 									<li><a href="picturesques">Picturesques</a></li>
 									<li><a href="#">Arrival</a></li>
@@ -45,7 +46,8 @@
 									<li><a href="#">Deperature</a></li>
 									<li><a href="#">Stand out</a></li>
 									<li><a href="#">Snap Shop</a></li>
-									<li><a href="#">Underground</a></li>
+									<li><a href="#">Underground</a></li> -->
+									@endforeach
 								</ul>
 							</div>
 

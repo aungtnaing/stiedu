@@ -22,7 +22,7 @@
 					</ul> -->
 					
 					<li><a href="<?php echo url(); ?>/en">Eng</a></li>
-					<li><a href="<?php echo url(); ?>/mn">ျမန္မာ</a></li>
+					<li><a href="<?php echo url(); ?>/mn">မြန်မာ</a></li>
 					@if (Auth::guest())
 					<li><a href="{{ url('/auth/login') }}">Login</a>
 						<div class="top-link-section">
@@ -41,18 +41,18 @@
 								<input type="hidden" name="_token" value="{{ csrf_token() }}">
 								<div class="input-group" id="top-login-username">
 									<span class="input-group-addon"><i class="icon-user"></i></span>
-									<input type="email" class="form-control" placeholder="အီး​ေမးလ္​" name="email" value="{{ old('email') }}">
+									<input type="email" class="form-control" placeholder="အီး​မေးလ်" name="email" value="{{ old('email') }}">
 								</div>
 								<div class="input-group" id="top-login-password">
 									<span class="input-group-addon"><i class="icon-key"></i></span>
-									<input type="password" class="form-control" placeholder="စကားဝွက္" name="password">
+									<input type="password" class="form-control" placeholder="စကားဝှက်" name="password">
 								</div>
 								<label class="checkbox">
 									<input type="checkbox" value="remember-me"> Remember me
 								</label>
 								
 							</br>
-							<button class="btn btn-danger btn-block" type="submit">ဝင္ေရာက္ရန္</button>
+							<button class="btn btn-danger btn-block" type="submit">ဝင်​ရောက်ရန်</button>
 						</form>
 
 						<a href="{{ url('/auth/register') }}"><button class="btn btn-danger btn-block" type="submit">Register</button></a>
@@ -67,7 +67,7 @@
 						@endif
 						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 							<li><a href="{{ route("profiles.edit", Auth::user()->id) }}"><i class="icon-user"></i> <span>My Profile</span></a></li>
-							<li><a href="{{ url('/auth/logout') }}">ျပန္ထြက္ရန္ <i class="icon-signout"></i></a></li>
+							<li><a href="{{ url('/auth/logout') }}">ပြန်ထွက်ရန်<i class="icon-signout"></i></a></li>
 						</ul>
 					</li>
 					@endif
@@ -119,10 +119,10 @@
 					<nav id="primary-menu" class="dark">
 
 						<ul>
-							<li class="current"><a href="#"><div>ပင္မစာမ်က္ႏွာ</div></a>
+							<li class="current"><a href="#"><div>ပင်မစာမျက်နှာ</div></a>
 								
 							</li>
-							<li><a href="magazine.html"><div>မဂၢဇင္​း</div></a>
+							<li><a href="magazine.html"><div>မဂ္ဂဇင်း</div></a>
 								
 							</li>
 							<li><a href="booking.html"><div>Booking</div></a>

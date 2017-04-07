@@ -7,4 +7,9 @@
 @include('includes.travelsectorupdate') 
 @include('includes.videolink') 
 
+@include('includes.specialfeatures') 
+@include('includes.advertisment2') 
+@include('includes.review') 
+@include('includes.latestblog') 
+
 @stop

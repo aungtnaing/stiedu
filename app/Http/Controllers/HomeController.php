@@ -25,7 +25,7 @@ class HomeController extends Controller {
 	|
 	*/
 
-   
+	
 	/**
 	 * Create a new controller instance.
 	 *
@@ -34,10 +34,10 @@ class HomeController extends Controller {
 	public function __construct()
 	{
 		
-	
+		
 		$this->middleware('auth');
 		// $this->middleware('guest');
-	
+		
 	}
 
 	/**
@@ -47,38 +47,68 @@ class HomeController extends Controller {
 	 */
 	public function index(Request $request)
 	{
-	
-			$mainslides = Posts::where('active',1)
-			->where('mainslide', 1)
-			->where('name','!=','')
-			->orderBy('id','DESC')
-			->get();
+		
+		$mainslides = Posts::where('active',1)
+		->where('mainslide', 1)
+		->where('name','!=','')
+		->orderBy('id','DESC')
+		->get();
 
 
-			$trvelsectorposts = Posts::where('active',1)
-			->where('categoryid', 1)
-			->where('name','!=','')
-			->orderBy('id','DESC')
-			->take(6)
-			->get();
+		$trvelsectorposts = Posts::where('active',1)
+		->where('categoryid', 1)
+		->where('name','!=','')
+		->orderBy('id','DESC')
+		->take(6)
+		->get();
 
-	$videoposts = Posts::where('active',1)
-			->where('categoryid', 2)
-			->where('name','!=','')
-			->orderBy('id','DESC')
-			->take(6)
-			->get();
+		$videoposts = Posts::where('active',1)
+		->where('categoryid', 2)
+		->where('name','!=','')
+		->orderBy('id','DESC')
+		->take(6)
+		->get();
+		
+		$specialfeatures = Posts::where('active',1)
+		->where('categoryid', 3)
+		->where('name','!=','')
+		->orderBy('id','DESC')
+		->take(6)
+		->get();
 
+
+		$reviews = Posts::where('active',1)
+		->where('categoryid', 4)
+		->where('name','!=','')
+		->orderBy('id','DESC')
+		->take(3)
+		->get();
+
+
+		
+
+		$latestblogs = Posts::where('active',1)
+		->where('categoryid','!=', 2)
+		->where('name','!=','')
+		->orderBy('id','DESC')
+		->take(4)
+		->get();
+
+
+		$categorys = Category::All();
 
 		return view('pages.home')
-				->with('travelsectorposts', $trvelsectorposts)
-				->with('videoposts', $videoposts)
-				->with('mainslides', $mainslides);
-				
-		 	
-		 	
-  	}
- 
-  
-  	
+		->with('travelsectorposts', $trvelsectorposts)
+		->with('videoposts', $videoposts)
+		->with('specialfeatures', $specialfeatures)
+		->with('reviews', $reviews)
+		->with('latestblogs', $latestblogs)
+		->with('categorys', $categorys)
+		->with('mainslides', $mainslides);
+		
+		
+	}
+	
+	
+	
 }

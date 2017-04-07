@@ -95,6 +95,22 @@
 	Basic
 -----------------------------------------------------------------*/
 
+@font-face {
+font-family: 'Tharlon';
+font-style: normal;
+font-weight: 400;
+src: url(../fonts/mmfont/Tharlon-Regular.eot);
+src: url(../fonts/mmfont/Tharlon-Regular.eot?#iefix) format('embedded-opentype'),
+url(../fonts/mmfont/Tharlon-Regular.woff2) format('woff2'),
+url(../fonts/mmfont/Tharlon-Regular.woff) format('woff'),
+url(../fonts/mmfont/Tharlon-Regular.ttf) format('truetype');
+}
+body {
+  font-family: 'Tharlon', sans-serif;
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
 dl, dt, dd, ol, ul, li {
 	margin: 0;
 	padding: 0;
@@ -140,7 +156,7 @@ dl, dt, dd, ol, ul, li {
 body {
 	line-height: 1.5;
 	color: #555;
-	font-family: 'Lato', sans-serif;
+	/*font-family: 'Lato', sans-serif;*/
 }
 
 a {

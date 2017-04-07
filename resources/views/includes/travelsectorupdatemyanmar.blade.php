@@ -5,7 +5,7 @@
 			<div class="section topmargin nobottommargin nobottomborder">
 				<div class="container clearfix">
 					<div class="heading-block center nomargin">
-						<h3><a href="blog-single.html">ခရီးသြားက႑</a></h3>
+						<h3><a href="blog-single.html">ခရီးသွားကဏ္ဍ</a></h3>
 					</div>
 				</div>
 			</div>

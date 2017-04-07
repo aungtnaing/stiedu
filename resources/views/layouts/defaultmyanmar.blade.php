@@ -2,6 +2,9 @@
 <html>
 <head>
 	@include('includes.head')  
+
+	
+
 </head>
 <body class="stretched">
 
@@ -13,7 +16,7 @@
 
 		@yield('content')
 
-		@include('includes.footer') 
+		@include('includes.footermyanmar') 
 
 		
 

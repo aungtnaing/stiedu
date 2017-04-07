@@ -4,7 +4,7 @@
 		<div class="section topmargin nobottommargin nobottomborder">
 			<div class="container clearfix">
 				<div class="heading-block center nomargin">
-					<h3>ဗြီဒီယို</h3>
+					<h3>ဗီဒီယို</h3>
 				</div>
 			</div>
 		</div>
