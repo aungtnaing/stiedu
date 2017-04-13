@@ -39,12 +39,65 @@ class PostsController extends Controller {
 		->with("posts", $posts);
 	}
 
+	/**
+	 * Show the form for creating a new resource.
+	 *
+	 * @return Response
+	 */
+
+	public function postdetails($postid)
+	{
+		
+		$postdetail = Posts::find($postid);
+		$categorys = Category::orderBy('id', 'desc')->get();
+		$strfbody = "";
+		$strsbody = "";
+		$strlbody = "";
+
+		
+		if(strlen($postdetail->description)>650)
+		{
+
+			$strfbody = $this->strCutting($postdetail->description, ".", 650);
+			
+
+			if(strlen($postdetail->description)>1000)
+			{
+				$strsbody = $this->strCutting(substr($postdetail->description, strlen($strfbody) , strlen($postdetail->description)), ".", 500);
+				
+				$strlbody = substr($postdetail->description, strlen($strfbody) + strlen($strsbody) , strlen($postdetail->description));
+
+			}				
+		}
+		else
+		{
+
+			$strfbody = $postdetail->description;
+		}
+
+		// echo count($postdetail->comments);
+		// die();
+		// $comments = Commets::orderBy('id', 'desc')
+		// 			->where('postid', $postid)
+		// 			->get();
+
+		return view("pages.postdetails")
+					->with('postdetail',$postdetail)
+					->with('categorys',$categorys)
+					->with('fbody', $strfbody)
+					->with('sbody', $strsbody)
+					->with('lbody', $strlbody);
+
+	}
+
+	
 	
 	/**
 	 * Show the form for creating a new resource.
 	 *
 	 * @return Response
 	 */
+
 	public function create()
 	{
 		
@@ -148,6 +201,7 @@ class PostsController extends Controller {
 		$post->categoryid = $request->input("category");
 		if (Input::get('active') === '1'){$post->active = 1;}
 		if (Input::get('mainslide') === '1'){$post->mainslide = 1;}
+		if (Input::get('popular') === '1'){$post->popular = 1;}
 		$post->userid = $request->user()->id;
 
 		$post->photourl1 = $photourl1;
@@ -282,6 +336,9 @@ class PostsController extends Controller {
 		$post->mainslide = 0;
 		if (Input::get('mainslide') === ""){$post->mainslide = 1;}
 
+		$post->popular = 0;
+		if (Input::get('popular') === ""){$post->popular = 1;}
+
 		$post->userid = $request->user()->id;
 			$post->youtubelink = $request->input("youtubelink");
 		$post->photourl1 = $photourl1;
@@ -329,7 +386,47 @@ class PostsController extends Controller {
 
 		return redirect()->route("posts.index");
 	}
+	/**
+	 * Remove the specified resource from storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
 
+	public function strCutting($mainstr, $char, $charcount)
+	{
+		//
+
+		
+		$pos = -1;
+		$oldpos = 0;
+		$strdata = "";
+		while (($pos = strpos($mainstr, $char, $pos+1)) !== false)
+		{
+			
+
+			$strdata = substr($mainstr, 0, $pos + 1);
+
+				
+
+			$totalcount = strlen($strdata);
+			if($totalcount >= $charcount)
+			{
+				// echo $strdata;
+				break;
+			}
+
+		}
+		
+		// die();
+
+		return $strdata;
+
+
+	}
+
+	
+	
 
 
 }

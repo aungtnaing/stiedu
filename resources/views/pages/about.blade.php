@@ -1,41 +1,32 @@
 @extends('layouts.default')
 @section('content')
-   <section class="heading-page">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								<h1>About Us</h1>
-								<!-- <span>Here are some more info about our company</span> -->
-							</div>
-						</div>
-					</div>
-				</section>
+<section id="page-title">
 
-				<section class="first-call-to-action">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="section-heading-middle text-center">
-									<h2><em>About Us</em></h2>
-									<img src="<?php echo url(); ?>/images/icon_small.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-8 col-md-offset-2">
-								<p style="text-align:left">Spiral Architects is a full serviced architectural, urban planning, structural engineering and interior design firm based in Myanmar. The company was established in 2008 by Mr. Rui Barreto.<br> Rui Barreto is an experienced architect who has lived and worked in Myanmar for the past twenty years, overseeing projects in Myanmar. He has over 40 years experience in interior design, architecture and urbanism. Mr. Barreto is also currently the Managing Director and Senior Architect for Spiral Architects in Myanmar and Criador Consulting Private Limited in Singapore.</p>
-								<br>
-							<!-- 	<p style="text-align:left;text-decoration:underline">SOME OF KEY PROJECTS</p>
-								<p style="text-align:left">Muse Special Development Zone Master Plan</p>
-								<p style="text-align:left">Thilawa SEZ Phase 1 – Residential and Commercial Area Master Plan</p>
-								<p style="text-align:left">Mindama Garden City Extension Master Plan (residential & commercial development)</p>
-								<p style="text-align:left">Amarapura Urban Development Project, Mandalay Region</p>
-							
-							
-							</div>
-						</div>
-					</div>
-				</section>
+	<div class="container clearfix">
+		<h1>About Us</h1>
 
-				 @include('includes.ourteam'); -->
-@stop
+	</div>
+
+</section>
+<section id="content">
+
+	<div class="content-wrap">
+
+		<div class="container clearfix">
+
+
+			<h4>About mymagicalmyanmar.com</h4>
+
+			<p>
+
+
+				Logimedia Publishing was established in 2007 and remains the leading Directory and Guide publishers in Myanmar. Logimedia publishes the leading Construction Industry Directory titles, the leading Hotels & Tourism Guide, Myanmar Travel Guide, My Magical Myanmar plus significant online products including<a href="www.mymagicalmyanmar.com"> www.mymagicalmyanmar.com </a>a major travel website for Myanmar and The Red Book (Myanmar Commercial Directory).Our products specifically target the high-spending local, corporate and tourist sector. Each title is the leading branding vehicles in its sector and also repeat & referral business for our clients
+				<p>
+
+
+				</div>
+
+			</div>
+
+		</section>
+		@stop

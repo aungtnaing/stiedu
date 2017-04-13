@@ -18,6 +18,11 @@ class Posts extends Model {
         return $this->belongsTo('App\User','userid');
     }
 
+     public function comments()
+    {
+        return $this->hasMany('App\Comments', 'postid');
+    }
+
 
   
 }

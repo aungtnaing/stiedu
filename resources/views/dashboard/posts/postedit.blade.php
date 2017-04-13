@@ -135,6 +135,15 @@
             @endif
         </div>
 
+          <div class="control-group">
+         
+          @if($post->popular==0)
+            <input type="checkbox" name="popular" value="">Popular<br>  
+            @else   
+            <input type="checkbox" name="popular" value="" checked>Popular<br>
+            @endif
+        </div>
+
 
             <div class="form-actions">
              <input class="btn btn-primary" type="submit" value="Save Changes"> 

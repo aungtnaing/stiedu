@@ -59,13 +59,13 @@
 
 								<h4>Contact</h4>
 								<ul>
-									<li><a href="aboutus.html">My Magical အ​ကြောင်း</a></li>
+									<li><a href="aboutusmyanmar">My Magical အ​ကြောင်း</a></li>
 									
-									<li><a href="adswithus.html">ကြော်ငြာရန်</a></li>
-									<li><a href="privacy.html">ကိုယ်ရေးအချက်အလက်မူဝါဒ</a></li>
-									<li><a href="term.html">စည်းမျဉ်းစည်းကမ်းများနှင့်အခွအေနအေ</a></li>
-									<li><a href="contact.html">ဆွက်သွယ်ရန်</a></li>
-									<li><a href="storelocator.html">စတိုးဆိုင်လိပ်စာ</a></li>
+									<li><a href="advertisewithusmyanmar">ကြော်ငြာရန်</a></li>
+									<li><a href="privacypolicymyanmar">ကိုယ်ရေးအချက်အလက်မူဝါဒ</a></li>
+									<li><a href="termscondationmyanmar">စည်းမျဉ်းစည်းကမ်းများနှင့်အခွအေနအေ</a></li>
+									<li><a href="contactusmyanmar">ဆွက်သွယ်ရန်</a></li>
+									<li><a href="storelocatormyanmar">စတိုးဆိုင်လိပ်စာ</a></li>
 									
 								</ul>
 							</div>

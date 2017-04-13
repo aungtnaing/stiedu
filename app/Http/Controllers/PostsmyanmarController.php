@@ -139,6 +139,7 @@ class PostsmyanmarController extends Controller {
 		$post->categoryid = $request->input("category");
 		if (Input::get('active') === '1'){$post->active = 1;}
 		if (Input::get('mainslide') === '1'){$post->mainslide = 1;}
+		if (Input::get('popular') === '1'){$post->popular = 1;}
 		$post->userid = $request->user()->id;
 
 		$post->photourl1 = $photourl1;
@@ -270,6 +271,9 @@ class PostsmyanmarController extends Controller {
 
 		$post->mainslide = 0;
 		if (Input::get('mainslide') === ""){$post->mainslide = 1;}
+
+		$post->popular = 0;
+		if (Input::get('popular') === ""){$post->popular = 1;}
 
 		$post->userid = $request->user()->id;
 

@@ -40,5 +40,15 @@ protected $fillable = ['name', 'email', 'password','photourl','mediaid','fburl',
         return $this->hasMany('App\Posts', 'userid');
     }
 
+    public function comments()
+    {
+        return $this->hasMany('App\Comments', 'userid');
+    }
+
+     public function replycomments()
+    {
+        return $this->hasMany('App\Replycomments', 'userid');
+    }
+
 
 }

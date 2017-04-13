@@ -59,13 +59,13 @@
 
 								<h4>Contact</h4>
 								<ul>
-									<li><a href="aboutus.html">About US</a></li>
+									<li><a href="aboutus">About US</a></li>
 									
-									<li><a href="adswithus.html">Advertise with us</a></li>
-									<li><a href="privacy.html">Privacy policy</a></li>
-									<li><a href="term.html">Terms and condition</a></li>
-									<li><a href="contact.html">Contact us</a></li>
-									<li><a href="storelocator.html">Store Locator</a></li>
+									<li><a href="advertisewithus">Advertise with us</a></li>
+									<li><a href="privacypolicy">Privacy policy</a></li>
+									<li><a href="termscondation">Terms and condition</a></li>
+									<li><a href="contactus">Contact us</a></li>
+									<li><a href="storelocator">Store Locator</a></li>
 									
 								</ul>
 							</div>

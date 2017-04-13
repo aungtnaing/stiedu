@@ -101,6 +101,13 @@
           </div>
         </div>
         <div class="form-group">
+          <label class="col-md-3 control-label">Bio:</label>
+          <div class="col-md-8">
+            
+            <textarea name="bio" placeholder="Enter your bio" class="form-control" rows="3">{{ $user->bio }}</textarea>
+          </div>
+        </div>
+        <div class="form-group">
           <label class="col-md-3 control-label">Password:</label>
           <div class="col-md-8">
             <input class="form-control" id="password1" name="password" type="password">

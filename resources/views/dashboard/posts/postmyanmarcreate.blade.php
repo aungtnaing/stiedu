@@ -111,6 +111,11 @@
           <input type="checkbox" name="active" value="1" checked>Active<br>
         </div>
 
+        
+          <div class="control-group">
+          <input type="checkbox" name="popular" value="1" checked>Popular
+        </div>
+
 
             <div class="form-actions">
              <input class="btn btn-primary" type="submit" value="Save Changes"> 

@@ -95,6 +95,15 @@
             <textarea name="address" placeholder="Enter your address" class="span11" rows="3">{{ $user->address }}</textarea>
           </div>
         </div>
+
+       <div class="control-group">
+          <label class="control-label">Bio:</label>
+          <div class="controls">
+
+            <textarea name="bio" placeholder="Enter your bio" class="span11" rows="3">{{ $user->bio }}</textarea>
+          </div>
+        </div>
+
         <div class="control-group">
           <label class="control-label">Password:</label>
           <div class="controls">

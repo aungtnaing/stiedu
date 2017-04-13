@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\User;
+use App\Category;
 use DB;
 use Hash;
 use Auth;
@@ -140,12 +141,13 @@ public function store(Request $request)
 		// //
 		// echo "edit";
 		// die();
-			
+			$categorys = Category::All();
+
 		if($id==Auth::user()->id)
 		{
 			$user = User::find($id);
 
-			return view('auth.profile')->with('user',$user);
+			return view('auth.profile')->with('user',$user)->with('categorys', $categorys);
 		}
 		else
 		{
@@ -232,6 +234,7 @@ public function store(Request $request)
 		$user->password = Hash::make($request->input("password"));
 	}
 	$user->photourl = $photourl;
+	$user->bio =  $request->input("bio");
 	$user->save();
 
 	if($id==0)

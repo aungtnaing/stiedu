@@ -21,9 +21,8 @@
 						<li><a href="#">Logout <i class="icon-signout"></i></a></li>
 					</ul> -->
 					
-					<li><a href="<?php echo url(); ?>/en">Eng</a></li>
-					<li><a href="<?php echo url(); ?>/mn">မြန်မာ</a></li>
-					@if (Auth::guest())
+<li><a href="<?php echo url(); ?>/en"><img class="img-circle img-thumbnail" src="<?php echo url();  ?>/images/eng.png">Eng</a></li>
+					<li><a href="<?php echo url(); ?>/mn"><img class="img-circle img-thumbnail" src="<?php echo url();  ?>/images/myan.png">မြန်မာ</a></li>					@if (Auth::guest())
 					<li><a href="{{ url('/auth/login') }}">Login</a>
 						<div class="top-link-section">
 							
@@ -122,13 +121,13 @@
 							<li class="current"><a href="#"><div>ပင်မစာမျက်နှာ</div></a>
 								
 							</li>
-							<li><a href="magazine.html"><div>မဂ္ဂဇင်း</div></a>
+							<li><a href="magazine"><div>မဂ္ဂဇင်း</div></a>
 								
 							</li>
-							<li><a href="booking.html"><div>Booking</div></a>
+							<li><a href="booking"><div>Booking</div></a>
 								
 							</li>
-							<li><a href="joinus.html"><div>Join Us</div></a>
+							<li><a href="joinus"><div>Join Us</div></a>
 								
 							</li>
 						</ul>

@@ -50,8 +50,8 @@
 									<td><img src="{{ $post->photourl1 }}" width="200" height="100"></td>
 									<td>{{ $post->name }}</td>
 									<td>{{ $post->mname }}</td>
-									<td><?php echo $post->description ?></td>
-									<td><?php echo $post->mdescription ?></td>
+									<td><?php echo substr($post->description, 0, 30) ?></td>
+									<td><?php echo substr($post->mdescription, 0, 30) ?></td>
 									<td>{{ $post->category->name }}</td>
 									<td>{{ $post->user->name }}</td>
 									@if($post->active==1)

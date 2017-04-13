@@ -2,7 +2,7 @@
 @section('content')
 
 @include('includes.mainslidesmyanmar') 
-@include('includes.subscribemodelmyanmar') 
+<!-- @include('includes.subscribemodelmyanmar')  -->
 @include('includes.advertisment1') 
 @include('includes.travelsectorupdatemyanmar') 
 @include('includes.videolinkmyanmar') 

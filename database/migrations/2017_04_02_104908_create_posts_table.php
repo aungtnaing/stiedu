@@ -38,6 +38,7 @@ class CreatePostsTable extends Migration {
 
 			$table->string('youtubelink',500);
 
+			$table->boolean('popular');
 			$table->boolean('mainslide');
 			$table->boolean('active');
 			$table->timestamps();
