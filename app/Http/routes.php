@@ -186,6 +186,7 @@
 		Route::group(['middleware' => 'auth'],function()
 		{
 			Route::resource('comments','CommentsController');
+			Route::resource('replycomments','ReplycommentsController');
 			Route::group(['middleware' => 'roleware2'],function()
 			{
 				Route::resource('dashboard','DashboardController');

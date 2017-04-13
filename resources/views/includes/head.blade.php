@@ -28,7 +28,17 @@
   <!--  notification message -->
   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-  <!-- ajax function -->
+
+   <script type="text/javascript">
+  function replyon(fid){
+   
+                    var elem = document.getElementById(fid);
+                    elem.style.display = 'block';
+                    
+             
+          }
+  </script>
+
   <script type="text/javascript">
     function wishliststore(id,type){
       var getUrl = window.location;

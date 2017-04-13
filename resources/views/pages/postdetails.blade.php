@@ -119,7 +119,7 @@
 
 												<p>{{ $comment->comment }}</p>
 
-												<a class='comment-reply-link' href='#'><i class="icon-reply"></i></a>
+												<a class='comment-reply-link' href='javascript:replyon({{ $comment->id }})'><i class="icon-reply"></i></a>
 											</div>
 											<div class="clear"></div>
 										</div>
@@ -142,13 +142,31 @@
 
 															<p>{{ $replycomment->comment }}</p>
 
-															<a class='comment-reply-link' href='#'><i class="icon-reply"></i></a>
+															<a class='comment-reply-link' href='javascript:replyon({{ $comment->id }})'><i class="icon-reply"></i></a>
 														</div>
 														<div class="clear"></div>
 													</div>
 												</li>
 												@endforeach
 											</ul>
+												<div class="clear"></div>
+											<form style="display:none;" id="{{ $comment->id }}" action="{{ route("replycomments.store") }}" method="POST">
+											<input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+
+													<div class="col_full">
+														
+														<textarea name="replycomment" cols="58" rows="3" tabindex="4" class="sm-form-control"></textarea>
+														<input style="display:none;" type="text" name="commentid" value="{{ $comment->id }}">
+														<input style="display:none;" type="text" name="postid" value="{{ $postdetail->id }}">
+													</div>
+
+													<div class="col_full nobottommargin">
+														<input class="btn btn-primary" type="submit" value="Reply Comment"> 
+
+													</div>
+
+												</form>
 										</li>
 										@endforeach
 										
