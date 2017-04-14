@@ -75,13 +75,135 @@ class PostsController extends Controller {
 			$strfbody = $postdetail->description;
 		}
 
+		$popularposts = Posts::where('active',1)
+			->where('popular',1)
+			->where('name','!=','')
+			->orderBy('id','DESC')
+			->take(5)
+			->get();
+
+		$recentposts = Posts::where('active',1)
+			->where('categoryid','!=', 2)
+			->where('name','!=','')
+			->orderBy('id','DESC')
+			->take(4)
+			->get();
+
+
+		return view("pages.postdetails")
+					->with('postdetail',$postdetail)
+					->with('categorys',$categorys)
+					->with('fbody', $strfbody)
+					->with('sbody', $strsbody)
+					->with('lbody', $strlbody)
+					->with('popularposts', $popularposts)
+					->with('recentposts', $recentposts);
+
+	}
+		/**
+	 * Show the form for creating a new resource.
+	 *
+	 * @return Response
+	 */
+
+	public function postdetailsmyanmar($postid)
+	{
+		
+		$postdetail = Posts::find($postid);
+		$categorys = Category::orderBy('id', 'desc')->get();
+		$strfbody = "";
+		$strsbody = "";
+		$strlbody = "";
+
+		
+		if(strlen($postdetail->mdescription)>650)
+		{
+
+			$strfbody = $this->strCutting($postdetail->mdescription, "။", 650);
+			
+
+			if(strlen($postdetail->mdescription)>1000)
+			{
+				$strsbody = $this->strCutting(substr($postdetail->mdescription, strlen($strfbody) , strlen($postdetail->mdescription)), "။", 500);
+				
+				$strlbody = substr($postdetail->mdescription, strlen($strfbody) + strlen($strsbody) , strlen($postdetail->mdescription));
+
+			}				
+		}
+		else
+		{
+
+			$strfbody = $postdetail->mdescription;
+		}
+
+		$popularposts = Posts::where('active',1)
+			->where('popular',1)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(5)
+			->get();
+
+		$recentposts = Posts::where('active',1)
+			->where('categoryid','!=', 2)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(4)
+			->get();
+
+
+		return view("pages.postdetailsmyanmar")
+					->with('postdetail',$postdetail)
+					->with('categorys',$categorys)
+					->with('fbody', $strfbody)
+					->with('sbody', $strsbody)
+					->with('lbody', $strlbody)
+					->with('popularposts', $popularposts)
+					->with('recentposts', $recentposts);
+
+	}
+	/**
+	 * Show the form for creating a new resource.
+	 *
+	 * @return Response
+	 */
+
+	public function postdetailsvideo($postid)
+	{
+		
+		$postdetail = Posts::find($postid);
+		$categorys = Category::orderBy('id', 'desc')->get();
+		$strfbody = "";
+		$strsbody = "";
+		$strlbody = "";
+
+		
+		if(strlen($postdetail->description)>650)
+		{
+
+			$strfbody = $this->strCutting($postdetail->description, ".", 650);
+			
+
+			if(strlen($postdetail->description)>1000)
+			{
+				$strsbody = $this->strCutting(substr($postdetail->description, strlen($strfbody) , strlen($postdetail->description)), ".", 500);
+				
+				$strlbody = substr($postdetail->description, strlen($strfbody) + strlen($strsbody) , strlen($postdetail->description));
+
+			}				
+		}
+		else
+		{
+
+			$strfbody = $postdetail->description;
+		}
+
 		// echo count($postdetail->comments);
 		// die();
 		// $comments = Commets::orderBy('id', 'desc')
 		// 			->where('postid', $postid)
 		// 			->get();
 
-		return view("pages.postdetails")
+		return view("pages.postdetailsvideo")
 					->with('postdetail',$postdetail)
 					->with('categorys',$categorys)
 					->with('fbody', $strfbody)

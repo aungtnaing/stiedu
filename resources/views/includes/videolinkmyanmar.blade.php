@@ -14,6 +14,14 @@
 			
 			@foreach($videoposts as $videopost)
 
+				<?php
+		$tcmt = count($videopost->comments);
+		foreach($videopost->comments as $cmt) 
+		{
+		$tcmt = $tcmt + count($cmt->replycomments);
+		}
+	?>
+
 			<div class="entry clearfix">
 				<div class="entry-image">
 					<iframe width="560" height="315" src="{{ $videopost->youtubelink }}" frameborder="0" allowfullscreen></iframe>

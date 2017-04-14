@@ -3,7 +3,7 @@
 <section id="page-title">
 
 <div class="container clearfix">
-	<h1>{{ $postdetail->category->name }}</h1>
+	<h1>{{ $postdetail->category->mname }}</h1>
 
 </div>
 
@@ -22,7 +22,7 @@
 					<div class="single-post nobottommargin">
 						<div class="entry clearfix">
 							<div class="entry-title">
-								<h2>{{ $postdetail->name }}</h2>
+								<h2>{{ $postdetail->mname }}</h2>
 							</div>
 							<ul class="entry-meta clearfix">
 								<li><i class="icon-calendar3"></i>{{ $postdetail->created_at }}</li>
@@ -43,7 +43,7 @@
 									<div class="entry1 clearfix">
 										<div class="entry-image">
 											<blockquote>
-												<p>{{ $postdetail->subtitle }}</p>
+												<p>{{ $postdetail->msubtitle }}</p>
 												<!-- <footer>Albert Einstein</footer> -->
 											</blockquote>
 										</div>
@@ -55,11 +55,11 @@
 
 								<div class="clear"></div>
 								<div class="si-share noborder clearfix">
-									<span>Share this Post:</span>
+									<span>ဒီ Post ကို Share:</span>
 									<div>
 										<a href="#" class="social-icon si-borderless si-facebook">
 											<i class="icon-facebook"></i>
-											<i class="icon-facebook"></i>
+											<i class="icon-facebဒီ Post ကို Shareook"></i>
 										</a>
 										<a href="#" class="social-icon si-borderless si-twitter">
 											<i class="icon-twitter"></i>
@@ -99,7 +99,7 @@
 						</div>
 						<div id="comments" class="clearfix">
 							
-							<h3 id="comments-title"><span>{{ $tcmt }}</span> Comments</h3>
+							<h3 id="comments-title"><span>{{ $tcmt }}</span> မှတ်ချက်များ</h3>
 							<ol class="commentlist clearfix">
 								@foreach($postdetail->comments as $comment)
 								<li class="comment even thread-even depth-1" id="li-comment-1">
@@ -172,20 +172,20 @@
 										
 										</ol>
 							<div id="respond" class="clearfix">
-								<h3>Leave a <span>Comment</span></h3>
+								<h3>Leave a <span>မှတ်ချက်</span></h3>
 
 									<form action="{{ route("comments.store") }}" method="POST">
 							<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 
 									<div class="col_full">
-										<label for="comment">Comment</label>
+										<label for="comment">မှတ်ချက်</label>
 										<textarea name="comment" cols="58" rows="7" tabindex="4" class="sm-form-control"></textarea>
 										<input style="display:none;" type="text" name="postid" value="{{ $postdetail->id }}">
 									</div>
 
 									<div class="col_full nobottommargin">
-										<input class="btn btn-primary" type="submit" value="Submit Comment"> 
+										<input class="btn btn-primary" type="submit" value="Submit မှတ်ချက်"> 
 
 									</div>
 
@@ -219,8 +219,8 @@
 							<div class="tabs nobottommargin clearfix" id="sidebar-tabs">
 
 								<ul class="tab-nav clearfix">
-									<li><a href="#tabs-1">Popular</a></li>
-									<li><a href="#tabs-2">Recent</a></li>
+									<li><a href="#tabs-1">လူကြိုက်များ</a></li>
+									<li><a href="#tabs-2">မကြာသေးမီ</a></li>
 									<li><a href="#tabs-3"><i class="icon-comments-alt norightmargin"></i></a></li>
 								</ul>
 
@@ -280,38 +280,7 @@
 
 										</div>
 									</div>
-						<!-- 			<div class="tab-content clearfix" id="tabs-3">
-										<div id="recent-post-list-sidebar">
-
-											<div class="spost clearfix">
-												<div class="entry-image">
-													<a href="#" class="nobg"><img class="img-circle" src="images/icons/avatar.jpg" alt=""></a>
-												</div>
-												<div class="entry-c">
-													<strong>John Doe:</strong> Veritatis recusandae sunt repellat distinctio...
-												</div>
-											</div>
-
-											<div class="spost clearfix">
-												<div class="entry-image">
-													<a href="#" class="nobg"><img class="img-circle" src="images/icons/avatar.jpg" alt=""></a>
-												</div>
-												<div class="entry-c">
-													<strong>Mary Jane:</strong> Possimus libero, earum officia architecto maiores....
-												</div>
-											</div>
-
-											<div class="spost clearfix">
-												<div class="entry-image">
-													<a href="#" class="nobg"><img class="img-circle" src="images/icons/avatar.jpg" alt=""></a>
-												</div>
-												<div class="entry-c">
-													<strong>Site Admin:</strong> Deleniti magni labore laboriosam odio...
-												</div>
-											</div>
-
-										</div>
-									</div> -->
+					
 
 								</div>
 

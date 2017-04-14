@@ -31,7 +31,8 @@
 							</ul>
 							<div class="entry-image">
 								<figure>
-									<a href="#"><img src="{{ $postdetail->photourl1 }}" alt='missing' /></a>
+									<!-- <a href="#"><img src="{{ $postdetail->photourl1 }}" alt='missing' /></a> -->
+									<iframe width="560" height="315" src="{{ $postdetail->youtubelink }}" frameborder="0" allowfullscreen></iframe>
 									<figcaption><h5>{{ $postdetail->caption1 }}</h5></figcaption>
 								</figure>
 							</div>
@@ -150,7 +151,7 @@
 												@endforeach
 											</ul>
 												<div class="clear"></div>
-											<form style="display:none;" id="{{ $comment->id }}" action="{{ route("replycomments.store") }}" method="POST">
+											<form style="display:none;" id="{{ $comment->id }}" action="{{ route("replycommentvideos.store") }}" method="POST">
 											<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 
@@ -174,7 +175,7 @@
 							<div id="respond" class="clearfix">
 								<h3>Leave a <span>Comment</span></h3>
 
-									<form action="{{ route("comments.store") }}" method="POST">
+									<form action="{{ route("commentvideos.store") }}" method="POST">
 							<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 
@@ -229,58 +230,98 @@
 									<div class="tab-content clearfix" id="tabs-1">
 										<div id="popular-post-list-sidebar">
 
-
-											@foreach($popularposts as $popularpost)
-											<?php
-												$tcmt1 = count($popularpost->comments);
-												foreach($popularpost->comments as $cmt) 
-												{
-												$tcmt1 = $tcmt1 + count($cmt->replycomments);
-												}
-											?>
 											<div class="spost clearfix">
 												<div class="entry-image">
-													<a href="{{ $popularpost->photourl1 }}" class="nobg"><img class="img-circle" src="{{ $popularpost->photourl2 }}" alt=""></a>
+													<a href="#" class="nobg"><img class="img-circle" src="images/magazine/small/3.jpg" alt=""></a>
 												</div>
 												<div class="entry-c">
 													<div class="entry-title">
-														<h4><a href="{{ url('/postdetails', $popularpost->id) }}">{{ $popularpost->name }}</a></h4>
+														<h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
 													</div>
 													<ul class="entry-meta">
-														<li><i class="icon-comments-alt"></i>{{ $tcmt1 }}Comments</li>
+														<li><i class="icon-comments-alt"></i> 35 Comments</li>
 													</ul>
 												</div>
 											</div>
-											@endforeach
 
-										
+											<div class="spost clearfix">
+												<div class="entry-image">
+													<a href="#" class="nobg"><img class="img-circle" src="images/magazine/small/2.jpg" alt=""></a>
+												</div>
+												<div class="entry-c">
+													<div class="entry-title">
+														<h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
+													</div>
+													<ul class="entry-meta">
+														<li><i class="icon-comments-alt"></i> 24 Comments</li>
+													</ul>
+												</div>
+											</div>
+
+											<div class="spost clearfix">
+												<div class="entry-image">
+													<a href="#" class="nobg"><img class="img-circle" src="images/magazine/small/1.jpg" alt=""></a>
+												</div>
+												<div class="entry-c">
+													<div class="entry-title">
+														<h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
+													</div>
+													<ul class="entry-meta">
+														<li><i class="icon-comments-alt"></i> 19 Comments</li>
+													</ul>
+												</div>
+											</div>
 
 										</div>
 									</div>
 									<div class="tab-content clearfix" id="tabs-2">
 										<div id="recent-post-list-sidebar">
 
-												@foreach($recentposts as $recentpost)
-											
 											<div class="spost clearfix">
 												<div class="entry-image">
-													<a href="{{ $recentpost->photourl1 }}" class="nobg"><img class="img-circle" src="{{ $recentpost->photourl2 }}" alt=""></a>
+													<a href="#" class="nobg"><img class="img-circle" src="images/magazine/small/1.jpg" alt=""></a>
 												</div>
 												<div class="entry-c">
 													<div class="entry-title">
-														<h4><a href="{{ url('/postdetails', $recentpost->id) }}">{{ $recentpost->name }}</a></h4>
+														<h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
 													</div>
 													<ul class="entry-meta">
-														<li>{{ $recentpost->createed_at }}</li>
+														<li>10th July 2014</li>
 													</ul>
 												</div>
 											</div>
 
-												@endforeach
+											<div class="spost clearfix">
+												<div class="entry-image">
+													<a href="#" class="nobg"><img class="img-circle" src="images/magazine/small/2.jpg" alt=""></a>
+												</div>
+												<div class="entry-c">
+													<div class="entry-title">
+														<h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
+													</div>
+													<ul class="entry-meta">
+														<li>10th July 2014</li>
+													</ul>
+												</div>
+											</div>
+
+											<div class="spost clearfix">
+												<div class="entry-image">
+													<a href="#" class="nobg"><img class="img-circle" src="images/magazine/small/3.jpg" alt=""></a>
+												</div>
+												<div class="entry-c">
+													<div class="entry-title">
+														<h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
+													</div>
+													<ul class="entry-meta">
+														<li>10th July 2014</li>
+													</ul>
+												</div>
+											</div>
 
 										</div>
 									</div>
-						<!-- 			<div class="tab-content clearfix" id="tabs-3">
+									<div class="tab-content clearfix" id="tabs-3">
 										<div id="recent-post-list-sidebar">
 
 											<div class="spost clearfix">
@@ -311,7 +352,7 @@
 											</div>
 
 										</div>
-									</div> -->
+									</div>
 
 								</div>
 

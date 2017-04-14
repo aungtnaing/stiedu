@@ -169,6 +169,18 @@
 			'uses' => 'PostsController@postdetails'
 			]);
 
+		Route::get('postdetailsmyanmar/{postid}', [
+			'uses' => 'PostsController@postdetailsmyanmar'
+			]);
+
+		Route::get('postdetailsvideo/{postid}', [
+			'uses' => 'PostsController@postdetailsvideo'
+			]);
+
+			Route::get('postdetailsvideomyanmar/{postid}', [
+			'uses' => 'PostsController@postdetailsvideomyanmar'
+			]);
+
 
 		
 		Route::resource('profiles','ProfilesController');
@@ -186,7 +198,11 @@
 		Route::group(['middleware' => 'auth'],function()
 		{
 			Route::resource('comments','CommentsController');
+			Route::resource('commentvideos','CommentsvideoController');
+
 			Route::resource('replycomments','ReplycommentsController');
+			Route::resource('replycommentvideos','ReplycommentsvideoController');
+
 			Route::group(['middleware' => 'roleware2'],function()
 			{
 				Route::resource('dashboard','DashboardController');
