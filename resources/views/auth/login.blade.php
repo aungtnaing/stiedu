@@ -1,6 +1,9 @@
 @extends('layouts.default')
 @section('content')
-     
+    <?php
+                        
+  Session::set('backUrl', URL::previous());
+?>
     <section id="page-title">
 
             <div class="container clearfix">

@@ -39,11 +39,14 @@ class AuthController extends Controller {
 		 
    		$categorys = Category::orderBy('id', 'desc')->paginate(10);
     	View::share('categorys', $categorys);
-
+   
 		$this->auth = $auth;
 		$this->registrar = $registrar;
 
+
 		$this->middleware('guest', ['except' => 'getLogout']);
+
+		
 	}
 
 }

@@ -198,10 +198,10 @@
 		Route::group(['middleware' => 'auth'],function()
 		{
 			Route::resource('comments','CommentsController');
-			Route::resource('commentvideos','CommentsvideoController');
+			// Route::resource('commentvideos','CommentsvideoController');
 
 			Route::resource('replycomments','ReplycommentsController');
-			Route::resource('replycommentvideos','ReplycommentsvideoController');
+			// Route::resource('replycommentvideos','ReplycommentsvideoController');
 
 			Route::group(['middleware' => 'roleware2'],function()
 			{

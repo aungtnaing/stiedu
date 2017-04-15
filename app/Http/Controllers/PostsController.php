@@ -77,9 +77,10 @@ class PostsController extends Controller {
 
 		$popularposts = Posts::where('active',1)
 			->where('popular',1)
+			->where('categoryid','!=', 2)
 			->where('name','!=','')
 			->orderBy('id','DESC')
-			->take(5)
+			->take(4)
 			->get();
 
 		$recentposts = Posts::where('active',1)
@@ -138,9 +139,10 @@ class PostsController extends Controller {
 
 		$popularposts = Posts::where('active',1)
 			->where('popular',1)
+			->where('categoryid','!=', 2)
 			->where('mname','!=','')
 			->orderBy('id','DESC')
-			->take(5)
+			->take(4)
 			->get();
 
 		$recentposts = Posts::where('active',1)
@@ -197,18 +199,87 @@ class PostsController extends Controller {
 			$strfbody = $postdetail->description;
 		}
 
-		// echo count($postdetail->comments);
-		// die();
-		// $comments = Commets::orderBy('id', 'desc')
-		// 			->where('postid', $postid)
-		// 			->get();
+		
+		$popularposts = Posts::where('active',1)
+			->where('categoryid','!=', 2)
+			->where('popular',1)
+			->where('name','!=','')
+			->orderBy('id','DESC')
+			->take(4)
+			->get();
+
+		$recentposts = Posts::where('active',1)
+			->where('categoryid','!=', 2)
+			->where('name','!=','')
+			->orderBy('id','DESC')
+			->take(4)
+			->get();
 
 		return view("pages.postdetailsvideo")
 					->with('postdetail',$postdetail)
 					->with('categorys',$categorys)
 					->with('fbody', $strfbody)
 					->with('sbody', $strsbody)
-					->with('lbody', $strlbody);
+					->with('lbody', $strlbody)
+					->with('popularposts', $popularposts)
+					->with('recentposts', $recentposts);
+
+	}
+
+	public function postdetailsvideomyanmar($postid)
+	{
+		
+		$postdetail = Posts::find($postid);
+		$categorys = Category::orderBy('id', 'desc')->get();
+		$strfbody = "";
+		$strsbody = "";
+		$strlbody = "";
+
+		
+		if(strlen($postdetail->mdescription)>650)
+		{
+
+			$strfbody = $this->strCutting($postdetail->mdescription, ".", 650);
+			
+
+			if(strlen($postdetail->mdescription)>1000)
+			{
+				$strsbody = $this->strCutting(substr($postdetail->mdescription, strlen($strfbody) , strlen($postdetail->mdescription)), ".", 500);
+				
+				$strlbody = substr($postdetail->mdescription, strlen($strfbody) + strlen($strsbody) , strlen($postdetail->mdescription));
+
+			}				
+		}
+		else
+		{
+
+			$strfbody = $postdetail->mdescription;
+		}
+
+		
+		$popularposts = Posts::where('active',1)
+			->where('popular',1)
+			->where('categoryid','!=', 2)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(4)
+			->get();
+
+		$recentposts = Posts::where('active',1)
+			->where('categoryid','!=', 2)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(4)
+			->get();
+
+		return view("pages.postdetailsvideomyanmar")
+					->with('postdetail',$postdetail)
+					->with('categorys',$categorys)
+					->with('fbody', $strfbody)
+					->with('sbody', $strsbody)
+					->with('lbody', $strlbody)
+					->with('popularposts', $popularposts)
+					->with('recentposts', $recentposts);
 
 	}
 

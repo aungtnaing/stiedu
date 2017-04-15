@@ -159,6 +159,7 @@
 														<textarea name="replycomment" cols="58" rows="3" tabindex="4" class="sm-form-control"></textarea>
 														<input style="display:none;" type="text" name="commentid" value="{{ $comment->id }}">
 														<input style="display:none;" type="text" name="postid" value="{{ $postdetail->id }}">
+														<input style="display:none;" type="text" name="ltype" value="en">
 													</div>
 
 													<div class="col_full nobottommargin">
@@ -180,8 +181,9 @@
 
 									<div class="col_full">
 										<label for="comment">Comment</label>
-										<textarea name="comment" cols="58" rows="7" tabindex="4" class="sm-form-control"></textarea>
+										<textarea name="comment" cols="58" rows="7" tabindex="4" class="sm-form-control" value="{{ old('comment') }}"></textarea>
 										<input style="display:none;" type="text" name="postid" value="{{ $postdetail->id }}">
+										<input style="display:none;" type="text" name="ltype" value="en">
 									</div>
 
 									<div class="col_full nobottommargin">
@@ -221,7 +223,7 @@
 								<ul class="tab-nav clearfix">
 									<li><a href="#tabs-1">Popular</a></li>
 									<li><a href="#tabs-2">Recent</a></li>
-									<li><a href="#tabs-3"><i class="icon-comments-alt norightmargin"></i></a></li>
+									<!-- <li><a href="#tabs-3"><i class="icon-comments-alt norightmargin"></i></a></li> -->
 								</ul>
 
 								<div class="tab-container">

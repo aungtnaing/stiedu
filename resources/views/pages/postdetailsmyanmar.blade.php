@@ -159,6 +159,7 @@
 														<textarea name="replycomment" cols="58" rows="3" tabindex="4" class="sm-form-control"></textarea>
 														<input style="display:none;" type="text" name="commentid" value="{{ $comment->id }}">
 														<input style="display:none;" type="text" name="postid" value="{{ $postdetail->id }}">
+														<input style="display:none;" type="text" name="ltype" value="mn">
 													</div>
 
 													<div class="col_full nobottommargin">
@@ -182,6 +183,7 @@
 										<label for="comment">မှတ်ချက်</label>
 										<textarea name="comment" cols="58" rows="7" tabindex="4" class="sm-form-control"></textarea>
 										<input style="display:none;" type="text" name="postid" value="{{ $postdetail->id }}">
+										<input style="display:none;" type="text" name="ltype" value="mn">
 									</div>
 
 									<div class="col_full nobottommargin">
@@ -221,7 +223,7 @@
 								<ul class="tab-nav clearfix">
 									<li><a href="#tabs-1">လူကြိုက်များ</a></li>
 									<li><a href="#tabs-2">မကြာသေးမီ</a></li>
-									<li><a href="#tabs-3"><i class="icon-comments-alt norightmargin"></i></a></li>
+									<!-- <li><a href="#tabs-3"><i class="icon-comments-alt norightmargin"></i></a></li> -->
 								</ul>
 
 								<div class="tab-container">
@@ -244,7 +246,7 @@
 												</div>
 												<div class="entry-c">
 													<div class="entry-title">
-														<h4><a href="{{ url('/postdetails', $popularpost->id) }}">{{ $popularpost->name }}</a></h4>
+														<h4><a href="{{ url('/postdetailsmyanmar', $popularpost->id) }}">{{ $popularpost->mname }}</a></h4>
 													</div>
 													<ul class="entry-meta">
 														<li><i class="icon-comments-alt"></i>{{ $tcmt1 }}Comments</li>
@@ -268,7 +270,7 @@
 												</div>
 												<div class="entry-c">
 													<div class="entry-title">
-														<h4><a href="{{ url('/postdetails', $recentpost->id) }}">{{ $recentpost->name }}</a></h4>
+														<h4><a href="{{ url('/postdetailsmyanmar', $recentpost->id) }}">{{ $recentpost->mname }}</a></h4>
 													</div>
 													<ul class="entry-meta">
 														<li>{{ $recentpost->createed_at }}</li>

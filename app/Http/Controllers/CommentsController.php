@@ -4,17 +4,18 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use Redirect;
 
 
 use DB;
 
-use App\Posts;
-use App\Category;
+
 use App\Comments;
 
-use File;
-use Input;
 use Auth;
+use Input;
+use Session;
+use URL;
 
 class CommentsController extends Controller {
 
@@ -25,7 +26,21 @@ class CommentsController extends Controller {
 	 */
 	public function index(Request $request)
 	{
-		
+		// return Redirect::back()->withErrors(['msg', 'The Message']);
+		 // echo $_SERVER['HTTP_REFERER'];
+			
+			// echo Session::get('backUrl');
+
+		   // return Session::get('backUrl'); ? Session::get('backUrl') : $this->redirectTo;
+
+        // return redirect()->back();
+		// echo "<br>";
+
+	
+
+		return Redirect::to(Session::get('backUrl'))->withInput();
+
+	
 		
 	}
 
@@ -68,8 +83,22 @@ class CommentsController extends Controller {
 		$comment->postid = $request->input('postid');
 		$comment->save();
 		
-		
-		return redirect()->action('PostsController@postdetails', ['postid' => $request->input('postid')]);
+		if($request->input('ltype')=="en")
+		{
+			return redirect()->action('PostsController@postdetails', ['postid' => $request->input('postid')]);
+		}
+		elseif($request->input('ltype')=="mn")
+		{
+			return redirect()->action('PostsController@postdetailsmyanmar', ['postid' => $request->input('postid')]);
+		}
+		elseif($request->input('ltype')=="envideo")
+		{
+			return redirect()->action('PostsController@postdetailsvideo', ['postid' => $request->input('postid')]);
+		}
+		else
+		{
+			return redirect()->action('PostsController@postdetailsvideomyanmar', ['postid' => $request->input('postid')]);
+		}
 	}
 
 	/**
