@@ -51,13 +51,13 @@
 
 								<h4>Contact</h4>
 								<ul>
-									<li><a href="aboutusmyanmar">My Magical အ​ကြောင်း</a></li>
+									<li><a href="<?php echo url() ?>/aboutusmyanmar">My Magical အ​ကြောင်း</a></li>
 									
-									<li><a href="advertisewithusmyanmar">ကြော်ငြာရန်</a></li>
-									<li><a href="privacypolicymyanmar">ကိုယ်ရေးအချက်အလက်မူဝါဒ</a></li>
-									<li><a href="termscondationmyanmar">စည်းမျဉ်းစည်းကမ်းများနှင့်အခွအေနအေ</a></li>
-									<li><a href="contactusmyanmar">ဆွက်သွယ်ရန်</a></li>
-									<li><a href="storelocatormyanmar">စတိုးဆိုင်လိပ်စာ</a></li>
+									<li><a href="<?php echo url() ?>/advertisewithusmyanmar">ကြော်ငြာရန်</a></li>
+									<li><a href="<?php echo url() ?>/privacypolicymyanmar">ကိုယ်ရေးအချက်အလက်မူဝါဒ</a></li>
+									<li><a href="<?php echo url() ?>/termscondationmyanmar">စည်းမျဉ်းစည်းကမ်းများနှင့်အခွအေနအေ</a></li>
+									<li><a href="<?php echo url() ?>/contactusmyanmar">ဆွက်သွယ်ရန်</a></li>
+									<li><a href="<?php echo url() ?>/storelocatormyanmar">စတိုးဆိုင်လိပ်စာ</a></li>
 									
 								</ul>
 							</div>

@@ -165,7 +165,7 @@
 			
 		});
 
-			Route::get('postlists/{categoryid}', function($categoryid) {
+		Route::get('postlists/{categoryid}', function($categoryid) {
 
 			$categorys = Category::orderBy('id', 'desc')->get();
 
@@ -190,7 +190,7 @@
 			
 		});
 
-				Route::get('postlistsmyanmar/{categoryid}', function($categoryid) {
+		Route::get('postlistsmyanmar/{categoryid}', function($categoryid) {
 
 			$categorys = Category::orderBy('id', 'desc')->get();
 
@@ -215,6 +215,36 @@
 			
 		});
 
+		
+
+		Route::get('magazine', function() {
+
+		$categorys = Category::orderBy('id', 'desc')->get();
+
+			
+		$travelsectorposts = Posts::where('active',1)
+			->where('categoryid', 1)
+			->where('name','!=','')
+			->orderBy('id','DESC')
+			->take(5)
+			->get();
+
+		$exposures = Posts::where('active',1)
+			->where('categoryid', 5)
+			->where('name','!=','')
+			->orderBy('id','DESC')
+			->take(6)
+			->get();
+
+			
+			return view('pages.magazine')
+			->with('travelsectorposts', $travelsectorposts)
+			->with('exposures', $exposures)
+			->with('categorys', $categorys);
+			
+			
+		});
+
 
 		Route::get('postdetails/{postid}', [
 			'uses' => 'PostsController@postdetails'
@@ -224,19 +254,9 @@
 			'uses' => 'PostsController@postdetailsmyanmar'
 			]);
 
-		// Route::get('postdetailsvideo/{postid}', [
-		// 	'uses' => 'PostsController@postdetailsvideo'
-		// 	]);
-
-		// 	Route::get('postdetailsvideomyanmar/{postid}', [
-		// 	'uses' => 'PostsController@postdetailsvideomyanmar'
-		// 	]);
-
-
+		
 		
 		Route::resource('profiles','ProfilesController');
-
-		
 
 		Route::controllers([
 			'auth' => 'Auth\AuthController',
@@ -249,11 +269,8 @@
 		Route::group(['middleware' => 'auth'],function()
 		{
 			Route::resource('comments','CommentsController');
-			// Route::resource('commentvideos','CommentsvideoController');
-
 			Route::resource('replycomments','ReplycommentsController');
-			// Route::resource('replycommentvideos','ReplycommentsvideoController');
-
+		
 			Route::group(['middleware' => 'roleware2'],function()
 			{
 				Route::resource('dashboard','DashboardController');

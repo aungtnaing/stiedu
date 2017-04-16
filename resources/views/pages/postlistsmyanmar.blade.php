@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.defaultmyanmar')
 @section('content')
 <section id="page-title">
 

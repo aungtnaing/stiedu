@@ -51,13 +51,13 @@
 
 								<h4>Contact</h4>
 								<ul>
-									<li><a href="aboutus">About US</a></li>
+									<li><a href="<?php echo url() ?>/aboutus">About US</a></li>
 									
-									<li><a href="advertisewithus">Advertise with us</a></li>
-									<li><a href="privacypolicy">Privacy policy</a></li>
-									<li><a href="termscondation">Terms and condition</a></li>
-									<li><a href="contactus">Contact us</a></li>
-									<li><a href="storelocator">Store Locator</a></li>
+									<li><a href="<?php echo url() ?>/advertisewithus">Advertise with us</a></li>
+									<li><a href="<?php echo url() ?>/privacypolicy">Privacy policy</a></li>
+									<li><a href="<?php echo url() ?>/termscondation">Terms and condition</a></li>
+									<li><a href="<?php echo url() ?>/contactus">Contact us</a></li>
+									<li><a href="<?php echo url() ?>/storelocator">Store Locator</a></li>
 									
 								</ul>
 							</div>
