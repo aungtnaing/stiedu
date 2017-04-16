@@ -26,16 +26,16 @@
 					<iframe width="560" height="315" src="{{ $videopost->youtubelink }}" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div class="entry-title">
-					<h2><a href="{{ url('/postdetailsvideo', $videopost->id) }}">{{ $videopost->name }}</a></h2>
+					<h2><a href="{{ url('/postdetails', $videopost->id) }}">{{ $videopost->name }}</a></h2>
 				</div>
 				<ul class="entry-meta clearfix">
 					<li><i class="icon-calendar3"></i> {{ $videopost->created_at }}</li>
-					<li><a href="{{ url('/postdetailsvideo', $videopost->id) }}"><i class="icon-comments"></i>{{ $tcmt }}</a></li>
+					<li><a href="{{ url('/postdetails', $videopost->id) }}"><i class="icon-comments"></i>{{ $tcmt }}</a></li>
 					<li><a href="{{ $videopost->youtubelink }}"><i class="icon-film"></i></a></li>
 				</ul>
 				<div class="entry-content">
 					<p><?php echo substr($videopost->description,0, 70) ?></p>
-					<a href="{{ url('/postdetailsvideo', $videopost->id) }}"class="more-link">Read More</a>
+					<a href="{{ url('/postdetails', $videopost->id) }}"class="more-link">Read More</a>
 				</div>
 			</div>
 

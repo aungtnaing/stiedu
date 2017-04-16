@@ -15,7 +15,7 @@
 					@foreach($reviews as $review)
 					<div class="slide">
 						<div class="testi-image">
-							<a href="#"><img src="{{ $review->photourl2 }}" alt="Customer Testimonails"></a>
+							<a href="{{ url('/postdetails', $review->id) }}"><img src="{{ $review->photourl2 }}" alt="Customer Testimonails"></a>
 						</div>
 						<div class="testi-content">
 							<p><?php echo substr($review->description,0, 70) ?></p>

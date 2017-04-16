@@ -13,6 +13,7 @@
 
 		use App\User;
 		use App\Category;
+		use App\Posts;
 		
 
 		Route::get('/', 'WelcomeController@index');
@@ -164,6 +165,56 @@
 			
 		});
 
+			Route::get('postlists/{categoryid}', function($categoryid) {
+
+			$categorys = Category::orderBy('id', 'desc')->get();
+
+			$postlists = Posts::where('active',1)
+			->where('categoryid', $categoryid)
+			->where('name','!=','')
+			->orderBy('id','DESC')
+			->paginate(4);
+
+			$recentposts = Posts::where('active',1)
+			->where('categoryid','!=', 2)
+			->where('name','!=','')
+			->orderBy('id','DESC')
+			->take(4)
+			->get();
+			
+			return view('pages.postlists')
+			->with('postlists', $postlists)
+			->with('categorys', $categorys)
+			->with('latestposts', $recentposts);
+			
+			
+		});
+
+				Route::get('postlistsmyanmar/{categoryid}', function($categoryid) {
+
+			$categorys = Category::orderBy('id', 'desc')->get();
+
+			$postlists = Posts::where('active',1)
+			->where('categoryid', $categoryid)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->paginate(4);
+
+			$recentposts = Posts::where('active',1)
+			->where('categoryid','!=', 2)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(4)
+			->get();
+			
+			return view('pages.postlistsmyanmar')
+			->with('postlists', $postlists)
+			->with('categorys', $categorys)
+			->with('latestposts', $recentposts);
+			
+			
+		});
+
 
 		Route::get('postdetails/{postid}', [
 			'uses' => 'PostsController@postdetails'
@@ -173,13 +224,13 @@
 			'uses' => 'PostsController@postdetailsmyanmar'
 			]);
 
-		Route::get('postdetailsvideo/{postid}', [
-			'uses' => 'PostsController@postdetailsvideo'
-			]);
+		// Route::get('postdetailsvideo/{postid}', [
+		// 	'uses' => 'PostsController@postdetailsvideo'
+		// 	]);
 
-			Route::get('postdetailsvideomyanmar/{postid}', [
-			'uses' => 'PostsController@postdetailsvideomyanmar'
-			]);
+		// 	Route::get('postdetailsvideomyanmar/{postid}', [
+		// 	'uses' => 'PostsController@postdetailsvideomyanmar'
+		// 	]);
 
 
 		

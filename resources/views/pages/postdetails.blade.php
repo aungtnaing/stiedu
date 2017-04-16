@@ -31,7 +31,11 @@
 							</ul>
 							<div class="entry-image">
 								<figure>
+									@if($postdetail->youtubelink!="")
+									<iframe width="560" height="315" src="{{ $postdetail->youtubelink }}" frameborder="0" allowfullscreen></iframe>									
+									@else
 									<a href="#"><img src="{{ $postdetail->photourl1 }}" alt='missing' /></a>
+									@endif
 									<figcaption><h5>{{ $postdetail->caption1 }}</h5></figcaption>
 								</figure>
 							</div>

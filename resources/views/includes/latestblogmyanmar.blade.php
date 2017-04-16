@@ -11,17 +11,24 @@
 		<div class="row">
 
 			@foreach($latestblogs as $latestblog)
+			<?php
+		$tcmt = count($latestblog->comments);
+		foreach($latestblog->comments as $cmt) 
+		{
+		$tcmt = $tcmt + count($cmt->replycomments);
+		}
+	?>
 			<div class="col-md-3 col-sm-6 bottommargin">
 				<div class="ipost clearfix">
 					<div class="entry-image">
-						<a href="#"><img class="image_fade" src="{{ $latestblog->photourl2 }}" alt="Image"></a>
+						<a href="{{ $latestblog->photourl1 }}"><img class="image_fade" src="{{ $latestblog->photourl2 }}" alt="Image"></a>
 					</div>
 					<div class="entry-title">
-						<h3><a href="blog-single.html">{{ $latestblog->mname }}</a></h3>
+						<h3><a href="{{ url('/postdetailsmyanmar', $latestblog->id) }}">{{ $latestblog->mname }}</a></h3>
 					</div>
 					<ul class="entry-meta clearfix">
 						<li><i class="icon-calendar3"></i>{{ $latestblog->created_at }}</li>
-						<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 53</a></li>
+						<li><a href="{{ url('/postdetailsmyanmar', $latestblog->id) }}"><i class="icon-comments"></i> {{ $tcmt }}</a></li>
 					</ul>
 					<div class="entry-content">
 						<p><?php echo substr($latestblog->mdescription,0, 70) ?></p>

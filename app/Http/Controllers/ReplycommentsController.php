@@ -78,22 +78,22 @@ class ReplycommentsController extends Controller {
 		// 	return redirect()->action('PostsController@postdetailsmyanmar', ['postid' => $request->input('postid')]);
 		// }
 
-			if($request->input('ltype')=="en")
+		if($request->input('ltype')=="en")
 		{
 			return redirect()->action('PostsController@postdetails', ['postid' => $request->input('postid')]);
 		}
-		elseif($request->input('ltype')=="mn")
+		else
 		{
 			return redirect()->action('PostsController@postdetailsmyanmar', ['postid' => $request->input('postid')]);
 		}
-		elseif($request->input('ltype')=="envideo")
-		{
-			return redirect()->action('PostsController@postdetailsvideo', ['postid' => $request->input('postid')]);
-		}
-		else
-		{
-			return redirect()->action('PostsController@postdetailsvideomyanmar', ['postid' => $request->input('postid')]);
-		}
+		// elseif($request->input('ltype')=="envideo")
+		// {
+		// 	return redirect()->action('PostsController@postdetailsvideo', ['postid' => $request->input('postid')]);
+		// }
+		// else
+		// {
+		// 	return redirect()->action('PostsController@postdetailsvideomyanmar', ['postid' => $request->input('postid')]);
+		// }
 		// return redirect()->action('PostsController@postdetails', ['postid' => $request->input('postid')]);
 	}
 

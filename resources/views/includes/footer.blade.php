@@ -15,8 +15,8 @@
 
 							<div class="widget clearfix">
 
-								<img src="images/footer-widget-logo.png" alt="" class="footer-logo">
-								<div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
+								<img src="<?php echo url() ?>/images/footer-widget-logo.png" alt="" class="footer-logo">
+								<div style="background: url('<?php echo url() ?>/images/world-map.png') no-repeat center center; background-size: 100%;">
 									<address>
 										<strong>Headquarters:</strong><br>
 										795 Folsom Ave, Suite 600<br>
@@ -37,16 +37,8 @@
 								<h4>Catagories</h4>
 								<ul>
 									@foreach($categorys as $category)
-									<li><a href="#">{{ $category->name }}</a></li>
-									<!-- <li><a href="#">Check In</a></li>
-									<li><a href="#">Exposure</a></li>
-									<li><a href="picturesques">Picturesques</a></li>
-									<li><a href="#">Arrival</a></li>
-									<li><a href="#">Infocus</a></li>
-									<li><a href="#">Deperature</a></li>
-									<li><a href="#">Stand out</a></li>
-									<li><a href="#">Snap Shop</a></li>
-									<li><a href="#">Underground</a></li> -->
+									<li><a href="{{ url('/postlists', $category->id) }}">{{ $category->name }}</a></li>
+									
 									@endforeach
 								</ul>
 							</div>
@@ -121,18 +113,18 @@
 						<div class="col">
 							<div class="col-lg-2 col-sm-2 col-xs-4">
 								<a href ="https://www.pata.org/" target="blank">
-									<img src="images/member1.png" class="img-responsive" width="100px" height="50px">
+									<img src="<?php echo url() ?>/images/member1.png" class="img-responsive" width="100px" height="50px">
 								</a>
 							</div>
 							<div class="col-lg-2 col-sm-2 col-xs-4">
 								
 								<a href="http://www.myanmartourismfederation.org/"  target="blank">
-									<img src="images/member2.png" class="img-responsive"  width="100px" height="50px">
+									<img src="<?php echo url() ?>/images/member2.png" class="img-responsive"  width="100px" height="50px">
 								</a>
 							</div>
 							<div class="col-lg-2 col-sm-2 col-xs-4">
 								<a href="https://www.umta.org/ " target="blank">
-									<img src="images/member3.png" class="img-responsive"  width="100px" height="50px">
+									<img src="<?php echo url() ?>/images/member3.png" class="img-responsive"  width="100px" height="50px">
 								</a>
 							</div>
 						</div>
@@ -151,7 +143,7 @@
 
 					<div class="col_half">
 						Copyrights &copy; 2014 All Rights Reserved by My Magical Myanmar.<br>
-						<div class="copyright-links"><a href="term.html">Terms of Use</a> / <a href="privacy.html">Privacy Policy</a></div>
+						<div class="copyright-links"><a href="termscondation">Terms of Use</a> / <a href="privacypolicy">Privacy Policy</a></div>
 					</div>
 
 					<div class="col_half col_last tright">
