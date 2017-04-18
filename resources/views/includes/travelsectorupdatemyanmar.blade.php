@@ -11,35 +11,37 @@
 			</div>
 
 			
+			
 			<div class="container clearfix" style="padding-left:180px;">
 				<div class="col_one_third">
-					<a href="booking.html">
+					<a href="booking">
 						<img src="images/air.png">
 					</a>
 					<br></br>
-					<a href="booking.html"><h4>
+					<a href="booking"><h4>
 						Booking Air
 					</h4></a>
 				</div>
 				<div class="col_one_third">
-					<a href="booking.html">
+					<a href="booking">
 						<img src="images/car.png">
 					</a>
 					<br></br>
-					<a href="booking.html">		<h4>
+					<a href="booking">		<h4>
 						Booking Car
 					</h4></a>
 				</div>
 				<div class="col_one_third col_last">
-					<a href="#">
+					<a href="booking">
 						<img src="images/tour.png">
 					</a>
 					<br></br>
-					<a href="booking.html">	<h4>
+					<a href="booking">	<h4>
 						Booking Tour
 					</h4></a>
 				</div>
 			</div>
+			
 			
 			
 			

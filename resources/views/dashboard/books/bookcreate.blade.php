@@ -4,7 +4,7 @@
 
 <div id="content">
   <div id="content-header">
-    <div id="breadcrumb"> <a href="{{ url('/dashboard') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">create post english</a> </div>
+    <div id="breadcrumb"> <a href="{{ url('/dashboard') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">create book</a> </div>
 
   </div>
   <div class="container-fluid">
@@ -25,95 +25,116 @@
       <div class="span10">
         <div class="widget-box">
           <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-            <h5>Post-info - English Type</h5>
+            <h5>Book-info</h5>
           </div>
           <div class="widget-content">
-            <form action="{{ route("posts.store") }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route("books.store") }}" method="POST" enctype="multipart/form-data">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
               <ul class="thumbnails">
                 <li class="span3"> <a> 
                   <input style="display:none;" id="file-input1" name="photourl1" type='file' onchange="readURL(this);" required/>                    
                   <label for="file-input1">
-                    <i class="icon-camera"></i>.Main 2000x1324<br>
+                    <i class="icon-camera"></i>.Main 937 X 1200<br>
                     <img id="blah" src="//placehold.it/100" alt="avatar" alt="your image" />
 
                   </label>
                   <div class="actions"><a id="preview1" class="lightbox_trigger" herf=""><i class="icon-search"></i></a> </div>
 
                 </li>
-                <li class="span3"> <a> 
+              <!--   <li class="span3"> <a> 
                  <input style="display:none;" id="file-input2" name="photourl2" type='file' onchange="readURL2(this);" />                    
                  <label for="file-input2">
                   <i class="icon-camera"></i>.Thum 400x300<br>
                   <img id="blah2" src="//placehold.it/100" alt="avatar" alt="your image" />
                 </label>
                 <div class="actions"> <a class="lightbox_trigger" href="blah2"><i class="icon-search"></i></a> </div>
-              </li>
+              </li> -->
 
             </ul>
 
-            <div class="control-group">
-              <label class="control-label">Photo Caption :</label>
-              <div class="controls">
-                <input name="caption1" class="span11" placeholder="Enter Your Photo Caption" type="text">
-              </div>
-            </div>     
-
 
             <div class="control-group">
-              <label class="control-label">Post Name :</label>
+              <label class="control-label">Book Name :</label>
               <div class="controls">
-                <input name="name" class="span11" placeholder="Enter Your Post Name" type="text" required>
+                <input name="bookname" class="span11" placeholder="Enter Your Book Name" type="text">
               </div>
             </div>
 
             <div class="control-group">
-              <label class="control-label">Sub Title :</label>
+              <label class="control-label">Vol Number :</label>
               <div class="controls">
-                <input name="subtitle" class="span11" placeholder="Enter Your Sub Title" type="text">
+                <!-- <input name="volnumber" class="span11" placeholder="Enter Your Sub Title" type="text"> -->
+                <input name="volnumber" type="number" min="1" step="1" required>
               </div>
             </div>
 
             <div class="control-group">
-              <label class="control-label">Description:</label>
+              <label class="control-label">Issue Number :</label>
               <div class="controls">
-              <textarea class="textarea_editor span12" name="description" placeholder="Enter your post description" class="span11" rows="7"></textarea>
-              
+                <!-- <input name="volnumber" class="span11" placeholder="Enter Your Sub Title" type="text"> -->
+                <input name="issuenumber" type="number" min="1" step="1" required>
+              </div>
+            </div>
+
+
+            <div class="control-group">
+              <label class="control-label">Discount :</label>
+              <div class="controls">
+                <!-- <input name="volnumber" class="span11" placeholder="Enter Your Sub Title" type="text"> -->
+                <input name="discount" type="number" min="0" step="1">
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label">Old Price :</label>
+              <div class="controls">
+                <!-- <input name="volnumber" class="span11" placeholder="Enter Your Sub Title" type="text"> -->
+                <input name="oprice" type="number" min="0" step="1">
               </div>
             </div>
 
              <div class="control-group">
-              <label class="control-label">YouTube Link :</label>
+              <label class="control-label">Price :</label>
               <div class="controls">
-                <input name="youtubelink" class="span11" placeholder="Enter Your Youtube linke" type="text">
+                <!-- <input name="volnumber" class="span11" placeholder="Enter Your Sub Title" type="text"> -->
+                <input name="price" type="number" min="0" step="1" required>
+              </div>
+            </div>
+
+            
+             <div class="control-group">
+              <label class="control-label">Rate :</label>
+              <div class="controls">
+                <!-- <input name="volnumber" class="span11" placeholder="Enter Your Sub Title" type="text"> -->
+                <input name="rate" type="number" min="0" step="1">
+              </div>
+            </div>
+
+             <div class="control-group">
+              <label class="control-label">Description:</label>
+              <div class="controls">
+              <textarea class="textarea_editor span12" name="description" placeholder="Enter your post description" class="span11" rows="2"></textarea>
+              
+              </div>
+            </div>
+
+               <div class="control-group">
+              <label class="control-label">mDescription:</label>
+              <div class="controls">
+              <textarea class="textarea_editor span12" name="mdescription" placeholder="Enter your post mdescription" class="span11" rows="2"></textarea>
+              
               </div>
             </div>
 
 
-            <div class="control-group">
-              <label class="control-label">Category:</label>
-              <div class="controls">
-                <select name="category">
-                  @foreach($categorys as $category)
-                  <option value="{{ $category->id }}">{{ $category->name }}</option>
-                  @endforeach 
-                </select>
-              </div>
-            </div>
 
-      <div class="control-group">
-          <input type="checkbox" name="mainslide" value="1" checked>Mainslide
-        </div>
 
             <div class="control-group">
           <input type="checkbox" name="active" value="1" checked>Active
         </div>
 
-          <div class="control-group">
-          <input type="checkbox" name="popular" value="1" checked>Popular
-        </div>
-
+        
 
             <div class="form-actions">
              <input class="btn btn-primary" type="submit" value="Save Changes"> 
@@ -127,7 +148,6 @@
  </div>
 </div>
 </div>
-
 
 
 
@@ -155,12 +175,6 @@
 
  
 
-// $(document).ready(function(){
-//     $("#file-input1").on('change',function(){
-//         //do whatever you want
-//         document.getElementById("preview1").src = $(this).src;
-//     });
-// });
 function readURL(input) {
 
 
@@ -179,31 +193,6 @@ function readURL(input) {
   }
 }
 
-
-//  document.getElementById('blah').onchange = function () {
-
-
-
-//   // document.getElementById("preview1").herf = $(this).herf;
-// };
-
-function readURL2(input) {
-
-
-
-  if (input.files && input.files[0]) {
-    var reader = new FileReader();
-
-    reader.onload = function (e) {
-      $('#blah2')
-      .attr('src', e.target.result)
-      .width(100)
-      .height(100);
-    };
-
-    reader.readAsDataURL(input.files[0]);
-  }
-}
 
 
 
