@@ -98,7 +98,7 @@
 
 	<div class="sidebar-widgets-wrap clearfix">
 		<div class="widget clearfix">
-			<img class="aligncenter" src="images/MMM Cover.jpg" alt="">
+			<img class="aligncenter" src="{{ $book->photourl1 }}" alt="">
 		</div>
 		<div style="padding-left:10px;">
 			<a href="#" class="button button-large button-rounded">Subscribe</a>

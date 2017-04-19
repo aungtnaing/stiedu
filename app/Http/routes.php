@@ -308,7 +308,11 @@
 			->take(4)
 			->get();
 
-			
+
+				$book = Books::find(Books::max('id'));
+
+			// var_dump($book);
+			// die();
 			return view('pages.magazines')
 			->with('categorys', $categorys)
 			->with('travelsectorposts', $travelsectorposts)
@@ -322,7 +326,8 @@
 			->with('standouts', $standouts)
 			->with('undergrounds', $undergrounds)
 			->with('popularposts', $popularposts)
-			->with('recentposts', $recentposts);
+			->with('recentposts', $recentposts)
+			->with('book', $book);
 ;
 			
 			
