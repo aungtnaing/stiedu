@@ -38,6 +38,17 @@
              
           }
   </script>
+    <script type="text/javascript">
+  function addbook(bprice, vnum, inum){
+   
+                    var e1 = document.getElementById('totalbox').innerHTML;
+                    if (e1 == "")e1 = 0;
+                    document.getElementById('totalbox').innerHTML = parseInt(e1) + bprice;
+                     document.getElementById('bookinfo').innerHTML  =  document.getElementById('bookinfo').innerHTML + '<br>' + 'vol' + vnum + ':' + inum + '  =   ' + bprice + 'ks';
+                    
+             
+          }
+  </script>
 
   <script type="text/javascript">
     function wishliststore(id,type){

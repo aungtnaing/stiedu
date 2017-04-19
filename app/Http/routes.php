@@ -14,6 +14,7 @@
 		use App\User;
 		use App\Category;
 		use App\Posts;
+		use App\Books;
 		
 
 		Route::get('/', 'WelcomeController@index');
@@ -340,9 +341,17 @@
 	Route::get('bookstore', function() {
 
 				$categorys = Category::All();
+
+				$books = Books::orderBy('volnumber', 'DESC')
+								->get();
+
+
+				$bookcols = Books::distinct()->get(['volnumber']);
 			
 			return view('pages.bookstore')
-			->with('categorys', $categorys);
+			->with('categorys', $categorys)
+			->with('books', $books)
+			->with('bookcols', $bookcols);
 			
 			
 		});

@@ -54,6 +54,7 @@ class BooksController extends Controller {
 
 		$this->validate($request,[
 			'photourl1' => 'required',
+			'pdfsample' => 'required',
 			'volnumber' => 'required',
 			'issuenumber' => 'required',
 			'description' => 'max:1000',
@@ -78,6 +79,7 @@ class BooksController extends Controller {
 		$destinationPath = $imagePath . $directory . '/photos';
 	
 		$photourl1 = "";
+		$pdfsample = "";
 	
 		
 		if(Input::file('photourl1')!="")
@@ -89,6 +91,17 @@ class BooksController extends Controller {
 				
 				Input::file('photourl1')->move($destinationPath, $name); // uploading file to given path
 				$photourl1 = "/images/books/" . $directory . '/photos/' .  $name;
+
+				if(Input::file('pdfsample')!="")
+				{
+					if(Input::file('pdfsample')->isValid())
+					{
+						$name =  time() . '-pdfsample' . '.' . $input['pdfsample']->getClientOriginalExtension();
+						Input::file('pdfsample')->move($destinationPath, $name); // uploading file to given path
+						$pdfsample = "/images/books/" . $directory . '/photos/' .  $name;
+					}
+				}
+
 
 			}
 
@@ -113,6 +126,7 @@ class BooksController extends Controller {
 		
 	
 		$book->photourl1 = $photourl1;
+		$book->pdfsample = $pdfsample;
 		
 		
 		$book->save();
@@ -176,6 +190,7 @@ class BooksController extends Controller {
 		$destinationPath = $imagePath . $directory . '/photos';
 		
 		$photourl1 = $book->photourl1;
+		$pdfsample = $book->pdfsample;
 		
 		if(Input::file('photourl1')!="")
 		{
@@ -204,6 +219,26 @@ class BooksController extends Controller {
 
 		}
 
+		if(Input::file('pdfsample')!="")
+				{
+					
+					if(Input::file('pdfsample')->isValid())
+					{
+					
+						if($pdfsample!="")
+						{
+							if(file_exists(public_path() .$pdfsample))
+							{
+								unlink(public_path() . $pdfsample);
+							}
+						}
+						$name =  time() . '-pdfsample' . '.' . $input['pdfsample']->getClientOriginalExtension();
+						Input::file('pdfsample')->move($destinationPath, $name); // uploading file to given path
+						$pdfsample = "/images/books/" . $directory . '/photos/' .  $name;
+					
+					}
+				}
+
 		$book->bookname = $request->input("bookname");
 		$book->volnumber = $request->input("volnumber");
 		$book->issuenumber = $request->input("issuenumber");
@@ -224,6 +259,7 @@ class BooksController extends Controller {
 
 	
 		$book->photourl1 = $photourl1;
+		$book->pdfsample = $pdfsample;
 		
 		
 		$book->save();

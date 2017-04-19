@@ -42,14 +42,14 @@
                   <div class="actions"><a id="preview1" class="lightbox_trigger" herf=""><i class="icon-search"></i></a> </div>
 
                 </li>
-              <!--   <li class="span3"> <a> 
-                 <input style="display:none;" id="file-input2" name="photourl2" type='file' onchange="readURL2(this);" />                    
+                <li class="span3"> <a> 
+                 <input style="display:none;" id="file-input2" name="pdfsample" type='file' required/>                    
                  <label for="file-input2">
-                  <i class="icon-camera"></i>.Thum 400x300<br>
-                  <img id="blah2" src="//placehold.it/100" alt="avatar" alt="your image" />
+                  <i class="icon-file"></i>pdf sample<br>
+                  <!-- <img id="blah2" src="//placehold.it/100" alt="avatar" alt="your image" /> -->
                 </label>
                 <div class="actions"> <a class="lightbox_trigger" href="blah2"><i class="icon-search"></i></a> </div>
-              </li> -->
+              </li>
 
             </ul>
 

@@ -30,7 +30,7 @@
 <!--End-Action boxes-->    
 
 <!--Chart-box-->    
-    <div class="row-fluid">
+   <!--  <div class="row-fluid">
       <div class="widget-box">
         <div class="widget-title bg_lg"><span class="icon"><i class="icon-signal"></i></span>
           <h5>Site Analytics</h5>
@@ -53,7 +53,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 <!--End-Chart-box--> 
     <hr/>
     <div class="row-fluid">
@@ -64,26 +64,19 @@
           </div>
           <div class="widget-content nopadding collapse in" id="collapseG2">
             <ul class="recent-posts">
+              
+            @foreach($latestposts as $latestblog)
               <li>
-                <div class="user-thumb"> <img width="40" height="40" alt="User" src="img/demo/av1.jpg"> </div>
-                <div class="article-post"> <span class="user-info"> By: john Deo / Date: 2 Aug 2012 / Time:09:27 AM </span>
-                  <p><a href="#">This is a much longer one that will go on for a few lines.It has multiple paragraphs and is full of waffle to pad out the comment.</a> </p>
+                <div class="user-thumb"> <img width="40" height="40" alt="User" src="{{ $latestblog->user->photourl }}"> </div>
+                <div class="article-post"> <span class="user-info"> By: {{ $latestblog->user->name }} / Date: {{ $latestblog->created_at }} </span>
+                  <p><a href="#">{{ $latestblog->name }}. :: {{ $latestblog->category->name }}</a> </p>
                 </div>
               </li>
-              <li>
-                <div class="user-thumb"> <img width="40" height="40" alt="User" src="img/demo/av2.jpg"> </div>
-                <div class="article-post"> <span class="user-info"> By: john Deo / Date: 2 Aug 2012 / Time:09:27 AM </span>
-                  <p><a href="#">This is a much longer one that will go on for a few lines.It has multiple paragraphs and is full of waffle to pad out the comment.</a> </p>
-                </div>
-              </li>
-              <li>
-                <div class="user-thumb"> <img width="40" height="40" alt="User" src="img/demo/av4.jpg"> </div>
-                <div class="article-post"> <span class="user-info"> By: john Deo / Date: 2 Aug 2012 / Time:09:27 AM </span>
-                  <p><a href="#">This is a much longer one that will go on for a few lines.Itaffle to pad out the comment.</a> </p>
-                </div>
-              <li>
+              
+            @endforeach
+             <!--  <li>
                 <button class="btn btn-warning btn-mini">View All</button>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -147,7 +140,7 @@
             </ul>
           </div>
         </div> -->
-        <div class="widget-box">
+     <!--    <div class="widget-box">
           <div class="widget-title bg_lo"  data-toggle="collapse" href="#collapseG3" > <span class="icon"> <i class="icon-chevron-down"></i> </span>
             <h5>News updates</h5>
           </div>
@@ -163,8 +156,8 @@
           </div>
         </div>
         
-      </div>
-      <div class="span6">
+      </div> -->
+      <!-- <div class="span6"> -->
      <!--    <div class="widget-box widget-chat">
           <div class="widget-title bg_lb"> <span class="icon"> <i class="icon-comment"></i> </span>
             <h5>Chat Option</h5>
@@ -196,7 +189,7 @@
             </div>
           </div>
         </div> -->
-        <div class="widget-box">
+<!--         <div class="widget-box">
           <div class="widget-title"><span class="icon"><i class="icon-user"></i></span>
             <h5>Our Partner (Box with Fix height)</h5>
           </div>
@@ -221,7 +214,7 @@
                 </div>
             </ul>
           </div>
-        </div>
+        </div> -->
   <!--       <div class="accordion" id="collapse-group">
           <div class="accordion-group widget-box">
             <div class="accordion-heading">

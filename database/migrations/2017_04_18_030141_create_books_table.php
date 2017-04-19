@@ -26,7 +26,7 @@ class CreateBooksTable extends Migration {
 			$table->string('description',1000);
 			$table->string('mdescription', 1000);
 				$table->string('photourl1');
-				
+			$table->string('pdfsample');	
 			$table->boolean('active');
 		
 			$table->timestamps();

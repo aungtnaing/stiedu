@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\User;
 use DB;
 use Input;	
-use App\Bgphoto;
+use App\Posts;
 
 // use Intervention\Image\ImageManager;
 // use Intervention\Image\ImageManagerStatic as Image;
@@ -23,19 +23,21 @@ class DashboardController extends Controller {
 	 */
 	public function index(Request $request)
 	{
-		// echo "hello world d";
-		// die();
+		
 		$user = User::find($request->user()->id);
-		return view('dashboard.home')->with('user',$user);	
+
+			$latestposts = Posts::where('active',1)
+			->where('categoryid','!=', 2)
+			->orderBy('id','DESC')
+			->take(10)
+			->get();
+
+		return view('dashboard.home')
+				->with('latestposts', $latestposts)
+				->with('user',$user);	
 	}
 
-	public function bgchange()
-	{
-		// echo "hello world d";
-		// die();
-		$bgphoto = Bgphoto::find(1);
-		return view('dashboard.bgphoto.bgphotopannel')->with('bgphoto',$bgphoto);	
-	}
+	
 	/**
 	 * Show the form for creating a new resource.
 	 *

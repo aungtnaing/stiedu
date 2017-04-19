@@ -46,6 +46,14 @@
                   <div class="actions"><a id="preview1" class="lightbox_trigger" herf=""><i class="icon-search"></i></a> </div>
 
                 </li>
+                  <li class="span3"> <a> 
+                 <input style="display:none;" id="file-input2" name="pdfsample" type='file' />                    
+                 <label for="file-input2">
+                  <i class="icon-file"></i>.pdf sample<br>
+                  {{ $book->pdfsample }} 
+                </label>
+               
+              </li>
            
 
             </ul>
