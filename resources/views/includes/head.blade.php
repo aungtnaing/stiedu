@@ -39,40 +39,49 @@
           }
   </script>
     <script type="text/javascript">
-  function addbook(bprice, vnum, inum){
-   
-                    var e1 = document.getElementById('totalbox').innerHTML;
+  function addbook(bprice, vnum, inum, id){
+
+     var getUrl = window.location;
+    var baseUrl = getUrl .protocol + "//" + getUrl.host + "/";
+
+
+              $.ajax({
+                type:'POST',
+                url: baseUrl + 'makeorder',
+                data: {
+                  "_token": "{{ csrf_token() }}",
+                  "id": id
+                },
+                datatype: "json",
+                success:function(data){
+
+                    if(data.msg == "success")
+                    {
+                     var e1 = document.getElementById('totalbox').innerHTML;
+                   
                     if (e1 == "")e1 = 0;
                     document.getElementById('totalbox').innerHTML = parseInt(e1) + bprice;
-                     document.getElementById('bookinfo').innerHTML  =  document.getElementById('bookinfo').innerHTML + '<br>' + 'vol' + vnum + ':' + inum + '  =   ' + bprice + 'ks';
+                    document.getElementById('bookinfo').innerHTML  =  document.getElementById('bookinfo').innerHTML + '<br>' + 'vol' + vnum + ':' + inum + '  =   ' + bprice + 'ks';
+                     // document.getElementById('bookids').innerHTML = document.getElementById('bookids').innerHTML + id + ";";
+                    }
+                    else
+                    {
+                        var elem = document.getElementById('nlabel');
+                        var elem1 = document.getElementById('btnlogin');
+                        elem.style.display = 'block';
+                            elem1.style.display = 'block';
+                    
+                    }
+                }
+              });
+   
+                   
                     
              
           }
+
+
+ 
+         
   </script>
 
-  <script type="text/javascript">
-    function wishliststore(id,type){
-      var getUrl = window.location;
-      var baseUrl = getUrl .protocol + "//" + getUrl.host + "/";
-
-
-      $.ajax({
-        type:'POST',
-        url: baseUrl + 'wishliststore',
-        data: {
-          "_token": "{{ csrf_token() }}",
-          "id": id
-        },
-        datatype: "json",
-        success:function(data){
-                        // $("#msg").html(data.msg);
-                        var elem = document.getElementById(id+type);
-                        elem.style.display = 'block';
-                        
-
-                      }
-                    });
-    }
-
-
-  </script>

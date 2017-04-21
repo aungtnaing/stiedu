@@ -15,6 +15,7 @@
 		use App\Category;
 		use App\Posts;
 		use App\Books;
+		use App\Orderstemp;
 		
 
 		Route::get('/', 'WelcomeController@index');
@@ -311,8 +312,7 @@
 
 				$book = Books::find(Books::max('id'));
 
-			// var_dump($book);
-			// die();
+			
 			return view('pages.magazines')
 			->with('categorys', $categorys)
 			->with('travelsectorposts', $travelsectorposts)
@@ -343,24 +343,7 @@
 			
 		});
 
-	Route::get('bookstore', function() {
-
-				$categorys = Category::All();
-
-				$books = Books::orderBy('volnumber', 'DESC')
-								->get();
-
-
-				$bookcols = Books::distinct()->get(['volnumber']);
-			
-			return view('pages.bookstore')
-			->with('categorys', $categorys)
-			->with('books', $books)
-			->with('bookcols', $bookcols);
-			
-			
-		});
-
+	
 
 
 		Route::get('postdetails/{postid}', [
@@ -383,13 +366,49 @@
 		
 		Route::resource('joinus','JoinusController');
 
+
+	
 		Route::group(['middleware' => 'auth'],function()
 		{
+			
+			
+		// Route::get('maketest/{id}', [
+		// 	'uses' => 'CheckoutController@maketest'
+		// 	]);
+
+			Route::get('bookstore', function() {
+
+				$categorys = Category::All();
+
+				$books = Books::orderBy('volnumber', 'DESC')
+								->get();
+				$affed = Orderstemp::where('userid', Auth::user()->id)->delete();
+				
+				$bookcols = Books::distinct()->get(['volnumber']);
+			
+			return view('pages.bookstore')
+			->with('categorys', $categorys)
+			->with('books', $books)
+			->with('bookcols', $bookcols);
+			
+			
+		});
+
+
+			Route::post('makeorder', [
+			'uses' => 'CheckoutController@makeorder'
+			]);
+
+			Route::resource('checkouts','CheckoutController');
+			
+
 			Route::resource('comments','CommentsController');
 			Route::resource('replycomments','ReplycommentsController');
 		
 			Route::group(['middleware' => 'roleware2'],function()
 			{
+				
+
 				Route::resource('dashboard','DashboardController');
 				Route::resource('posts','PostsController');
 				Route::resource('books','BooksController');

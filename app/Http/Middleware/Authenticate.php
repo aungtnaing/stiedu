@@ -43,6 +43,7 @@ class Authenticate {
 				// echo "hello";
 				// die();
 				return redirect()->guest('auth/login');
+				// return back();
 			}
 		}
 

@@ -16,8 +16,10 @@
 						<div class="col_half">
 						<div class="panel panel-default">
 							<div class="panel-body">
+								<label style="display:none" id='nlabel'>Need to login!</label>
+								<a style="display:none" id='btnlogin' href="{{ url('/auth/login') }}">LOGIN</a>
 								<label id='bookinfo'></label><br>
-								<a href="login-register.html">Check Out   :   </a><label id='totalbox'></label>ks.
+								<a href="{{ url('/checkouts') }}">Check Out   :   </a><label id='totalbox'></label>ks.
 							</div>
 						</div>
 					</div>
@@ -37,7 +39,8 @@
 									<div class="sale-flash">{{ $book->discount }} %Off*</div>
 									@endif
 									<div class="product-overlay">
-										<a href="javascript:addbook({{ $book->price }}, {{ $book->volnumber }}, {{ $book->issuenumber }})" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Buy</span></a>
+										<a href="javascript:addbook({{ $book->price }}, {{ $book->volnumber }}, {{ $book->issuenumber }}, {{ $book->id }})" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Buy</span></a>
+										<!-- <a href="{{ url('/maketest', $book->id) }}" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Buy</span></a> -->
 										<a href="{{ $book->pdfsample }}"  class="item-quick-view"  target="blank"><i class="icon-zoom-in2" ></i><span>View</span></a>
 									</div>
 								</div>

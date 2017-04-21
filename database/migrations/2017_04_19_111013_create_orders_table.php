@@ -15,6 +15,7 @@ class CreateOrdersTable extends Migration {
 		Schema::create('orders', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->integer('userid');
 			$table->string('name');
 			$table->string('lastname');
 			$table->string('phoneno');
@@ -23,6 +24,7 @@ class CreateOrdersTable extends Migration {
 			$table->string('note', 1000);
 			$table->string('bookinfo', 1000);
 			$table->boolean('active');
+
 			$table->timestamps();
 		});
 	}
