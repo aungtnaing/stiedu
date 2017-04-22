@@ -13,7 +13,7 @@ use App\Books;
 use App\Category;
 use Auth;
 
-class CheckoutController extends Controller {
+class CheckoutmyanmarController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -28,7 +28,7 @@ class CheckoutController extends Controller {
 
 		$categorys = Category::All();
 								
-		return view('pages.checkout')->with('orderbooks', $orderbooks)
+		return view('pages.checkoutmyanmar')->with('orderbooks', $orderbooks)
 									 ->with('categorys', $categorys);
 	}
 
@@ -37,10 +37,10 @@ class CheckoutController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function subscribeindex($bookid, Request $request)
+	public function subscribemyanmarindex($bookid, Request $request)
 	{
-		
 				$affed = Orderstemp::where('userid', Auth::user()->id)->delete();
+
 			if (Auth::check()) {
   
 
@@ -69,7 +69,7 @@ class CheckoutController extends Controller {
 
 		$categorys = Category::All();
 								
-		return view('pages.checkout')->with('orderbooks', $orderbooks)
+		return view('pages.checkoutmyanmar')->with('orderbooks', $orderbooks)
 									 ->with('categorys', $categorys);
 	}
 

@@ -333,6 +333,121 @@
 			
 		});
 
+	Route::get('magazinemyanmar', function() {
+
+		$categorys = Category::All();
+
+			
+		$travelsectorposts = Posts::where('active',1)
+			->where('categoryid', 1)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(5)
+			->get();
+
+		$exposures = Posts::where('active',1)
+			->where('categoryid', 5)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(6)
+			->get();
+
+			$picturesques = Posts::where('active',1)
+			->where('categoryid', 6)
+			->where('name','!=','')
+			->orderBy('id','DESC')
+			->take(14)
+			->get();
+
+
+		$arrivals = Posts::where('active',1)
+			->where('categoryid', 7)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(3)
+			->get();
+
+		$infocus = Posts::where('active',1)
+			->where('categoryid', 8)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(3)
+			->get();
+
+		$deperatures = Posts::where('active',1)
+			->where('categoryid', 9)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(3)
+			->get();
+
+			$snapshops = Posts::where('active',1)
+			->where('categoryid', 10)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(3)
+			->get();
+
+			$checkins = Posts::where('active',1)
+			->where('categoryid', 11)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(3)
+			->get();
+
+			$standouts = Posts::where('active',1)
+			->where('categoryid', 12)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(3)
+			->get();
+
+			$undergrounds = Posts::where('active',1)
+			->where('categoryid', 13)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(3)
+			->get();
+
+				$popularposts = Posts::where('active',1)
+			->where('popular',1)
+			->where('categoryid','!=', 2)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(4)
+			->get();
+
+		$recentposts = Posts::where('active',1)
+			->where('categoryid','!=', 2)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(4)
+			->get();
+
+
+				$book = Books::find(Books::max('id'));
+
+			
+			return view('pages.magazinesmyanmar')
+			->with('categorys', $categorys)
+			->with('travelsectorposts', $travelsectorposts)
+			->with('exposures', $exposures)
+			->with('picturesques', $picturesques)
+			->with('arrivals', $arrivals)
+			->with('infocus', $infocus)
+			->with('deperatures', $deperatures)
+			->with('snapshops', $snapshops)
+			->with('checkins', $checkins)
+			->with('standouts', $standouts)
+			->with('undergrounds', $undergrounds)
+			->with('popularposts', $popularposts)
+			->with('recentposts', $recentposts)
+			->with('book', $book);
+;
+			
+			
+		});
+
 	Route::get('booking', function() {
 
 				$categorys = Category::All();
@@ -393,6 +508,23 @@
 			
 			
 		});
+			Route::get('bookstoremyanmar', function() {
+
+				$categorys = Category::All();
+
+				$books = Books::orderBy('volnumber', 'DESC')
+								->get();
+				$affed = Orderstemp::where('userid', Auth::user()->id)->delete();
+				
+				$bookcols = Books::distinct()->get(['volnumber']);
+			
+			return view('pages.bookstoremyanmar')
+			->with('categorys', $categorys)
+			->with('books', $books)
+			->with('bookcols', $bookcols);
+			
+			
+		});
 
 
 			Route::post('makeorder', [
@@ -400,34 +532,69 @@
 			]);
 
 			Route::resource('checkouts','CheckoutController');
+			Route::resource('checkoutsmyanmar','CheckoutmyanmarController');
 			
+			Route::get('subscribecheckouts/{bookid}', [
+			'uses' => 'CheckoutController@subscribeindex'
+			]);
+
+			Route::get('subscribemyanmarcheckouts/{bookid}', [
+			'uses' => 'CheckoutmyanmarController@subscribemyanmarindex'
+			]);
+
 
 			Route::resource('comments','CommentsController');
 			Route::resource('replycomments','ReplycommentsController');
-		
-			Route::group(['middleware' => 'roleware2'],function()
+			
+			Route::group(['middleware' => 'rolewaredashboard'],function()
+			{
+				Route::resource('dashboard','DashboardController');
+
+			});	
+			Route::group(['middleware' => 'roleware6'],function()
+			{
+					Route::resource('adlists','AdlistsController');
+			});		
+
+			Route::group(['middleware' => 'roleware5'],function()
+			{
+					Route::resource('orderlists','OrderlistsController');
+			});		
+
+			Route::group(['middleware' => 'roleware3_4'],function()
 			{
 				
+					
+					Route::resource('posts','PostsController');
+					Route::resource('postsmyanmar','PostsmyanmarController');
 
-				Route::resource('dashboard','DashboardController');
-				Route::resource('posts','PostsController');
-				Route::resource('books','BooksController');
-				Route::resource('postsmyanmar','PostsmyanmarController');
-				
-				Route::get('dashboarduserprofile', [
-					'uses' => 'ProfilesController@dashboarduserindex'
-					]);
-
-				Route::group(['middleware' => 'roleware'],function()
+				Route::group(['middleware' => 'roleware2'],function()
 				{
 					
-					Route::resource('categorys','CategoryController');
-					Route::resource('userspannel','UserspannelController');
-					
-				});
 
-			});
+					
+					Route::resource('books','BooksController');
+
+					Route::get('dashboarduserprofile', [
+						'uses' => 'ProfilesController@dashboarduserindex'
+						]);
+
+					
+
+					Route::group(['middleware' => 'roleware'],function()
+					{
+						
+						Route::resource('categorys','CategoryController');
+						Route::resource('userspannel','UserspannelController');
+						
+					});
+
+				});
 			
+			});
+
+
+
 			
 		});
 

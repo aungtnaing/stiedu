@@ -44,7 +44,15 @@
 									@if($user->roleid==1)
 									<td>Admin</td>
 									@elseif($user->roleid==2)
-									<td>Publisher</td>
+									<td>Editor</td>
+									@elseif($user->roleid==3)
+									<td>Designer</td>
+									@elseif($user->roleid==4)
+									<td>Author</td>
+									@elseif($user->roleid==5)
+									<td>Circulator</td>
+									@elseif($user->roleid==6)
+									<td>Ad Manager</td>
 									@else
 									<td>User</td>
 									@endif

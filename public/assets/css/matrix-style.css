@@ -5,12 +5,30 @@
 html, body{height:100%}
 /* Main */
 
+
 /*Bootstrap-overlay*/
 
 body {
 	overflow-x: hidden;
 	margin-top: -10px; font-family: 'Open Sans', sans-serif; font-size:12px; color:#666;
 }
+
+@font-face {
+font-family: 'Tharlon';
+font-style: normal;
+font-weight: 400;
+src: url(../fonts/mmfont/Tharlon-Regular.eot);
+src: url(../fonts/mmfont/Tharlon-Regular.eot?#iefix) format('embedded-opentype'),
+url(../fonts/mmfont/Tharlon-Regular.woff2) format('woff2'),
+url(../fonts/mmfont/Tharlon-Regular.woff) format('woff'),
+url(../fonts/mmfont/Tharlon-Regular.ttf) format('truetype');
+}
+body {
+  font-family: 'Tharlon', sans-serif;
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
 a{color:#666;}
 a:hover, a:focus {
 	text-decoration: none; color:#28b779;

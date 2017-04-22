@@ -78,12 +78,26 @@
           <div class="controls">
                <select name="roleid">
                   @if($user->roleid==1)
-                  <option value="{{ $user->roleid }}">1 : All Access</option>
+                  <option value="{{ $user->roleid }}">1 : Admin</option>
+                  @elseif($user->roleid==2)
+                  <option value="{{ $user->roleid }}">2 : Editor</option>
+                  @elseif($user->roleid==3)
+                   <option value="{{ $user->roleid }}">3 : Designer</option>
+                  @elseif($user->roleid==4)
+                  <option value="{{ $user->roleid }}">4 : Author</option>
+                  @elseif($user->roleid==5)
+                  <option value="{{ $user->roleid }}">5 : Circulator</option>
+                  @elseif($user->roleid==6)
+                  <option value="{{ $user->roleid }}">6 : Ad Manager</option>
                   @else
-                  <option value="{{ $user->roleid }}">2 : Publisher (only post)</option>
+                  <option value="{{ $user->roleid }}">User</option>
                   @endif
-                  <option value="1">1 : All Access</option>
-                  <option value="2">2 : Publisher (only post)</option>
+                  <option value="1">1 : Admin</option>
+                  <option value="2">2 : Editor (all post)</option>
+                  <option value="3">3 : Designer</option>
+                  <option value="4">4 : Author (own post)</option>
+                  <option value="5">5 : Circulator</option>
+                  <option value="6">6 : Manager</option>
                   <option value="0">0 : User</option>
                </select>
           </div>

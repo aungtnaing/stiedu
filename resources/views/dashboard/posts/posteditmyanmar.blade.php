@@ -4,7 +4,7 @@
 
 <div id="content">
   <div id="content-header">
-    <div id="breadcrumb"> <a href="{{ url('/dashboard') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">edit post  ျမန္မာ</a> </div>
+    <div id="breadcrumb"> <a href="{{ url('/dashboard') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">edit post  မြန်မာ</a> </div>
 
   </div>
   <div class="container-fluid">
@@ -25,7 +25,7 @@
       <div class="span10">
         <div class="widget-box">
           <div class="widget-title"> <span class="postsmyanmaricon"> <i class="icon-align-justify"></i> </span>
-            <h5>Post-info -  ျမန္မာ</h5>
+            <h5>Post-info - မြန်မာ</h5>
           </div>
           <div class="widget-content">
            <form action="{{ route("postsmyanmar.update", $post->id) }}" method="POST" enctype="multipart/form-data">
@@ -115,7 +115,7 @@
                 </select>
               </div>
             </div>
-
+            @if(Auth::user()->roleid==1)
       <div class="control-group">
          
 
@@ -143,7 +143,7 @@
             <input type="checkbox" name="popular" value="" checked>Popular<br>
             @endif
         </div>
-
+        @endif
 
             <div class="form-actions">
              <input class="btn btn-primary" type="submit" value="Save Changes"> 

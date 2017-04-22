@@ -101,7 +101,7 @@
                 </select>
               </div>
             </div>
-
+          @if(Auth::user()->roleid==1)
       <div class="control-group">
           <input type="checkbox" name="mainslide" value="1" checked>Mainslide
         </div>
@@ -113,7 +113,7 @@
           <div class="control-group">
           <input type="checkbox" name="popular" value="1" checked>Popular
         </div>
-
+        @endif
 
             <div class="form-actions">
              <input class="btn btn-primary" type="submit" value="Save Changes"> 

@@ -1,9 +1,9 @@
-@extends('layouts.default')
+@extends('layouts.defaultmyanmar')
 @section('content')
 <section id="page-title">
 
 	<div class="container clearfix">
-		<h1>Magazine</h1>
+		<h1>မဂ္ဂဇင်း</h1>
 		
 	</div>
 
@@ -15,10 +15,10 @@
 				<div class="col-md-8 bottommargin">
 					<div class="col_full bottommargin-lg"> </div>						
 					
-					@include('pages.magazine.travelsector') 
+					@include('pages.magazine.travelsectormyanmar') 
 					
 
-					@include('pages.magazine.exposure') 
+					@include('pages.magazine.exposuremyanmar') 
 
 					<div class="bottommargin-lg clearfix">
 						<img src="<?php echo url() ?>/images/magazine/ad.jpg" alt="Ad" class="aligncenter notopmargin nobottommargin">
@@ -27,7 +27,7 @@
 					@include('pages.magazine.picturesque') 
 
 
-					@include('pages.magazine.arrivalandinfocus') 
+					@include('pages.magazine.arrivalandinfocusmyanmar') 
 
 
 					<div class="clearfix"></div>
@@ -42,7 +42,7 @@
 				<div class="clear"></div>
 
 				
-				@include('pages.magazine.deperature') 
+				@include('pages.magazine.deperaturemyanmar') 
 
 
 				<div class="clearfix"></div>
@@ -55,7 +55,7 @@
 			</div>
 			<div class="clear"></div>
 
-			@include('pages.magazine.snapshop') 
+			@include('pages.magazine.snapshopmyanmar') 
 
 
 			<div class="clearfix"></div>
@@ -67,7 +67,7 @@
 		</div>
 		<div class="clear"></div>
 
-		@include('pages.magazine.checkin') 
+		@include('pages.magazine.checkinmyanmar') 
 
 		<div class="clearfix"></div>
 		<br>
@@ -78,7 +78,7 @@
 	</div>
 	<div class="clear"></div>
 
-	@include('pages.magazine.standout') 
+	@include('pages.magazine.standoutmyanmar') 
 
 	<div class="clearfix"></div>
 	<br>
@@ -89,7 +89,7 @@
 </div>
 <div class="clear"></div>
 
-@include('pages.magazine.underground') 
+@include('pages.magazine.undergroundmyanmar') 
 
 </div>
 <div class="col-md-4">
@@ -101,8 +101,8 @@
 			<img class="aligncenter" src="{{ $book->photourl1 }}" alt="">
 		</div>
 		<div style="padding-left:10px;">
-			<a href="{{ url('/subscribecheckouts', $book->id) }}" class="button button-large button-rounded">Subscribe</a>
-			<a href="bookstore" class="button button-large button-rounded">Book Store</a>
+			<a href="{{ url('/subscribemyanmarcheckouts', $book->id) }}" class="button button-large button-rounded">Subscribe</a>
+			<a href="bookstoremyanmar" class="button button-large button-rounded">Book Store</a>
 		</div>
 
 		<div class="widget widget_links clearfix">
@@ -112,7 +112,7 @@
 				<ul>
 					@for($i = 0; $i < count($categorys); $i++)
 						@if($i < 6)
-						<li><a href="{{ url('/postlists', $categorys[$i]->id) }}">{{ $categorys[$i]->name }}</a></li>
+						<li><a href="{{ url('/postlistsmyanmar', $categorys[$i]->id) }}">{{ $categorys[$i]->mname }}</a></li>
 						@endif
 					@endfor
 
@@ -124,7 +124,7 @@
 
 					@for($i = 6; $i < count($categorys); $i++)
 						
-						<li><a href="{{ url('/postlists', $categorys[$i]->id) }}">{{ $categorys[$i]->name }}</a></li>
+						<li><a href="{{ url('/postlistsmyanmar', $categorys[$i]->id) }}">{{ $categorys[$i]->mname }}</a></li>
 						
 					@endfor
 				
@@ -165,7 +165,7 @@
 								</div>
 								<div class="entry-c">
 									<div class="entry-title">
-										<h4><a href="{{ url('/postdetails', $popularpost->id) }}">{{ $popularpost->name }}</a></h4>
+										<h4><a href="{{ url('/postdetailsmyanmar', $popularpost->id) }}">{{ $popularpost->mname }}</a></h4>
 									</div>
 									<ul class="entry-meta">
 										<li><i class="icon-comments-alt"></i>{{ $tcmt1 }}Comments</li>
@@ -189,7 +189,7 @@
 								</div>
 								<div class="entry-c">
 									<div class="entry-title">
-										<h4><a href="{{ url('/postdetails', $recentpost->id) }}">{{ $recentpost->name }}</a></h4>
+										<h4><a href="{{ url('/postdetailsmyanmar', $recentpost->id) }}">{{ $recentpost->mname }}</a></h4>
 									</div>
 									<ul class="entry-meta">
 										<li>{{ $recentpost->createed_at }}</li>

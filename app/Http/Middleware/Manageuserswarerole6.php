@@ -4,7 +4,7 @@ use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
 
-class Manageuserswarerole2 {
+class Manageuserswarerole6 {
 
 	
 	/**
@@ -39,15 +39,15 @@ class Manageuserswarerole2 {
 	{
 		
 
-		if ($request->user()->roleid==2)
+		if ($request->user()->roleid==6 || $request->user()->roleid==1 || $request->user()->roleid==3)
 		{
 
 			return $next($request);
 		
 		}
-
-		if ($request->user()->roleid!=1)
-		{	if ($request->ajax())
+		else
+		{
+			if ($request->ajax())
 			{
 				return response('Unauthorized.', 401);
 			}
@@ -55,8 +55,11 @@ class Manageuserswarerole2 {
 			{
 				return redirect()->guest('auth/login');
 			}
+			
 		}
-		// if ($request->user()->roleid==0 || $request->user()->roleid==3 || $request->user()->roleid==5)
+
+		
+		// if ($request->user()->roleid>6 || $request->user()->roleid==0)
 		// {	if ($request->ajax())
 		// 	{
 		// 		return response('Unauthorized.', 401);

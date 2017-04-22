@@ -62,7 +62,7 @@
 									<td>
 										<a class="btn btn-mini btn-primary" href="{{ route("books.edit", $book->id ) }}">Edit</a>
 									</td>
-									@if(Auth::user()->roleid==1)
+									@if(Auth::user()->roleid==1 || Auth::user()->roleid==2)
 									<td>
 										<form method="POST" action="{{ route("books.destroy", $book->id) }}" accept-charset="UTF-8">
 											<input name="_method" type="hidden" value="DELETE">

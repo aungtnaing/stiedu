@@ -8,7 +8,7 @@
   @if(Auth::user()->roleid==1)
 	@include('dashboard.includes.sidebar')
   @else
-  @include('dashboard.includes.sidebarpublisher')
+  @include('dashboard.includes.sidebarpublishers')
   @endif
 		
 	

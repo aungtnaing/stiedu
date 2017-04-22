@@ -118,16 +118,16 @@
 					<nav id="primary-menu" class="dark">
 
 						<ul>
-							<li class="current"><a href="#"><div>ပင်မစာမျက်နှာ</div></a>
+							<li class="current"><a href="<?php echo url(); ?>/homemyanmar"><div>ပင်မစာမျက်နှာ</div></a>
 								
 							</li>
-							<li><a href="magazine"><div>မဂ္ဂဇင်း</div></a>
+							<li><a href="<?php echo url(); ?>/magazinemyanmar"><div>မဂ္ဂဇင်း</div></a>
 								
 							</li>
-							<li><a href="booking"><div>Booking</div></a>
+							<li><a href="<?php echo url(); ?>/booking"><div>Booking</div></a>
 								
 							</li>
-							<li><a href="joinus"><div>Join Us</div></a>
+							<li><a href="<?php echo url(); ?>/joinus"><div>Join Us</div></a>
 								
 							</li>
 						</ul>

@@ -229,19 +229,62 @@ class LanguageController extends Controller {
 	public function homemyanmar()
 	{
 		
-
-		$mainslides = Mainslide::where('active',1)
-			->orderBy('slideno','asc')
-			->take(10)
+	$mainslides = Posts::where('active',1)
+			->where('mainslide', 1)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
 			->get();
 
+
+		$trvelsectorposts = Posts::where('active',1)
+			->where('categoryid', 1)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(6)
+			->get();
+
+	$videoposts = Posts::where('active',1)
+			->where('categoryid', 2)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(6)
+			->get();
+
+
+		$specialfeatures = Posts::where('active',1)
+			->where('categoryid', 3)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(6)
+			->get();
+
+
+				$reviews = Posts::where('active',1)
+			->where('categoryid', 4)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(3)
+			->get();
+
+	$latestblogs = Posts::where('active',1)
+			->where('categoryid','!=', 2)
+			->where('mname','!=','')
+			->orderBy('id','DESC')
+			->take(4)
+			->get();
+
+
 	
-		
-		$categorys = Category::orderBy('id', 'desc')->get();
+		$categorys = Category::All();
 
 		return view('pages.homemyanmar')
-			->with('mainslides', $mainslides)
-			->with('categorys', $categorys);
+				->with('travelsectorposts', $trvelsectorposts)
+				->with('videoposts', $videoposts)
+				->with('specialfeatures', $specialfeatures)
+				->with('reviews', $reviews)
+				->with('latestblogs', $latestblogs)
+				->with('categorys', $categorys)
+				->with('mainslides', $mainslides);
 		 	
 	}
 

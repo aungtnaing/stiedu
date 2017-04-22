@@ -35,7 +35,7 @@
 									<th>mContent</th>
 									<th>Category</th>
 									<th>Writer</th>
-									<th>Active</th>
+									<th>Publish</th>
 									<th>Mslide</th>
 									<th>Myanmar</th>
 									<th>English</th>
@@ -57,7 +57,7 @@
 									@if($post->active==1)
 									<td><i class=" icon-check"></i></td>
 									@else
-									<td></td>
+									<td><i class=" icon-check-empty"></i></td>
 									@endif
 									@if($post->mainslide==1)
 									<td><i class=" icon-check"></i></td>
@@ -70,15 +70,30 @@
 									<td>
 										<a class="btn btn-mini btn-primary" href="{{ route("posts.edit", $post->id ) }}">Edit</a>
 									</td>
-									@if(Auth::user()->roleid==1)
-									<td>
-										<form method="POST" action="{{ route("posts.destroy", $post->id) }}" accept-charset="UTF-8">
-											<input name="_method" type="hidden" value="DELETE">
-											<input type="hidden" name="_token" value="{{ csrf_token() }}">
-											<input class="btn btn-mini btn-danger" type="submit" value="Delete">
-										</form>
-									</td>
+									@if(Auth::user()->roleid==1 || Auth::user()->roleid==2)
+										<td>
+												<form method="POST" action="{{ route("posts.destroy", $post->id) }}" accept-charset="UTF-8">
+													<input name="_method" type="hidden" value="DELETE">
+													<input type="hidden" name="_token" value="{{ csrf_token() }}">
+													<input class="btn btn-mini btn-danger" type="submit" value="Delete">
+												</form>
+											</td>
+
+									@else
+										@if($post->active!=1)
+											<td>
+												<form method="POST" action="{{ route("posts.destroy", $post->id) }}" accept-charset="UTF-8">
+													<input name="_method" type="hidden" value="DELETE">
+													<input type="hidden" name="_token" value="{{ csrf_token() }}">
+													<input class="btn btn-mini btn-danger" type="submit" value="Delete">
+												</form>
+											</td>
+										@else
+											<td></td>
+										@endif
+
 									@endif
+									
 								</tr>
 								@endforeach
 

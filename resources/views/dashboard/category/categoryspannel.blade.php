@@ -17,7 +17,7 @@
 					<div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
 						<h5>CATEGORIES</h5>
 					</div>
-					<div class="widget-content nopadding	">
+					<div class="widget-content nopadding">
 						<table class="table table-bordered data-table">
 							<thead>
 								<tr>

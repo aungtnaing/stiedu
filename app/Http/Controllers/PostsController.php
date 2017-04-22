@@ -25,7 +25,7 @@ class PostsController extends Controller {
 	public function index(Request $request)
 	{
 		
-		if(Auth::user()->roleid==1)
+		if(Auth::user()->roleid==1 || Auth::user()->roleid==2 || Auth::user()->roleid==3)
 
 		{
 			$posts = Posts::All();

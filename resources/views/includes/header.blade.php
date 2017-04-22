@@ -119,16 +119,16 @@
 					<nav id="primary-menu" class="dark">
 
 						<ul>
-							<li class="current"><a href="#"><div>Home</div></a>
+							<li class="current"><a href="/"><div>Home</div></a>
 								
 							</li>
-							<li><a href="magazine"><div>Magazine</div></a>
+							<li><a href="<?php echo url(); ?>/magazine"><div>Magazine</div></a>
 								
 							</li>
-							<li><a href="booking"><div>Booking</div></a>
+							<li><a href="<?php echo url(); ?>/booking"><div>Booking</div></a>
 								
 							</li>
-							<li><a href="joinus"><div>Join Us</div></a>
+							<li><a href="<?php echo url(); ?>/joinus"><div>Join Us</div></a>
 								
 							</li>
 						</ul>

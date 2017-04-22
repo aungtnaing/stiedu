@@ -115,7 +115,7 @@
                 </select>
               </div>
             </div>
-
+  @if(Auth::user()->roleid==1)
       <div class="control-group">
          
 
@@ -143,7 +143,7 @@
             <input type="checkbox" name="popular" value="" checked>Popular<br>
             @endif
         </div>
-
+        @endif
 
             <div class="form-actions">
              <input class="btn btn-primary" type="submit" value="Save Changes"> 
