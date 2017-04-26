@@ -40,41 +40,104 @@ class LanguageController extends Controller {
 	public function changemn()
 	{
 	
-		// $a = $_SERVER['HTTP_REFERER'];
+		$a = $_SERVER['HTTP_REFERER'];
 		
 		// $page = "pages.homemyanmar";
-		// if (strpos($a, 'about') !== false)
-		// {
-		// 	// $page = "pages.aboutmyanmar";
-		// 	 return redirect('aboutusmyanmar');
-		// }
-		// if (strpos($a, 'services') !== false)
-		// {
-		// 	 return redirect('servicesmyanmar');
-		// }
-		// if (strpos($a, 'contact') !== false)
-		// {
-		// 	 return redirect('contactusmyanmar');
-		// }
+		// 
+		if (strpos($a, 'about') !== false)
+		{
+			
+			 return redirect('aboutusmyanmar');
+		}
+		if (strpos($a, 'advertisewithus') !== false)
+		{
+			 return redirect('advertisewithusmyanmar');
+		}
+		if (strpos($a, 'contactus') !== false)
+		{
+			 return redirect('contactusmyanmar');
+		}
 
-		// if (strpos($a, 'projectdetail') !== false)
-		// {
-		// 	$var = explode("/", $a);
-			 
-		// 	$projectid = $var[sizeof($var)-1];
-
-		// 	return redirect()->action(
-		// 		    'ProjectsController@projectdetailmyanmar', ['projectid' => $projectid]
-		// 		);
+		if (strpos($a, 'privacypolicy') !== false)
+		{
 		
-		// }
+			 return redirect('privacypolicymyanmar');
+		}
+		if (strpos($a, 'termscondation') !== false)
+		{
+			 return redirect('termscondationmyanmar');
+		}
+		if (strpos($a, 'postlists') !== false)
+		{
+				$var = explode("/", $a);
+			 
+			$catid = $var[sizeof($var)-1];
+
+			 // return redirect('postlistsmyanmar', $catid);
+			// return redirect('postlistsmyanmar', ['categoryid' => $catid]);
+			 // return redirect()->action(
+				//     'postlistsmyanmar', ['categoryid' => $catid]
+				// );
+			 return redirect()->route('postlistsmyanmar', ['categoryid' => $catid]);
+			// return route('postlistsmyanmar', ['categoryid' => $catid]);
+			// return redirect()->route('postlistsmyanmar', $catid);
+			// return redirect()->route('postlistsmyanmar')->with('categoryid', $catid);
+
+		}
+			if (strpos($a, 'storelocator') !== false)
+		{
+			
+			 return redirect('storelocatormyanmar');
+		}
+		if (strpos($a, 'magazine') !== false)
+		{
+			 return redirect('magazinemyanmar');
+		}
+		if (strpos($a, 'booking') !== false)
+		{
+			 return redirect('booking');
+		}
 
 
 
-		// $mainslides = Mainslide::where('active',1)
-		// 	->orderBy('slideno','asc')
-		// 	->take(10)
-		// 	->get();
+		if (strpos($a, 'postdetails') !== false)
+		{
+			$var = explode("/", $a);
+			 
+			$postid = $var[sizeof($var)-1];
+
+			return redirect()->action(
+				    'PostsController@postdetailsmyanmar', ['postid' => $postid]
+				);
+		
+		}
+
+		if (strpos($a, 'joinus') !== false)
+		{
+			
+			 return redirect('joinus');
+		}
+		if (strpos($a, 'bookstore') !== false)
+		{
+			 return redirect('bookstoremyanmar');	
+		}
+		if (strpos($a, 'checkouts') !== false)
+		{
+			 return redirect('checkoutsmyanmar');
+		}
+
+		if (strpos($a, 'subscribecheckouts') !== false)
+		{
+			$var = explode("/", $a);
+			 
+			$bookid = $var[sizeof($var)-1];
+
+			return redirect()->action(
+				    'CheckoutmyanmarController@subscribemyanmarindex', ['bookid' => $bookid]
+				);
+		
+		}
+
 
 		$mainslides = Posts::where('active',1)
 			->where('mainslide', 1)
@@ -138,32 +201,104 @@ class LanguageController extends Controller {
 	public function changeen()
 	{
 		
-		// $a = $_SERVER['HTTP_REFERER'];
-
-				
+		$a = $_SERVER['HTTP_REFERER'];
+		
 		// $page = "pages.homemyanmar";
-		// if (strpos($a, 'about') !== false)
-		// {
-		// 	// $page = "pages.aboutmyanmar";
-		// 	 return redirect('aboutus');
-		// }
-		// if (strpos($a, 'services') !== false)
-		// {
-		// 	 return redirect('services');
-		// }
-		// if (strpos($a, 'contact') !== false)
-		// {
-		// 	 return redirect('contactus');
-		// }
+		// 
+		if (strpos($a, 'aboutusmyanmar') !== false)
+		{
+			
+			 return redirect('aboutus');
+		}
+		if (strpos($a, 'advertisewithusmyanmar') !== false)
+		{
+			 return redirect('advertisewithus');
+		}
+		if (strpos($a, 'contactusmyanmar') !== false)
+		{
+			 return redirect('contactus');
+		}
 
-		// if (strpos($a, 'projectdetail') !== false)
-		// {
-		// 	$var = explode("/", $a);
+		if (strpos($a, 'privacypolicymyanmar') !== false)
+		{
+		
+			 return redirect('privacypolicy');
+		}
+		if (strpos($a, 'termscondationmyanmar') !== false)
+		{
+			 return redirect('termscondation');
+		}
+		if (strpos($a, 'postlistsmyanmar') !== false)
+		{
+				$var = explode("/", $a);
 			 
-		// 	$projectid = $var[sizeof($var)-1];
+			$catid = $var[sizeof($var)-1];
 
-		// 	return redirect()->action('ProjectsController@projectdetail', ['projectid' => $projectid]);
-		// }
+			 // return redirect('postlistsmyanmar', $catid);
+			// return redirect('postlistsmyanmar', ['categoryid' => $catid]);
+			 // return redirect()->action(
+				//     'postlistsmyanmar', ['categoryid' => $catid]
+				// );
+			 return redirect()->route('postlists', ['categoryid' => $catid]);
+			// return route('postlistsmyanmar', ['categoryid' => $catid]);
+			// return redirect()->route('postlistsmyanmar', $catid);
+			// return redirect()->route('postlistsmyanmar')->with('categoryid', $catid);
+
+		}
+			if (strpos($a, 'storelocatormyanmar') !== false)
+		{
+			
+			 return redirect('storelocator');
+		}
+		if (strpos($a, 'magazinemyanmar') !== false)
+		{
+			 return redirect('magazine');
+		}
+		if (strpos($a, 'booking') !== false)
+		{
+			 return redirect('booking');
+		}
+
+
+
+		if (strpos($a, 'postdetailsmyanmar') !== false)
+		{
+			$var = explode("/", $a);
+			 
+			$postid = $var[sizeof($var)-1];
+
+			return redirect()->action(
+				    'PostsController@postdetails', ['postid' => $postid]
+				);
+		
+		}
+
+		if (strpos($a, 'joinus') !== false)
+		{
+			
+			 return redirect('joinus');
+		}
+		if (strpos($a, 'bookstoremyanmar') !== false)
+		{
+			 return redirect('bookstore');
+		}
+		if (strpos($a, 'checkoutsmyanmar') !== false)
+		{
+			 return redirect('checkouts');
+		}
+
+		if (strpos($a, 'subscribemyanmarcheckouts') !== false)
+		{
+			$var = explode("/", $a);
+			 
+			$bookid = $var[sizeof($var)-1];
+
+			return redirect()->action(
+				    'CheckoutController@subscribeindex', ['bookid' => $bookid]
+				);
+		
+		}
+
 
 		
 	$mainslides = Posts::where('active',1)

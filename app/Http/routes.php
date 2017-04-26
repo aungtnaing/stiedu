@@ -166,9 +166,8 @@
 			
 		});
 
-		Route::get('postlists/{categoryid}', function($categoryid) {
-
-					$categorys = Category::All();
+		Route::get('postlists/{categoryid}', ['as' => 'postlists', function ($categoryid) {
+    	$categorys = Category::All();
 
 			$postlists = Posts::where('active',1)
 			->where('categoryid', $categoryid)
@@ -189,11 +188,12 @@
 			->with('latestposts', $recentposts);
 			
 			
-		});
+}]);
 
-		Route::get('postlistsmyanmar/{categoryid}', function($categoryid) {
-
-					$categorys = Category::All();
+	
+	
+	Route::get('postlistsmyanmar/{categoryid}', ['as' => 'postlistsmyanmar', function ($categoryid) {
+    	$categorys = Category::All();
 
 			$postlists = Posts::where('active',1)
 			->where('categoryid', $categoryid)
@@ -213,8 +213,9 @@
 			->with('categorys', $categorys)
 			->with('latestposts', $recentposts);
 			
-			
-		});
+}]);
+
+	
 
 		
 
