@@ -153,6 +153,18 @@
 			
 		});
 
+
+
+		Route::get('contactusmyanmar', function() {
+
+			$categorys = Category::All();
+			
+			return view('pages.contactusmyanmar')
+			->with('categorys', $categorys);
+			
+			
+		});
+
 		Route::get('authorprofile/{userid}', function($userid) {
 
 			$categorys = Category::All();
@@ -487,6 +499,15 @@
 	Route::group(['middleware' => 'auth'],function()
 	{
 		
+		Route::get('pictureupload', function() {
+
+			$categorys = Category::All();
+			
+			return view('pages.pictureupload')
+			->with('categorys', $categorys);
+			
+			
+		});
 		
 		// Route::get('maketest/{id}', [
 		// 	'uses' => 'CheckoutController@maketest'
