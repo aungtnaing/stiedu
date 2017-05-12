@@ -27,20 +27,10 @@ class DashboardController extends Controller {
 		
 		$user = User::find($request->user()->id);
 
-			$latestposts = Posts::where('active',1)
-			->where('categoryid','!=', 2)
-			->orderBy('id','DESC')
-			->take(10)
-			->get();
-
-			$orderlists = Orders::where('active','!=', 1)
-						->orderBy('id','DESC')
-						->get();
+		
 
 		return view('dashboard.home')
-				->with('latestposts', $latestposts)
-				->with('user',$user)
-				->with('orderlists', $orderlists);	
+				->with('user',$user);	
 	}
 
 	

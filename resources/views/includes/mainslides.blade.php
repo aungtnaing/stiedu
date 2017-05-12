@@ -1,29 +1,24 @@
-		<section id="slider" class="slider-parallax swiper_wrapper full-screen clearfix" data-autoplay="7000" data-speed="650" data-loop="true">
-			<div>
-
-				<div class="swiper-container swiper-parent">
-
-
-					<div class="swiper-wrapper">
-						@foreach($mainslides as $mainslide)
-						<div class="swiper-slide dark" style="background-image: url({{  $mainslide->photourl1 }});">
-							<div class="container clearfix">
-								<div class="slider-caption slider-caption-center">
-									<h2 data-caption-animate="fadeInUp">{{ $mainslide->name }}</h2>
-									<p data-caption-animate="fadeInUp" data-caption-delay="200">{{ $mainslide->subtitle }}</p>
-								</div>
-							</div>
-						</div>
-						
-						@endforeach
-					</div>
-					<div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
-					<div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
-				</div>
-
-				<a href="#" data-scrollto="#content" data-offset="100" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
-
-			</div>
-
-		</section>
-		
+  
+<section id="slider" class="page">
+    <section class="section padding-off">
+        <div id="layerslider-container">
+            <div id="layerslider">
+                @foreach($mainslides as $mainslide)
+                
+                <div class="ls-slide" style="slidedirection: right; durationin: 1500; durationout: 1500; easingin: easeInOutQuint; timeshift: -500;"> <img alt="" class="ls-bg" src="{{ $mainslide->photourl1 }}">
+                    <h1 class="ls-s2 align-center" style="top: 43%; left: 180px; slidedirection : top; slideoutdirection : fade; scaleout : 0.75; durationin : 2000; durationout : 1000; easingin : easeInOutQuint; easingout : easeInOutQuint;">
+                        We really love
+                    </h1>
+                    <h1 class="ls-s2 align-center" style="top: 57%; left: 260px; slidedirection : bottom; slideoutdirection : fade; scaleout : 0.75; durationin : 2000; durationout : 1000; easingin : easeInOutQuint; easingout : easeInOutQuint;">
+                        what we do
+                    </h1> 
+                </div>
+                @endforeach
+            </div>
+            <!--/ #layerslider-->
+        </div>
+        <!--/ #layerslider-container-->
+    </section>
+    <!--/ .section-->
+</section>
+        <!--  end Layerslider  -->
