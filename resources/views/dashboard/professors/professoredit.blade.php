@@ -4,7 +4,7 @@
 
 <div id="content">
 	<div id="content-header">
-		<div id="breadcrumb"> <a href="{{ url('/dashboard') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">edit testimonial</a> </div>
+		<div id="breadcrumb"> <a href="{{ url('/dashboard') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">edit professor</a> </div>
 
 	</div>
 	<div class="container-fluid">
@@ -25,11 +25,11 @@
 		<div class="span12">
 				<div class="widget-box">
 					<div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-						<h5>Testimonial-info</h5>
+						<h5>Professor-info</h5>
 					</div>
 					<div class="widget-content">
 
-					<form action="{{ route("testimonials.update", $testimonial->id) }}" method="POST" enctype="multipart/form-data">
+					<form action="{{ route("professors.update", $professor->id) }}" method="POST" enctype="multipart/form-data">
 							<input name="_method" type="hidden" value="PATCH">
 							<input type="hidden" name="_token" value="{{ csrf_token() }}">
 							
@@ -39,8 +39,8 @@
 										<input style="display:none;" id="file-input1" name="photourl1" type='file' onchange="readURL(this);"/>                    
 										<label for="file-input1">
 											<i class="icon-camera"></i>.Main 100 X 100<br>
-											@if($testimonial->photourl1!="")
-											<img id="blah" src= "{{ $testimonial->photourl1 }}" width="100" height="100">
+											@if($professor->photourl1!="")
+											<img id="blah" src= "{{ $professor->photourl1 }}" width="100" height="100">
 											@else
 											<img id="blah" src="//placehold.it/100" alt="avatar" alt="your image" />
 											@endif
@@ -56,7 +56,7 @@
 								<div class="control-group">
 									<label class="control-label">Name :</label>
 									<div class="controls">
-										<input type="text" class="span11" id="" name="name" placeholder="Enter Name" value="{{ $testimonial->name }}" required>
+										<input type="text" class="span11" id="" name="name" placeholder="Enter Name" value="{{ $professor->name }}" required>
 									</div>
 								</div>
 
@@ -64,13 +64,13 @@
 								<div class="control-group">
 									<label class="control-label">Positions :</label>
 									<div class="controls">
-										<input type="text" class="span11" id="" name="positions" placeholder="Enter positions" value="{{ $testimonial->positions }}" required>
+										<input type="text" class="span11" id="" name="positions" placeholder="Enter positions" value="{{ $professor->positions }}" required>
 									</div>
 								</div> 
 								<div class="control-group">
 									<label class="control-label">Description:</label>
 									<div class="controls">
-										<textarea class="textarea_editor span12" name="description" placeholder="Enter your description" class="span11" rows="4">{{ $testimonial->description }}</textarea>
+										<textarea class="textarea_editor span12" name="description" placeholder="Enter your description" class="span11" rows="4">{{ $professor->description }}</textarea>
 										
 									</div>
 								</div>
@@ -78,7 +78,7 @@
 							
 								<div class="control-group">
 									
-									@if($testimonial->active==0)
+									@if($professor->active==0)
 									<input type="checkbox" name="active" value="">Active<br>  
 									@else   
 									<input type="checkbox" name="active" value="" checked>Active<br>

@@ -2,10 +2,10 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Testimonials extends Model {
+class Professors extends Model {
 
 	//
-	protected $table = 'testimonials';
+	protected $table = 'professors';
 	// protected $fillable = ["id","title","photourl1","mtitle", "description"];
 
 	

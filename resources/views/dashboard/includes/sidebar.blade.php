@@ -10,6 +10,8 @@
 
      <li><a href="{{ url('/testimonials') }}" <i class="icon icon-th"></i> <span>Testimonials Pannel</span></a></li>
 
+      <li><a href="{{ url('/professors') }}" <i class="icon icon-th"></i> <span>Professors Pannel</span></a></li>
+
  
   </ul>
 </div>

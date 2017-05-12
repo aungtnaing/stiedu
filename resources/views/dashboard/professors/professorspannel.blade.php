@@ -4,7 +4,7 @@
 
 <div id="content">
 	<div id="content-header">
-		<div id="breadcrumb"> <a href="{{ url('/dashboard') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">testimonials</a> </div>
+		<div id="breadcrumb"> <a href="{{ url('/dashboard') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">professors</a> </div>
 		<!-- <h1>USER LISTS</h1> -->
 	</div>
 	<div class="container-fluid">
@@ -13,12 +13,12 @@
 			<div class="span12">
 
 				
-				<a class="btn btn-primary btn-mini pull-left" href="{{ route("testimonials.create") }}">Add New testimonial</a>
+				<a class="btn btn-primary btn-mini pull-left" href="{{ route("professors.create") }}">Add New professor</a>
 			
 	
 				<div class="widget-box">
 					<div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
-						<h5>Testimonials</h5>
+						<h5>Professors</h5>
 					</div>
 					<div class="widget-content nopadding">
 						<table class="table table-bordered data-table">
@@ -40,15 +40,15 @@
 							</thead>
 							<tbody>
 
-								@foreach($testimonials as $testimonial)
+								@foreach($professors as $professor)
 								<tr lass="gradeX">   
-									<td>{{ $testimonial->id }}</td>
-									<td><img src="{{ $testimonial->photourl1 }}" width="200" height="100"></td>
-									<td>{{ $testimonial->name }}</td>
-									<td>{{ $testimonial->positions }}</td>
-									<td>{{ $testimonial->description }}</td>
+									<td>{{ $professor->id }}</td>
+									<td><img src="{{ $professor->photourl1 }}" width="200" height="100"></td>
+									<td>{{ $professor->name }}</td>
+									<td>{{ $professor->positions }}</td>
+									<td>{{ $professor->description }}</td>
 								
-									@if($testimonial->active==1)
+									@if($professor->active==1)
 									<td><i class=" icon-check"></i></td>
 									@else
 									<td></td>
@@ -56,11 +56,11 @@
 									
 								
 									<td>
-										<a class="btn btn-mini btn-primary" href="{{ route("testimonials.edit", $testimonial->id ) }}">Edit</a>
+										<a class="btn btn-mini btn-primary" href="{{ route("professors.edit", $professor->id ) }}">Edit</a>
 									</td>
 									@if(Auth::user()->roleid==1 || Auth::user()->roleid==2)
 									<td>
-										<form method="POST" action="{{ route("testimonials.destroy", $testimonial->id) }}" accept-charset="UTF-8">
+										<form method="POST" action="{{ route("professors.destroy", $professor->id) }}" accept-charset="UTF-8">
 											<input name="_method" type="hidden" value="DELETE">
 											<input type="hidden" name="_token" value="{{ csrf_token() }}">
 											<input class="btn btn-mini btn-danger" type="submit" value="Delete">

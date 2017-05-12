@@ -6,7 +6,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-4">
-                            <div class="copyright"> Copyright © 2017. <a target="_blank" href="http://zwebtheme.com/">zwebtheme</a>. All rights reserved </div>
+                            <div class="copyright"> Copyright © 2017. <a target="_blank" href="http://infolink.rocks/">InfoLink It solution</a>. All rights reserved </div>
                             <!--/ .cppyright-->
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-4 ">
@@ -26,11 +26,11 @@
                             <!--/ .widget-->
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-4 text-right">
-                            <div class="developed"> Developed by <a target="_blank" href="http://zwebtheme.com/">zwebtheme</a> </div>
+                            <div class="developed"> Developed by <a target="_blank" href="http://infolink.rocks">InofoLink-IT solution</a> </div>
                             <!--/ .developed-->
                         </div>
-                    </div>
-                    <!--/ .row-->
+                    </div>  
+                    <!--/ .row--> 
                 </div>
                 <!--/ .container-->
             </div>

@@ -3,13 +3,13 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Testimonials;
+use App\Professors;
 use DB;
 
 use File;
 use Input;
 
-class TestimonialsController extends Controller {
+class ProfessorsController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -18,10 +18,10 @@ class TestimonialsController extends Controller {
 	 */
 	public function index(Request $request)
 	{
-		$testimonials = Testimonials::All();
+		$professors = Professors::All();
     	
-		return view("dashboard.testimonials.testimonialspannel")
-		->with("testimonials", $testimonials);
+		return view("dashboard.professors.professorspannel")
+		->with("professors", $professors);
 	}
 
 	
@@ -33,7 +33,7 @@ class TestimonialsController extends Controller {
 	public function create()
 	{
 		//
-		return view("dashboard.testimonials.testimonialcreate");
+		return view("dashboard.professors.professorcreate");
 
 	}
 
@@ -54,9 +54,9 @@ class TestimonialsController extends Controller {
 			]);
 
 
-		$testimonial = new Testimonials();
-		$imagePath = public_path() . '/images/testimonials/';
-		$lastid = DB::table('testimonials')->select('id')->orderBy('id', 'DESC')->first();
+		$professor = new Professors();
+		$imagePath = public_path() . '/images/professors/';
+		$lastid = DB::table('professors')->select('id')->orderBy('id', 'DESC')->first();
 		if($lastid!=null)
 		{
 			$lastid = $lastid->id + 1;
@@ -80,25 +80,25 @@ class TestimonialsController extends Controller {
 				$name =  time()  . '-photo' . '.' . $input['photourl1']->getClientOriginalExtension();
 				File::exists($destinationPath) or File::makeDirectory($destinationPath, 0777, true, true);
 				Input::file('photourl1')->move($destinationPath, $name); // uploading file to given path
-				$photourl1 = "/images/testimonials/" . $directory . '/photos/' .  $name;
+				$photourl1 = "/images/professors/" . $directory . '/photos/' .  $name;
 			
 			}
 
 		}
 
-		$testimonial->name = $request->input("name");
-		$testimonial->positions = $request->input("positions");	
-		$testimonial->description = $request->input("description");
+		$professor->name = $request->input("name");
+		$professor->positions = $request->input("positions");	
+		$professor->description = $request->input("description");
 		
 		
-		$testimonial->active = 0;
-		if (Input::get('active') === '1'){$testimonial->active = 1;}
+		$professor->active = 0;
+		if (Input::get('active') === '1'){$professor->active = 1;}
 
 	
-		$testimonial->photourl1 = $photourl1;
+		$professor->photourl1 = $photourl1;
 		
-		$testimonial->save();
-		return redirect()->route("testimonials.index");
+		$professor->save();
+		return redirect()->route("professors.index");
 	}
 
 	/**
@@ -123,8 +123,8 @@ class TestimonialsController extends Controller {
 	{
 		//
 		
-		$testimonial = Testimonials::find($id);
-		return view('dashboard.testimonials.testimonialedit')->with('testimonial',$testimonial);
+		$professor = Professors::find($id);
+		return view('dashboard.professors.professoredit')->with('professor',$professor);
 	}
 
 	/**
@@ -143,9 +143,9 @@ class TestimonialsController extends Controller {
 			
 			]);
 		
-		$testimonial = Testimonials::find($id);
+		$professor = Professors::find($id);
 			
-		$imagePath = public_path() . '/images/testimonials/';
+		$imagePath = public_path() . '/images/professors/';
 	
 		$directory = $id;
 
@@ -153,7 +153,7 @@ class TestimonialsController extends Controller {
 		$input = $request->all();
 		$destinationPath = $imagePath . $directory . '/photos';
 	
-		$photourl1 = $testimonial->photourl1;
+		$photourl1 = $professor->photourl1;
 		// ini_set('post_max_size', '64M');
 		// ini_set('upload_max_filesize', '64M');
 	
@@ -176,25 +176,25 @@ class TestimonialsController extends Controller {
 				$name =  time() . '-photo' . '.' . $input['photourl1']->getClientOriginalExtension();
 				File::exists($destinationPath) or File::makeDirectory($destinationPath, 0777, true, true);
 				Input::file('photourl1')->move($destinationPath, $name); // uploading file to given path
-				$photourl1 = "/images/testimonials/" . $directory . '/photos/' .  $name;
+				$photourl1 = "/images/professors/" . $directory . '/photos/' .  $name;
 			 }
 
 		}
 	
 	
-		$testimonial->name = $request->input("name");
-		$testimonial->positions = $request->input("positions");	
-		$testimonial->description = $request->input("description");
+		$professor->name = $request->input("name");
+		$professor->positions = $request->input("positions");	
+		$professor->description = $request->input("description");
 
 
-		$testimonial->active = 0;
-		if (Input::get('active') === ""){$testimonial->active = 1;}
+		$professor->active = 0;
+		if (Input::get('active') === ""){$professor->active = 1;}
 
 		
-		$testimonial->photourl1 = $photourl1;
+		$professor->photourl1 = $photourl1;
 		
-		$testimonial->save();
-		return redirect()->route("testimonials.index");
+		$professor->save();
+		return redirect()->route("professors.index");
 	}
 
 	/**
@@ -206,9 +206,9 @@ class TestimonialsController extends Controller {
 	public function destroy($id)
 	{
 		//
-			$testimonial = Testimonials::find($id);
+			$professor = Professors::find($id);
 
-		$photourl1 = $testimonial->photourl1;
+		$photourl1 = $professor->photourl1;
 	
 			if($photourl1!="")
 				{
@@ -220,9 +220,9 @@ class TestimonialsController extends Controller {
 
 
 		
-		Testimonials::destroy($id);
+		Professors::destroy($id);
 
-		return redirect()->route("testimonials.index");
+		return redirect()->route("professors.index");
 	}
 
 	public function rrmdir($dir) {

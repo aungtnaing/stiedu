@@ -3,7 +3,7 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div id="content-header">
-		<div id="breadcrumb"> <a href="{{ url('/dashboard') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">new testimonial</a> </div>
+		<div id="breadcrumb"> <a href="{{ url('/dashboard') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">new professor</a> </div>
 		<!-- <h1>USER LISTS</h1> -->
 	</div>
 	<div class="container-fluid">
@@ -22,10 +22,10 @@
 				@endif	
 				<div class="widget-box">
 					<div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-						<h5>Testimonial-info</h5>
+						<h5>Professor-info</h5>
 					</div>
 					<div class="widget-content nopadding">
-						<form action="{{ route("testimonials.store") }}" method="POST" enctype="multipart/form-data">
+						<form action="{{ route("professors.store") }}" method="POST" enctype="multipart/form-data">
 
 							<input type="hidden" name="_token" value="{{ csrf_token() }}">
 

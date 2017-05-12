@@ -134,6 +134,7 @@
 				{
 					Route::resource('mainslides','MainslideController');
 					Route::resource('testimonials','TestimonialsController');
+					Route::resource('professors','ProfessorsController');
 					Route::resource('categorys','CategoryController');
 					Route::resource('userspannel','UserspannelController');
 					

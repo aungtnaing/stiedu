@@ -8,7 +8,7 @@ use App\Category;
 
 use App\Mainslide;
 use App\Testimonials;
-
+use App\Professors;
 
 use View;
 use Config;		
@@ -55,7 +55,7 @@ class HomeController extends Controller {
 		
 		$mainslides = Mainslide::where('active',1)
 		->orderBy('slideno','asc')
-		->take(10)
+		->take(4)
 		->get();
 	
 		$testimonials = Testimonials::where('active',1)
@@ -63,10 +63,16 @@ class HomeController extends Controller {
 						->take(3)
 						->get();
 
+		$professors = Professors::where('active',1)
+						->orderBy('id','DESC')
+						->take(8)
+						->get();				
+
 		return view('pages.home')
 				->with('categorys', $categorys)
 				->with('mainslides', $mainslides)
-				->with('testimonials', $testimonials);
+				->with('testimonials', $testimonials)
+				->with('professors', $professors);
 				
 				
 		

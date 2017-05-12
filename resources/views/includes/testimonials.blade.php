@@ -1,4 +1,4 @@
- <style type="text/css">
+<!--  <style type="text/css">
      .imgg {
     
     width:20%;
@@ -8,7 +8,7 @@
          text-align: -webkit-center;
     
 }
- </style>
+ </style> -->
  <section class="section parallax parallax-bg-1 bg-turquoise-color">
                 <div class="full-bg-image"></div>
                 <div class="container">
@@ -20,7 +20,7 @@
                                     <blockquote class="quote-text">
                                         <p><?php echo $testimonial->description; ?></p>
                                     </blockquote>
-                                    <div class="quote-image"><img class="imgg" alt="Jack Black" src="{{ $testimonial->photourl1 }}" ></div>
+                                    <div class="quote-image"><img alt="Jack Black" src="{{ $testimonial->photourl1 }}" ></div>
                                     <div class="quote-author"><span>{{ $testimonial->name }}, {{ $testimonial->positions }}</span></div>
                                 </div>
                             @endforeach   
