@@ -38,7 +38,7 @@
 									<li class="span3"> <a> 
 										<input style="display:none;" id="file-input1" name="photourl1" type='file' onchange="readURL(this);"/>                    
 										<label for="file-input1">
-											<i class="icon-camera"></i>.Main 937 X 1200<br>
+											<i class="icon-camera"></i>.Main 1539x732<br>
 											@if($mainslide->photourl1!="")
 											<img id="blah" src= "{{ $mainslide->photourl1 }}" width="100" height="100">
 											@else

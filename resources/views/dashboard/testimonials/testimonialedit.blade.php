@@ -38,7 +38,7 @@
 									<li class="span3"> <a> 
 										<input style="display:none;" id="file-input1" name="photourl1" type='file' onchange="readURL(this);"/>                    
 										<label for="file-input1">
-											<i class="icon-camera"></i>.Main 100 X 100<br>
+											<i class="icon-camera"></i>.Main 70 X 70<br>
 											@if($testimonial->photourl1!="")
 											<img id="blah" src= "{{ $testimonial->photourl1 }}" width="100" height="100">
 											@else

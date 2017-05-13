@@ -5,6 +5,8 @@ use App\Category;
 use App\Mainslide;
 use App\Testimonials;
 use App\Professors;
+use App\Priorities;
+use App\Ourgallerys;
 
 use View;
 use Config;
@@ -65,11 +67,21 @@ $testimonials = Testimonials::where('active',1)
 						->take(8)
 						->get();				
 
+			$priorities = Priorities::All();
+			
+		$ourgallerys = 	Ourgallerys::where('active',1)
+						->orderBy('id','DESC')
+						->take(10)
+						->get();	
+
 		return view('pages.home')
 				->with('categorys', $categorys)
 				->with('mainslides', $mainslides)
 				->with('testimonials', $testimonials)
-				->with('professors', $professors);
+				->with('professors', $professors)
+				->with('priorities', $priorities)
+				->with('ourgallerys', $ourgallerys);			
+		
 	}
 
 	public function myanmarindex()
@@ -92,12 +104,21 @@ $testimonials = Testimonials::where('active',1)
 						->orderBy('id','DESC')
 						->take(8)
 						->get();				
+		$priorities = Priorities::All();
+		
+
+		$ourgallerys = 	Ourgallerys::where('active',1)
+						->orderBy('id','DESC')
+						->take(10)
+						->get();	
 
 		return view('pages.homemyanmar')
 				->with('categorys', $categorys)
 				->with('mainslides', $mainslides)
 				->with('testimonials', $testimonials)
-				->with('professors', $professors);				
+				->with('professors', $professors)
+				->with('priorities', $priorities)
+				->with('ourgallerys', $ourgallerys);				
 		
 	}
 

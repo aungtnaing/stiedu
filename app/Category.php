@@ -9,9 +9,9 @@ class Category extends Model {
 	protected $fillable = ["id","name","mname"];
 
 
-     public function posts()
+     public function courses()
     {
-        return $this->hasMany('App\Posts', 'categoryid');
+        return $this->hasMany('App\Courses', 'categoryid');
     }
 
 }

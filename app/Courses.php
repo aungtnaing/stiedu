@@ -2,10 +2,10 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Posts extends Model {
+class Courses extends Model {
 
 	//
-	protected $table = 'posts';
+	protected $table = 'courses';
 	
 
 	public function category()
@@ -18,10 +18,10 @@ class Posts extends Model {
         return $this->belongsTo('App\User','userid');
     }
 
-     public function comments()
-    {
-        return $this->hasMany('App\Comments', 'postid');
-    }
+    //  public function comments()
+    // {
+    //     return $this->hasMany('App\Comments', 'courseid');
+    // }
 
 
   

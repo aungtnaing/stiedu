@@ -9,9 +9,9 @@ class Comments extends Model {
 	
 
  
-      public function post()
+      public function course()
     {
-        return $this->belongsTo('App\Posts','postid');
+        return $this->belongsTo('App\Courses','courseid');
     }
 
        public function user()

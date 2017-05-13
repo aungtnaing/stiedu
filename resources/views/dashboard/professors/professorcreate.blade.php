@@ -33,7 +33,7 @@
 								<li class="span3"> <a> 
 									<input style="display:none;" id="file-input1" name="photourl1" type='file' onchange="readURL(this);" required/>                    
 									<label for="file-input1">
-										<i class="icon-camera"></i>.Main 100x100<br>
+										<i class="icon-camera"></i>.Main 252x270<br>
 										<img id="blah" src="//placehold.it/100" alt="avatar" alt="your image" />
 
 									</label>
