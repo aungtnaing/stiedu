@@ -4,7 +4,7 @@
 
 <div id="content">
 	<div id="content-header">
-		<div id="breadcrumb"> <a href="{{ url('/dashboard') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">edit category</a> </div>
+		<div id="breadcrumb"> <a href="{{ url('/dashboard') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">new main category</a> </div>
 		<!-- <h1>USER LISTS</h1> -->
 	</div>
 	<div class="container-fluid">
@@ -23,18 +23,18 @@
 				@endif	
 				<div class="widget-box">
 					<div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-						<h5>Category-info</h5>
+						<h5>Main Category-info</h5>
 					</div>
 					<div class="widget-content nopadding">
-						<form action="{{ route("categorys.update", $category->id) }}" method="POST" accept-charset="UTF-8">
-							<input name="_method" type="hidden" value="PATCH">
+						<form action="{{ route("maincategorys.store") }}" method="POST">
 							<input type="hidden" name="_token" value="{{ csrf_token() }}">
+
 
 
 							<div class="control-group">
 								<label class="control-label">Name :</label>
 								<div class="controls">
-									<input type="text" class="span11" id="" name="name" placeholder="Enter Category Name" value="{{ $category->name }}" required>
+									<input type="text" class="span11" id="" name="name" placeholder="Enter Main Category Name" value="{{ old('name') }}" required>
 								</div>
 							</div>
 
@@ -42,21 +42,10 @@
 							<div class="control-group">
 								<label class="control-label">mName :</label>
 								<div class="controls">
-									<input type="text" class="span11" id="" name="mname" placeholder="Enter Category mName" value="{{ $category->mname }}" required>
+									<input type="text" class="span11" id="" name="mname" placeholder="Enter Main Category mName" value="{{ old('mname') }}" required>
 								</div>
 							</div> 
 
-							<div class="control-group">
-						<label class="control-label">Maincategory</label>
-						<br>
-						<select name="maincategory">
-						<option value="{{ $category->maincategoryid }}">{{ $category->maincategory->name }}</option>
-						@foreach($maincategorys as $maincategory)
-						<option value="{{ $maincategory->id }}">{{ $maincategory->name }}</option>
-						@endforeach	
-						</select>
-
-					</div>
 
 
 
@@ -76,7 +65,6 @@
 
 
 @stop
-
 
 
 

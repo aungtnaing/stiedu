@@ -1918,7 +1918,8 @@ padding-top: 0px;
 .course-wrap .course_tab_des {
     float: left;
     width: 100%;
-    padding-top: 38px;
+    /*padding-top: 38px;*/
+    padding-top: 5px;
 }
 .course-wrap .course_tab_des .entry-body {
     padding-top: 15px;
@@ -2008,7 +2009,8 @@ padding-top: 0px;
 .course-wrap .course-meta li {
     display: inline-block;
     font-size: 12px;
-    margin-right: 45px;
+    /*margin-right: 45px;*/
+     margin-right: 40px;
     position: relative;
 }
 

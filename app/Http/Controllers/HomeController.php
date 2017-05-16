@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 
 
 use App\Category;
-
+use App\Maincategory;
 use App\Mainslide;
 use App\Testimonials;
 use App\Professors;
@@ -78,13 +78,16 @@ class HomeController extends Controller {
 						->take(10)
 						->get();	
 
+		$maincategorys = Maincategory::All();
+						
 		return view('pages.home')
 				->with('categorys', $categorys)
 				->with('mainslides', $mainslides)
 				->with('testimonials', $testimonials)
 				->with('professors', $professors)
 				->with('priorities', $priorities)
-				->with('ourgallerys', $ourgallerys);
+				->with('ourgallerys', $ourgallerys)
+				->with('maincategorys', $maincategorys);
 				
 				
 		

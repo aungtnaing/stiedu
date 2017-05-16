@@ -5,8 +5,8 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <hgroup class="section-title align-center opacity">
-                                <h1 class="header-title">meet our <span>Professor</span></h1>
-                                <h2>We are great Professor in a university</h2> 
+                                <h1 class="header-title">meet our <span>Faculty</span></h1>
+                                <h2>We are great Faculty in a university</h2> 
                             </hgroup>
                         </div>
                     </div>

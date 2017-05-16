@@ -137,6 +137,7 @@
 					Route::resource('professors','ProfessorsController');
 					Route::resource('priorities','PrioritiesController');
 					Route::resource('ourgallerys','OurgallerysController');
+					Route::resource('maincategorys','MaincategoryController');
 					Route::resource('categorys','CategoryController');
 					Route::resource('userspannel','UserspannelController');
 					

@@ -7,5 +7,5 @@
 @include('includes.professors') 
 @include('includes.priorities') 
 @include('includes.ourgallerys') 
-
+@include('includes.courses') 
 @stop
