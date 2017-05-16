@@ -2,6 +2,7 @@
 
 
 use App\Category;
+use App\Maincategory;
 use App\Mainslide;
 use App\Testimonials;
 use App\Professors;
