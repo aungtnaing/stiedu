@@ -74,13 +74,16 @@ $testimonials = Testimonials::where('active',1)
 						->take(10)
 						->get();	
 
+	$maincategorys = Maincategory::All();
+						
 		return view('pages.home')
 				->with('categorys', $categorys)
 				->with('mainslides', $mainslides)
 				->with('testimonials', $testimonials)
 				->with('professors', $professors)
 				->with('priorities', $priorities)
-				->with('ourgallerys', $ourgallerys);			
+				->with('ourgallerys', $ourgallerys)
+				->with('maincategorys', $maincategorys);
 		
 	}
 
@@ -112,13 +115,18 @@ $testimonials = Testimonials::where('active',1)
 						->take(10)
 						->get();	
 
+		$maincategorys = Maincategory::All();
+						
 		return view('pages.homemyanmar')
 				->with('categorys', $categorys)
 				->with('mainslides', $mainslides)
 				->with('testimonials', $testimonials)
 				->with('professors', $professors)
 				->with('priorities', $priorities)
-				->with('ourgallerys', $ourgallerys);				
+				->with('ourgallerys', $ourgallerys)
+				->with('maincategorys', $maincategorys);
+
+				
 		
 	}
 
