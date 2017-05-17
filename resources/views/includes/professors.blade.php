@@ -27,7 +27,17 @@
                                                     <a class="single-image team-plus-icon" href="#team-1"><img src="{{ $professor->photourl1 }}" alt="" /></a>
                                                 </div>
                                                 <hgroup class="team-group">
-                                                    <h2 class="team-title">{{ $professor->name }}</h2>
+                                                    @if(strlen($professor->name) > 13)
+                                                    <h4 class="team-title">  
+                                                    {{ $professor->name }}
+                                                    </h4>
+                                                     @else
+                                                      <h4 class="team-title">
+                                                    {{ $professor->name }}
+                                                    </h4>
+                                                    <br>
+                                                     @endif
+                                                    
                                                     <h5 class="team-position">{{ $professor->positions }}</h5> 
                                                 </hgroup>
                                             </div>

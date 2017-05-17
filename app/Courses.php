@@ -13,6 +13,11 @@ class Courses extends Model {
         return $this->belongsTo('App\Category','categoryid');
     }
 
+    public function professor()
+    {
+        return $this->belongsTo('App\Professors','professorid');
+    }
+
     public function user()
     {
         return $this->belongsTo('App\User','userid');

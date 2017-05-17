@@ -98,12 +98,17 @@
 
 
 
+	Route::get('coursedetails/{courseid}', [
+		'uses' => 'CoursesController@coursedetails'
+		]);
+
 	
 	Route::group(['middleware' => 'auth'],function()
 	{
 		
 		
-
+			Route::resource('comments','CommentsController');
+		Route::resource('replycomments','ReplycommentsController');
 	
 		Route::group(['middleware' => 'rolewaredashboard'],function()
 		{
@@ -141,6 +146,7 @@
 					Route::resource('categorys','CategoryController');
 					Route::resource('userspannel','UserspannelController');
 					
+					Route::resource('courses','CoursesController');
 				});
 
 			});
