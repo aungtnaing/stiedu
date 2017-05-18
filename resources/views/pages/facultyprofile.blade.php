@@ -15,7 +15,7 @@
             <br>
               <div class="widget-box">
                   <div class="widget-title">
-                    <h5>Personal-info</h5>
+                    <h5>Faculty-info</h5>
                   </div>
                         <div class="widget-content nopadding">
 
@@ -25,8 +25,8 @@
                             <label>
                              <!--  -->
                              <i class="lnr lnr-camera"></i>...photo<br>
-                             @if($user->photourl!="")
-                             <img id="blah" src= "{{ $user->photourl }}" width="100" height="100">
+                             @if($faculty->photourl1!="")
+                             <img id="blah" src= "{{ $faculty->photourl1 }}" width="100" height="100">
                              @else
                              <img id="blah" src="//placehold.it/100" class="avatar img-circle" alt="avatar" alt="your image" />
                              @endif
@@ -40,30 +40,30 @@
                           <label class="control-label">Name :</label>
                           <div class="controls">
 
-                            <label>{{ $user->name }}</label>
+                            <label>{{ $faculty->name }}</label>
                           </div>
                         </div>
 
 
                         <div class="control-group">
-                          <label class="control-label">mName :</label>
+                          <label class="control-label">Positions :</label>
                           <div class="controls">
 
-                           <label>{{ $user->mname }}</label>
+                           <label>{{ $faculty->positions }}</label>
                          </div>
                        </div> 
 
-                       <div class="control-group">
+                      <!--  <div class="control-group">
                         <label class="control-label">Email:</label>
                         <div class="controls">
-                          <label>{{ $user->email }}</label>
+                          <label>{{ $faculty->email }}</label>
                         </div>
-                      </div>
+                      </div> -->
 
                        <div class="control-group">
                         <label class="control-label">Bio:</label>
                         <div class="controls">
-                          <label>{{ $user->bio }}</label>
+                          <label>{{ $faculty->description }}</label>
                         </div>
                       </div>
 

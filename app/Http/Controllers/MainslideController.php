@@ -49,7 +49,7 @@ class MainslideController extends Controller {
 		$this->validate($request,[
 			'photourl1' => 'required',
 			'title' => 'required|max:255',
-			'mtitle' => 'required|max:255',
+			'stitle' => 'required|max:255',
 			
 			]);
 
@@ -87,7 +87,7 @@ class MainslideController extends Controller {
 		}
 
 		$mainslide->title = $request->input("title");
-		$mainslide->mtitle = $request->input("mtitle");	
+		$mainslide->stitle = $request->input("stitle");	
 		$mainslide->description = $request->input("description");
 		$mainslide->mdescription = $request->input("mdescription");
 
@@ -140,7 +140,7 @@ class MainslideController extends Controller {
 		$this->validate($request,[
 		
 			'title' => 'required|max:255',
-			'mtitle' => 'required|max:255',
+			'stitle' => 'required|max:255',
 			
 			]);
 		
@@ -184,7 +184,7 @@ class MainslideController extends Controller {
 	
 	
 		$mainslide->title = $request->input("title");
-		$mainslide->mtitle = $request->input("mtitle");	
+		$mainslide->stitle = $request->input("stitle");	
 		$mainslide->description = $request->input("description");
 		$mainslide->mdescription = $request->input("mdescription");
 

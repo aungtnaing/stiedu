@@ -1108,7 +1108,7 @@ body {
 		
 			.parallax-bg-1 .full-bg-image { background-image: url(../images/parallax/parallax-1.jpg); }
 			.parallax-bg-2 .full-bg-image { background-image: url(../images/parallax/parallax-2.jpg); }
-			.parallax-bg-3 .full-bg-image { background-image: url(../images/parallax/parallax-3.png); }
+			.parallax-bg-3 .full-bg-image { background-image: url(../images/parallax/parallax-3.jpg); }
 			.parallax-bg-4 .full-bg-image { background-image: url(../images/parallax/parallax-4.png); }
 		
 			/* Mobile Video Image */
@@ -2010,7 +2010,7 @@ padding-top: 0px;
     display: inline-block;
     font-size: 12px;
     /*margin-right: 45px;*/
-     margin-right: 40px;
+     margin-right: 35px;
     position: relative;
 }
 

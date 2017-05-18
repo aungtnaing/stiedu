@@ -8,6 +8,7 @@ use App\Testimonials;
 use App\Professors;
 use App\Priorities;
 use App\Ourgallerys;
+use App\Events;
 
 use View;
 use Config;
@@ -76,6 +77,11 @@ $testimonials = Testimonials::where('active',1)
 						->get();	
 
 	$maincategorys = Maincategory::All();
+			
+			$events = Events::where('active',1)
+						->orderBy('id','DESC')
+						->take(4)
+						->get();
 						
 		return view('pages.home')
 				->with('categorys', $categorys)
@@ -84,7 +90,8 @@ $testimonials = Testimonials::where('active',1)
 				->with('professors', $professors)
 				->with('priorities', $priorities)
 				->with('ourgallerys', $ourgallerys)
-				->with('maincategorys', $maincategorys);
+				->with('maincategorys', $maincategorys)
+				->with('events', $events);
 		
 	}
 
@@ -117,6 +124,11 @@ $testimonials = Testimonials::where('active',1)
 						->get();	
 
 		$maincategorys = Maincategory::All();
+		
+					$events = Events::where('active',1)
+						->orderBy('id','DESC')
+						->take(4)
+						->get();
 						
 		return view('pages.homemyanmar')
 				->with('categorys', $categorys)
@@ -125,9 +137,9 @@ $testimonials = Testimonials::where('active',1)
 				->with('professors', $professors)
 				->with('priorities', $priorities)
 				->with('ourgallerys', $ourgallerys)
-				->with('maincategorys', $maincategorys);
-
-				
+				->with('maincategorys', $maincategorys)
+				->with('events', $events);		
+		
 		
 	}
 

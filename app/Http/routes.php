@@ -13,7 +13,8 @@
 
 		use App\User;
 		use App\Category;
-		
+		use App\Courses;
+		use App\Professors;
 
 		Route::get('/', 'WelcomeController@index');
 		Route::get('home', 'HomeController@index');
@@ -75,13 +76,24 @@
 
 		Route::get('authorprofile/{userid}', function($userid) {
 
-			$categorys = Category::All();
+			// $categorys = Category::All();
 
 			$user = User::find($userid);
 			
 			return view('pages.authorprofile')
-			->with('user', $user)
-			->with('categorys', $categorys);
+			->with('user', $user);
+			
+			
+		});
+
+		Route::get('facultyprofile/{facultyid}', function($facultyid) {
+
+			
+
+			$faculty = Professors::find($facultyid);
+			
+			return view('pages.facultyprofile')
+			->with('faculty', $faculty);
 			
 			
 		});
@@ -102,7 +114,32 @@
 		'uses' => 'CoursesController@coursedetails'
 		]);
 
-	
+	Route::get('eventdetails/{eventid}', [
+		'uses' => 'EventsController@eventdetails'
+		]);
+
+	Route::get('courselists/{categoryid}', ['as' => 'courselists', function ($categoryid) {
+			$categorys = Category::orderBy('id', 'desc')
+								->take(7)
+								->get();
+
+			$categoryname = Category::find($categoryid);
+
+			$courselists = Courses::where('active',1)
+			->where('categoryid', $categoryid)
+			->orderBy('id','DESC')
+			->paginate(5);
+
+			
+			
+			return view('pages.courselists')
+			->with('courselists', $courselists)
+			->with('categorys', $categorys)
+			->with('categoryname', $categoryname);
+			
+			
+		}]);
+
 	Route::group(['middleware' => 'auth'],function()
 	{
 		
@@ -147,6 +184,7 @@
 					Route::resource('userspannel','UserspannelController');
 					
 					Route::resource('courses','CoursesController');
+					Route::resource('events','EventsController');
 				});
 
 			});

@@ -21,6 +21,8 @@
    
      <li><a href="{{ url('/courses') }}"><i class="icon icon-th"></i> <span>courses Pannel</span></a></li>
 
+      <li><a href="{{ url('/events') }}"><i class="icon icon-th"></i> <span>events Pannel</span></a></li>
+
  
   </ul>
 </div>

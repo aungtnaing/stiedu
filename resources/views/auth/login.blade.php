@@ -35,11 +35,11 @@ Session::set('backUrl', URL::previous());
                                     <div class="row">
                                         <div class="col-md-6">
                                             <!-- <input type="text" class="form-control" placeholder="Username"> -->
-                                            <input type="email" class="form-control" placeholder="email" name="email" value="{{ old('email') }}">
+                                            <input type="email" class="" placeholder="email" name="email" value="{{ old('email') }}">
                                         </div>
                                         <div class="col-md-6">
                                             <!-- <input type="text" class="form-control" placplaceholder="Username" eholder="Password"> -->
-                                            <input type="password" class="form-control" placeholder="password" name="password">
+                                            <input type="password" class="" placeholder="password" name="password">
                                         </div>
                                         <div class="col-md-12">
                                             

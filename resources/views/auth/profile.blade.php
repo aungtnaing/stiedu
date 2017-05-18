@@ -64,20 +64,20 @@
             <div class="form-group">
               <label class="col-lg-3 control-label">Name:<span class="text-error">*</span></label>
               <div class="col-lg-8">
-                <input class="form-control" name="name" value="{{ $user->name }}" placeholder="Enter Your Name" type="text" required>
+                <input class="" name="name" value="{{ $user->name }}" placeholder="Enter Your Name" type="text" required>
               </div>
             </div>
             <div class="form-group">
               <label class="col-lg-3 control-label">mName:</label>
               <div class="col-lg-8">
-               <input class="form-control" name="mname" value="{{ $user->mname }}" placeholder="Enter Your mName" type="text">
+               <input class="" name="mname" value="{{ $user->mname }}" placeholder="Enter Your mName" type="text">
              </div>
            </div>
            
            <div class="form-group">
             <label class="col-lg-3 control-label">Email:<span class="text-error">*</span></label>
             <div class="col-lg-8">
-             <input class="form-control" name="email" value="{{ $user->email }}" placeholder="Enter Your email" type="text" required>
+             <input class="" name="email" value="{{ $user->email }}" placeholder="Enter Your email" type="text" required>
 
            </div>
          </div>
@@ -85,40 +85,40 @@
          <div class="form-group">
           <label class="col-md-3 control-label">Phone1:</label>
           <div class="col-md-8">
-            <input class="form-control" name="ph1" value="{{ $user->ph1 }}" placeholder="Enter Your phone1" type="text">
+            <input class="" name="ph1" value="{{ $user->ph1 }}" placeholder="Enter Your phone1" type="text">
             
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label">Phone2:</label>
           <div class="col-md-8">
-            <input class="form-control" name="ph2" value="{{ $user->ph2 }}" placeholder="Enter Your phone2" type="text">
+            <input class="" name="ph2" value="{{ $user->ph2 }}" placeholder="Enter Your phone2" type="text">
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label">Address:</label>
           <div class="col-md-8">
             
-            <textarea name="address" placeholder="Enter your address" class="form-control" rows="3">{{ $user->address }}</textarea>
+            <textarea name="address" placeholder="Enter your address" class="" rows="3">{{ $user->address }}</textarea>
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label">Bio:</label>
           <div class="col-md-8">
             
-            <textarea name="bio" placeholder="Enter your bio" class="form-control" rows="3">{{ $user->bio }}</textarea>
+            <textarea name="bio" placeholder="Enter your bio" class="" rows="3">{{ $user->bio }}</textarea>
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label">Password:</label>
           <div class="col-md-8">
-            <input class="form-control" id="password1" name="password" type="password">
+            <input class="" id="password1" name="password" type="password">
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label">Confirm password:</label>
           <div class="col-md-8">
-            <input class="form-control" id="password2" name="password_confirmation" type="password">
+            <input class="" id="password2" name="password_confirmation" type="password">
           </div>
         </div>
         <div class="form-group">

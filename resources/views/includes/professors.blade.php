@@ -24,7 +24,7 @@
                                         <div class="contents clearfix">
                                             <div class="team-info">
                                                 <div class="team-image">
-                                                    <a class="single-image team-plus-icon" href="#team-1"><img src="{{ $professor->photourl1 }}" alt="" /></a>
+                                                    <a class="single-image team-plus-icon" href="{{ url('/facultyprofile', $professor->id) }}"><img src="{{ $professor->photourl1 }}" alt="" /></a>
                                                 </div>
                                                 <hgroup class="team-group">
                                                     @if(strlen($professor->name) > 13)

@@ -4,7 +4,7 @@
 
 <div id="content">
 	<div id="content-header">
-		<div id="breadcrumb"> <a href="{{ url('/dashboard') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">mainslide</a> </div>
+		<div id="breadcrumb"> <a href="{{ url('/dashboard') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">events/new</a> </div>
 		<!-- <h1>USER LISTS</h1> -->
 	</div>
 	<div class="container-fluid">
@@ -13,12 +13,12 @@
 			<div class="span12">
 
 				
-				<a class="btn btn-primary btn-mini pull-left" href="{{ route("mainslides.create") }}">Add New mainslide</a>
+				<a class="btn btn-primary btn-mini pull-left" href="{{ route("events.create") }}">Add New event/new</a>
 			
 	
 				<div class="widget-box">
 					<div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
-						<h5>Mainslide</h5>
+						<h5>News and Events</h5>
 					</div>
 					<div class="widget-content nopadding">
 						<table class="table table-bordered data-table">
@@ -27,12 +27,11 @@
 							<thead>
 								<tr>
 									<th>sort</th>
-									<th>Main Slide</th>					
-									
-									<th>title</th>
-									<th>second title</th>
-									
-									<th>SlideNo</th>
+									<th>Photo</th>				
+									<th>name</th>
+									<th>aboutevent</th>
+									<th>date</th>
+									<th>address</th>
 									<th>Active</th>
 									<th></th>
 									<th></th>
@@ -40,15 +39,15 @@
 							</thead>
 							<tbody>
 
-								@foreach($mainslides as $mainslide)
+								@foreach($events as $event)
 								<tr lass="gradeX">   
-									<td>{{ $mainslide->id }}</td>
-									<td><img src="{{ $mainslide->photourl1 }}" width="200" height="100"></td>
-									<td>{{ $mainslide->title }}</td>
-									<td>{{ $mainslide->stitle }}</td>
-									<td>{{ $mainslide->slideno }}</td>
-								
-									@if($mainslide->active==1)
+									<td>{{ $event->id }}</td>
+									<td><img src="{{ $event->photourl1 }}" width="100" height="100"></td>
+									<td>{{ $event->name }}</td>
+									<td>{{ $event->aboutevent }}</td>
+									<td>{{ $event->startdate }} to {{ $event->enddate }}</td>
+									<td>{{ $event->address }}</td>
+									@if($event->active==1)
 									<td><i class=" icon-check"></i></td>
 									@else
 									<td></td>
@@ -56,11 +55,11 @@
 									
 								
 									<td>
-										<a class="btn btn-mini btn-primary" href="{{ route("mainslides.edit", $mainslide->id ) }}">Edit</a>
+										<a class="btn btn-mini btn-primary" href="{{ route("events.edit", $event->id ) }}">Edit</a>
 									</td>
 									@if(Auth::user()->roleid==1 || Auth::user()->roleid==2)
 									<td>
-										<form method="POST" action="{{ route("mainslides.destroy", $mainslide->id) }}" accept-charset="UTF-8">
+										<form method="POST" action="{{ route("events.destroy", $event->id) }}" accept-charset="UTF-8">
 											<input name="_method" type="hidden" value="DELETE">
 											<input type="hidden" name="_token" value="{{ csrf_token() }}">
 											<input class="btn btn-mini btn-danger" type="submit" value="Delete">

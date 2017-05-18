@@ -18,7 +18,9 @@ class CreateMainslidesTable extends Migration {
 
 			$table->string('photourl1');
 			$table->string('title');
+			$table->string('stitle');
 			$table->string('mtitle');
+			$table->string('mstitle');
 			$table->string('description', 500);
 			$table->string('mdescription', 500);
 			$table->integer('slideno');

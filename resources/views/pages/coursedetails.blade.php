@@ -25,11 +25,11 @@
 								<div class="thumb"> <img src="<?php echo url(); ?>{{ $coursedetail->professor->photourl1 }}" alt="image"> 
 								</div>
 								@endif
-								<div class="text"> <a href="#">{{ $coursedetail->professor->name }}</a>
+								<div class="text"> <a href="{{ url('/facultyprofile', $coursedetail->professor->id) }}">{{ $coursedetail->professor->name }}</a>
 									<p>Teacher</p>
 								</div>
 							</li>
-							<li class="categories"> <a href="#" class="course-name">{{ $coursedetail->category->name }}</a>
+							<li class="categories"> <a href="{{ url('/courselists', $coursedetail->category->id) }}" class="course-name">{{ $coursedetail->category->name }}</a>
 								<p>Categories</p>
 							</li>
 							<li class="review-stars"> 
@@ -160,7 +160,7 @@
 											<div class="comment-body">
 												<div class="comment-meta">
 													<div class="comment-author">
-														<h6><a href="#">{{ $comment->user->name }}</a></h6></div>
+														<h6><a href="{{ url('/authorprofile', $comment->user->id) }}">{{ $comment->user->name }}</a></h6></div>
 														<div class="comment-date"><a href="#">{{ $comment->created_at }}</a></div>
 													</div>
 													<!--/ .comment-meta-->
@@ -182,7 +182,7 @@
 														@endif
 														<div class="comment-body">
 															<div class="comment-meta">
-																<div class="comment-author"><a href="#">{{ $replycomment->user->name }}</a></div>
+																<div class="comment-author"><a href="{{ url('/authorprofile', $replycomment->user->id) }}">{{ $replycomment->user->name }}</a></div>
 																<div class="comment-date"><a href="#">{{ $replycomment->created_at }}</a></div>
 															</div>
 															<!--/ .comment-meta-->
@@ -224,7 +224,7 @@
 								</section>
 								<!--/ #comments-->
 								<section id="respond">
-									<h3>Leave a Reply</h3>
+									<h3>Leave a Comment</h3>
 									<form action="{{ route("comments.store") }}" method="POST">
 										<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
@@ -263,7 +263,7 @@
 													<h3 class="widget-title">Categories</h3>
 													<ul>
 														@foreach($categorys as $category)
-														<li><a href="#">{{ $category->name }}</a></li>
+														<li><a href="{{ url('/courselists', $category->id) }}">{{ $category->name }}</a></li>
 														@endforeach
 													</ul>
 												</div>

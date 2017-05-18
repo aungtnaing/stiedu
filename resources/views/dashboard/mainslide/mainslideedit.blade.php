@@ -62,9 +62,9 @@
 
 
 								<div class="control-group">
-									<label class="control-label">mTitle :</label>
+									<label class="control-label">Second Title :</label>
 									<div class="controls">
-										<input type="text" class="span11" id="" name="mtitle" placeholder="Enter mtitle" value="{{ $mainslide->mtitle }}" required>
+										<input type="text" class="span11" id="" name="stitle" placeholder="Enter second title" value="{{ $mainslide->stitle }}" required>
 									</div>
 								</div> 
 								<div class="control-group">

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 use DB;
 
-use App\Courses;
+use App\Events;
 use App\Category;
 use App\Professors;
 
@@ -16,9 +16,9 @@ use File;
 use Input;
 use Auth;
 
-class CoursesController extends Controller {
+class EventsController extends Controller {
 
-	/**
+	/*
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
@@ -29,15 +29,15 @@ class CoursesController extends Controller {
 		if(Auth::user()->roleid==1 || Auth::user()->roleid==2 || Auth::user()->roleid==3)
 
 		{
-			$courses = Courses::All();
+			$events = Events::All();
 		}
 		else
 		{
-		$courses = Courses::where('userid', Auth::user()->id)->get();
+		$events = Events::where('userid', Auth::user()->id)->get();
 		}
 
-		return view("dashboard.courses.coursespannel")
-		->with("courses", $courses);
+		return view("dashboard.events.eventspannel")
+		->with("events", $events);
 	}
 
 	/**
@@ -46,20 +46,23 @@ class CoursesController extends Controller {
 	 * @return Response
 	 */
 
-	public function coursedetails($courseid)
+	public function eventdetails($eventid)
 	{
 		
-		$coursedetail = Courses::find($courseid);
+		$eventdetail = Events::find($eventid);
 		$categorys = Category::orderBy('id', 'desc')
 								->take(7)
 								->get();
 		
-		$courselists = Courses::where('categoryid', $coursedetail->category->id)->get();
+		$eventlists = Events::where('active', 1)
+								->orderBy('id', 'desc')
+								->take(5)
+								->get();
 		
 
-		return view("pages.coursedetails")
-					->with('coursedetail',$coursedetail)
-					->with('courselists',$courselists)
+		return view("pages.eventdetails")
+					->with('eventdetail',$eventdetail)
+					->with('eventlists',$eventlists)
 					->with('categorys',$categorys);
 					
 
@@ -89,7 +92,7 @@ class CoursesController extends Controller {
 		
 		$categorys = Category::orderBy('id', 'desc')->get();
 		$professors = Professors::orderBy('id', 'desc')->get();
-		return view("dashboard.courses.coursecreate")
+		return view("dashboard.events.eventcreate")
 				->with('professors', $professors)
 				->with('categorys',$categorys);
 
@@ -108,15 +111,15 @@ class CoursesController extends Controller {
 		$this->validate($request,[
 			'photourl1' => 'required',
 			'name' => 'required|max:255',
-			'aboutcourse' => 'required|max:1000',
+			'aboutevent' => 'required|max:2000',
 			
 			]);
 
 
-		$course = new Courses();
+		$event = new Events();
 
-		$imagePath = public_path() . '/images/courses/';
-		$lastid = DB::table('courses')->select('id')->orderBy('id', 'DESC')->first();
+		$imagePath = public_path() . '/images/events/';
+		$lastid = DB::table('events')->select('id')->orderBy('id', 'DESC')->first();
 		if($lastid!=null)
 		{
 			$lastid = $lastid->id + 1;
@@ -141,35 +144,45 @@ class CoursesController extends Controller {
 				File::exists($destinationPath) or File::makeDirectory($destinationPath, 0777, true, true);
 				
 				Input::file('photourl1')->move($destinationPath, $name); // uploading file to given path
-				$photourl1 = "/images/courses/" . $directory . '/photos/' .  $name;
+				$photourl1 = "/images/events/" . $directory . '/photos/' .  $name;
 
 			
 			}
 
 		}
 
-		$course->photourl1 = $photourl1;
-		$course->name = $request->input("name");
-		$course->categoryid = $request->input("category");
-		$course->professorid = $request->input("professor");
-		$course->userid = $request->user()->id;
+		$event->photourl1 = $photourl1;
+		$event->name = $request->input("name");
+		
+		if($request->input("firstspeakerid") != 0)
+		{ $event->firstspeakerid = $request->input("firstspeakerid"); }
+		
+		if($request->input("secondspeakerid") != 0)
+		{ $event->secondspeakerid = $request->input("secondspeakerid"); }
+		if($request->input("thirdspeakerid") != 0)
+		{ $event->thirdspeakerid = $request->input("thirdspeakerid"); }
+		
+		if($request->input("fourthspeakerid") != 0)
+		{ $event->fourthspeakerid = $request->input("fourthspeakerid");
+		}
 
-		$course->aboutcourse = $request->input("aboutcourse");
-		$course->whatlearn = $request->input("whatlearn");
+		if($request->input("fifthspeakerid") != 0)
+		{ $event->fifthspeakerid = $request->input("fifthspeakerid");
+		}
 		
-		$course->startdate = $request->input("startdate");
-		$course->duration = $request->input("duration");
-		$course->classduration = $request->input("classduration");
-		$course->institution = $request->input("institution");
-		$course->seatsavailable = $request->input("seatsavailable");
-		$course->level = $request->input("level");
-		$course->rate = $request->input("rate");
+		$event->userid = $request->user()->id;
 
-		if (Input::get('active') === '1'){$course->active = 1;}
+		$event->aboutevent = $request->input("aboutevent");
+		$event->startdate = $request->input("startdate");
+		$event->enddate = $request->input("enddate");
+		$event->address = $request->input("address");
 		
-		$course->save();
+
+		if (Input::get('active') === '1'){$event->active = 1;}
 		
-		return redirect()->route("courses.index");
+		$event->save();
+		
+		return redirect()->route("events.index");
 	}
 
 	/**
@@ -194,13 +207,13 @@ class CoursesController extends Controller {
 	{
 		//
 		
-		$course = Courses::find($id);
+		$event = Events::find($id);
 		$categorys = Category::orderBy('id', 'desc')->get();
 		$professors = Professors::orderBy('id', 'desc')->get();
 
-		return view('dashboard.courses.courseedit')
+		return view('dashboard.events.eventedit')
 				->with('professors', $professors)
-				->with('course', $course)
+				->with('event', $event)
 				->with('categorys',$categorys);
 	}
 
@@ -217,20 +230,20 @@ class CoursesController extends Controller {
 	$this->validate($request,[
 		
 		'name' => 'required|max:255',
-			'aboutcourse' => 'required|max:1000',
+			'aboutevent' => 'required|max:2000',
 			
 			]);
 
 
-		$course = Courses::find($id);
+		$event = Events::find($id);
 
-		$imagePath = public_path() . '/images/courses/';
+		$imagePath = public_path() . '/images/events/';
 		$directory = $id;
 
 		$input = $request->all();
 		$destinationPath = $imagePath . $directory . '/photos';
 		
-		$photourl1 = $course->photourl1;
+		$photourl1 = $event->photourl1;
 
 		
 		if(Input::file('photourl1')!="")
@@ -250,7 +263,7 @@ class CoursesController extends Controller {
 
 				$name =  time()  . '-photo' . '.' . $input['photourl1']->getClientOriginalExtension();
 				Input::file('photourl1')->move($destinationPath, $name); // uploading file to given path
-				$photourl1 = "/images/courses/" . $directory . '/photos/' .  $name;
+				$photourl1 = "/images/events/" . $directory . '/photos/' .  $name;
 			
 			}
 
@@ -259,29 +272,36 @@ class CoursesController extends Controller {
 
 		
 
-		$course->photourl1 = $photourl1;
-		$course->name = $request->input("name");
-		$course->categoryid = $request->input("category");
-		$course->professorid = $request->input("professor");
-		$course->userid = $request->user()->id;
-
-		$course->aboutcourse = $request->input("aboutcourse");
-		$course->whatlearn = $request->input("whatlearn");
+		$event->photourl1 = $photourl1;
+		$event->name = $request->input("name");
+		if($request->input("firstspeakerid") != 0)
+		{ $event->firstspeakerid = $request->input("firstspeakerid"); }
 		
-		$course->startdate = $request->input("startdate");
-		$course->duration = $request->input("duration");
-		$course->classduration = $request->input("classduration");
-		$course->institution = $request->input("institution");
-		$course->seatsavailable = $request->input("seatsavailable");
-		$course->level = $request->input("level");
-		$course->rate = $request->input("rate");
+		if($request->input("secondspeakerid") != 0)
+		{ $event->secondspeakerid = $request->input("secondspeakerid"); }
+		if($request->input("thirdspeakerid") != 0)
+		{ $event->thirdspeakerid = $request->input("thirdspeakerid"); }
+		
+		if($request->input("fourthspeakerid") != 0)
+		{ $event->fourthspeakerid = $request->input("fourthspeakerid");
+		}
+
+		if($request->input("fifthspeakerid") != 0)
+		{ $event->fifthspeakerid = $request->input("fifthspeakerid");
+		}
+		$event->userid = $request->user()->id;
+
+		$event->aboutevent = $request->input("aboutevent");
+		$event->startdate = $request->input("startdate");
+		$event->enddate = $request->input("enddate");
+		$event->address = $request->input("address");
 		
 
-		$course->active = 0;
-		if (Input::get('active') === ""){$course->active = 1;}
+		$event->active = 0;
+		if (Input::get('active') === ""){$event->active = 1;}
 
-		$course->save();
-				return redirect()->route("courses.index");
+		$event->save();
+				return redirect()->route("events.index");
 			}
 
 	/**
@@ -293,19 +313,19 @@ class CoursesController extends Controller {
 	public function destroy($id)
 	{
 		//
-		$course = Courses::find($id);
+		$event = Events::find($id);
 		
-		if($course->photourl1!="")
+		if($event->photourl1!="")
 		{
-			if(file_exists(public_path() .$course->photourl1))
+			if(file_exists(public_path() .$event->photourl1))
 			{
-				unlink(public_path() . $course->photourl1);
+				unlink(public_path() . $event->photourl1);
 			}
 		}
 
-		Courses::destroy($id);
+		Events::destroy($id);
 
-		return redirect()->route("courses.index");
+		return redirect()->route("events.index");
 	}
 	/**
 	 * Remove the specified resource from storage.

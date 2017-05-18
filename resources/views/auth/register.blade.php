@@ -32,7 +32,7 @@
                                     <div class="form-group">
                                         <label for="inputFirstName" class="col-sm-3 control-label">Name:<span class="text-error">*</span></label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="name" value="{{ old('name') }}">
+                                            <input type="text" class="" name="name" value="{{ old('name') }}">
                                         </div>
                                     </div>
 
@@ -40,7 +40,7 @@
                                     <div class="form-group">
                                         <label for="inputEMail" class="col-sm-3 control-label">E-Mail:<span class="text-error">*</span></label>
                                         <div class="col-sm-9">
-                                            <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                            <input type="email" class="" name="email" value="{{ old('email') }}">
                                         </div>
                                     </div>
 
@@ -49,14 +49,14 @@
                                     <div class="form-group">
                                         <label for="inputPhone" class="col-sm-3 control-label">Phone:<span class="text-error">*</span></label>
                                         <div class="col-sm-9">
-                                            <input class="form-control" name="ph1" value="{{ old('phone') }}" placeholder="Enter Your phone" type="text" required>
+                                            <input class="" name="ph1" value="{{ old('phone') }}" placeholder="Enter Your phone" type="text" required>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="address" class="col-sm-3 control-label">Address:</label>
                                         <div class="col-sm-9">
-                                             <textarea name="address" placeholder="Enter your address" class="form-control" rows="2"></textarea>
+                                             <textarea name="address" placeholder="Enter your address" class="" rows="2"></textarea>
                                         </div>
                                     </div>
 <!-- 
@@ -65,14 +65,14 @@
                                     <div class="form-group">
                                         <label class="col-md-3 control-label">Password:<span class="text-error">*</span></label>
                                         <div class="col-md-9">
-                                            <input id="password1" type="password" class="form-control" name="password">
+                                            <input id="password1" type="password" class="" name="password">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-md-3 control-label">Confirm Password:<span class="text-error">*</span></label>
                                         <div class="col-md-9">
-                                            <input id="password2" type="password" class="form-control" name="password_confirmation">
+                                            <input id="password2" type="password" class="" name="password_confirmation">
                                         </div>
                                     </div>
 
