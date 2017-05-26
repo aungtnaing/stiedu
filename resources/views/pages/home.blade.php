@@ -8,6 +8,7 @@
 @include('includes.priorities') 
 @include('includes.ourgallerys') 
 @include('includes.courses') 
+@include('includes.partners') 
 @include('includes.events') 
 @include('includes.contact') 
 @stop

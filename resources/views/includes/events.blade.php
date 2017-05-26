@@ -1,16 +1,4 @@
-  <section class="section parallax parallax-bg-3 bg-dark-color">
-                <div class="full-bg-image"></div>
-                <div class="parallax-overlay"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="tweet opacity" data-timeout="6000"></div>
-                        </div>
-                    </div>
-                    <!--/ .row-->
-                </div>
-                <!--/ .container-->
-            </section>
+
  <section id="news" class="page news_wrap">
             <section class="section border bg-gray-color">
                 <div class="container">

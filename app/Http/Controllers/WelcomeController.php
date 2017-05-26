@@ -9,6 +9,8 @@ use App\Professors;
 use App\Priorities;
 use App\Ourgallerys;
 use App\Events;
+use App\Partners;
+
 
 use View;
 use Config;
@@ -82,7 +84,10 @@ $testimonials = Testimonials::where('active',1)
 						->orderBy('id','DESC')
 						->take(4)
 						->get();
-						
+			$partners = Partners::where('active',1)
+						->orderBy('id','DESC')
+						->take(10)
+						->get();				
 		return view('pages.home')
 				->with('categorys', $categorys)
 				->with('mainslides', $mainslides)
@@ -91,8 +96,8 @@ $testimonials = Testimonials::where('active',1)
 				->with('priorities', $priorities)
 				->with('ourgallerys', $ourgallerys)
 				->with('maincategorys', $maincategorys)
-				->with('events', $events);
-		
+				->with('events', $events)
+				->with('partners', $partners);		
 	}
 
 	public function myanmarindex()
@@ -129,7 +134,10 @@ $testimonials = Testimonials::where('active',1)
 						->orderBy('id','DESC')
 						->take(4)
 						->get();
-						
+			$partners = Partners::where('active',1)
+						->orderBy('id','DESC')
+						->take(10)
+						->get();				
 		return view('pages.homemyanmar')
 				->with('categorys', $categorys)
 				->with('mainslides', $mainslides)
@@ -138,7 +146,9 @@ $testimonials = Testimonials::where('active',1)
 				->with('priorities', $priorities)
 				->with('ourgallerys', $ourgallerys)
 				->with('maincategorys', $maincategorys)
-				->with('events', $events);		
+				->with('events', $events)
+				->with('partners', $partners);					
+		
 		
 		
 	}

@@ -12,6 +12,7 @@ use App\Professors;
 use App\Priorities;
 use App\Ourgallerys;
 use App\Events;
+use App\Partners;
 
 use View;
 use Config;		
@@ -85,7 +86,10 @@ class HomeController extends Controller {
 						->orderBy('id','DESC')
 						->take(4)
 						->get();
-						
+		$partners = Partners::where('active',1)
+						->orderBy('id','DESC')
+						->take(10)
+						->get();				
 		return view('pages.home')
 				->with('categorys', $categorys)
 				->with('mainslides', $mainslides)
@@ -94,7 +98,8 @@ class HomeController extends Controller {
 				->with('priorities', $priorities)
 				->with('ourgallerys', $ourgallerys)
 				->with('maincategorys', $maincategorys)
-				->with('events', $events);
+				->with('events', $events)
+				->with('partners', $partners);
 				
 				
 		
