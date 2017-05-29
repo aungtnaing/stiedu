@@ -143,7 +143,9 @@
 	Route::group(['middleware' => 'auth'],function()
 	{
 		
-		
+		Route::get('yourtestimonials', [
+		'uses' => 'TestimonialsController@createtestimonial'
+		]);
 			Route::resource('comments','CommentsController');
 		Route::resource('replycomments','ReplycommentsController');
 	

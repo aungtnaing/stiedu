@@ -16,13 +16,17 @@
                     
                     @foreach($ourgallerys as $ourgallery)
                     <li class="photo mix mix_all opacity2x">
-                        <div class="work-item"> <img src="{{ $ourgallery->photourl1 }}" alt="" />
+                        <div class="work-item"> <img src="{{ $ourgallery->photourl1 }}" alt="" style="width: 466px;height: 200px;"/>
                             <div class="image-extra">
                                 <div class="extra-content">
                                     <div class="inner-extra">
                                         <h2 class="extra-title">{{ $ourgallery->name }}</h2>
                                         <h6 class="extra-category">{{ $ourgallery->type }}</h6>
-                                        <a class="single-image plus-icon" data-fancybox-group="folio" href="{{ $ourgallery->photourl1 }}"></a>
+                                        @if($ourgallery->type==='video')
+                                        <a class="single-image plus-icon" data-fancybox-group="folio" href="{{ $ourgallery->youtubelink }}"></a>
+                                        @else
+                                         <a class="single-image plus-icon" data-fancybox-group="folio" href="{{ $ourgallery->photourl1 }}"></a>
+                                         @endif
                                     </div>
                                     <!--/ .inner-extra-->
                                 </div>

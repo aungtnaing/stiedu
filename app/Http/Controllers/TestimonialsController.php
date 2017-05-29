@@ -36,6 +36,17 @@ class TestimonialsController extends Controller {
 		return view("dashboard.testimonials.testimonialcreate");
 
 	}
+	/**
+	 * Show the form for creating a new resource.
+	 *
+	 * @return Response
+	 */
+	public function createtestimonial()
+	{
+		//
+		return view("pages.testimonialcreate");
+
+	}
 
 	/**
 	 * Store a newly created resource in storage.
@@ -98,7 +109,15 @@ class TestimonialsController extends Controller {
 		$testimonial->photourl1 = $photourl1;
 		
 		$testimonial->save();
+
+		if($request->input("description")==='submit')
+		{
 		return redirect()->route("testimonials.index");
+		}
+		else
+		{
+			 return redirect('/');
+		}
 	}
 
 	/**
