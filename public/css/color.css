@@ -343,7 +343,8 @@ ul.circle-list li:after,
 .navigation ul ul .current_page_ancestor > a,
 .counter .count,
 .counter .details {
-    background: rgba(127, 202, 206, 0.54);
+    background: rgba(5, 9, 53, 0.9);
+    /*rgba(127, 202, 206, 0.54);*/
     /*rgba(169, 222, 247, 0.75); */
     /*rgba(0, 0, 56, 0.75);*/
     /*rgba(47, 80, 108, 0.8);*/
@@ -433,13 +434,15 @@ button {
 .pagenavi .current,
 .pagenavi .page-numbers:hover,
 .bottom-footer {
-    background-color: rgba(127, 202, 206, 0.54); 
+    background-color: rgba(5, 9, 53, 0.9);
+    /*rgba(127, 202, 206, 0.54); */
     /*#000038;*/
     /*#2f506c;*/
 }
 
 .course-wrap .course-header {
-    background: rgba(127, 202, 206, 0.54);
+    background: rgba(5, 9, 53, 0.9);
+    /*rgba(127, 202, 206, 0.54);*/
     /*#f9f9f9;*/
 }
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>STI  |  University</title>
+  <title>STI Myanmar University</title>
   <meta name="description" content="STI">
   <meta name="author" content="Aung Thein Naing">
   <meta charset="UTF-8">

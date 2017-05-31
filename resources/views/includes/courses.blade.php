@@ -13,13 +13,13 @@
             <div class="row">
                 <div class="course_tab_wrap">
                     <!-- Nav tabs -->
-                    <ul class="nav nav-tabs" role="tablist">
+                    <ul style="background-color: #f0ff00;" class="nav nav-tabs" role="tablist">
                         @for ($i = 0; $i < count($maincategorys); $i++)
                         
                         @if($i == 0)
-                        <li role="presentation" class="active"><a href="#main{{ $maincategorys[$i]->id }}" aria-controls="main{{ $maincategorys[$i]->id }}" role="tab" data-toggle="tab">{{ $maincategorys[$i]->name }}</a></li>
+                        <li role="presentation" class="active"><a href="#main{{ $maincategorys[$i]->id }}" aria-controls="main{{ $maincategorys[$i]->id }}" role="tab" data-toggle="tab"><b>{{ $maincategorys[$i]->name }}</b></a></li>
                         @else
-                        <li role="presentation"><a href="#main{{ $maincategorys[$i]->id }}" aria-controls="main{{ $maincategorys[$i]->id }}" role="tab" data-toggle="tab">{{ $maincategorys[$i]->name }}</a></li>
+                        <li role="presentation"><a href="#main{{ $maincategorys[$i]->id }}" aria-controls="main{{ $maincategorys[$i]->id }}" role="tab" data-toggle="tab"><b>{{ $maincategorys[$i]->name }}</b></a></li>
                         @endif
                         @endfor
                     </ul>
@@ -45,7 +45,7 @@
                        <div class="row margin-bottom">
                            <div class="course_tab_wrap">
                             <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
+                            <ul style="background-color: #98cefb;" class="nav nav-tabs" role="tablist">
                                 @for ($j = 0; $j < count($maincategorys[$i]->categorys); $j++)
                                 @if($j == 0)
                                 <li role="presentation" class="active"><a href="#sub{{ $maincategorys[$i]->categorys[$j]->id }}" aria-controls="sub{{ $maincategorys[$i]->categorys[$j]->id }}" role="tab" data-toggle="tab">{{ $maincategorys[$i]->categorys[$j]->name }}</a></li>
@@ -63,7 +63,7 @@
                    <div class="row margin-bottom">
                        <div class="course_tab_wrap">
                         <!-- Nav tabs -->
-                        <ul class="nav nav-tabs" role="tablist">
+                        <ul style="background-color: #98cefb;" class="nav nav-tabs" role="tablist">
                             @for ($j = 0; $j < count($maincategorys[$i]->categorys); $j++)
                             @if($j == 0)
                             <li role="presentation" class="active"><a href="#sub{{ $maincategorys[$i]->categorys[$j]->id }}" aria-controls="sub{{ $maincategorys[$i]->categorys[$j]->id }}" role="tab" data-toggle="tab">{{ $maincategorys[$i]->categorys[$j]->name }}</a></li>
