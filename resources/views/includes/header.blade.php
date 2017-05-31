@@ -33,7 +33,7 @@
                     </li>
                     <li><a href="#contacts" class="page-scroll">Contact</a></li>
                     @if (Auth::guest())
-                    <li><a href="{{ url('/auth/login') }}">Login / Register</a></li>   
+                    <li><a href="{{ url('/auth/login') }}">Login/signup</a></li>   
                     @else
                     @if(Auth::user()->photourl!="")
                     <li class="dropdown"><a href="" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle"><img src="{{ Auth::user()->photourl }}" width="20" height="20" class="img-circle">{{ substr(Auth::user()->name,0, 5) }} <b class="caret"></b></a>
