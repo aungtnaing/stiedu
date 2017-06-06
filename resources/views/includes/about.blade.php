@@ -5,8 +5,8 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <hgroup class="slogan align-center opacity ">
-                                <h1>Welcome <span>STI University</span> </h1>
-                                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2> 
+                                <h1>Welcome <span>STI Myanmar University </span> </h1>
+                               <!--  <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>  -->
                             </hgroup>
                         </div>
                     </div>
