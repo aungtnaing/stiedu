@@ -39,33 +39,37 @@
                                               <source src="<?php echo url(); ?>{{ $event->photourl1 }}" type="video/mp4">
                                                   <!-- <source src="{{ $event->photourl1 }}" type="video/ogg"> -->
                                                   Your browser does not support the video tag.
-                                              </video> 
-                                              @else
-                                              <img src="{{ $event->photourl1 }}" alt="" />
-                                                 @endif
-                                              <div class="image-extra">
-                                                <div class="extra-content">
-                                                    <div class="inner-extra">
-                                                        <a class="single-image plus-icon" data-fancybox-group="blog" href="{{ $event->photourl1 }}"></a>
-                                                    </div>
+                                              </video>
+                                              @elseif($event->type==='youtubelink')
+                                              <iframe width="300px" height="200px"
+                                              src="{{ $event->youtubelink }}">
+                                          </iframe>
+                                          @else
+                                          <img src="{{ $event->photourl1 }}" alt="" />
+                                          @endif
+                                          <div class="image-extra">
+                                            <div class="extra-content">
+                                                <div class="inner-extra">
+                                                    <a class="single-image plus-icon" data-fancybox-group="blog" href="{{ $event->photourl1 }}"></a>
                                                 </div>
                                             </div>
                                         </div>
-
-                                     
                                     </div>
+
+                                    
                                 </div>
                             </div>
                         </div>
-                        @endforeach
-                        <!-- News & Event item 1-->
-                        
-                        
                     </div>
-                    <!--/ .row-->
+                    @endforeach
+                    <!-- News & Event item 1-->
+                    
+                    
                 </div>
-                <!--/ .container-->
-            </section>
-            <!--/ .section-->
+                <!--/ .row-->
+            </div>
+            <!--/ .container-->
         </section>
+        <!--/ .section-->
+    </section>
         <!-- end News & Event   -->
