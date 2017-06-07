@@ -48,8 +48,12 @@ class EventsController extends Controller {
 
 	public function eventdetails($eventid)
 	{
+
+
 		
 		$eventdetail = Events::find($eventid);
+
+
 		$categorys = Category::orderBy('id', 'desc')
 								->take(7)
 								->get();
@@ -59,8 +63,7 @@ class EventsController extends Controller {
 								->take(5)
 								->get();
 		
-
-		return view("pages.eventdetails")
+		return view("pages.eventdetail")
 					->with('eventdetail',$eventdetail)
 					->with('eventlists',$eventlists)
 					->with('categorys',$categorys);
