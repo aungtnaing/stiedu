@@ -38,11 +38,22 @@
 									<li class="span3"> <a> 
 										<input style="display:none;" id="file-input1" name="photourl1" type='file' onchange="readURL(this);"/>                    
 										<label for="file-input1">
-											<i class="icon-camera"></i>.Main 360 X 248<br>
+											<i class="icon-camera"></i>.Main 360 X 248 or<br>Video.MP4<br>
+											@if($event->type==='video')
+												 <video width="200px" height="200px" controls loop autoplay>
+								                  <source src="<?php echo url(); ?>{{ $event->photourl1 }}" type="video/mp4">
+								                     
+								                      Your browser does not support the video tag.
+								                  </video> 
+
+											@else
+
 											@if($event->photourl1!="")
 											<img id="blah" src= "<?php echo url(); ?>{{ $event->photourl1 }}" width="100" height="100">
 											@else
 											<img id="blah" src="//placehold.it/100" alt="avatar" alt="your image" />
+											@endif
+
 											@endif
 										</label>
 										<div class="actions"><a id="preview1" class="lightbox_trigger" herf=""><i class="icon-search"></i></a> </div>
@@ -60,14 +71,39 @@
 								</div>
 							</div>
 
+							<div class="control-group">
+						<label class="control-label">Type :</label>
+						<br>
+						<select name="type">
+						<option value="{{ $event->type }}">{{ $event->type }}</option>
 						
+						<option value="photo">photo</option>
+						<option value="video">video</option>
+						<option value="youtubelink">youtubelink</option>
+							
+						</select>
+
+					</div>
+
+								<div class="control-group">
+									<label class="control-label">Youtubelink:</label>
+									<div class="controls">
+										<div class="controls">
+										<input type="text" class="span11" id="" name="youtubelink" placeholder="Enter youtubelink" value="{{ $event->youtubelink }}">
+								</div>
+										
+									</div>
+								</div>
 
 						<div class="control-group">
 								<label class="control-label">First Speaker</label>
 								<br>
 								<select name="firstspeakerid">
+									@if($event->firstspeakerid!=0)
 									<option value="{{ $event->firstspeakerid }}">{{ $event->firstspeaker->name }}</option>
+									@else
 									<option value="0">None</option>
+									@endif
 									@foreach($professors as $professor)
 									<option value="{{ $professor->id }}">{{ $professor->name }}</option>
 									@endforeach	
@@ -79,8 +115,11 @@
 								<label class="control-label">Second Speaker</label>
 								<br>
 								<select name="secondspeakerid">
+									@if($event->secondspeakerid!=0)
 								<option value="{{ $event->secondspeakerid }}">{{ $event->secondspeaker->name }}</option>
+								@else
 									<option value="0">None</option>
+									@endif
 									@foreach($professors as $professor)
 									<option value="{{ $professor->id }}">{{ $professor->name }}</option>
 									@endforeach	
@@ -92,8 +131,11 @@
 								<label class="control-label">Third Speaker</label>
 								<br>
 								<select name="thirdspeakerid">
+								@if($event->thirdspeakerid!=0)
 								<option value="{{ $event->thirdspeakerid }}">{{ $event->thirdspeaker->name }}</option>
+								@else
 									<option value="0">None</option>
+									@endif
 									@foreach($professors as $professor)
 									<option value="{{ $professor->id }}">{{ $professor->name }}</option>
 									@endforeach	
@@ -105,9 +147,11 @@
 								<label class="control-label">Fourth Speaker</label>
 								<br>
 								<select name="fourthspeakerid">
+									@if($event->fourthspeakerid!=0)
 									<option value="{{ $event->fourthspeakerid }}">{{ $event->fourthspeaker->name }}</option>
-
+									@else
 									<option value="0">None</option>
+									@endif
 									@foreach($professors as $professor)
 									<option value="{{ $professor->id }}">{{ $professor->name }}</option>
 									@endforeach	
@@ -119,9 +163,11 @@
 								<label class="control-label">Fifth Speaker</label>
 								<br>
 								<select name="fifthspeakerid">
+								@if($event->fifthspeakerid!=0)
 								<option value="{{ $event->fifthspeakerid }}">{{ $event->fifthspeaker->name }}</option>
-
+								@else
 									<option value="0">None</option>
+								@endif
 									@foreach($professors as $professor)
 									<option value="{{ $professor->id }}">{{ $professor->name }}</option>
 									@endforeach	
@@ -133,7 +179,7 @@
 							<div class="control-group">
 								<label class="control-label">About Event:</label>
 								<div class="controls">
-									<textarea class="textarea_editor span12" name="aboutevent" placeholder="Enter your about event" class="span11" rows="3">{{ $event->aboutenvent }}</textarea>
+									<textarea class="textarea_editor span12" name="aboutevent" placeholder="" class="span11" rows="5">{{ $event->aboutevent }}</textarea>
 
 								</div>
 							</div>
@@ -142,7 +188,7 @@
 							<div class="control-group">
 								<label class="control-label">Start date :</label>
 								<div class="controls">
-									<input type="date" placeholder="start date" name="startdate" class="span11" value="{{ $event->startdate }}"/>
+									<input type="datetime" placeholder="start date" name="startdate" class="span11" value="{{ $event->startdate }}"/>
 									
 								</div>
 							</div>
@@ -151,7 +197,7 @@
 							<div class="control-group">
 								<label class="control-label">End date :</label>
 								<div class="controls">
-									<input type="date" placeholder="end date" name="enddate" class="span11" value="{{ $event->enddate }}"/>
+									<input type="datetime" placeholder="end date" name="enddate" class="span11" value="{{ $event->enddate }}"/>
 									
 								</div>
 							</div>

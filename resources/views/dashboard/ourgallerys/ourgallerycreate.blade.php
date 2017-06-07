@@ -33,7 +33,7 @@
 								<li class="span3"> <a> 
 									<input style="display:none;" id="file-input1" name="photourl1" type='file' onchange="readURL(this);" required/>                    
 									<label for="file-input1">
-										<i class="icon-camera"></i>.Main 466x379<br>
+										<i class="icon-camera"></i>.Main 466x379 or<br>Video.MP4<br>
 										<img id="blah" src="//placehold.it/100" alt="avatar" alt="your image" />
 
 									</label>
@@ -54,12 +54,21 @@
 							</div>
 
 
-							<div class="control-group">
-								<label class="control-label">Type :</label>
-								<div class="controls">
-									<input type="text" class="span11" id="" name="type" placeholder="Enter type" value="{{ old('type') }}">
-								</div>
-							</div> 
+							
+
+								<div class="control-group">
+						<label class="control-label">Type :</label>
+						<br>
+						<select name="type">
+						
+						<option value="photo">photo</option>
+						<option value="video">video</option>
+						<option value="youtubelink">youtubelink</option>
+						
+						</select>
+
+					</div>
+
 							<div class="control-group">
 								<label class="control-label">Youtubelink:</label>
 								<div class="controls">

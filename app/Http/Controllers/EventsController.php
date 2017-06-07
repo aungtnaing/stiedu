@@ -153,6 +153,9 @@ class EventsController extends Controller {
 
 		$event->photourl1 = $photourl1;
 		$event->name = $request->input("name");
+
+		$event->type = $request->input("type");	
+		$event->youtubelink = $request->input("youtubelink");
 		
 		if($request->input("firstspeakerid") != 0)
 		{ $event->firstspeakerid = $request->input("firstspeakerid"); }
@@ -274,6 +277,10 @@ class EventsController extends Controller {
 
 		$event->photourl1 = $photourl1;
 		$event->name = $request->input("name");
+
+		$event->type = $request->input("type");	
+		$event->youtubelink = $request->input("youtubelink");
+		
 		if($request->input("firstspeakerid") != 0)
 		{ $event->firstspeakerid = $request->input("firstspeakerid"); }
 		

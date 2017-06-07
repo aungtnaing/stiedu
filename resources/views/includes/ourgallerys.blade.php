@@ -26,14 +26,14 @@
 
 
                 @if($ourgallery->type==='video')
-                <video width="300px" height="200px" controls loop autoplay>
+                <video width="350" height="250px" controls loop autoplay>
                   <source src="<?php echo url(); ?>{{ $ourgallery->photourl1 }}" type="video/mp4">
                       <!-- <source src="{{ $ourgallery->photourl1 }}" type="video/ogg"> -->
                       Your browser does not support the video tag.
                   </video> 
                   @else
                   <div class="work-item"> 
-                    <img src="{{ $ourgallery->photourl1 }}" alt="" style="width: 466px;height: 200px;"/>
+                    <img src="{{ $ourgallery->photourl1 }}" alt="" style="width: 466px;height: 250px;"/>
 
                     <div class="image-extra">
                         <div class="extra-content">

@@ -19,7 +19,8 @@
 		</div>
 		@endif  
 		<hr>
-
+		
+ 
 		<div class="row-fluid">
 
 		<div class="span12">
@@ -38,11 +39,20 @@
 									<li class="span3"> <a> 
 										<input style="display:none;" id="file-input1" name="photourl1" type='file' onchange="readURL(this);"/>                    
 										<label for="file-input1">
-											<i class="icon-camera"></i>.Main 466 X 379<br>
-											@if($ourgallery->photourl1!="")
-											<img id="blah" src= "{{ $ourgallery->photourl1 }}" width="100" height="100">
+											<i class="icon-camera"></i>.Main 466x379 or<br>Video.MP4<br>
+											@if($ourgallery->type==='video')
+												 <video width="200px" height="200px" controls loop autoplay>
+								                  <source src="<?php echo url(); ?>{{ $ourgallery->photourl1 }}" type="video/mp4">
+								                     
+								                      Your browser does not support the video tag.
+								                  </video> 
+
 											@else
-											<img id="blah" src="//placehold.it/100" alt="avatar" alt="your image" />
+												@if($ourgallery->photourl1!="")
+												<img id="blah" src= "{{ $ourgallery->photourl1 }}" width="100" height="100">
+												@else
+												<img id="blah" src="//placehold.it/100" alt="avatar" alt="your image" />
+												@endif
 											@endif
 										</label>
 										<div class="actions"><a id="preview1" class="lightbox_trigger" herf=""><i class="icon-search"></i></a> </div>
@@ -61,12 +71,21 @@
 								</div>
 
 
+								
 								<div class="control-group">
-									<label class="control-label">Type :</label>
-									<div class="controls">
-										<input type="text" class="span11" id="" name="type" placeholder="Enter type" value="{{ $ourgallery->type }}">
-									</div>
-								</div> 
+						<label class="control-label">Type :</label>
+						<br>
+						<select name="type">
+						<option value="{{ $ourgallery->type }}">{{ $ourgallery->type }}</option>
+						
+						<option value="photo">photo</option>
+						<option value="video">video</option>
+						<option value="youtubelink">youtubelink</option>
+							
+						</select>
+
+					</div>
+
 								<div class="control-group">
 									<label class="control-label">Youtubelink:</label>
 									<div class="controls">

@@ -42,7 +42,15 @@
 								@foreach($events as $event)
 								<tr lass="gradeX">   
 									<td>{{ $event->id }}</td>
+									@if($event->type==='video')
+									<td> <video width="200px" height="200px" controls loop autoplay>
+								                  <source src="<?php echo url(); ?>{{ $event->photourl1 }}" type="video/mp4">
+								                     
+								                      Your browser does not support the video tag.
+								                  </video> </td>
+									@else
 									<td><img src="{{ $event->photourl1 }}" width="100" height="100"></td>
+									@endif
 									<td>{{ $event->name }}</td>
 									<td>{{ $event->aboutevent }}</td>
 									<td>{{ $event->startdate }} to {{ $event->enddate }}</td>

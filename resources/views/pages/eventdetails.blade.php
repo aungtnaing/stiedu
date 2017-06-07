@@ -17,7 +17,15 @@
 						<div class="single-event-detail">
 							<h2 class="entry-title">{{ $eventdetail->name }}</h2>
 							<!--/ .entry-title-->
+							 @if($eventdetail->type==='video')
+                                            <video width="777px" height="504px" controls loop autoplay>
+                                              <source src="<?php echo url(); ?>{{ $eventdetail->photourl1 }}" type="video/mp4">
+                                                  <!-- <source src="{{ $eventdetail->photourl1 }}" type="video/ogg"> -->
+                                                  Your browser does not support the video tag.
+                                              </video> 
+                                              @else
 							<div class="entry-image"> <img src="{{ $eventdetail->photourl1 }}" alt="" style="width: 777px;height: 504;"/> </div>
+							@endif
 							<!--/ .entry-image-->
 							<!-- Speakers -->
 							<div class="speakers-list">
