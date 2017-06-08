@@ -19,7 +19,7 @@
 							<h2 class="entry-title">{{ $eventdetail->name }}</h2>
 							<!--/ .entry-title-->
 							@if($eventdetail->type==='video')
-							<video width="777px" height="504px" controls loop autoplay>
+							<video width="777px" height="504px" controls>
 								<source src="<?php echo url(); ?>{{ $eventdetail->photourl1 }}" type="video/mp4">
 									<!-- <source src="{{ $eventdetail->photourl1 }}" type="video/ogg"> -->
 									Your browser does not support the video tag.
@@ -37,71 +37,29 @@
 								<h4><i class="fa fa-microphone"></i>Speakers</h4>
 								<div class="row">
 									<div class="col-sm-4">
-										@if($eventdetail->firstspeakerid!=0)
-										@if($eventdetail->firstspeaker->photourl1=="")
-										<div class="aurthor-name style-2"> <img class="z-depth-2" src="<?php echo url(); ?>/images/speakers/img-01.png" alt="">
-											<h4><a href="{{ url('/facultyprofile', $eventdetail->firstspeaker->id) }}">{{ $eventdetail->firstspeaker->name }}</a></h4> <span>{{ $eventdetail->firstspeaker->positions }}</span> 
+										
+										<div class="aurthor-name style-2"> <span>{{ $eventdetail->firstspeaker }}</span>
 										</div>
-										@else
-										<div class="aurthor-name style-2"> <img class="z-depth-2" src="<?php echo url(); ?>{{ $eventdetail->firstspeaker->photourl1 }}" alt="" style="width: 50px;height: 50px;">
-											<h4><a href="{{ url('/facultyprofile', $eventdetail->firstspeaker->id) }}">{{ $eventdetail->firstspeaker->name }}</a></h4> <span>{{ $eventdetail->firstspeaker->positions }}</span> 
-										</div>
-										@endif
-										@endif
+										
+									
 									</div>
 									<div class="col-sm-4">
-										@if($eventdetail->secondspeakerid!=0)
-										@if($eventdetail->secondspeaker->photourl1=="")
-										<div class="aurthor-name style-2"> <img class="z-depth-2" src="<?php echo url(); ?>/images/speakers/img-01.png" alt="">
-											<h4><a href="{{ url('/facultyprofile', $eventdetail->secondspeaker->id) }}">{{ $eventdetail->secondspeaker->name }}</a></h4> <span>{{ $eventdetail->secondspeaker->positions }}</span> 
+										<div class="aurthor-name style-2"> <span>{{ $eventdetail->secondspeaker }}</span>
 										</div>
-										@else
-										<div class="aurthor-name style-2"> <img class="z-depth-2" src="<?php echo url(); ?>{{ $eventdetail->secondspeaker->photourl1 }}" alt="" style="width: 50px;height: 50px;">
-											<h4><a href="{{ url('/facultyprofile', $eventdetail->secondspeaker->id) }}">{{ $eventdetail->secondspeaker->name }}</a></h4> <span>{{ $eventdetail->secondspeaker->positions }}</span> 
-										</div>
-										@endif
-										@endif
 									</div>
 									<div class="col-sm-4">
-										@if($eventdetail->thirdspeakerid!=0)
-										@if($eventdetail->thirdspeaker->photourl1=="")
-										<div class="aurthor-name style-2"> <img class="z-depth-2" src="<?php echo url(); ?>/images/speakers/img-01.png" alt="">
-											<h4><a href="{{ url('/facultyprofile', $eventdetail->thirdspeaker->id) }}">{{ $eventdetail->thirdspeaker->name }}</a></h4> <span>{{ $eventdetail->thirdspeaker->positions }}</span> 
+										<div class="aurthor-name style-2"> <span>{{ $eventdetail->thirdspeaker }}</span>
 										</div>
-										@else
-										<div class="aurthor-name style-2"> <img class="z-depth-2" src="<?php echo url(); ?>{{ $eventdetail->thirdspeaker->photourl1 }}" alt="" style="width: 50px;height: 50px;">
-											<h4><a href="{{ url('/facultyprofile', $eventdetail->thirdspeaker->id) }}">{{ $eventdetail->thirdspeaker->name }}</a></h4> <span>{{ $eventdetail->thirdspeaker->positions }}</span> 
-										</div>
-										@endif
-										@endif
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-sm-4">
-										@if($eventdetail->fourthspeakerid!=0)
-										@if($eventdetail->fourthspeaker->photourl1=="")
-										<div class="aurthor-name style-2"> <img class="z-depth-2" src="<?php echo url(); ?>/images/speakers/img-01.png" alt="">
-											<h4><a href="{{ url('/facultyprofile', $eventdetail->fourthspeaker->id) }}">{{ $eventdetail->fourthspeaker->name }}</a></h4> <span>{{ $eventdetail->fourthspeaker->positions }}</span> 
+										<div class="aurthor-name style-2"> <span>{{ $eventdetail->fourthspeaker }}</span>
 										</div>
-										@else
-										<div class="aurthor-name style-2"> <img class="z-depth-2" src="<?php echo url(); ?>{{ $eventdetail->fourthspeaker->photourl1 }}" alt="" style="width: 50px;height: 50px;">
-											<h4><a href="{{ url('/facultyprofile', $eventdetail->fourthspeaker->id) }}">{{ $eventdetail->fourthspeaker->name }}</a></h4> <span>{{ $eventdetail->fourthspeaker->positions }}</span> 
-										</div>
-										@endif
-										@endif
 									</div>
 									<div class="col-sm-4">
-										@if($eventdetail->fifthspeakerid!=0)
-										@if($eventdetail->fifthspeaker->photourl1=="")
-										<div class="aurthor-name style-2"> <img class="z-depth-2" src="<?php echo url(); ?>/images/speakers/img-01.png" alt="">
-											<h4><a href="{{ url('/facultyprofile', $eventdetail->fifthspeaker->id) }}">{{ $eventdetail->fifthspeaker->name }}</a></h4> <span>{{ $eventdetail->fifthspeaker->positions }}</span> 
+										<div class="aurthor-name style-2"> <span>{{ $eventdetail->fifthspeaker }}</span>
 										</div>
-										@else
-										<div class="aurthor-name style-2"> <img class="z-depth-2" src="<?php echo url(); ?>{{ $eventdetail->fifthspeaker->photourl1 }}" alt="" style="width: 50px;height: 50px;">
-											<h4><a href="{{ url('/facultyprofile', $eventdetail->fifthspeaker->id) }}">{{ $eventdetail->fifthspeaker->name }}</a></h4> <span>{{ $eventdetail->fifthspeaker->positions }}</span> 
-										</div>
-										@endif
-										@endif
 									</div>
 
 								</div>

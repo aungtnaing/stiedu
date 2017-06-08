@@ -10,28 +10,28 @@ class Events extends Model {
 
 	
 
-    public function firstspeaker()
-    {
-        return $this->belongsTo('App\Professors','firstspeakerid');
-    } 
-    public function secondspeaker()
-    {
-        return $this->belongsTo('App\Professors','secondspeakerid');
-    }
+    // public function firstspeaker()
+    // {
+    //     return $this->belongsTo('App\Professors','firstspeakerid');
+    // } 
+    // public function secondspeaker()
+    // {
+    //     return $this->belongsTo('App\Professors','secondspeakerid');
+    // }
 
-     public function thirdspeaker()
-    {
-        return $this->belongsTo('App\Professors','thirdspeakerid');
-    }
-    public function fourthspeaker()
-    {
-        return $this->belongsTo('App\Professors','fourthspeakerid');
-    }
+    //  public function thirdspeaker()
+    // {
+    //     return $this->belongsTo('App\Professors','thirdspeakerid');
+    // }
+    // public function fourthspeaker()
+    // {
+    //     return $this->belongsTo('App\Professors','fourthspeakerid');
+    // }
 
-     public function fifthspeaker()
-    {
-        return $this->belongsTo('App\Professors','fifthspeakerid');
-    }
+    //  public function fifthspeaker()
+    // {
+    //     return $this->belongsTo('App\Professors','fifthspeakerid');
+    // }
 
     public function user()
     {

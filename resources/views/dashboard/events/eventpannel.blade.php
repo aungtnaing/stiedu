@@ -43,7 +43,7 @@
 								<tr lass="gradeX">   
 									<td>{{ $event->id }}</td>
 									@if($event->type==='video')
-									<td> <video width="200px" height="200px" controls loop autoplay>
+									<td> <video width="200px" height="200px" controls>
 								                  <source src="<?php echo url(); ?>{{ $event->photourl1 }}" type="video/mp4">
 								                     
 								                      Your browser does not support the video tag.

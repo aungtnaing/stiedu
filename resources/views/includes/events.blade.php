@@ -35,7 +35,7 @@
                                         <div class="work-item"> 
 
                                             @if($event->type==='video')
-                                            <video width="300px" height="200px" controls loop autoplay>
+                                            <video width="300px" height="200px" controls>
                                               <source src="<?php echo url(); ?>{{ $event->photourl1 }}" type="video/mp4">
                                                   <!-- <source src="{{ $event->photourl1 }}" type="video/ogg"> -->
                                                   Your browser does not support the video tag.

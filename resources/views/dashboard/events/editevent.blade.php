@@ -98,80 +98,49 @@
 						<div class="control-group">
 								<label class="control-label">First Speaker</label>
 								<br>
-								<select name="firstspeakerid">
-									@if($event->firstspeakerid!=0)
-									<option value="{{ $event->firstspeakerid }}">{{ $event->firstspeaker->name }}</option>
-									@else
-									<option value="0">None</option>
-									@endif
-									@foreach($professors as $professor)
-									<option value="{{ $professor->id }}">{{ $professor->name }}</option>
-									@endforeach	
-								</select>
+								 
+								<div class="controls">
+										<input type="text" class="span11" id="" name="firstspeaker" placeholder="Enter Speaker" value="{{ $event->firstspeaker }}">
+								</div>
 
 							</div>
 
 							<div class="control-group">
 								<label class="control-label">Second Speaker</label>
 								<br>
-								<select name="secondspeakerid">
-									@if($event->secondspeakerid!=0)
-								<option value="{{ $event->secondspeakerid }}">{{ $event->secondspeaker->name }}</option>
-								@else
-									<option value="0">None</option>
-									@endif
-									@foreach($professors as $professor)
-									<option value="{{ $professor->id }}">{{ $professor->name }}</option>
-									@endforeach	
-								</select>
+							 
+								<div class="controls">
+										<input type="text" class="span11" id="" name="secondspeaker" placeholder="Enter Speaker" value="{{ $event->secondspeaker }}">
+								</div>
 
 							</div>
 
 							<div class="control-group">
 								<label class="control-label">Third Speaker</label>
 								<br>
-								<select name="thirdspeakerid">
-								@if($event->thirdspeakerid!=0)
-								<option value="{{ $event->thirdspeakerid }}">{{ $event->thirdspeaker->name }}</option>
-								@else
-									<option value="0">None</option>
-									@endif
-									@foreach($professors as $professor)
-									<option value="{{ $professor->id }}">{{ $professor->name }}</option>
-									@endforeach	
-								</select>
-
+						 
+								<div class="controls">
+										<input type="text" class="span11" id="" name="thirdspeaker" placeholder="Enter Speaker" value="{{ $event->thirdspeaker }}">
+								</div>
 							</div>
 
 							<div class="control-group">
 								<label class="control-label">Fourth Speaker</label>
 								<br>
-								<select name="fourthspeakerid">
-									@if($event->fourthspeakerid!=0)
-									<option value="{{ $event->fourthspeakerid }}">{{ $event->fourthspeaker->name }}</option>
-									@else
-									<option value="0">None</option>
-									@endif
-									@foreach($professors as $professor)
-									<option value="{{ $professor->id }}">{{ $professor->name }}</option>
-									@endforeach	
-								</select>
+							 
+								<div class="controls">
+										<input type="text" class="span11" id="" name="fourthspeaker" placeholder="Enter Speaker" value="{{ $event->fourthspeaker }}">
+								</div>
 
 							</div>
 
 							<div class="control-group">
 								<label class="control-label">Fifth Speaker</label>
 								<br>
-								<select name="fifthspeakerid">
-								@if($event->fifthspeakerid!=0)
-								<option value="{{ $event->fifthspeakerid }}">{{ $event->fifthspeaker->name }}</option>
-								@else
-									<option value="0">None</option>
-								@endif
-									@foreach($professors as $professor)
-									<option value="{{ $professor->id }}">{{ $professor->name }}</option>
-									@endforeach	
-								</select>
+							 
+								<div class="controls">
+										<input type="text" class="span11" id="" name="fifthspeaker" placeholder="Enter Speaker" value="{{ $event->fifthspeaker }}">
+								</div>
 
 							</div>
 

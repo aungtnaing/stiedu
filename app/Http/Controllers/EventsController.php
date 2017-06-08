@@ -36,7 +36,7 @@ class EventsController extends Controller {
 		$events = Events::where('userid', Auth::user()->id)->get();
 		}
 
-		return view("dashboard.events.eventspannel")
+		return view("dashboard.events.eventpannel")
 		->with("events", $events);
 	}
 
@@ -95,7 +95,7 @@ class EventsController extends Controller {
 		
 		$categorys = Category::orderBy('id', 'desc')->get();
 		$professors = Professors::orderBy('id', 'desc')->get();
-		return view("dashboard.events.eventcreate")
+		return view("dashboard.events.createevent")
 				->with('professors', $professors)
 				->with('categorys',$categorys);
 
@@ -160,21 +160,27 @@ class EventsController extends Controller {
 		$event->type = $request->input("type");	
 		$event->youtubelink = $request->input("youtubelink");
 		
-		if($request->input("firstspeakerid") != 0)
-		{ $event->firstspeakerid = $request->input("firstspeakerid"); }
+		// if($request->input("firstspeakerid") != 0)
+		// { $event->firstspeakerid = $request->input("firstspeakerid"); }
 		
-		if($request->input("secondspeakerid") != 0)
-		{ $event->secondspeakerid = $request->input("secondspeakerid"); }
-		if($request->input("thirdspeakerid") != 0)
-		{ $event->thirdspeakerid = $request->input("thirdspeakerid"); }
+		// if($request->input("secondspeakerid") != 0)
+		// { $event->secondspeakerid = $request->input("secondspeakerid"); }
+		// if($request->input("thirdspeakerid") != 0)
+		// { $event->thirdspeakerid = $request->input("thirdspeakerid"); }
 		
-		if($request->input("fourthspeakerid") != 0)
-		{ $event->fourthspeakerid = $request->input("fourthspeakerid");
-		}
+		// if($request->input("fourthspeakerid") != 0)
+		// { $event->fourthspeakerid = $request->input("fourthspeakerid");
+		// }
 
-		if($request->input("fifthspeakerid") != 0)
-		{ $event->fifthspeakerid = $request->input("fifthspeakerid");
-		}
+		// if($request->input("fifthspeakerid") != 0)
+		// { $event->fifthspeakerid = $request->input("fifthspeakerid");
+		// }
+
+		$event->firstspeaker = $request->input("firstspeaker");	
+		$event->secondspeaker = $request->input("secondspeaker");	
+		$event->thirdspeaker = $request->input("thirdspeaker");	
+		$event->fourthspeaker = $request->input("fourthspeaker");	
+		$event->fifthspeaker = $request->input("fifthspeaker");	
 		
 		$event->userid = $request->user()->id;
 
@@ -217,7 +223,7 @@ class EventsController extends Controller {
 		$categorys = Category::orderBy('id', 'desc')->get();
 		$professors = Professors::orderBy('id', 'desc')->get();
 
-		return view('dashboard.events.eventedit')
+		return view('dashboard.events.editevent')
 				->with('professors', $professors)
 				->with('event', $event)
 				->with('categorys',$categorys);
@@ -284,21 +290,28 @@ class EventsController extends Controller {
 		$event->type = $request->input("type");	
 		$event->youtubelink = $request->input("youtubelink");
 		
-		if($request->input("firstspeakerid") != 0)
-		{ $event->firstspeakerid = $request->input("firstspeakerid"); }
+		// if($request->input("firstspeakerid") != 0)
+		// { $event->firstspeakerid = $request->input("firstspeakerid"); }
 		
-		if($request->input("secondspeakerid") != 0)
-		{ $event->secondspeakerid = $request->input("secondspeakerid"); }
-		if($request->input("thirdspeakerid") != 0)
-		{ $event->thirdspeakerid = $request->input("thirdspeakerid"); }
+		// if($request->input("secondspeakerid") != 0)
+		// { $event->secondspeakerid = $request->input("secondspeakerid"); }
+		// if($request->input("thirdspeakerid") != 0)
+		// { $event->thirdspeakerid = $request->input("thirdspeakerid"); }
 		
-		if($request->input("fourthspeakerid") != 0)
-		{ $event->fourthspeakerid = $request->input("fourthspeakerid");
-		}
+		// if($request->input("fourthspeakerid") != 0)
+		// { $event->fourthspeakerid = $request->input("fourthspeakerid");
+		// }
 
-		if($request->input("fifthspeakerid") != 0)
-		{ $event->fifthspeakerid = $request->input("fifthspeakerid");
-		}
+		// if($request->input("fifthspeakerid") != 0)
+		// { $event->fifthspeakerid = $request->input("fifthspeakerid");
+		// }
+
+		$event->firstspeaker = $request->input("firstspeaker");	
+		$event->secondspeaker = $request->input("secondspeaker");	
+		$event->thirdspeaker = $request->input("thirdspeaker");	
+		$event->fourthspeaker = $request->input("fourthspeaker");	
+		$event->fifthspeaker = $request->input("fifthspeaker");	
+		
 		$event->userid = $request->user()->id;
 
 		$event->aboutevent = $request->input("aboutevent");

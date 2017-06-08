@@ -76,62 +76,47 @@
 							<div class="control-group">
 								<label class="control-label">First Speaker</label>
 								<br>
-								<select name="firstspeakerid">
-									<option value="0">None</option>
-									@foreach($professors as $professor)
-									<option value="{{ $professor->id }}">{{ $professor->name }}</option>
-									@endforeach	
-								</select>
-
+							
+								<div class="controls">
+										<input type="text" class="span11" id="" name="firstspeaker" placeholder="Enter Speaker" value="{{ old('firstspeaker') }}">
+								</div>
 							</div>
 
 							<div class="control-group">
 								<label class="control-label">Second Speaker</label>
 								<br>
-								<select name="secondspeakerid">
-									<option value="0">None</option>
-									@foreach($professors as $professor)
-									<option value="{{ $professor->id }}">{{ $professor->name }}</option>
-									@endforeach	
-								</select>
-
+							
+								<div class="controls">
+										<input type="text" class="span11" id="" name="secondspeaker" placeholder="Enter Speaker" value="{{ old('secondspeaker') }}">
+								</div>
 							</div>
 
 							<div class="control-group">
 								<label class="control-label">Third Speaker</label>
 								<br>
-								<select name="thirdspeakerid">
-									<option value="0">None</option>
-									@foreach($professors as $professor)
-									<option value="{{ $professor->id }}">{{ $professor->name }}</option>
-									@endforeach	
-								</select>
-
+								
+								<div class="controls">
+										<input type="text" class="span11" id="" name="thirdspeaker" placeholder="Enter Speaker" value="{{ old('thirdspeaker') }}">
+								</div>
 							</div>
 
 							<div class="control-group">
 								<label class="control-label">Fourth Speaker</label>
 								<br>
-								<select name="fourthspeakerid">
-									<option value="0">None</option>
-									@foreach($professors as $professor)
-									<option value="{{ $professor->id }}">{{ $professor->name }}</option>
-									@endforeach	
-								</select>
-
+							
+								<div class="controls">
+										<input type="text" class="span11" id="" name="fourthspeaker" placeholder="Enter Speaker" value="{{ old('fourthspeaker') }}">
+								</div>
 							</div>
 
 							<div class="control-group">
 								<label class="control-label">Fifth Speaker</label>
 								<br>
-								<select name="fifthspeakerid">
-									<option value="0">None</option>
-									@foreach($professors as $professor)
-									<option value="{{ $professor->id }}">{{ $professor->name }}</option>
-									@endforeach	
-								</select>
-
-							</div>
+							
+								<div class="controls">
+										<input type="text" class="span11" id="" name="fifthspeaker" placeholder="Enter Speaker" value="{{ old('fifthspeaker') }}">
+								</div>
+							</div>	
 
 							
 							<div class="control-group">
