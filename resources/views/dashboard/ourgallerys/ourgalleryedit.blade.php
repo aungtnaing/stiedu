@@ -39,26 +39,35 @@
 									<li class="span3"> <a> 
 										<input style="display:none;" id="file-input1" name="photourl1" type='file' onchange="readURL(this);"/>                    
 										<label for="file-input1">
-											<i class="icon-camera"></i>.Main 466x379 or<br>Video.MP4<br>
-											@if($ourgallery->type==='video')
-												 <video width="200px" height="200px" controls loop autoplay>
-								                  <source src="<?php echo url(); ?>{{ $ourgallery->photourl1 }}" type="video/mp4">
-								                     
-								                      Your browser does not support the video tag.
-								                  </video> 
-
-											@else
+											<i class="icon-camera"></i>.Main 466x379<br>
+											
 												@if($ourgallery->photourl1!="")
 												<img id="blah" src= "{{ $ourgallery->photourl1 }}" width="100" height="100">
 												@else
 												<img id="blah" src="//placehold.it/100" alt="avatar" alt="your image" />
 												@endif
-											@endif
+											
 										</label>
 										<div class="actions"><a id="preview1" class="lightbox_trigger" herf=""><i class="icon-search"></i></a> </div>
 
 									</li>
-									
+									<li class="span3"> <a> 
+										<input style="display:none;" id="file-input2" name="photourl2" type='file' />                    
+										<label for="file-input2">
+											<i class="icon-camera"></i>Video.MP4<br>
+											@if($ourgallery->type==='video')
+												 <video width="200px" height="200px" controls loop autoplay>
+								                  <source src="<?php echo url(); ?>{{ $ourgallery->photourl2 }}" type="video/mp4">
+								                     
+								                      Your browser does not support the video tag.
+								                  </video> 
+
+											@endif
+											
+										</label>
+										<div class="actions"><a id="preview1" class="lightbox_trigger" herf=""><i class="icon-search"></i></a> </div>
+
+									</li>
 									
 
 								</ul>

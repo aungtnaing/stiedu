@@ -136,6 +136,7 @@ class EventsController extends Controller {
 		$destinationPath = $imagePath . $directory . '/photos';
 	
 		$photourl1 = "";
+			$photourl2 = "";
 	
 	
 		
@@ -154,7 +155,23 @@ class EventsController extends Controller {
 
 		}
 
+		if(Input::file('photourl2')!="")
+		{
+			if(Input::file('photourl2')->isValid())
+			{
+				$name =  time()  . '-video' . '.' . $input['photourl2']->getClientOriginalExtension();
+				File::exists($destinationPath) or File::makeDirectory($destinationPath, 0777, true, true);
+				
+				Input::file('photourl2')->move($destinationPath, $name); // uploading file to given path
+				$photourl2 = "/images/events/" . $directory . '/photos/' .  $name;
+
+			
+			}
+
+		}
+
 		$event->photourl1 = $photourl1;
+		$event->photourl2 = $photourl2;
 		$event->name = $request->input("name");
 
 		$event->type = $request->input("type");	
@@ -256,6 +273,7 @@ class EventsController extends Controller {
 		$destinationPath = $imagePath . $directory . '/photos';
 		
 		$photourl1 = $event->photourl1;
+		$photourl2 = $event->photourl2;
 
 		
 		if(Input::file('photourl1')!="")
@@ -282,9 +300,35 @@ class EventsController extends Controller {
 		}
 
 
+		if(Input::file('photourl2')!="")
+		{
+			if(Input::file('photourl2')->isValid())
+			{
+			
+				if($photourl2!="")
+				{
+					if(file_exists(public_path().$photourl2))
+					{
+						unlink(public_path() . $photourl2);
+					}
+				}
+
+
+
+				$name =  time()  . '-video' . '.' . $input['photourl2']->getClientOriginalExtension();
+				Input::file('photourl2')->move($destinationPath, $name); // uploading file to given path
+				$photourl2 = "/images/events/" . $directory . '/photos/' .  $name;
+			
+			}
+
+		}
+
+
 		
 
 		$event->photourl1 = $photourl1;
+		$event->photourl2 = $photourl2;
+		
 		$event->name = $request->input("name");
 
 		$event->type = $request->input("type");	

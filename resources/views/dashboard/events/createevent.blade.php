@@ -33,14 +33,23 @@
 								<li class="span3"> <a> 
 									<input style="display:none;" id="file-input1" name="photourl1" type='file' onchange="readURL(this);" required/>                    
 									<label for="file-input1">
-										<i class="icon-camera"></i>.Main 360x248 or<br>Video.MP4<br>
+										<i class="icon-camera"></i>.Main 360x248 or<br>
 										<img id="blah" src="//placehold.it/100" alt="avatar" alt="your image" />
 
 									</label>
 									<div class="actions"><a id="preview1" class="lightbox_trigger" herf=""><i class="icon-search"></i></a> </div>
 
 								</li>
-								
+								<li class="span3"> <a> 
+									<input style="display:none;" id="file-input2" name="photourl2" type='file' />                    
+									<label for="file-input2">
+										<i class="icon-camera"></i>Video.MP4<br>
+										<img id="blah1" src="//placehold.it/100" alt="avatar" alt="your image" />
+
+									</label>
+									<div class="actions"><a id="preview1" class="lightbox_trigger" herf=""><i class="icon-search"></i></a> </div>
+
+								</li>
 
 							</ul>
 

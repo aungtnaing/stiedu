@@ -34,17 +34,7 @@
                                     <div class="col-xs-12 col-md-6 col-sm-6 thumb">
                                         <div class="work-item"> 
 
-                                            @if($event->type==='video')
-                                            <video width="300px" height="200px" controls>
-                                              <source src="<?php echo url(); ?>{{ $event->photourl1 }}" type="video/mp4">
-                                                  <!-- <source src="{{ $event->photourl1 }}" type="video/ogg"> -->
-                                                  Your browser does not support the video tag.
-                                              </video>
-                                              @elseif($event->type==='youtubelink')
-                                              <iframe width="300px" height="150px"
-                                              src="{{ $event->youtubelink }}">
-                                          </iframe>
-                                          @else
+                                      
                                           <img src="{{ $event->photourl1 }}" alt="" />
                                            <div class="image-extra">
                                             <div class="extra-content">
@@ -53,7 +43,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                          @endif
                                          
                                     </div>
 

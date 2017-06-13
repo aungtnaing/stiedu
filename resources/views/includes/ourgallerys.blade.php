@@ -25,13 +25,13 @@
 
 
 
-                @if($ourgallery->type==='video')
-                <video width="350" height="250px" controls>
+              
+            <!--     <video width="350" height="250px" controls>
                   <source src="<?php echo url(); ?>{{ $ourgallery->photourl1 }}" type="video/mp4">
-                      <!-- <source src="{{ $ourgallery->photourl1 }}" type="video/ogg"> -->
+                    
                       Your browser does not support the video tag.
-                  </video> 
-                  @else
+                  </video>  -->
+                
                   <div class="work-item"> 
                     <img src="{{ $ourgallery->photourl1 }}" alt="" style="width: 466px;height: 250px;"/>
 
@@ -44,6 +44,8 @@
 
                                 @if($ourgallery->type==='youtubelink')
                                 <a class="single-image plus-icon" data-fancybox-group="folio" href="{{ $ourgallery->youtubelink }}"></a>
+                                @elseif($ourgallery->type==='video')
+                                <a class="single-image plus-icon" href="{{ $ourgallery->photourl2 }}"></a>
                                 @else
                                 <a class="single-image plus-icon" data-fancybox-group="folio" href="{{ $ourgallery->photourl1 }}"></a>
                                 @endif
@@ -55,7 +57,7 @@
                     <!--/ .image-extra-->
                 </div>
 
-                @endif    
+               
 
                 <!--/ .work-item-->
 

@@ -44,7 +44,7 @@
 									<td>{{ $event->id }}</td>
 									@if($event->type==='video')
 									<td> <video width="200px" height="200px" controls>
-								                  <source src="<?php echo url(); ?>{{ $event->photourl1 }}" type="video/mp4">
+								                  <source src="<?php echo url(); ?>{{ $event->photourl2 }}" type="video/mp4">
 								                     
 								                      Your browser does not support the video tag.
 								                  </video> </td>

@@ -45,7 +45,7 @@
 									<td>{{ $ourgallery->id }}</td>
 									@if($ourgallery->type==='video')
 									<td> <video width="200px" height="200px" controls loop autoplay>
-								                  <source src="<?php echo url(); ?>{{ $ourgallery->photourl1 }}" type="video/mp4">
+								                  <source src="<?php echo url(); ?>{{ $ourgallery->photourl2 }}" type="video/mp4">
 								                     
 								                      Your browser does not support the video tag.
 								                  </video> </td>

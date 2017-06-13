@@ -38,23 +38,33 @@
 									<li class="span3"> <a> 
 										<input style="display:none;" id="file-input1" name="photourl1" type='file' onchange="readURL(this);"/>                    
 										<label for="file-input1">
-											<i class="icon-camera"></i>.Main 360 X 248 or<br>Video.MP4<br>
-											@if($event->type==='video')
-												 <video width="200px" height="200px" controls loop autoplay>
-								                  <source src="<?php echo url(); ?>{{ $event->photourl1 }}" type="video/mp4">
-								                     
-								                      Your browser does not support the video tag.
-								                  </video> 
-
-											@else
-
+											<i class="icon-camera"></i>.Main 360 X 248<br>
+											
 											@if($event->photourl1!="")
 											<img id="blah" src= "<?php echo url(); ?>{{ $event->photourl1 }}" width="100" height="100">
 											@else
 											<img id="blah" src="//placehold.it/100" alt="avatar" alt="your image" />
 											@endif
 
-											@endif
+											
+										</label>
+										<div class="actions"><a id="preview1" class="lightbox_trigger" herf=""><i class="icon-search"></i></a> </div>
+
+									</li>
+
+									<li class="span3"> <a> 
+										<input style="display:none;" id="file-input2" name="photourl2" type='file' />                    
+										<label for="file-input2">
+											<i class="icon-camera"></i>Video.MP4<br>
+											
+												 <video width="200px" height="200px" controls loop autoplay>
+								                  <source src="<?php echo url(); ?>{{ $event->photourl2 }}" type="video/mp4">
+								                     
+								                      Your browser does not support the video tag.
+								                  </video> 
+
+										
+
 										</label>
 										<div class="actions"><a id="preview1" class="lightbox_trigger" herf=""><i class="icon-search"></i></a> </div>
 

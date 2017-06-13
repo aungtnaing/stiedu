@@ -71,6 +71,7 @@ class OurgallerysController extends Controller {
 		
 		$photourl1 = "";
 		
+		$photourl2 = "";
 		
 		if(Input::file('photourl1')!="")
 		{
@@ -80,6 +81,19 @@ class OurgallerysController extends Controller {
 				File::exists($destinationPath) or File::makeDirectory($destinationPath, 0777, true, true);
 				Input::file('photourl1')->move($destinationPath, $name); // uploading file to given path
 				$photourl1 = "/images/ourgallerys/" . $directory . '/photos/' .  $name;
+			
+			}
+
+		}
+
+		if(Input::file('photourl2')!="")
+		{
+			if(Input::file('photourl2')->isValid())
+			{
+				$name =  time()  . '-video' . '.' . $input['photourl2']->getClientOriginalExtension();
+				File::exists($destinationPath) or File::makeDirectory($destinationPath, 0777, true, true);
+				Input::file('photourl2')->move($destinationPath, $name); // uploading file to given path
+				$photourl2 = "/images/ourgallerys/" . $directory . '/photos/' .  $name;
 			
 			}
 
@@ -95,6 +109,7 @@ class OurgallerysController extends Controller {
 
 	
 		$ourgallery->photourl1 = $photourl1;
+		$ourgallery->photourl2 = $photourl2;
 		
 		$ourgallery->save();
 		return redirect()->route("ourgallerys.index");
@@ -152,6 +167,7 @@ class OurgallerysController extends Controller {
 		$destinationPath = $imagePath . $directory . '/photos';
 	
 		$photourl1 = $ourgallery->photourl1;
+		$photourl2 = $ourgallery->photourl2;
 		// ini_set('post_max_size', '64M');
 		// ini_set('upload_max_filesize', '64M');
 	
@@ -178,19 +194,43 @@ class OurgallerysController extends Controller {
 			 }
 
 		}
+
+		if(Input::file('photourl2')!="")
+		{
+			
+
+			 if(Input::file('photourl2')->isValid())
+			 {
+				if($photourl2!="")
+				{
+					if(file_exists(public_path() .$photourl2))
+					{
+						unlink(public_path() . $photourl2);
+					}
+				}
+					
+
+
+				$name =  time() . '-video' . '.' . $input['photourl2']->getClientOriginalExtension();
+				File::exists($destinationPath) or File::makeDirectory($destinationPath, 0777, true, true);
+				Input::file('photourl2')->move($destinationPath, $name); // uploading file to given path
+				$photourl2 = "/images/ourgallerys/" . $directory . '/photos/' .  $name;
+			 }
+
+		}
 	
 	
 		$ourgallery->name = $request->input("name");
 		$ourgallery->type = $request->input("type");	
 		$ourgallery->youtubelink = $request->input("youtubelink");
 
-
+		
 		$ourgallery->active = 0;
 		if (Input::get('active') === ""){$ourgallery->active = 1;}
 
 		
 		$ourgallery->photourl1 = $photourl1;
-		
+		$ourgallery->photourl2 = $photourl2;
 		$ourgallery->save();
 		return redirect()->route("ourgallerys.index");
 	}
