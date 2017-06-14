@@ -13,7 +13,7 @@
                 <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                 <li><a href="#page-top" class="page-scroll">Home</a></li>
                 <li><a href="#about" class="page-scroll">About</a></li>
-                <li><a href="#team" class="page-scroll">Faculty</a></li>
+                <!-- <li><a href="#team" class="page-scroll">Faculty</a></li> -->
                 <li><a href="#gallery" class="page-scroll">Gallery</a></li>
                 <li><a href="#course" class="page-scroll">Programs</a></li>
                 <li><a href="#news" class="page-scroll">Event</a></li>
