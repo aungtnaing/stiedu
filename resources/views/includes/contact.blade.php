@@ -13,11 +13,7 @@
                 </div>
                 <!--/ .container-->
             </section>
-            <!--/ .section-->
-           <!--  <section class="section padding-off">
-                <div class="google_map"></div>
-            </section> -->
-            <!--/ .section-->
+           
         </section>
 
          <section class="section parallax parallax-bg-4">
