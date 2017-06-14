@@ -112,7 +112,7 @@ class EventsController extends Controller {
 		
 
 		$this->validate($request,[
-			'photourl1' => 'required',
+			// 'photourl1' => 'required',
 			'name' => 'required|max:255',
 			'aboutevent' => 'required|max:2000',
 			
