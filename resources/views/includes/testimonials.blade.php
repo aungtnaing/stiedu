@@ -1,14 +1,4 @@
-<!--  <style type="text/css">
-     .imgg {
-    
-    width:20%;
-     max-width: 20%;
-     width:70px;
-     height:70px;
-         text-align: -webkit-center;
-    
-}
-</style> -->
+
 <section class="section parallax parallax-bg-1 bg-turquoise-color">
     <div class="full-bg-image"></div>
     <div class="container">

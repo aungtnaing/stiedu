@@ -3,14 +3,7 @@
 <section class="section" id="course">
 	<div id="content">
 		<div class="container">
-			<!-- <div class="row">
-				<div class="col-xs-12">
-					<hgroup class="section-title align-center">
-						<h1>Courses Single</h1> 
-					</hgroup>
-				</div>
-			</div> -->
-			<!--/ .row-->
+		
 			<div class="row">
 				<section id="main" class="col-md-12">
 					<section id="main" class="col-md-8">

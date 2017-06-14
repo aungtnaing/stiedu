@@ -30,17 +30,14 @@
    <link rel="stylesheet" href="<?php echo url(); ?>/css/font-awesome.min.css" />
    
 
-  <!--    <link rel="stylesheet" href="css/color.css" />-->
-    <!-- HTML5 Shiv
-    ================================================== -->
+  
     <script src="<?php echo url(); ?>/js/jquery.modernizr.js"></script>
 
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- <link rel="icon" href="/images/mylogo.png" type="image/png" sizes="16x16"> -->
-
+   
 <script type="text/javascript">
   function replyon(fid){
    

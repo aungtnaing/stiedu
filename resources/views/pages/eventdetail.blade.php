@@ -4,14 +4,7 @@
 <section class="section" id="news">
 	<div id="content">
 		<div class="container">
-			<!-- <div class="row">
-				<div class="col-xs-12">
-					<hgroup class="section-title align-center">
-						<h1>Event Single</h1> 
-					</hgroup>
-				</div>
-			</div> -->
-			<!--/ .row-->
+			
 			<div class="row">
 				<section id="main" class="col-md-8">
 					<article class="entry main-entry single">
@@ -90,10 +83,7 @@
 								<!-- Description -->
 								<!-- Join Event Option -->
 								<div class="join-event-option">
-									<!-- <ul class="btn-list">
-										<li><a class="btn white sm z-depth-2 full-width" href="#">Google Calendar +</a></li>
-										<li><a class="btn white sm z-depth-2 full-width" href="#">Ical Import +</a></li>
-									</ul> -->
+									
 									<div class="social-icons-2">
 										<ul class="social-icons">
 											<li class="twitter"><a href="#" data-toggle="tooltip" data-placement="top" title="twitter"><i class="icon-twitter"></i></a></li>
@@ -115,20 +105,7 @@
 					</section>
 					<!--/ #main-->
 					<aside id="sidebar" class="col-md-4">
-						<!-- <div class="widget widget_search">
-							<form action="http://html.webtemplatemasters.com/" id="searchform" method="get">
-								<p>
-									<input placeholder="Search" type="text" value="" name="s">
-									<button class="submit-search" type="submit">Search</button>
-								</p>
-							</form>
-						</div> -->
-						<!--/ .widget-->
-						<!-- <div class="widget widget_text">
-							<h3 class="widget-title">Text Widget</h3>
-							<div class="textwidget"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut lacus at velit consequat sodales. Ut posuere neque in molestie gravida. Integer eu feugiat neque, elementum posuere purus. </div>
-						</div> -->
-						<!--/ .widget-->
+						
 						<div class="widget widget_categories">
 							<h3 class="widget-title">Categories</h3>
 							<ul>
@@ -137,12 +114,7 @@
 								@endforeach
 							</ul>
 						</div>
-						<!--/ .widget-->
-						<!-- <div class="widget widget_tag_cloud">
-							<h3 class="widget-title">Tags</h3>
-							<div class="tagcloud"> <a href="#">Web</a> <a href="#">Video</a> <a href="#">Business</a> </div>
-						</div> -->
-						<!--/ .widget-->
+					
 						<div class="widget widget_recent_posts">
 							<h3 class="widget-title">Recent Posts</h3>
 							<section>

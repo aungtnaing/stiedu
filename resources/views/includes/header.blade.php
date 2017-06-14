@@ -18,17 +18,12 @@
                 <li><a href="#course" class="page-scroll">Programs</a></li>
                 <li><a href="#news" class="page-scroll">Event</a></li>
                
-                    <!--  <li class="dropdown"><a href="#blog" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle">English <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="blog.html" class="page-scroll"> English </a></li>
-                            <li><a href="blog-single.html" class="page-scroll"> Myanmar </a></li>
-                        </ul>
-                    </li> -->
+                  
                     <li class="dropdown"><a href="#useful" data-toggle="dropdown" class="dropdown-toggle">Useful<b class="caret"></b></a>
                         <ul class="dropdown-menu pull-right">
                             <li><a href="https://login.bluehost.com/hosting/webmail" class="page-scroll">email</a></li>
                             <li><a href="http://ole.ouhk.edu.hk" class="page-scroll">ole</a></li>
-                            <!-- <li><a href="" class="page-scroll">ole</a></li> -->
+                            
                         </ul>
                     </li>
                     <li><a href="#contacts" class="page-scroll">Contact</a></li>

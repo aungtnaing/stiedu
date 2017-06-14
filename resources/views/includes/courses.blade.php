@@ -209,11 +209,7 @@
                             <!--/ .row-->
                         </div>
                         <!--/ .row-->
-                       <!--  <div class="row">
-                            <div class="col-xs-12">
-                                <div class="align-center opacityRun view-more-wrap"> <a class="button large default" href="#">View More</a> </div>
-                            </div>
-                        </div> -->
+                      
                     </div>
                 </section>
 

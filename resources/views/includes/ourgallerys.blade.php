@@ -12,26 +12,13 @@
             <!--/ .row-->
         </div>
         <!--/ .container-->
-        @foreach($ourgallerys as $ourgallery)
-
-
-
-        @endforeach
+       
         <ul id="gallery-items" class="portfolio-items">
 
             @foreach($ourgallerys as $ourgallery)
             <li class="photo mix mix_all opacity2x">
 
-
-
-
-              
-            <!--     <video width="350" height="250px" controls>
-                  <source src="<?php echo url(); ?>{{ $ourgallery->photourl1 }}" type="video/mp4">
-                    
-                      Your browser does not support the video tag.
-                  </video>  -->
-                
+               
                   <div class="work-item"> 
                     <img src="{{ $ourgallery->photourl1 }}" alt="" style="width: 466px;height: 250px;"/>
 
@@ -56,10 +43,7 @@
                     </div>
                     <!--/ .image-extra-->
                 </div>
-
-               
-
-                <!--/ .work-item-->
+         
 
             </li>
             @endforeach

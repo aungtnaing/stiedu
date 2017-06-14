@@ -53,13 +53,6 @@
                          </div>
                        </div> 
 
-                      <!--  <div class="control-group">
-                        <label class="control-label">Email:</label>
-                        <div class="controls">
-                          <label>{{ $faculty->email }}</label>
-                        </div>
-                      </div> -->
-
                        <div class="control-group">
                         <label class="control-label">Bio:</label>
                         <div class="controls">

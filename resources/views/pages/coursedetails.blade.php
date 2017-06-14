@@ -3,14 +3,7 @@
 <section class="section" id="course">
 	<div id="content">
 		<div class="container">
-			<!-- <div class="row">
-				<div class="col-xs-12">
-					<hgroup class="section-title align-center">
-						<h1>Courses Single</h1> 
-					</hgroup>
-				</div>
-			</div> -->
-			<!--/ .row-->
+			
 			<div class="row">
 				<section id="main" class="col-md-8">
 					<article class="entry main-entry single">
@@ -127,15 +120,7 @@
 								<div class="col-xs-12 col-sm-8 col-md-7">
 									<h4 class="title-1 bold">ABOUT THE COURSES</h4>
 									<p> {{ $coursedetail->aboutcourse }} </p>
-									<!-- <h4 class="title-2">What You Will Learn</h4> -->
-									<!-- 	<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut lacus at velit consequat sodales. Ut posuere neque in molestie gravida. Integer feugiat neque, elementum posuere purus. Nam vitae convallis ipsum. </p>
-										<ul class="flat-list color-black">
-											<li>2 Glossaries for difficult terms & acronyms</li>
-											<li>25 hours of High Quality e-Learning content</li>
-											<li>72 end of chapter quizzes </li>
-											<li>30 PDUs Offered </li>
-											<li>Collection of 47 six sigma tools for hands-on practice</li>
-										</ul> -->
+								
 									</div>
 								</div>
 								<div class="entry-body">

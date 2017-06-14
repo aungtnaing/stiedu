@@ -22,15 +22,7 @@
                             <br>It comprises of four major Faculties: Faculty of Arts, Faculty of Business, Faculty of Education & Linguistics and Faculty of Engineering. 
                             <br>It is one of the top private education providers in Myanmar conducting courses in business and finance, engineering, human resource management, education and English proficiency programs, in collaboration with international universities and the National Management University under the Ministry of Education, Myanmar. </p>
 
-                           
-                           <!--  <ul class="list circle-list opacity">
-                                <li>Organises lectures, seminars and lab work.</li>
-                                <li>Provides a wide range of resources for teaching</li>
-                                <li>learning in the form of libraries</li>
-                                <li>Admits and supervises graduate students, and examines theses.</li>
-                                <li>Provides administrative services and centrally managed student services such as counselling and careers.</li>
-                            </ul> -->
-                            <!--/ .list-->
+               
                             <a role="button" id="togglable-a" data-toggle="collapse" href="#more-about-university" aria-expanded="false" aria-controls="collapseExample" class="readmore">Read More <i class="fa fa-long-arrow-right"></i></a> 
                         </div>
                         <!--/ .col-md-5-->
