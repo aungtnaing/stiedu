@@ -13,7 +13,7 @@
                     <!--/ .row-->
                     <div class="row">
                         <div class="col-md-7 opacity ">
-                            <p> <img src="<?php echo url(); ?>/images/about.jpg" alt="" /> </p>
+                            <p> <img src="<?php echo url(); ?>/images/about1.jpg" alt="" /> </p>
                         </div>
                         <!--/ .col-md-6-->
                         <div class="col-md-5">

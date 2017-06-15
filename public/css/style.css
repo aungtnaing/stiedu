@@ -1107,9 +1107,9 @@ body {
 				filter: alpha(opacity = 60);				
 			}
 		
-			.parallax-bg-1 .full-bg-image { background-image: url(../images/parallax/parallax-1.jpg); }
-			.parallax-bg-2 .full-bg-image { background-image: url(../images/parallax/parallax-2.jpg); }
-			.parallax-bg-3 .full-bg-image { background-image: url(../images/parallax/parallax-3.jpg); }
+			.parallax-bg-1 .full-bg-image { background-image: url(../images/parallax/parallax-11.jpg); }
+			.parallax-bg-2 .full-bg-image { background-image: url(../images/parallax/parallax-22.jpg); }
+			.parallax-bg-3 .full-bg-image { background-image: url(../images/parallax/parallax-33.jpg); }
 			.parallax-bg-4 .full-bg-image { background-image: url(../images/parallax/parallax-4.png); }
 		
 			/* Mobile Video Image */
