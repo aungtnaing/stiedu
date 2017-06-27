@@ -441,7 +441,7 @@ button {
 }
 
 .course-wrap .course-header {
-    background: rgba(5, 9, 53, 0.9);
+    background: #f9f9f9;/*rgba(5, 9, 53, 0.9);*/
     /*rgba(127, 202, 206, 0.54);*/
     /*#f9f9f9;*/
 }

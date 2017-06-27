@@ -1858,7 +1858,8 @@ body {
 
 .course-wrap .course-body{
     
-padding-top: 0px;
+padding-top: 15px;
+/*0px;*/
 }
 
 .course-wrap .course_tab_wrap {
