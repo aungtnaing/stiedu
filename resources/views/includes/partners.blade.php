@@ -3,7 +3,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <hgroup class="section-title align-center opacity">
-                            <h2>Meet our partner</h2> </hgroup>
+                            <h2 style="color:#050930;">Meet our partner</h2> </hgroup>
                         </div>
                     </div>
                     <!--/ .row-->

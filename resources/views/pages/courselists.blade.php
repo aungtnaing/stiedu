@@ -8,14 +8,14 @@
 				<section id="main" class="col-md-12">
 					<section id="main" class="col-md-8">
 						
-						<h2 class="entry-title">{{ $categoryname->name }}</h2>
+						<h2 class="entry-title" style="color:#050930;">{{ $categoryname->name }}</h2>
 						@foreach($courselists as $courselist)
 						<div class="row">
 							<div class="col-md-12">
 								<div class="news_des right">
 									<div class="row">
 										<div class="col-xs-12 col-md-6 col-sm-6 thumb">
-											<div class="work-item"> <img src="{{ $courselist->photourl1 }}" alt="" />
+											<div class="worstyle="color:#050930;"k-item"> <img src="{{ $courselist->photourl1 }}" alt="" />
 												<div class="image-extra">
 													<div class="extra-content">
 														<div class="inner-extra">
@@ -31,9 +31,9 @@
 												<br>
 													<li><a href="#"> {{ $courselist->professor->name }}</a></li>
 													<li>
-														<a href="{{ url('/coursedetails', $courselist->id) }}">{{ $courselist->name }}</a>
+														<a href="{{ url('/coursedetails', $courselist->id) }}" style="color:#050930;">{{ $courselist->name }}</a>
 													</li>
-													<li><p>
+													<li><p style="color:#050930;">
 														{{ substr($courselist->aboutcourse,0, 150) }}
 													</p></li>
 													
@@ -139,7 +139,7 @@
 					<aside id="sidebar" class="col-md-4">
 
 						<div class="widget widget_categories">
-							<h3 class="widget-title">Categories</h3>
+							<h3 class="widget-title" style="color:#050930;">Categories</h3>
 							<ul>
 								@foreach($categorys as $category)
 								<li><a href="{{ url('/courselists', $category->id) }}">{{ $category->name }}</a></li>
@@ -148,7 +148,7 @@
 						</div>
 						<!--/ .widget-->
 						<div class="widget widget_recent_posts">
-							<h3 class="widget-title">Featured courses</h3>
+							<h3 class="widget-title" style="color:#050930;">Featured courses</h3>
 							<section>
 
 								@foreach($courselists as $courselist)	

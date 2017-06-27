@@ -76,7 +76,7 @@
                                                 <h2 class="entry-title"><a href="{{ url('/coursedetails', $course->id) }}">{{ $course->name }}</a></h2>
                                                 <div class="entry-meta"> <span class="date">{{ $course->created_at }}</span> </div>
                                                 <div class="entry-body">
-                                                    <p><b>{{ substr($course->aboutcourse,0, 150) }}...</b></p>
+                                                    <p style="color:#050930;">{{ substr($course->aboutcourse,0, 150) }}...</p>
                                                 </div>
                                             </div>
                                             <div class="course_cur_des_ft">
@@ -118,7 +118,7 @@
                                                 <h2 class="entry-title"><a href="{{ url('/coursedetails', $course->id) }}">{{ $course->name }}</a></h2>
                                                 <div class="entry-meta"> <span class="date">{{ $course->created_at }}</span> </div>
                                                 <div class="entry-body">
-                                                    <p><b>{{ substr($course->aboutcourse,0, 150) }}...</b></p>
+                                                    <p style="color:#050930;">{{ substr($course->aboutcourse,0, 150) }}...</p>
                                                 </div>
                                             </div>
                                             <div class="course_cur_des_ft">
@@ -165,7 +165,7 @@
                                                 <h2 class="entry-title"><a href="{{ url('/coursedetails', $course->id) }}">{{ $course->name }}</a></h2>
                                                 <div class="entry-meta"> <span class="date">{{ $course->created_at }}</span> </div>
                                                 <div class="entry-body">
-                                                    <p><b>{{ substr($course->aboutcourse,0, 150) }}...</b></p>
+                                                    <p style="color:#050930;">{{ substr($course->aboutcourse,0, 150) }}...</p>
                                                 </div>
                                             </div>
                                             <div class="course_cur_des_ft">
@@ -211,7 +211,7 @@
                                                 <h2 class="entry-title"><a href="{{ url('/coursedetails', $course->id) }}">{{ $course->name }}</a></h2>
                                                 <div class="entry-meta"> <span class="date">{{ $course->created_at }}</span> </div>
                                                 <div class="entry-body">
-                                                    <p><b>{{ substr($course->aboutcourse,0, 150) }}...</b></p>
+                                                    <p style="color:#050930;">{{ substr($course->aboutcourse,0, 150) }}...</p>
                                                 </div>
                                             </div>
                                             <div class="course_cur_des_ft">

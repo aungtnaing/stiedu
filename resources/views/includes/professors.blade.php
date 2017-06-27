@@ -6,7 +6,7 @@
                         <div class="col-xs-12">
                             <hgroup class="section-title align-center opacity">
                                 <h1 class="header-title">meet our <span>Faculty</span></h1>
-                                <h2>We are great Faculty in a university</h2> 
+                                <h2 style="color:#050930;">We are great Faculty in a university</h2> 
                             </hgroup>
                         </div>
                     </div>

@@ -9,7 +9,7 @@
 				<section id="main" class="col-md-8">
 					<article class="entry main-entry single">
 						<div class="single-event-detail">
-							<h2 class="entry-title">{{ $eventdetail->name }}</h2>
+							<h2 class="entry-title" style="color:#050930;">{{ $eventdetail->name }}</h2>
 							<!--/ .entry-title-->
 							@if($eventdetail->type==='video')
 							<video width="777px" height="504px" controls>
@@ -27,7 +27,7 @@
 							<!--/ .entry-image-->
 							<!-- Speakers -->
 							<div class="speakers-list">
-								<h4><i class="fa fa-microphone"></i>Speakers</h4>
+								<h4 style="color:#050930;"><i class="fa fa-microphone"></i>Speakers</h4>
 								<div class="row">
 									<div class="col-sm-4">
 										
@@ -59,15 +59,15 @@
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="time-address">
-											<h4><i class="fa fa-clock-o"></i>Time</h4>
-											<p>Start: {{ $eventdetail->startdate }}</p>
-											<p>End: {{ $eventdetail->enddate }}</p>
+											<h4 style="color:#050930;"><i class="fa fa-clock-o"></i>Time</h4>
+											<p style="color:#050930;">Start: {{ $eventdetail->startdate }}</p>
+											<p style="color:#050930;">End: {{ $eventdetail->enddate }}</p>
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="time-address">
-											<h4><i class="fa fa-map-marker"></i>Address</h4>
-											<p>{{ $eventdetail->address }}</p>
+											<h4 style="color:#050930;"><i class="fa fa-map-marker"></i>Address</h4>
+											<p style="color:#050930;">{{ $eventdetail->address }}</p>
 
 										</div>
 									</div>
@@ -77,8 +77,8 @@
 							<div class="entry-body">
 								<!-- Description -->
 								<div class="description">
-									<h4><i class="fa fa-dot-circle-o"></i>description</h4>
-									<p> {{ $eventdetail->aboutevent }}</p>
+									<h4 style="color:#050930;"><i class="fa fa-dot-circle-o"></i>description</h4>
+									<p style="color:#050930;"> {{ $eventdetail->aboutevent }}</p>
 								</div>
 								<!-- Description -->
 								<!-- Join Event Option -->
@@ -107,7 +107,7 @@
 					<aside id="sidebar" class="col-md-4">
 						
 						<div class="widget widget_categories">
-							<h3 class="widget-title">Categories</h3>
+							<h3 class="widget-title" style="color:#050930;">Categories</h3>
 							<ul>
 								@foreach($categorys as $category)
 								<li><a href="{{ url('/courselists', $category->id) }}">{{ $category->name }}</a></li>
@@ -116,7 +116,7 @@
 						</div>
 					
 						<div class="widget widget_recent_posts">
-							<h3 class="widget-title">Recent Posts</h3>
+							<h3 class="widget-title" style="color:#050930;">Recent Posts</h3>
 							<section>
 								@foreach($eventlists as $eventlist)
 								<article class="entry">
@@ -125,7 +125,7 @@
 									</div>
 									<!--/ .entry-image-->
 									<div class="post-holder">
-										<div class="entry-meta"> <span class="date"><a href="#">{{ $eventlist->created_at }}</a></span> </div>
+										<div class="entry-meta"> <span class="date"><a href="#" >{{ $eventlist->created_at }}</a></span> </div>
 										<!--/ .entry-meta-->
 										<h6 class="entry-title">
 											<a href="{{ url('/eventdetails', $eventlist->id) }}">{{ $eventlist->name }}</a>

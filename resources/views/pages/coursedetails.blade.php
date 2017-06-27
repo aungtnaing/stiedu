@@ -7,7 +7,7 @@
 			<div class="row">
 				<section id="main" class="col-md-8">
 					<article class="entry main-entry single">
-						<h2 class="entry-title">{{ $coursedetail->name }}</h2>
+						<h2 class="entry-title" style="color:#050930;">{{ $coursedetail->name }}</h2>
 						<!--/ .entry-title-->
 						<ul class="course-meta review style2 clearfix">
 							<li class="author">
@@ -106,7 +106,7 @@
 						<div class="row">
 							<div class="col-xs-12 col-sm-4 col-md-5">
 								<div class="course-widget-price">
-									<h4 class="course-title">COURSE FEATURES</h4>
+									<h4 class="course-title" style="color:#050930;">COURSE FEATURES</h4>
 									<ul>
 										<li> <i class="fa fa-clock-o" aria-hidden="true"></i> <span>Starts</span> <span class="time">{{ $coursedetail->startdate }}</span> </li>
 										<li> <i class="fa fa-exclamation-circle" aria-hidden="true"></i> <span>Duration</span> <span class="time">{{ $coursedetail->duration }}</span> </li>
@@ -118,14 +118,14 @@
 									<a class="btn-button btn bg-orange" href="#">ENROLL THIS COURSE</a> </div>
 								</div>
 								<div class="col-xs-12 col-sm-8 col-md-7">
-									<h4 class="title-1 bold">ABOUT THE COURSES</h4>
-									<p> {{ $coursedetail->aboutcourse }} </p>
+									<h4 class="title-1 bold" style="color:#050930;">ABOUT THE COURSES</h4>
+									<p style="color:#050930;"> {{ $coursedetail->aboutcourse }} </p>
 								
 									</div>
 								</div>
 								<div class="entry-body">
-									<h4 class="title-2">What You Will Learn</h4>
-									<p> {{ $coursedetail->whatlearn }}. </p>
+									<h4 class="title-2" style="color:#050930;">What You Will Learn</h4>
+									<p style="color:#050930;"> {{ $coursedetail->whatlearn }}. </p>
 								</div>
 								<!--/ .entry-body-->
 							</article>

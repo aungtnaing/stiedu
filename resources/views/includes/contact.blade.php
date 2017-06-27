@@ -5,7 +5,7 @@
                         <div class="col-xs-12">
                             <hgroup class="section-title align-center opacity">
                                 <h1 class="header-title">Contact <span>Us</span></h1>
-                                <h2>We look forward to hearing from you</h2> 
+                                <h2 style="color:#050930;">We look forward to hearing from you</h2> 
                             </hgroup>
                         </div>
                     </div>
