@@ -25,6 +25,9 @@
 
          <li><a href="{{ url('/partners') }}"><i class="icon icon-th"></i> <span>partners Pannel</span></a></li>
 
+           <li><a href="{{ url('/visitors') }}"><i class="icon icon-th"></i> <span>visitors Pannel</span></a></li>
+
+
  
   </ul>
 </div>

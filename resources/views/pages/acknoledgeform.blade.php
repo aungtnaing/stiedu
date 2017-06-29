@@ -1,10 +1,14 @@
-@extends('layouts.default')
+@extends('layouts.defaultp')
 @section('content')
 
 <section id="page-title">
 
-	<div class="container clearfix">
-		<h1>Thank You.</h1>
+	<div class="container clearfix" style="height: 800px;">
+	<br>
+	<br>
+	<br>
+	<br>
+		<h1>Thank You. We will contact you, soon.</h1>
 
 	</div>
 

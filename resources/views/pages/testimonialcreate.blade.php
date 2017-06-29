@@ -81,7 +81,7 @@
                 </div>
               </div>
 
-              <div class="control-group">
+              <div class="control-group" style="display:none">
                 <input type="checkbox" name="active" value="0">Active
               </div>
 

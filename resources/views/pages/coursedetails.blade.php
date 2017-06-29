@@ -103,6 +103,11 @@
 						</ul>
 						<div class="entry-image"> <img src="<?php echo url(); ?>{{ $coursedetail->photourl1 }}" alt="" style="width: 777px;height: 504;"/> </div>
 						<!--/ .entry-image-->
+
+						<div class="row">
+							<a class="btn-button btn btn-primary" href="{{ url('/visitorinfo', $coursedetail->id) }}">Get Brochures</a> 
+							<a class="btn-button btn btn-primary" href="{{ url('/visitorinfoadmission', $coursedetail->id) }}">Seeks Appointment Admission Officer</a> 
+						</div>
 						<div class="row">
 							<div class="col-xs-12 col-sm-4 col-md-5">
 								<div class="course-widget-price">
@@ -115,7 +120,7 @@
 										<li> <i class="fa fa-user-plus" aria-hidden="true"></i> <span>Seats Available</span> <span class="time">{{ $coursedetail->seatsavailable }} Student</span> </li>
 										<li> <i class="fa fa-users" aria-hidden="true"></i> <span>Level</span> <span class="time">{{ $coursedetail->level }}</span> </li>
 									</ul>
-									<a class="btn-button btn bg-orange" href="#">ENROLL THIS COURSE</a> </div>
+									<a class="btn-button btn btn-primary" href="{{ url('/enrollprogram', $coursedetail->id) }}">ENROLL THIS PROGRAM</a> </div>
 								</div>
 								<div class="col-xs-12 col-sm-8 col-md-7">
 									<h4 class="title-1 bold" style="color:#050930;">ABOUT THE COURSES</h4>
