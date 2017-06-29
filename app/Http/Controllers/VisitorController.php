@@ -185,7 +185,7 @@ class VisitorController extends Controller {
 		
 		$file = public_path(). "/doc/" . $request->input("categoryid") . ".pdf";
     	$headers = ['Content-Type: application/pdf'];
-    	$newName = 'brochures-'.time().'.pdf';
+    	$newName =  $request->input("type").'.pdf';
     
 		// var_dump($file);
 		// die();
