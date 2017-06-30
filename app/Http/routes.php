@@ -152,6 +152,7 @@
 		'uses' => 'VisitorController@enrollprogram'
 		]);
 
+	Route::resource('visitors','VisitorController');
 
 	Route::group(['middleware' => 'auth'],function()
 	{
@@ -190,7 +191,7 @@
 				Route::group(['middleware' => 'roleware'],function()
 				{
 					Route::resource('mainslides','MainslideController');
-					Route::resource('visitors','VisitorController');
+					
 					Route::resource('testimonials','TestimonialsController');
 					Route::resource('professors','ProfessorsController');
 					Route::resource('partners','PartnersController');
