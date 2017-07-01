@@ -124,13 +124,13 @@
 								</div>
 								<div class="col-xs-12 col-sm-8 col-md-7">
 									<h4 class="title-1 bold" style="color:#050930;">ABOUT THE COURSE</h4>
-									<p style="color:#050930;"> {{ $coursedetail->aboutcourse }} </p>
+									<p style="color:#050930;"> <?php echo $coursedetail->aboutcourse; ?></p>
 								
 									</div>
 								</div>
 								<div class="entry-body">
 									<h4 class="title-2" style="color:#050930;">What You Will Learn</h4>
-									<p style="color:#050930;"> {{ $coursedetail->whatlearn }}. </p>
+									<p style="color:#050930;"> <?php echo $coursedetail->whatlearn; ?> </p>
 								</div>
 								<!--/ .entry-body-->
 							</article>
