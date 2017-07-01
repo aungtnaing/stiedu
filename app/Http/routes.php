@@ -49,7 +49,63 @@
 		});
 
 
+		Route::get('stimuvision', function() {
 
+			return view('pages.stivision');
+			
+			
+			
+		});
+
+		Route::get('history', function() {
+
+			return view('pages.history');
+			
+			
+			
+		});
+
+		Route::get('value', function() {
+
+			return view('pages.value');
+			
+			
+			
+		});
+
+		Route::get('ourcampus', function() {
+
+			return view('pages.ourcampus');
+			
+			
+			
+		});
+
+		Route::get('ourfaculty', function() {
+
+			return view('pages.ourfaculty');
+			
+			
+			
+		});
+
+		Route::get('ourfaculty', function() {
+
+			return view('pages.ourfaculty');
+			
+			
+			
+		});
+
+		Route::get('stimugovernance', function() {
+
+			return view('pages.stimugovernance');
+			
+			
+			
+		});
+
+		
 		
 
 		Route::get('contactus', function() {
@@ -128,7 +184,7 @@
 			$courselists = Courses::where('active',1)
 			->where('categoryid', $categoryid)
 			->orderBy('id','DESC')
-			->paginate(5);
+			->get();
 
 			
 			

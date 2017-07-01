@@ -11,26 +11,47 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse navigation">
             <ul class="nav navbar-nav">
                 <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                <li><a href="#page-top" class="page-scroll">Home</a></li>
-                <li><a href="#about" class="page-scroll">About</a></li>
-                <!-- <li><a href="#team" class="page-scroll">Faculty</a></li> -->
+                <li><a href="#page-top" class="page-scroll"><span class="glyphicon glyphicon-home"></span></a></li>
+               
+                <li class="dropdown"><a href="#about" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle">About <b class="caret"></b></a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="{{ url('/stimuvision') }}" class="page-scroll">STIMU VISION/MISSION</a></li>
+                            <li><a href="{{ url('/history') }}" class="page-scroll">HISTORY</a></li>
+                             <li><a href="{{ url('/value') }}" class="page-scroll">VALUE</a></li>
+                             <li><a href="{{ url('/ourcampus') }}" class="page-scroll">OUR CAMPUS/PROGRAM</a></li>
+                              <li><a href="{{ url('/ourfaculty') }}" class="page-scroll">OUR FACULTY/GRADUATES</a></li>
+                              <li><a href="{{ url('/stimugovernance') }}" class="page-scroll">STIMU GOVERNANCE AND <br>MANAGEMENT STRUCTURE</a></li>
+                            <li><a href="" class="page-scroll">Corporate Video Link</a></li>
+                            
+                            
+                        </ul>
+                    </li>
+               
                 <li><a href="#gallery" class="page-scroll">Gallery</a></li>
-                <li><a href="#course" class="page-scroll">Programs</a></li>
+                 <li class="dropdown"><a href="#course" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle">Programs <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ url('/courselists', 19) }}" class="page-scroll">FACULTY OF BUSINESS</a></li>
+                            <li><a href="{{ url('/courselists', 20) }}" class="page-scroll">FACULTY OF ENGINEERING</a></li>
+                            <li><a href="{{ url('/courselists', 21) }}" class="page-scroll">FACULTY OF HEALTH <br>SCIENCE</a></li>
+                            <li><a href="{{ url('/courselists', 22) }}" class="page-scroll">Faculty of Education <br>& Linguistics</a></li>
+                        </ul>
+                    </li>
+               
                 <li><a href="#news" class="page-scroll">Event</a></li>
                
                   
-                    <li class="dropdown"><a href="#useful" data-toggle="dropdown" class="dropdown-toggle">Useful<b class="caret"></b></a>
+                    <li class="dropdown"><a href="#useful" data-toggle="dropdown" class="dropdown-toggle">Useful Link<b class="caret"></b></a>
                         <ul class="dropdown-menu pull-right">
-                            <li><a href="https://login.bluehost.com/hosting/webmail" class="page-scroll">email</a></li>
-                            <li><a href="http://ole.ouhk.edu.hk" class="page-scroll">ole</a></li>
-                            <li><a href="https://www.beds.ac.uk/" class="page-scroll">bedfordshire</a></li>
+                            <li><a href="https://login.bluehost.com/hosting/webmail" class="page-scroll">EMAIL</a></li>
+                            <li><a href="http://ole.ouhk.edu.hk" class="page-scroll">OLE</a></li>
+                            <li><a href="https://breo.beds.ac.uk" class="page-scroll">BREO</a></li>
 
                             
                         </ul>
                     </li>
                     <li><a href="#contacts" class="page-scroll">Contact</a></li>
                     @if (Auth::guest())
-                    <li><a href="{{ url('/auth/login') }}">Signup/in</a></li>   
+                    <li><a href="{{ url('/auth/login') }}"><span class="glyphicon glyphicon-log-in"></span></a></li>   
                     @else
                     @if(Auth::user()->photourl!="")
                     <li class="dropdown"><a href="" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle"><img src="{{ Auth::user()->photourl }}" width="20" height="20" class="img-circle">{{ substr(Auth::user()->name,0, 5) }} <b class="caret"></b></a>

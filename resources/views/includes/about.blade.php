@@ -19,7 +19,7 @@
                         <div class="col-md-5">
                             <h3><p style="color:#050930;"><b>Overview</b></p></h3>
                             <h4><p class="opacity" style="color:#050930;"> STI Myanmar University, formerly known as STI Education, was founded in Myanmar in early 2006 with the commitment of providing academic programs at the undergraduate and postgraduate levels. 
-                            <br>It comprises of four major Faculties: Faculty of Arts, Faculty of Business, Faculty of Education & Linguistics and Faculty of Engineering. 
+                            <br>It comprises of five major Faculties: Faculty of Arts, Faculty of Business, Faculty of Health Science, Faculty of Education & Linguistics and Faculty of Engineering. 
                             <br>It is one of the top private education providers in Myanmar conducting courses in business and finance, engineering, human resource management, education and English proficiency programs, in collaboration with international universities and the National Management University under the Ministry of Education, Myanmar. </p>
 </h4>
                           
@@ -164,7 +164,7 @@ STI faculty members are diverse with different cultural backgrounds from differe
                                 <li>Strategic coordination with different governmental agencies</li>
                                
                             </ul>
-   <p style="color:#050930;"><b>The Board’s conducts a regular monthly meeting. It also meets monthly with the Academic Board and the Executive Management Group.</b></p>
+   <p style="color:#050930;"><b>The Board conducts a regular monthly meeting. It also meets monthly with the Academic Board and the Executive Management Group.</b></p>
    
    <h5><p style="color:#050930;"><b>B.2 THE ACADEMIC BOARD</b></p></h5>
 <h4><p class="opacity" style="color:#050930;">The Academic Board is the governing body of the university that is responsible for all the educational services and academic matters of the institution.   It operates under the delegated authority of the Committee on Research and Education.  It is responsible to matters concerning academic governance which include the approval of new programs and courses, faculty policies, academic and degree standards and requirements, strategic academic plans, teaching, research, examinations and feedback.  As the university’s main academic authority it guides the University's academic strategic performance, directions and plans.

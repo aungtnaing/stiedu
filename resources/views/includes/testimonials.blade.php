@@ -10,7 +10,7 @@
                         <blockquote class="quote-text">
                             <p><?php echo $testimonial->description; ?></p>
                         </blockquote>
-                        <div class="quote-image"><img alt="Jack Black" src="{{ $testimonial->photourl1 }}" style="width: 70px;height: 70;"/></div>
+                        <div class="quote-image"><img alt="Jack Black" src="{{ $testimonial->photourl1 }}" style="width: 200px;height: 200px;"/></div>
                         <div class="quote-author"><span>{{ $testimonial->name }}, {{ $testimonial->positions }}</span></div>
                     </div>
 

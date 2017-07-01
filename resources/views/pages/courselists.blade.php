@@ -3,19 +3,25 @@
 <section class="section" id="course">
 	<div id="content">
 		<div class="container">
-		
+			 <div class="row">
+                        <div class="col-xs-12">
+                            <hgroup class="section-title align-center">
+                                <h1 style="color:#050930;">{{ $categoryname->name }}</h1> 
+                            </hgroup>
+                        </div>
+                    </div>
 			<div class="row">
 				<section id="main" class="col-md-12">
 					<section id="main" class="col-md-8">
 						
-						<h2 class="entry-title" style="color:#050930;">{{ $categoryname->name }}</h2>
+						<!-- <h2 class="entry-title" style="color:#050930;">{{ $categoryname->name }}</h2> -->
 						@foreach($courselists as $courselist)
 						<div class="row">
 							<div class="col-md-12">
 								<div class="news_des right">
 									<div class="row">
 										<div class="col-xs-12 col-md-6 col-sm-6 thumb">
-											<div class="worstyle="color:#050930;"k-item"> <img src="{{ $courselist->photourl1 }}" alt="" />
+											<div class="work-item"> <img src="{{ $courselist->photourl1 }}" alt="" />
 												<div class="image-extra">
 													<div class="extra-content">
 														<div class="inner-extra">
@@ -29,9 +35,9 @@
 											<div class="event_des">
 												<ul class="post-option">
 												<br>
-													<li><a href="#"> {{ $courselist->professor->name }}</a></li>
-													<li>
-														<a href="{{ url('/coursedetails', $courselist->id) }}" style="color:#050930;">{{ $courselist->name }}</a>
+													<!-- <li><a href="#"> {{ $courselist->professor->name }}</a></li>
+													<li> -->
+														<h2><a href="{{ url('/coursedetails', $courselist->id) }}">{{ $courselist->name }}</a></h2>
 													</li>
 													<li><p style="color:#050930;">
 														{{ substr($courselist->aboutcourse,0, 150) }}

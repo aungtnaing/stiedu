@@ -106,7 +106,7 @@
 
 						<div class="row">
 							<a class="btn-button btn btn-primary" href="{{ url('/visitorinfo', $coursedetail->id) }}">Get Brochures</a> 
-							<a class="btn-button btn btn-primary" href="{{ url('/visitorinfoadmission', $coursedetail->id) }}">Seeks Appointment Admission Officer</a> 
+							<a class="btn-button btn btn-primary" href="{{ url('/visitorinfoadmission', $coursedetail->id) }}">Seek Appointment With Admission Officer</a> 
 						</div>
 						<div class="row">
 							<div class="col-xs-12 col-sm-4 col-md-5">
@@ -123,7 +123,7 @@
 									<a class="btn-button btn btn-primary" href="{{ url('/enrollprogram', $coursedetail->id) }}">ENROLL THIS PROGRAM</a> </div>
 								</div>
 								<div class="col-xs-12 col-sm-8 col-md-7">
-									<h4 class="title-1 bold" style="color:#050930;">ABOUT THE COURSES</h4>
+									<h4 class="title-1 bold" style="color:#050930;">ABOUT THE COURSE</h4>
 									<p style="color:#050930;"> {{ $coursedetail->aboutcourse }} </p>
 								
 									</div>

@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <hgroup class="section-title align-center opacity">
-                        <h1 class="header-title">News & <span>Event</span></h1> </hgroup>
+                        <h1 class="header-title" style="color:#050930;">News & Events</h1> </hgroup>
                     </div>
                 </div>
                 <!--/ .row-->

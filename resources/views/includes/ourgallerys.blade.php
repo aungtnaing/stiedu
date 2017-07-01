@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <hgroup class="section-title align-center opacity">
-                        <h1 class="header-title">Our<span>Gallery</span></h1> 
+                        <h1 class="header-title" style="color:#050930;">Our Gallery</h1> 
                     </hgroup>
                 </div>
             </div>

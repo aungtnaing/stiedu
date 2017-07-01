@@ -4,8 +4,8 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <hgroup class="section-title align-center opacity">
-                                <h1 class="header-title">Contact <span>Us</span></h1>
-                                <h2 style="color:#050930;">Phone No - 01 507 151</h2>
+                                <h1 class="header-title" style="color:#050930;">Contact Us</h1>
+                                <h2 style="color:#050930;">Call Now - 01 507 151</h2>
                                 <h2 style="color:#050930;">We look forward to hearing from you</h2> 
                             </hgroup>
                         </div>
