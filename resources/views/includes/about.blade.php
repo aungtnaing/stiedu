@@ -19,7 +19,7 @@
                         <div class="col-md-5">
                             <h3><p style="color:#050930;"><b>Overview</b></p></h3>
                             <h4><p class="opacity" style="color:#050930;"> STI Myanmar University, formerly known as STI Education, was founded in Myanmar in early 2006 with the commitment of providing academic programs at the undergraduate and postgraduate levels. 
-                            <br>It comprises of five major Faculties: Faculty of Arts, Faculty of Business, Faculty of Health Science, Faculty of Education & Linguistics and Faculty of Engineering. 
+                            <br>It comprises of four major Faculties: Faculty of Business, Faculty of Health Science, Faculty of Education & Linguistics and Faculty of Engineering. 
                             <br>It is one of the top private education providers in Myanmar conducting courses in business and finance, engineering, human resource management, education and English proficiency programs, in collaboration with international universities and the National Management University under the Ministry of Education, Myanmar. </p>
 </h4>
                           
@@ -39,7 +39,7 @@
                             <h3><p style="color:#050930;"><b>HISTORY</b></p></h3> 
                             <h4><p class="opacity" style="color:#050930;"> STI Myanmar University formerly named STI Education started in 2006 offering courses principally focusing on Teacher Training Diploma programmes, business management and English Language diplomas. By 2013 the school had expanded to more than 1500 students spread out in its three campuses. The enrollment keep increasing as a result of programmes and courses offered from strong positive reputation, sound market targeting and robust competitive edge. From one campus in downtown Yangon, STIMU now occupies three campuses all located in the prime commercial areas of Yangon. To date there are more than 2000 students studying at STIMU.
 
-To date, STIMU has grown to a mature academic institution with excellent academic reputation and the most prestigious private higher education University in Yangon with comprehensive program portfolio. There are five faculties, namely, Faculty of business, Faculty of Engineering, Faculty of Education and Linguistics, Faculty beauty art and Faculty of Health Science. In the near future another campus in Mandalay is to be extended in widening STIMU's provision. </p></h4>
+To date, STIMU has grown to a mature academic institution with excellent academic reputation and the most prestigious private higher education University in Yangon with comprehensive program portfolio. There are four faculties, namely, Faculty of business, Faculty of Engineering, Faculty of Education and Linguistics and Faculty of Health Science. In the near future another campus in Mandalay is to be extended in widening STIMU's provision. </p></h4>
 
                              <h3><p style="color:#050930;"><b>VALUES</b></p></h3>
                             <h4><p class="opacity" style="color:#050930;"> STIMU's values are reflected in its approach to management, operations and academic missions and undertakings. These values guide the short term and long-term goals of the university and serve as the underlying principles into which all the university's efforts in daily operations and decision-making are conducted. It is also in these values that the university's quality and standards are anchored.
