@@ -3,7 +3,7 @@
 
 <section id="page-title">
 
-  <div class="container clearfix" style="height: 800px;">
+  <div class="container clearfix">
   <br>
   <br>
   <br>
