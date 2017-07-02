@@ -4,12 +4,15 @@
   <meta charset="utf-8">
 
   <title>STI Myanmar University</title>
-  <meta name="description" content="STI">
+  <meta name="description" content="STI Myanmar University, formerly known as STI Education, was founded in Myanmar in early 2006 with the commitment of providing academic programs at the undergraduate and postgraduate levels.">
   <meta name="author" content="Aung Thein Naing">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
+  <link rel="apple-touch-icon" sizes="120x120" href="<?php echo url(); ?>/images/apple-touch-icon-120x120-precomposed.png" /> 
+  <link rel="apple-touch-icon" sizes="152x152" href="<?php echo url(); ?>/images/apple-touch-icon-152x152-precomposed.png" />
 
+  <link rel="icon" href="<?php echo url(); ?>/images/favicon.png" type="image/png" sizes="16x16">
  
 
   <link rel="stylesheet" href="<?php echo url(); ?>/css/bootstrap.min.css" />

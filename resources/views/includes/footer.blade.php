@@ -23,7 +23,8 @@
                             <!--/ .widget-->
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-4 text-right">
-                            <div class="developed"> Developed by <a target="_blank" href="http://infolink.rocks">InofoLink-IT solution</a> </div>
+                            <div class="developed">  STI MYANMAR UNIVERSITY<a target="_blank" href="{{ url('/sitemap') }}">sitemap</a> </div>
+                            
                             <!--/ .developed-->
                         </div>
                     </div>  

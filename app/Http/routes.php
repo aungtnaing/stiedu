@@ -105,6 +105,15 @@
 			
 		});
 
+
+		Route::get('sitemap', function() {
+
+			return view('pages.sitemap');
+			
+			
+			
+		});
+
 		
 		
 
