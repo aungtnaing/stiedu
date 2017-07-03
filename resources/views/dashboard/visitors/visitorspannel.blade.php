@@ -32,6 +32,7 @@
 									
 									<th>like</th>
 									<th>type</th>
+									<th>message</th>
 									<th>enquiry date</th>
 									<th></th>
 									
@@ -50,7 +51,8 @@
 									
 									<td>{{ $visitor->like }}</td>
 									<td>{{ $visitor->type }}</td>
-								
+									<td>{{ $visitor->message }}</td>
+
 									
 									<td>{{ $visitor->created_at }}</td>
 									

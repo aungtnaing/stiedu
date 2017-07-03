@@ -150,6 +150,7 @@ class VisitorController extends Controller {
 	
 		$visitor->like = $request->input("like");
 		$visitor->type = $request->input("type");
+		$visitor->message = $request->input("contentmessage");
 		
 		$visitor->save();
 
