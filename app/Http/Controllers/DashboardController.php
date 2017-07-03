@@ -10,6 +10,7 @@ use DB;
 use Input;	
 use App\Posts;
 use App\Orders;
+use App\Visitors;
 
 // use Intervention\Image\ImageManager;
 // use Intervention\Image\ImageManagerStatic as Image;
@@ -27,10 +28,13 @@ class DashboardController extends Controller {
 		
 		$user = User::find($request->user()->id);
 
-		
+		$visitors = Visitors::where('active', 0)
+							->orderBy('id','DESC')
+							->get();
 
 		return view('dashboard.home')
-				->with('user',$user);	
+				->with('user',$user)
+				->with('visitors', $visitors);	
 	}
 
 	

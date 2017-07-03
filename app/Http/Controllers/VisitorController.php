@@ -241,6 +241,9 @@ class VisitorController extends Controller {
 		
 		// $testimonial = Testimonials::find($id);
 		// return view('dashboard.testimonials.testimonialedit')->with('testimonial',$testimonial);
+		$visitor = Visitors::find($id);
+
+		return view('dashboard.visitors.visitorstatus')->with('visitor',$visitor);
 	}
 
 	/**
@@ -251,66 +254,16 @@ class VisitorController extends Controller {
 	 */
 	public function update($id,Request $request)
 	{
-		// $this->validate($request,[
-		
-		// 	'name' => 'required|max:255',
-		// 	'positions' => 'required|max:255',
-		// 	'description' => 'required|max:1000',
+		$visitor = Visitors::find($id);
+			if($request->input("status")==="read")
+			{
+				$visitor->active = 1;
+			}
 			
-		// 	]);
-		
-		// $testimonial = Testimonials::find($id);
+			$visitor->save();
 			
-		// $imagePath = public_path() . '/images/testimonials/';
-	
-		// $directory = $id;
-
-
-		// $input = $request->all();
-		// $destinationPath = $imagePath . $directory . '/photos';
-	
-		// $photourl1 = $testimonial->photourl1;
-		// // ini_set('post_max_size', '64M');
-		// // ini_set('upload_max_filesize', '64M');
-	
-		// if(Input::file('photourl1')!="")
-		// {
+				return redirect()->route("dashboard.index");
 			
-
-		// 	 if(Input::file('photourl1')->isValid())
-		// 	 {
-		// 		if($photourl1!="")
-		// 		{
-		// 			if(file_exists(public_path() .$photourl1))
-		// 			{
-		// 				unlink(public_path() . $photourl1);
-		// 			}
-		// 		}
-					
-
-
-		// 		$name =  time() . '-photo' . '.' . $input['photourl1']->getClientOriginalExtension();
-		// 		File::exists($destinationPath) or File::makeDirectory($destinationPath, 0777, true, true);
-		// 		Input::file('photourl1')->move($destinationPath, $name); // uploading file to given path
-		// 		$photourl1 = "/images/testimonials/" . $directory . '/photos/' .  $name;
-		// 	 }
-
-		// }
-	
-	
-		// $testimonial->name = $request->input("name");
-		// $testimonial->positions = $request->input("positions");	
-		// $testimonial->description = $request->input("description");
-
-
-		// $testimonial->active = 0;
-		// if (Input::get('active') === ""){$testimonial->active = 1;}
-
-		
-		// $testimonial->photourl1 = $photourl1;
-		
-		// $testimonial->save();
-		// return redirect()->route("testimonials.index");
 	}
 
 	/**
