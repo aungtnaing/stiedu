@@ -84,7 +84,7 @@ class HomeController extends Controller {
 
 		$events = Events::where('active',1)
 						->orderBy('id','DESC')
-						->take(4)
+						->take(8)
 						->get();
 		$partners = Partners::where('active',1)
 						->orderBy('id','DESC')
