@@ -110,8 +110,8 @@
 							<h3 class="widget-title" style="color:#050930;">Categories</h3>
 							<ul>
 								@foreach($categorys as $category)
-								<li><a href="{{ url('/courselists', $category->id) }}">{{ $category->name }}</a></li>
-								@endforeach
+														<li><b><a href="{{ url('/courselists', $category->id) }}" style="color: #1e26b0;">{{ $category->name }}</a></b></li>
+														@endforeach
 							</ul>
 						</div>
 					
@@ -128,7 +128,7 @@
 										<div class="entry-meta"> <span class="date"><a href="#" >{{ $eventlist->created_at }}</a></span> </div>
 										<!--/ .entry-meta-->
 										<h6 class="entry-title">
-											<a href="{{ url('/eventdetails', $eventlist->id) }}">{{ $eventlist->name }}</a>
+											<a href="{{ url('/eventdetails', $eventlist->id) }}" style="color: #1e26b0;">{{ $eventlist->name }}</a>
 										</h6> 
 									</div>
 									<!--/ .post-holder-->

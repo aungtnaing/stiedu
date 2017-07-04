@@ -57,6 +57,14 @@
 			
 		});
 
+		Route::get('stimumission', function() {
+
+			return view('pages.stimission');
+			
+			
+			
+		});
+
 		Route::get('history', function() {
 
 			return view('pages.history');
@@ -81,9 +89,9 @@
 			
 		});
 
-		Route::get('ourfaculty', function() {
+		Route::get('ourprogram', function() {
 
-			return view('pages.ourfaculty');
+			return view('pages.ourprogram');
 			
 			
 			
@@ -92,6 +100,14 @@
 		Route::get('ourfaculty', function() {
 
 			return view('pages.ourfaculty');
+			
+			
+			
+		});
+
+		Route::get('ourgraduates', function() {
+
+			return view('pages.ourgraduates');
 			
 			
 			

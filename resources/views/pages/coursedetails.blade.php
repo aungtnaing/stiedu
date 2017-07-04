@@ -253,7 +253,7 @@
 													<h3 class="widget-title">Categories</h3>
 													<ul>
 														@foreach($categorys as $category)
-														<li><a href="{{ url('/courselists', $category->id) }}">{{ $category->name }}</a></li>
+														<li><b><a href="{{ url('/courselists', $category->id) }}" style="color: #1e26b0;">{{ $category->name }}</a></b></li>
 														@endforeach
 													</ul>
 												</div>
@@ -347,7 +347,7 @@
 																</div>
 																<!--/ .entry-meta-->
 																<h6 class="entry-title">
-																	<a href="{{ url('/coursedetails', $courselist->id) }}">{{ $courselist->name }}</a>
+																	<a href="{{ url('/coursedetails', $courselist->id) }}" style="color: #1e26b0;">{{ $courselist->name }}</a>
 																</h6>
 																<!-- <div class="flat-money">
 																	<p>$170</p>

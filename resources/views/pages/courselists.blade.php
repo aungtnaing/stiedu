@@ -37,7 +37,7 @@
 												<br>
 													<!-- <li><a href="#"> {{ $courselist->professor->name }}</a></li>
 													<li> -->
-														<h2><a href="{{ url('/coursedetails', $courselist->id) }}">{{ $courselist->name }}</a></h2>
+														<h2><a href="{{ url('/coursedetails', $courselist->id) }}" style="color: #1e26b0;">{{ $courselist->name }}</a></h2>
 													</li>
 													<li><p style="color:#050930;">
 														{{ substr($courselist->aboutcourse,0, 150) }}
@@ -124,7 +124,7 @@
 												<div class="event-info">
 													
 
-													<a href="{{ url('/coursedetails', $courselist->id) }}" class="readmore">read more<i class="fa fa-long-arrow-right"></i></a> 
+													<a href="{{ url('/coursedetails', $courselist->id) }}" class="readmore" style="color: #1e26b0;">read more<i class="fa fa-long-arrow-right"></i></a> 
 												</div>
 											</div>
 										</div>
@@ -148,7 +148,7 @@
 							<h3 class="widget-title" style="color:#050930;">Categories</h3>
 							<ul>
 								@foreach($categorys as $category)
-								<li><a href="{{ url('/courselists', $category->id) }}">{{ $category->name }}</a></li>
+								<li><b><a href="{{ url('/courselists', $category->id) }}" style="color: #1e26b0;">{{ $category->name }}</a></b></li>
 								@endforeach
 							</ul>
 						</div>
@@ -242,7 +242,7 @@
 										</div>
 										<!--/ .entry-meta-->
 										<h6 class="entry-title">
-											<a href="{{ url('/coursedetails', $courselist->id) }}">{{ $courselist->name }}</a>
+											<a href="{{ url('/coursedetails', $courselist->id) }}" style="color: #1e26b0;">{{ $courselist->name }}</a>
 										</h6>
 
 									</div>

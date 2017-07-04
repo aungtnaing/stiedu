@@ -42,7 +42,7 @@
 
 
 								<div class="control-group">
-									<label class="control-label">Like Program :</label>
+									<label class="control-label">Program :</label>
 									<div class="controls">
 										<select name="like">
 											@foreach($likes as $like)

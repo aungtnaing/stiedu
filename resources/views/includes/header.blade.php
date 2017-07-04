@@ -15,11 +15,14 @@
                
                 <li class="dropdown"><a href="#about" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle">About <b class="caret"></b></a>
                         <ul class="dropdown-menu pull-right">
-                            <li><a href="{{ url('/stimuvision') }}" class="page-scroll">STIMU VISION/MISSION</a></li>
+                            <li><a href="{{ url('/stimuvision') }}" class="page-scroll">STIMU VISION</a></li>
+                            <li><a href="{{ url('/stimumission') }}" class="page-scroll">STIMU MISSION</a></li>
                             <li><a href="{{ url('/history') }}" class="page-scroll">HISTORY</a></li>
                              <li><a href="{{ url('/value') }}" class="page-scroll">VALUE</a></li>
-                             <li><a href="{{ url('/ourcampus') }}" class="page-scroll">OUR CAMPUS/PROGRAM</a></li>
-                              <li><a href="{{ url('/ourfaculty') }}" class="page-scroll">OUR FACULTY/GRADUATES</a></li>
+                             <li><a href="{{ url('/ourcampus') }}" class="page-scroll">OUR CAMPUS</a></li>
+                              <li><a href="{{ url('/ourprogram') }}" class="page-scroll">OUR PROGRAM</a></li>
+                              <li><a href="{{ url('/ourfaculty') }}" class="page-scroll">OUR FACULTY</a></li>
+                              <li><a href="{{ url('/ourgraduates') }}" class="page-scroll">OUR GRADUATES</a></li>
                               <li><a href="{{ url('/stimugovernance') }}" class="page-scroll">STIMU GOVERNANCE AND <br>MANAGEMENT STRUCTURE</a></li>
                             <li><a href="" class="page-scroll">Corporate Video Link</a></li>
                             
@@ -27,7 +30,7 @@
                         </ul>
                     </li>
                
-                <li><a href="#gallery" class="page-scroll">Gallery</a></li>
+                <li><a href="#team" class="page-scroll">Faculty</a></li>
                  <li class="dropdown"><a href="#course" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle">Programs <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ url('/courselists', 19) }}" class="page-scroll">FACULTY OF BUSINESS</a></li>
@@ -36,11 +39,31 @@
                             <li><a href="{{ url('/courselists', 22) }}" class="page-scroll">Faculty of Education <br>& Linguistics</a></li>
                         </ul>
                     </li>
-               
+                    <li><a href="#gallery" class="page-scroll">Gallery</a></li>
+                <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Admission<b class="caret"></b></a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="https://login.bluehost.com/hosting/webmail" class="page-scroll">Graduate</a></li>
+                            <li><a href="http://ole.ouhk.edu.hk" class="page-scroll">Under Gradute</a></li>
+                          
+
+                            
+                        </ul>
+                    </li>
                 <li><a href="#news" class="page-scroll">Event</a></li>
                
                   
-                    <li class="dropdown"><a href="#useful" data-toggle="dropdown" class="dropdown-toggle">Useful Link<b class="caret"></b></a>
+                    
+                    <li><a href="#contacts" class="page-scroll">Contact</a></li>
+             
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <nav class="navbar navbar-default navbar-fixed-top transparent" role="navigation" style="background-color: #f8f8f800;border-color: #e7e7e700; height: 15px; min-height: 15px; color: #dfe880; font-size: smaller;">
+        <ul class="nav navbar-nav" style="float:right; color: #dfe880;">
+            <li class="dropdown"><a href="#useful" data-toggle="dropdown" class="dropdown-toggle" style="color: #dfe880;">Useful Link<b class="caret"></b></a>
                         <ul class="dropdown-menu pull-right">
                             <li><a href="https://login.bluehost.com/hosting/webmail" class="page-scroll">EMAIL</a></li>
                             <li><a href="http://ole.ouhk.edu.hk" class="page-scroll">OLE</a></li>
@@ -49,19 +72,19 @@
                             
                         </ul>
                     </li>
-                    <li><a href="#contacts" class="page-scroll">Contact</a></li>
+             <li ><a href="https://breo.beds.ac.uk" class="page-scroll" style="color: #dfe880;">Exam Result</a></li>
                     @if (Auth::guest())
-                    <li><a href="{{ url('/auth/login') }}"><span class="glyphicon glyphicon-log-in"></span></a></li>   
+                    <li><a href="{{ url('/auth/login') }}" style="color: #dfe880;"><span class="glyphicon glyphicon-log-in"></span></a></li>   
                     @else
                     @if(Auth::user()->photourl!="")
-                    <li class="dropdown"><a href="" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle"><img src="{{ Auth::user()->photourl }}" width="20" height="20" class="img-circle">{{ substr(Auth::user()->name,0, 5) }} <b class="caret"></b></a>
+                    <li class="dropdown"><a href="" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle" style="color: #dfe880;"><img src="{{ Auth::user()->photourl }}" width="20" height="20" class="img-circle">{{ substr(Auth::user()->name,0, 5) }} <b class="caret"></b></a>
                         <ul class="dropdown-menu pull-right">
                             <li><a href="{{ route("profiles.edit", Auth::user()->id) }}" class="page-scroll">My Profile</a></li>
                             <li><i class="icon-signout"></i><a href="{{ url('/auth/logout') }}" class="page-scroll">Logout</a></li>
                         </ul>
                     </li>
                     @else
-                    <li class="dropdown"><a href="" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle">{{ Auth::user()->name }} <b class="caret"></b></a>
+                    <li class="dropdown"><a href="" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle" style="color: #dfe880;">{{ Auth::user()->name }} <b class="caret"></b></a>
                         <ul class="dropdown-menu pull-right">
                             <li><a href="{{ route("profiles.edit", Auth::user()->id) }}" class="page-scroll">My Profile</a></li>
                             <li><i class="icon-signout"></i><a href="{{ url('/auth/logout') }}" class="page-scroll">Logout</a></li>
@@ -72,10 +95,7 @@
 
 
                     @endif
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
+        </ul>
     </nav>
     <!-- - - - - - - - - - - - - end Header - - - - - - - - - - - - - - - -->
+

@@ -27,7 +27,7 @@
                                         <div class="event-date"> <span>{{ Carbon\Carbon::parse($event->startdate)->format('d')  }}</span>
                                             <h4>{{ Carbon\Carbon::parse($event->startdate)->format('m')  }}</h4> </div>
                                             <div class="event-info">
-                                                <p style="color:#050930;"><b>{{ $event->name }}</b></p> <a href="{{ url('/eventdetails', $event->id) }}" class="readmore">read more<i class="fa fa-long-arrow-right"></i></a> 
+                                                <p style="color: #191b05;"><b>{{ $event->name }}</b></p> <a href="{{ url('/eventdetails', $event->id) }}" class="readmore" style="color: #1e26b0;">read more<i class="fa fa-long-arrow-right"></i></a> 
                                             </div>
                                         </div>
                                     </div>
