@@ -9,29 +9,8 @@
                             
                         </ul>
                     </li>
-             <li ><a href="https://breo.beds.ac.uk" class="page-scroll" style="color: #dfe880;">Exam Result</a></li>
-                    @if (Auth::guest())
-                    <li><a href="{{ url('/auth/login') }}" style="color: #dfe880;"><span class="glyphicon glyphicon-log-in"></span></a></li>   
-                    @else
-                    @if(Auth::user()->photourl!="")
-                    <li class="dropdown"><a href="" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle" style="color: #dfe880;"><img src="{{ Auth::user()->photourl }}" width="20" height="20" class="img-circle">{{ substr(Auth::user()->name,0, 5) }} <b class="caret"></b></a>
-                        <ul class="dropdown-menu pull-right">
-                            <li><a href="{{ route("profiles.edit", Auth::user()->id) }}" class="page-scroll">My Profile</a></li>
-                            <li><i class="icon-signout"></i><a href="{{ url('/auth/logout') }}" class="page-scroll">Logout</a></li>
-                        </ul>
-                    </li>
-                    @else
-                    <li class="dropdown"><a href="" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle" style="color: #dfe880;">{{ Auth::user()->name }} <b class="caret"></b></a>
-                        <ul class="dropdown-menu pull-right">
-                            <li><a href="{{ route("profiles.edit", Auth::user()->id) }}" class="page-scroll">My Profile</a></li>
-                            <li><i class="icon-signout"></i><a href="{{ url('/auth/logout') }}" class="page-scroll">Logout</a></li>
-                        </ul>
-                    </li>
+             <li ><a href="https://breo.beds.ac.uk" class="page-scroll" style="color: #dfe880;">Exam <br>Result</a></li>
                     
-                    @endif
-
-
-                    @endif
         </ul>
     </nav>
     
@@ -113,6 +92,28 @@
                   
                     
                     <li><a href="#contacts" class="page-scroll">Contact</a></li>
+                    @if (Auth::guest())
+                    <li><a href="{{ url('/auth/login') }}" style="color: #dfe880;"><span class="glyphicon glyphicon-log-in"></span></a></li>   
+                    @else
+                    @if(Auth::user()->photourl!="")
+                    <li class="dropdown"><a href="" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle" style="color: #dfe880;"><img src="{{ Auth::user()->photourl }}" width="20" height="20" class="img-circle">{{ substr(Auth::user()->name,0, 5) }} <b class="caret"></b></a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="{{ route("profiles.edit", Auth::user()->id) }}" class="page-scroll">My Profile</a></li>
+                            <li><i class="icon-signout"></i><a href="{{ url('/auth/logout') }}" class="page-scroll">Logout</a></li>
+                        </ul>
+                    </li>
+                    @else
+                    <li class="dropdown"><a href="" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle" style="color: #dfe880;">{{ Auth::user()->name }} <b class="caret"></b></a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="{{ route("profiles.edit", Auth::user()->id) }}" class="page-scroll">My Profile</a></li>
+                            <li><i class="icon-signout"></i><a href="{{ url('/auth/logout') }}" class="page-scroll">Logout</a></li>
+                        </ul>
+                    </li>
+                    
+                    @endif
+
+
+                    @endif
              
                 </ul>
             </div>

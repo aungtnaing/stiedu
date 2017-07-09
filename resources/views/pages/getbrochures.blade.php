@@ -10,7 +10,7 @@
 						
 				
 					<h2 class="entry-title" style="color:#050930;">Get Brochures</h2>
-						<p>Plese fill your's information for our brochures.</p>
+						<p>Plese fill your's information to get the brochure.</p>
 						<div class="entry-image"> <img src="<?php echo url(); ?>{{ $coursedetail->photourl1 }}" alt="" style="width: 500px;height: 400;"/> </div>
 					<form action="{{ route("visitors.store") }}" method="POST" enctype="multiGet Brochurespart/form-data">
 
