@@ -122,6 +122,41 @@
 		});
 
 
+		Route::get('graduatelists/{id}', ['as' => 'courselists', function ($id) {
+			$categorys = Category::orderBy('id', 'desc')
+								->take(7)
+								->get();
+
+			if($id==0)
+			{
+				$categoryname = "Under Graduate Programs";
+
+			}
+			else
+			{
+				$categoryname = "Post Graduate Programs";
+
+			}
+
+			// echo $id;
+
+			// die();
+			
+			$courselists = Courses::where('active',1)
+			->where('graduate', $id)
+			->orderBy('id','DESC')
+			->get();
+
+			
+			
+			return view('pages.courselists')
+			->with('courselists', $courselists)
+			->with('categorys', $categorys)
+			->with('categoryname', $categoryname);
+			
+			
+		}]);
+
 		Route::get('sitemap', function() {
 
 			return view('pages.sitemap');
@@ -204,7 +239,8 @@
 								->take(7)
 								->get();
 
-			$categoryname = Category::find($categoryid);
+			$category = Category::find($categoryid);
+			$categoryname = $category->name;
 
 			$courselists = Courses::where('active',1)
 			->where('categoryid', $categoryid)

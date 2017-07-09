@@ -1,3 +1,40 @@
+  <nav class="navbar navbar-default navbar-fixed-top transparent" role="navigation" style="background-color: #f8f8f800;border-color: #e7e7e700; height: 15px; min-height: 15px; color: #dfe880; font-size: smaller;">
+        <ul class="nav navbar-nav" style="float:left; color: #dfe880;">
+            <li class="dropdown"><a href="#useful" data-toggle="dropdown" class="dropdown-toggle" style="color: #dfe880;">Useful Link<b class="caret"></b></a>
+                        <ul class="dropdown-menu pull-left">
+                            <li><a href="https://login.bluehost.com/hosting/webmail" class="page-scroll">EMAIL</a></li>
+                            <li><a href="http://ole.ouhk.edu.hk" class="page-scroll">OLE</a></li>
+                            <li><a href="https://breo.beds.ac.uk" class="page-scroll">BREO</a></li>
+
+                            
+                        </ul>
+                    </li>
+             <li ><a href="https://breo.beds.ac.uk" class="page-scroll" style="color: #dfe880;">Exam Result</a></li>
+                    @if (Auth::guest())
+                    <li><a href="{{ url('/auth/login') }}" style="color: #dfe880;"><span class="glyphicon glyphicon-log-in"></span></a></li>   
+                    @else
+                    @if(Auth::user()->photourl!="")
+                    <li class="dropdown"><a href="" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle" style="color: #dfe880;"><img src="{{ Auth::user()->photourl }}" width="20" height="20" class="img-circle">{{ substr(Auth::user()->name,0, 5) }} <b class="caret"></b></a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="{{ route("profiles.edit", Auth::user()->id) }}" class="page-scroll">My Profile</a></li>
+                            <li><i class="icon-signout"></i><a href="{{ url('/auth/logout') }}" class="page-scroll">Logout</a></li>
+                        </ul>
+                    </li>
+                    @else
+                    <li class="dropdown"><a href="" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle" style="color: #dfe880;">{{ Auth::user()->name }} <b class="caret"></b></a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="{{ route("profiles.edit", Auth::user()->id) }}" class="page-scroll">My Profile</a></li>
+                            <li><i class="icon-signout"></i><a href="{{ url('/auth/logout') }}" class="page-scroll">Logout</a></li>
+                        </ul>
+                    </li>
+                    
+                    @endif
+
+
+                    @endif
+        </ul>
+    </nav>
+    
   <!-- - - - - - - - - - - - - - Header - - - - - - - - - - - - - - - - -->
   <nav id="header" class="navbar navbar-default navbar-fixed-top transparent" role="navigation">
     <div class="container">
@@ -42,8 +79,30 @@
                     <li><a href="#gallery" class="page-scroll">Gallery</a></li>
                 <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Admission<b class="caret"></b></a>
                         <ul class="dropdown-menu pull-right">
-                            <li><a href="https://login.bluehost.com/hosting/webmail" class="page-scroll">Graduate</a></li>
-                            <li><a href="http://ole.ouhk.edu.hk" class="page-scroll">Under Gradute</a></li>
+                            <li><a href="{{ url('/graduatelists', 1) }}" class="page-scroll">Post Graduate <br>Program</a>
+                              <!--   <ul class="dropdown-menu">
+                                @foreach($categorys as $category)
+                                    @foreach($category->courses as $course)
+                                    @if($course->graduate===1)
+                                    <li class="dropdown"><a href="{{ url('/coursedetails', $course->id) }}" data-toggle="dropdown" class="dropdown-toggle">{{ $course->name }}</a>
+                                    </li>
+                                    @endif
+                                    @endforeach
+                                @endforeach                      
+                                </ul> -->
+                            </li>
+                            <li><a href="{{ url('/graduatelists', 0) }}" class="page-scroll">Undergraduate <br>Program</a>
+                            <!-- <ul class="dropdown-menu pull-left">
+                                @foreach($categorys as $category)
+                                    @foreach($category->courses as $course)
+                                    @if($course->graduate===0)
+                                    <li><a href="{{ url('/coursedetails', $course->id) }}">{{ $course->name }}</a>
+                                    </li>
+                                    @endif
+                                    @endforeach
+                                @endforeach                      
+                                </ul> -->
+                            </li>
                           
 
                             
@@ -60,42 +119,6 @@
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
-    </nav>
-    <nav class="navbar navbar-default navbar-fixed-top transparent" role="navigation" style="background-color: #f8f8f800;border-color: #e7e7e700; height: 15px; min-height: 15px; color: #dfe880; font-size: smaller;">
-        <ul class="nav navbar-nav" style="float:right; color: #dfe880;">
-            <li class="dropdown"><a href="#useful" data-toggle="dropdown" class="dropdown-toggle" style="color: #dfe880;">Useful Link<b class="caret"></b></a>
-                        <ul class="dropdown-menu pull-right">
-                            <li><a href="https://login.bluehost.com/hosting/webmail" class="page-scroll">EMAIL</a></li>
-                            <li><a href="http://ole.ouhk.edu.hk" class="page-scroll">OLE</a></li>
-                            <li><a href="https://breo.beds.ac.uk" class="page-scroll">BREO</a></li>
-
-                            
-                        </ul>
-                    </li>
-             <li ><a href="https://breo.beds.ac.uk" class="page-scroll" style="color: #dfe880;">Exam Result</a></li>
-                    @if (Auth::guest())
-                    <li><a href="{{ url('/auth/login') }}" style="color: #dfe880;"><span class="glyphicon glyphicon-log-in"></span></a></li>   
-                    @else
-                    @if(Auth::user()->photourl!="")
-                    <li class="dropdown"><a href="" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle" style="color: #dfe880;"><img src="{{ Auth::user()->photourl }}" width="20" height="20" class="img-circle">{{ substr(Auth::user()->name,0, 5) }} <b class="caret"></b></a>
-                        <ul class="dropdown-menu pull-right">
-                            <li><a href="{{ route("profiles.edit", Auth::user()->id) }}" class="page-scroll">My Profile</a></li>
-                            <li><i class="icon-signout"></i><a href="{{ url('/auth/logout') }}" class="page-scroll">Logout</a></li>
-                        </ul>
-                    </li>
-                    @else
-                    <li class="dropdown"><a href="" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle" style="color: #dfe880;">{{ Auth::user()->name }} <b class="caret"></b></a>
-                        <ul class="dropdown-menu pull-right">
-                            <li><a href="{{ route("profiles.edit", Auth::user()->id) }}" class="page-scroll">My Profile</a></li>
-                            <li><i class="icon-signout"></i><a href="{{ url('/auth/logout') }}" class="page-scroll">Logout</a></li>
-                        </ul>
-                    </li>
-                    
-                    @endif
-
-
-                    @endif
-        </ul>
     </nav>
     <!-- - - - - - - - - - - - - end Header - - - - - - - - - - - - - - - -->
 

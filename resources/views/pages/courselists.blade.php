@@ -6,7 +6,7 @@
 			 <div class="row">
                         <div class="col-xs-12">
                             <hgroup class="section-title align-center">
-                                <h1 style="color:#050930;">{{ $categoryname->name }}</h1> 
+                                <h1 style="color:#050930;">{{ $categoryname }}</h1> 
                             </hgroup>
                         </div>
                     </div>
@@ -14,8 +14,7 @@
 				<section id="main" class="col-md-12">
 					<section id="main" class="col-md-8">
 						
-						<!-- <h2 class="entry-title" style="color:#050930;">{{ $categoryname->name }}</h2> -->
-						@foreach($courselists as $courselist)
+					@foreach($courselists as $courselist)
 						<div class="row">
 							<div class="col-md-12">
 								<div class="news_des right">
