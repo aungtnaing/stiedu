@@ -40,7 +40,7 @@
                             <li><a href="{{ url('/courselists', 22) }}" class="page-scroll">Faculty of Education <br>& Linguistics</a></li>
                         </ul>
                     </li>
-                    <li><a href="#gallery" class="page-scroll">Gallery</a></li>
+                    <!-- <li><a href="#gallery" class="page-scroll">Gallery</a></li> -->
                 <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Admission<b class="caret"></b></a>
                         <ul class="dropdown-menu pull-right">
                             <li><a href="{{ url('/graduatelists', 1) }}" class="page-scroll">Post Graduate <br>Program</a>
