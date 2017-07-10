@@ -129,12 +129,12 @@
 
 			if($id==0)
 			{
-				$categoryname = "Under Graduate Programs";
+				$categoryname = "Undergraduate Programs";
 
 			}
 			else
 			{
-				$categoryname = "Post Graduate Programs";
+				$categoryname = "Postgraduate Programs";
 
 			}
 
