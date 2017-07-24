@@ -129,7 +129,7 @@
 									</div>
 								</div>
 								<div class="entry-body">
-									<h4 class="title-2" style="color:#050930;">For the high performing students</h4>
+									<h4 class="title-2" style="color:#050930;">What you will learns</h4>
 									<p style="color:#050930;"> <?php echo $coursedetail->whatlearn; ?> </p>
 								</div>
 								<!--/ .entry-body-->
