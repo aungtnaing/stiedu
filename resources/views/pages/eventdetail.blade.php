@@ -86,16 +86,16 @@
 									
 									<div class="social-icons-2">
 										<ul class="social-icons">
-											<li class="twitter"><a href="#" data-toggle="tooltip" data-placement="top" title="twitter"><i class="icon-twitter"></i></a></li>
+											<!-- <li class="twitter"><a href="#" data-toggle="tooltip" data-placement="top" title="twitter"><i class="icon-twitter"></i></a></li>
 											<li class="facebook"><a href="#" data-toggle="tooltip" data-placement="top" title="facebook"><i class="icon-facebook"></i></a></li>
 											<li class="linkedin"><a href="#" data-toggle="tooltip" data-placement="top" title="linkedin"><i class="icon-linkedin"></i></a></li>
 											<li class="pinterest"><a href="#" data-toggle="tooltip" data-placement="top" title="pinterest"><i class="icon-pinterest-circled"></i></a></li>
 											<li class="rss"><a href="#" data-toggle="tooltip" data-placement="top" title="rss"><i class="icon-rss"></i></a></li>
 											<li class="gplus"><a href="#" data-toggle="tooltip" data-placement="top" title="gplus"><i class="icon-gplus"></i></a></li>
 											<li class="youtube"><a href="#" data-toggle="tooltip" data-placement="top" title="youtube"><i class="icon-youtube"></i></a></li>
-											<li class="instagram"><a href="#" data-toggle="tooltip" data-placement="top" title="instagram"><i class="icon-instagramm"></i></a></li>
+											<li class="instagram"><a href="#" data-toggle="tooltip" data-placement="top" title="instagram"><i class="icon-instagramm"></i></a></li> -->
 										</ul>
-									</div> <a class="button turquoise large  full-width" href="#">Join this event</a> </div>
+								<!-- 	</div> <a class="button turquoise large  full-width" href="#">Join this event</a> </div> -->
 									<!-- Join Event Option -->
 								</div>
 								<!--/ .entry-body-->
