@@ -4,6 +4,8 @@
 	@include('includes.head')  
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZZ44ZV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	<div class="preloader">
 		<div class="sk-folding-cube">
@@ -53,4 +55,5 @@
 
 
 </body>
+
 </html>
