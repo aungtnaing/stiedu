@@ -7,375 +7,324 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>http://www.stiedu.net/</loc>
-  <priority>1.00</priority>
+  <loc>http://stiedu.net/</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/stimuvision</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/stimuvision</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/history</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/stimumission</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/value</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/history</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/ourcampus</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/value</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/ourfaculty</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/ourcampus</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/stimugovernance</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/ourprogram</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/courselists/19</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/ourfaculty</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/courselists/20</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/ourgraduates</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/courselists/21</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/stimugovernance</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/courselists/22</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/courselists/19</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/auth/login</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/courselists/20</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/facultyprofile/3</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/courselists/21</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/facultyprofile/2</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/courselists/22</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/facultyprofile/1</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/graduatelists/1</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/coursedetails/6</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/graduatelists/0</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/coursedetails/7</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/auth/login</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/coursedetails/8</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/facultyprofile/10</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/coursedetails/9</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/facultyprofile/9</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/coursedetails/17</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/facultyprofile/8</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/coursedetails/18</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/facultyprofile/7</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/coursedetails/1</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/facultyprofile/5</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/coursedetails/2</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/facultyprofile/4</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/coursedetails/3</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/facultyprofile/3</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/coursedetails/4</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/facultyprofile/2</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/coursedetails/5</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/coursedetails/6</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/coursedetails/10</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/coursedetails/7</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/coursedetails/11</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/coursedetails/8</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/coursedetails/12</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/coursedetails/9</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/coursedetails/15</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/coursedetails/17</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/coursedetails/16</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/coursedetails/18</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/coursedetails/19</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/coursedetails/1</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/authorprofile/3</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/coursedetails/2</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/eventdetails/4</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/coursedetails/3</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/eventdetails/3</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/coursedetails/4</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/eventdetails/2</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/coursedetails/5</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/eventdetails/1</loc>
-  <priority>0.80</priority>
+  <loc>http://stiedu.net/coursedetails/10</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/password/email</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/coursedetails/11</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/auth/register</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/coursedetails/12</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/facultyprofile/4</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/coursedetails/15</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfo/6</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/coursedetails/16</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfoadmission/6</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/coursedetails/19</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/enrollprogram/6</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/authorprofile/3</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/authorprofile/1</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/eventdetails/28</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfo/7</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/eventdetails/27</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfoadmission/7</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/eventdetails/26</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/enrollprogram/7</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/eventdetails/25</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfo/8</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/eventdetails/24</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfoadmission/8</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/eventdetails/23</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/enrollprogram/8</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/eventdetails/4</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfo/9</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/eventdetails/3</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfoadmission/9</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/sitemap</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/enrollprogram/9</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/password/email</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfo/17</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/auth/register</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfoadmission/17</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfo/6</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/enrollprogram/17</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfoadmission/6</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfo/18</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/enrollprogram/6</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfoadmission/18</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/authorprofile/1</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/enrollprogram/18</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfo/7</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfo/1</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfoadmission/7</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfoadmission/1</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/enrollprogram/7</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/enrollprogram/1</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfo/8</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfo/2</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfoadmission/8</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfoadmission/2</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/enrollprogram/8</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/enrollprogram/2</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfo/9</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfo/3</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfoadmission/9</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfoadmission/3</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/enrollprogram/9</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/enrollprogram/3</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfo/17</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfo/4</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfoadmission/17</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfoadmission/4</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/enrollprogram/17</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/enrollprogram/4</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfo/18</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfo/5</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfoadmission/18</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfoadmission/5</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/enrollprogram/18</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/enrollprogram/5</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfo/1</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfo/10</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfoadmission/1</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfoadmission/10</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/enrollprogram/1</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/enrollprogram/10</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfo/2</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/authorprofile/6</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfoadmission/2</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfo/11</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/enrollprogram/2</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfoadmission/11</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfo/3</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/enrollprogram/11</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfoadmission/3</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfo/12</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/enrollprogram/3</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfoadmission/12</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfo/4</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/enrollprogram/12</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfoadmission/4</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfo/15</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/enrollprogram/4</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfoadmission/15</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfo/5</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/enrollprogram/15</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfoadmission/5</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfo/16</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/enrollprogram/5</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfoadmission/16</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfo/10</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/enrollprogram/16</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfoadmission/10</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfo/19</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/enrollprogram/10</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/visitorinfoadmission/19</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/authorprofile/6</loc>
 </url>
 <url>
-  <loc>http://www.stiedu.net/enrollprogram/19</loc>
-  <priority>0.64</priority>
+  <loc>http://stiedu.net/visitorinfo/11</loc>
+</url>
+<url>
+  <loc>http://stiedu.net/visitorinfoadmission/11</loc>
+</url>
+<url>
+  <loc>http://stiedu.net/enrollprogram/11</loc>
+</url>
+<url>
+  <loc>http://stiedu.net/visitorinfo/12</loc>
+</url>
+<url>
+  <loc>http://stiedu.net/visitorinfoadmission/12</loc>
+</url>
+<url>
+  <loc>http://stiedu.net/enrollprogram/12</loc>
+</url>
+<url>
+  <loc>http://stiedu.net/visitorinfo/15</loc>
+</url>
+<url>
+  <loc>http://stiedu.net/visitorinfoadmission/15</loc>
+</url>
+<url>
+  <loc>http://stiedu.net/enrollprogram/15</loc>
+</url>
+<url>
+  <loc>http://stiedu.net/visitorinfo/16</loc>
+</url>
+<url>
+  <loc>http://stiedu.net/visitorinfoadmission/16</loc>
+</url>
+<url>
+  <loc>http://stiedu.net/enrollprogram/16</loc>
+</url>
+<url>
+  <loc>http://stiedu.net/visitorinfo/19</loc>
+</url>
+<url>
+  <loc>http://stiedu.net/visitorinfoadmission/19</loc>
+</url>
+<url>
+  <loc>http://stiedu.net/enrollprogram/19</loc>
 </url>
 </urlset>
