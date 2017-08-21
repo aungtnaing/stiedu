@@ -38,6 +38,16 @@
 			
 		});
 
+		Route::get('fbtest', function() {
+
+			$categorys = Category::All();
+			
+			return view('pages.fbtest')
+			->with('categorys', $categorys);
+			
+			
+		});
+
 		Route::get('aboutusmyanmar', function() {
 
 			$categorys = Category::All();

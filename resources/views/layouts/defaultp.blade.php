@@ -2,6 +2,14 @@
 <html>
 <head>
 	@include('includes.head')  
+
+	<meta property="og:url" content="http://www.stiedu.net/coursedetails/6"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="STI Myanmar University" />
+  <meta property="og:description" content="we r soldier." />
+  <meta property="og:image" content="<?php echo url(); ?>/images/about1.jpg" />
+
+  
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZZ44ZV"

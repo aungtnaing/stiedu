@@ -187,6 +187,17 @@ class VisitorController extends Controller {
 
     });
 
+    Mail::send('emails.layoutmail', $data, function ($message) use ($data){
+
+
+
+        $message->from('stieducontact@gmail.com', $data['email']);
+
+        $message->to('info@stiedu.net')->subject('New Visitor Enquiry')
+        										->replyTo($data['email']);
+
+    });
+
 
     	// var_dump($request->input("submittype"));
     	// die();
