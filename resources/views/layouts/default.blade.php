@@ -7,7 +7,7 @@
   
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-	
+	<!-- 
 	<div class="preloader">
 		<div class="sk-folding-cube">
 			<div class="sk-cube1 sk-cube"></div>
@@ -15,7 +15,7 @@
 			<div class="sk-cube4 sk-cube"></div>
 			<div class="sk-cube3 sk-cube"></div>
 		</div>
-	</div>
+	</div> -->
 	
 	<!-- - - - - - - - - - - - - - Wrapper - - - - - - - - - - - - - - - - -->
 	<div id="wrapper">
