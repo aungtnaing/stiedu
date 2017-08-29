@@ -15,6 +15,7 @@
 		use App\Category;
 		use App\Courses;
 		use App\Professors;
+		use App\Ourgallerys;
 
 		Route::get('/', 'WelcomeController@index');
 		Route::get('home', 'HomeController@index');
@@ -70,6 +71,20 @@
 		Route::get('stimumission', function() {
 
 			return view('pages.stimission');
+			
+			
+			
+		});
+
+		Route::get('ourgall', function() {
+
+			$ourgallerys = 	Ourgallerys::where('active',1)
+						->orderBy('id','DESC')
+						->take(10)
+						->get();	
+
+
+			return view('pages.ourgallery')->with('ourgallerys', $ourgallerys);
 			
 			
 			

@@ -26,6 +26,7 @@
                               <li><a href="{{ url('/ourgraduates') }}" class="page-scroll">OUR GRADUATES</a></li>
                               <li><a href="{{ url('/stimugovernance') }}" class="page-scroll">STIMU GOVERNANCE AND <br>MANAGEMENT STRUCTURE</a></li>
                             <li><a href="" class="page-scroll">Corporate Video Link</a></li>
+                            <li><a href="{{ url('/ourgall') }}" class="page-scroll">OUR GALLERY</a></li>
                             
                             
                         </ul>
@@ -44,28 +45,10 @@
                 <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Admission<b class="caret"></b></a>
                         <ul class="dropdown-menu pull-right">
                             <li><a href="{{ url('/graduatelists', 1) }}" class="page-scroll">Post Graduate <br>Program</a>
-                              <!--   <ul class="dropdown-menu">
-                                @foreach($categorys as $category)
-                                    @foreach($category->courses as $course)
-                                    @if($course->graduate===1)
-                                    <li class="dropdown"><a href="{{ url('/coursedetails', $course->id) }}" data-toggle="dropdown" class="dropdown-toggle">{{ $course->name }}</a>
-                                    </li>
-                                    @endif
-                                    @endforeach
-                                @endforeach                      
-                                </ul> -->
+                            
                             </li>
                             <li><a href="{{ url('/graduatelists', 0) }}" class="page-scroll">Undergraduate <br>Program</a>
-                            <!-- <ul class="dropdown-menu pull-left">
-                                @foreach($categorys as $category)
-                                    @foreach($category->courses as $course)
-                                    @if($course->graduate===0)
-                                    <li><a href="{{ url('/coursedetails', $course->id) }}">{{ $course->name }}</a>
-                                    </li>
-                                    @endif
-                                    @endforeach
-                                @endforeach                      
-                                </ul> -->
+                           
                             </li>
                           
 

@@ -5,7 +5,7 @@
 @include('includes.about') 
 @include('includes.testimonials')
 @include('includes.professors') 
-@include('includes.ourgallerys')
+
 @include('includes.courses') 
 @include('includes.partners') 
 @include('includes.events') 

@@ -7,7 +7,9 @@
   
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-	
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZZ44ZV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 	<div class="preloader">
 		<div class="sk-folding-cube">
 			<div class="sk-cube1 sk-cube"></div>
@@ -43,8 +45,9 @@
 	<script src="<?php echo url(); ?>/js/layerslider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
 	<!-- Google Map -->
 	
-	 <script src="<?php echo url(); ?>/js/jquery.mixitup.js"></script>
-    <script src="<?php echo url(); ?>/js/fancybox/jquery.fancybox.pack.js"></script>
+	
+	<script src="<?php echo url(); ?>/js/jquery.mixitup.js"></script>
+	<script src="<?php echo url(); ?>/js/fancybox/jquery.fancybox.pack.js"></script>
 	<!-- Owl Carousel -->
 	<script src="<?php echo url(); ?>/js/owl/js/owl.carousel.js"></script>
 	<script src="<?php echo url(); ?>/js/counter.js"></script>
