@@ -319,7 +319,8 @@ ul.circle-list li:after,
 /* BG Color for Image Parallax */
 
 .bg-turquoise-color {
-    background-color: #2f506c;
+    /*background-color: #2f506c;*/
+        background-color: #050930;
 }
 
 .bg-dark-color {

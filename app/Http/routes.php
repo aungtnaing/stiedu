@@ -16,6 +16,7 @@
 		use App\Courses;
 		use App\Professors;
 		use App\Ourgallerys;
+		use App\Partners;
 
 		Route::get('/', 'WelcomeController@index');
 		Route::get('home', 'HomeController@index');
@@ -85,6 +86,19 @@
 
 
 			return view('pages.ourgallery')->with('ourgallerys', $ourgallerys);
+			
+			
+			
+		});
+
+		Route::get('ourpartners', function() {
+
+$partners = Partners::where('active',1)
+						->orderBy('id','DESC')
+						->take(10)
+						->get();		
+
+			return view('pages.ourpartners')->with('partners', $partners);
 			
 			
 			

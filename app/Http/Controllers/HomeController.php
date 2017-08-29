@@ -9,8 +9,7 @@ use App\Maincategory;
 use App\Mainslide;
 use App\Testimonials;
 use App\Professors;
-use App\Priorities;
-use App\Ourgallerys;
+
 use App\Events;
 use App\Partners;
 
@@ -72,14 +71,7 @@ class HomeController extends Controller {
 						->take(8)
 						->get();				
 
-		$priorities = Priorities::All();
-
-	
-		$ourgallerys = 	Ourgallerys::where('active',1)
-						->orderBy('id','DESC')
-						->take(10)
-						->get();	
-
+		
 		$maincategorys = Maincategory::All();
 
 		$events = Events::where('active',1)
@@ -95,8 +87,6 @@ class HomeController extends Controller {
 				->with('mainslides', $mainslides)
 				->with('testimonials', $testimonials)
 				->with('professors', $professors)
-				->with('priorities', $priorities)
-				->with('ourgallerys', $ourgallerys)
 				->with('maincategorys', $maincategorys)
 				->with('events', $events)
 				->with('partners', $partners);
