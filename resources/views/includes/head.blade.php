@@ -39,6 +39,13 @@ src="https://www.facebook.com/tr?id=450642131975254&ev=PageView&noscript=1"
 </script>
 
 
+<meta property="og:url"           content="http://www.stiedu.net" />
+  <meta property="og:type"          content="article" />
+  <meta property="og:title"         content="STI Myanmar University" />
+  <meta property="og:description"   content="STI Myanmar University, formerly known as STI Education, was founded in Myanmar in early 2006 with the commitment of providing academic programs at the undergraduate and postgraduate levels." />
+  <meta property="og:image"         content="http://www.stiedu.net/images/courses/7/photos/1497605680-photo.JPG" />
+<meta property="fb:app_id" content="132711514007187" />
+
 
  
   <link rel="apple-touch-icon" sizes="120x120" href="<?php echo url(); ?>/images/apple-touch-icon-120x120-precomposed.png" /> 
