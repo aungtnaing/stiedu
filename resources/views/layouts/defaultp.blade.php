@@ -4,7 +4,12 @@
 	@include('includes.head')  
 
 	
-
+<meta property="og:url"           content="http://www.stiedu.net" />
+  <meta property="og:type"          content="article" />
+  <meta property="og:title"         content="{{ $coursedetail->name }}" />
+  <meta property="og:description"   content="STI uni test." />
+  <meta property="og:image"         content="http://www.stiedu.net/images/courses/7/photos/1497605680-photo.JPG" />
+<meta property="fb:app_id" content="132711514007187" />
 
 
   
