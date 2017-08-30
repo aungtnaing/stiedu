@@ -48,7 +48,6 @@ src="https://www.facebook.com/tr?id=450642131975254&ev=PageView&noscript=1"
 <meta property="fb:app_id" content="132711514007187" />
 
 
-
  
   <link rel="apple-touch-icon" sizes="120x120" href="<?php echo url(); ?>/images/apple-touch-icon-120x120-precomposed.png" /> 
   <link rel="apple-touch-icon" sizes="152x152" href="<?php echo url(); ?>/images/apple-touch-icon-152x152-precomposed.png" />
@@ -77,7 +76,36 @@ src="https://www.facebook.com/tr?id=450642131975254&ev=PageView&noscript=1"
   
     <script src="<?php echo url(); ?>/js/jquery.modernizr.js"></script>
 
+<style type="text/css">
 
+#fb-share-button {
+    background: #3b5998;
+    border-radius: 3px;
+    font-weight: 600;
+    padding: 5px 8px;
+    display: inline-block;
+    position: static;
+}
+
+#fb-share-button:hover {
+    cursor: pointer;
+    background: #213A6F
+}
+
+#fb-share-button svg {
+    width: 18px;
+    fill: white;
+    vertical-align: middle;
+    border-radius: 2px
+}
+
+#fb-share-button span {
+    vertical-align: middle;
+    color: white;
+    font-size: 14px;
+    padding: 0 3px
+}
+</style>
    
 <script type="text/javascript">
   function replyon(fid){
