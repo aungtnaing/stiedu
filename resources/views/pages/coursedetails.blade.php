@@ -108,27 +108,10 @@
 							<a class="btn-button btn btn-primary" href="{{ url('/visitorinfo', $coursedetail->id) }}">Get Brochures</a> 
 							<a class="btn-button btn btn-primary" href="{{ url('/visitorinfoadmission', $coursedetail->id) }}">Seek Appointment With Admission Officer</a> 
 
+							<a class="btn-button btn btn-primary" href="javascript:fbshareCurrentPage()" target="_blank" alt="Share on Facebook">Facebook</a>
+
 						</div>
-						<div class="row">
-
-							
-							<div id="fb-root"></div>
-							<script>(function(d, s, id) {
-								var js, fjs = d.getElementsByTagName(s)[0];
-								if (d.getElementById(id)) return;
-								js = d.createElement(s); js.id = id;
-								js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
-								fjs.parentNode.insertBefore(js, fjs);
-							}(document, 'script', 'facebook-jssdk'));</script>
-
-							<!-- Your share button code -->
-
-
-							
-
-
-							<!-- <div class="fb-share-button" data-href="http://www.stiedu.net/coursedetails/6" data-layout="button_count" data-size="small" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.stiedu.net%2Fcoursedetails%2F6&amp;src=sdkpreparse">Share</a></div> -->
-						</div>
+						
 						<div class="row">
 							<div class="col-xs-12 col-sm-4 col-md-5">
 								<div class="course-widget-price">
@@ -392,4 +375,12 @@
 								<!--/ #content-->
 							</section>
 							<!--/ .section-->
+
+
+<script language="javascript">
+    function fbshareCurrentPage()
+    {window.open("https://www.facebook.com/sharer/sharer.php?u="+escape(window.location.href)+"&t="+document.title, '', 
+    'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+    return false; }
+</script>
 							@stop
