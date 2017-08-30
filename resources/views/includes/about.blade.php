@@ -26,6 +26,17 @@
                             <a role="button" id="togglable-a" data-toggle="collapse" href="#more-about-university" aria-expanded="false" aria-controls="collapseExample" class="readmore">Read More <i class="fa fa-long-arrow-right"></i></a> 
                         </div>
                         <!--/ .col-md-5-->
+                        <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/qz_MM/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your share button code -->
+<div class="fb-share-button" data-href="http://stiedu.net" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fstiedu.net%2F&amp;src=sdkpreparse">share</a></div>
                     </div>
                     <!--/ .row-->
                     <div class="row">

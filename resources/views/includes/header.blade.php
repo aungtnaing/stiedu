@@ -55,6 +55,18 @@
                             
                         </ul>
                     </li>
+
+                    <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">link<b class="caret"></b></a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="https://login.bluehost.com/hosting/webmail" class="page-scroll">EMAIL</a></li>
+                            <li><a href="http://ole.ouhk.edu.hk" class="page-scroll">OLE</a></li>
+                            <li><a href="https://breo.beds.ac.uk" class="page-scroll">BREO</a></li>
+                             <li ><a href="" class="page-scroll" class="page-scroll">Exam <br>Result</a></li>
+                            
+                        </ul>
+                    </li>
+            
+
                 <li><a href="#news" class="page-scroll">Event</a></li>
                
                   
@@ -90,7 +102,7 @@
         <!-- /.container -->
     </nav>
     <!-- - - - - - - - - - - - - end Header - - - - - - - - - - - - - - - -->
-
+<!-- 
   <nav class="navbar navbar-default navbar-fixed-top transparent" role="navigation" style="background-color: #f8f8f800;border-color: #e7e7e700; height: 15px; min-height: 15px; color: #dfe880; font-size: smaller;">
         <ul class="nav navbar-nav" style="float:left; color: #dfe880;">
             <li class="dropdown"><a href="#useful" data-toggle="dropdown" class="dropdown-toggle" style="color: #dfe880;">Useful Link<b class="caret"></b></a>
@@ -105,4 +117,4 @@
              <li ><a href="https://breo.beds.ac.uk" class="page-scroll" style="color: #dfe880;">Exam <br>Result</a></li>
                     
         </ul>
-    </nav>
+    </nav> -->
