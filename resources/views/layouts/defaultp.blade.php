@@ -6,8 +6,15 @@
 <head>
   <meta charset="utf-8">
 
+  <meta property="og:url"           content="javascript:fbshareCurrentPage()" />
+  <meta property="og:type"          content="article" />
+  <meta property="og:title"         content="{{ $coursedetail->name }}" />
+  <meta property="og:description"   content="{{ $coursedetail->aboutcourse }}" />
+  <meta property="og:image"         content="<?php echo url(); ?>{{ $coursedetail->photourl1 }}" />
+<meta property="fb:app_id" content="132711514007187" />
+
   <title>{{ $coursedetail->name }}</title>
-  <meta name="description" content="STI Myanmar University, formerly known as STI Education, was founded in Myanmar in early 2006 with the commitment of providing academic programs at the undergraduate and postgraduate levels.">
+  <meta name="description" content="{{ $coursedetail->aboutcourse }}">
   <meta name="author" content="Aung Thein Naing">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -43,12 +50,7 @@ src="https://www.facebook.com/tr?id=450642131975254&ev=PageView&noscript=1"
 
 
 
-<meta property="og:url"           content="http://www.stiedu.net" />
-  <meta property="og:type"          content="article" />
-  <meta property="og:title"         content="{{ $coursedetail->name }}" />
-  <meta property="og:description"   content="STI uni test." />
-  <meta property="og:image"         content="http://www.stiedu.net/images/courses/7/photos/1497605680-photo.JPG" />
-<meta property="fb:app_id" content="132711514007187" />
+
 
 
  
