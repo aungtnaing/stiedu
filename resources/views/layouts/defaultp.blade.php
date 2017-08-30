@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>STI Myanmar University</title>
+  <title>{{ $coursedetail->name }}</title>
   <meta name="description" content="STI Myanmar University, formerly known as STI Education, was founded in Myanmar in early 2006 with the commitment of providing academic programs at the undergraduate and postgraduate levels.">
   <meta name="author" content="Aung Thein Naing">
   <meta charset="UTF-8">
