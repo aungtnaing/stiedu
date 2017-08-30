@@ -6,9 +6,15 @@
 <head>
   <meta charset="utf-8">
 
-  
-  <title>STI Myanmar University</title>
-  <meta name="description" content="ith the commitment of providing academic programs at the undergraduate and postgraduate levels.">
+  <meta property="og:url"           content="javascript:fbshareCurrentPage()" />
+  <meta property="og:type"          content="article" />
+  <meta property="og:title"         content="{{ $coursedetail->name }}" />
+  <meta property="og:description"   content="{{ $coursedetail->aboutcourse }}" />
+  <meta property="og:image"         content="<?php echo url(); ?>{{ $coursedetail->photourl1 }}" />
+<meta property="fb:app_id" content="132711514007187" />
+
+  <title>{{ $coursedetail->name }}</title>
+  <meta name="description" content="{{ $coursedetail->aboutcourse }}">
   <meta name="author" content="Aung Thein Naing">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />

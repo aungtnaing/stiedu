@@ -1,4 +1,4 @@
-@extends('layouts.defaultp')
+@extends('layouts.defaultcourse')
 @section('content')
 <section class="section" id="course">
 	<div id="content">
