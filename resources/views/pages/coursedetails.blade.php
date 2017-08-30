@@ -108,7 +108,15 @@
 							<a class="btn-button btn btn-primary" href="{{ url('/visitorinfo', $coursedetail->id) }}">Get Brochures</a> 
 							<a class="btn-button btn btn-primary" href="{{ url('/visitorinfoadmission', $coursedetail->id) }}">Seek Appointment With Admission Officer</a> 
 
-							<a class="btn-button btn btn-primary" href="javascript:fbshareCurrentPage()" target="_blank" alt="Share on Facebook">Facebook</a>
+							<meta property="og:url"           content="javascript:fbshareCurrentPage()" />
+							<meta property="og:type"          content="article" />
+							<meta property="og:title"         content="{{ $coursedetail->category->name }}" />
+							<meta property="og:description"   content="{{ $coursedetail->aboutcourse }}" />
+							<meta property="og:image"         content="{{ $coursedetail->photourl1 }}" />
+							<meta property="fb:app_id" content="132711514007187" />
+
+
+							<a class="fb-share-button" href="javascript:fbshareCurrentPage()" target="_blank" alt="Share on Facebook">share</a>
 
 						</div>
 						
@@ -377,10 +385,10 @@
 							<!--/ .section-->
 
 
-<script language="javascript">
-    function fbshareCurrentPage()
-    {window.open("https://www.facebook.com/sharer/sharer.php?u="+escape(window.location.href)+"&t="+document.title, '', 
-    'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
-    return false; }
-</script>
+							<script language="javascript">
+								function fbshareCurrentPage()
+								{window.open("https://www.facebook.com/sharer/sharer.php?u="+escape(window.location.href)+"&t="+document.title, '', 
+									'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+								return false; }
+							</script>
 							@stop
