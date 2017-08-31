@@ -81,7 +81,7 @@
 								<!-- Description -->
 								<div class="description">
 									<h4 style="color:#050930;"><i class="fa fa-dot-circle-o"></i>description</h4>
-									<p style="color:#050930;"> {{ $eventdetail->aboutevent }}</p>
+									<p style="color:#050930;"> <?php echo $eventdetail->aboutevent; ?></p>
 								</div>
 								<!-- Description -->
 								<!-- Join Event Option -->
