@@ -259,7 +259,7 @@ class EventsController extends Controller {
 	$this->validate($request,[
 		
 		'name' => 'required|max:255',
-			'aboutevent' => 'required|max:2000',
+			'aboutevent' => 'required|max:5000',
 			
 			]);
 
