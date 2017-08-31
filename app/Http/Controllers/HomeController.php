@@ -9,6 +9,7 @@ use App\Maincategory;
 use App\Mainslide;
 use App\Testimonials;
 use App\Professors;
+use App\Ourgallerys;
 
 use App\Events;
 use App\Partners;
@@ -81,7 +82,11 @@ class HomeController extends Controller {
 		$partners = Partners::where('active',1)
 						->orderBy('id','DESC')
 						->take(10)
-						->get();				
+						->get();	
+							$ourgallerys = 	Ourgallerys::where('active',1)
+						->orderBy('id','DESC')
+						->take(10)
+						->get();					
 		return view('pages.home')
 				->with('categorys', $categorys)
 				->with('mainslides', $mainslides)
@@ -89,7 +94,8 @@ class HomeController extends Controller {
 				->with('professors', $professors)
 				->with('maincategorys', $maincategorys)
 				->with('events', $events)
-				->with('partners', $partners);
+				->with('partners', $partners)
+				->with('ourgallerys', $ourgallerys);
 				
 				
 		

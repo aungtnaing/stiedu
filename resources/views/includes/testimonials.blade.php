@@ -1,5 +1,5 @@
 
-<section class="section parallax bg-turquoise-color">
+<section class="section parallax parallax-bg-1 bg-turquoise-color">
     <div class="full-bg-image"></div>
     <div class="container">
         <div class="row">
