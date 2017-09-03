@@ -13,6 +13,7 @@ use App\Ourgallerys;
 
 use App\Events;
 use App\Partners;
+use App\Blogs;
 
 use View;
 use Config;		
@@ -72,7 +73,10 @@ class HomeController extends Controller {
 						->take(8)
 						->get();				
 
-		
+			$blogs = Blogs::where('active',1)
+						->orderBy('id','DESC')
+						->take(3)
+						->get();
 		$maincategorys = Maincategory::All();
 
 		$events = Events::where('active',1)
@@ -95,7 +99,8 @@ class HomeController extends Controller {
 				->with('maincategorys', $maincategorys)
 				->with('events', $events)
 				->with('partners', $partners)
-				->with('ourgallerys', $ourgallerys);
+				->with('ourgallerys', $ourgallerys)
+				->with('blogs',$blogs);
 				
 				
 		

@@ -10,6 +10,7 @@ use App\Ourgallerys;
 
 use App\Events;
 use App\Partners;
+use App\Blogs;
 
 
 use View;
@@ -66,6 +67,11 @@ $testimonials = Testimonials::where('active',1)
 						->take(3)
 						->get();
 
+						$blogs = Blogs::where('active',1)
+						->orderBy('id','DESC')
+						->take(3)
+						->get();
+
 		$professors = Professors::where('active',1)
 						->orderBy('id','DESC')
 						->take(8)
@@ -95,7 +101,8 @@ $testimonials = Testimonials::where('active',1)
 				->with('maincategorys', $maincategorys)
 				->with('events', $events)
 				->with('partners', $partners)
-				->with('ourgallerys', $ourgallerys);		
+				->with('ourgallerys', $ourgallerys)
+				->with('blogs', $blogs);		
 	}
 
 	public function myanmarindex()

@@ -7,6 +7,8 @@
 @include('includes.professors') 
 @include('includes.events') 
 @include('includes.courses')
+@include('includes.blogs') 
+
  
 @include('includes.ourgallerys') 
 @include('includes.partners') 

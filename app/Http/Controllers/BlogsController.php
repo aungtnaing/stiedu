@@ -3,13 +3,14 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Testimonials;
+use App\Blogs;
+use App\Category;
 use DB;
 
 use File;
 use Input;
 
-class TestimonialsController extends Controller {
+class BlogsController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -18,10 +19,10 @@ class TestimonialsController extends Controller {
 	 */
 	public function index(Request $request)
 	{
-		$testimonials = Testimonials::All();
+		$blogs = Blogs::All();
     	
-		return view("dashboard.testimonials.testimonialspannel")
-		->with("testimonials", $testimonials);
+		return view("dashboard.blogs.blogspannel")
+		->with("blogs", $blogs);
 	}
 
 	
@@ -33,7 +34,7 @@ class TestimonialsController extends Controller {
 	public function create()
 	{
 		//
-		return view("dashboard.testimonials.testimonialcreate");
+		return view("dashboard.blogs.blogcreate");
 
 	}
 	/**
@@ -41,12 +42,37 @@ class TestimonialsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function createtestimonial()
+	public function createblog()
 	{
 		//
-		return view("pages.testimonialcreate");
+		return view("pages.blogscreate");
 
 	}
+	public function blogdetails($blogid)
+	{
+		
+		$blogdetail = Blogs::find($blogid);
+
+		$categorys = Category::orderBy('id', 'desc')
+								->take(7)
+								->get();
+		
+		
+		$bloglists = Blogs::orderBy('id', 'desc')
+						->where('id','!=',$blogid)
+						->take(6)
+						->get();
+		
+		
+
+		return view("pages.blogdetails")
+					->with('blogdetail',$blogdetail)
+					->with('categorys',$categorys)
+					->with('bloglists',$bloglists);
+					
+
+	}
+
 
 	/**
 	 * Store a newly created resource in storage.
@@ -58,16 +84,15 @@ class TestimonialsController extends Controller {
 		
 
 		$this->validate($request,[
-			'photourl1' => 'required',
-			'name' => 'required|max:255',
-			'positions' => 'required|max:255',
-			'description' => 'required|max:1000',
+			'title' => 'required|max:255',
+			'bloger' => 'required|max:255',
+			'content' => 'required|max:5000',
 			]);
 
 
-		$testimonial = new Testimonials();
-		$imagePath = public_path() . '/images/testimonials/';
-		$lastid = DB::table('testimonials')->select('id')->orderBy('id', 'DESC')->first();
+		$blog = new Blogs();
+		$imagePath = public_path() . '/images/blogs/';
+		$lastid = DB::table('blogs')->select('id')->orderBy('id', 'DESC')->first();
 		if($lastid!=null)
 		{
 			$lastid = $lastid->id + 1;
@@ -91,28 +116,28 @@ class TestimonialsController extends Controller {
 				$name =  time()  . '-photo' . '.' . $input['photourl1']->getClientOriginalExtension();
 				File::exists($destinationPath) or File::makeDirectory($destinationPath, 0777, true, true);
 				Input::file('photourl1')->move($destinationPath, $name); // uploading file to given path
-				$photourl1 = "/images/testimonials/" . $directory . '/photos/' .  $name;
+				$photourl1 = "/images/blogs/" . $directory . '/photos/' .  $name;
 			
 			}
 
 		}
 
-		$testimonial->name = $request->input("name");
-		$testimonial->positions = $request->input("positions");	
-		$testimonial->description = $request->input("description");
+		$blog->title = $request->input("title");
+		$blog->bloger = $request->input("bloger");	
+		$blog->content = $request->input("content");
 		
 		
-		$testimonial->active = 0;
-		if (Input::get('active') === '1'){$testimonial->active = 1;}
+		$blog->active = 0;
+		if (Input::get('active') === '1'){$blog->active = 1;}
 
 	
-		$testimonial->photourl1 = $photourl1;
+		$blog->photourl1 = $photourl1;
 		
-		$testimonial->save();
+		$blog->save();
 
 		if($request->input("public")==='Save')
 		{
-		return redirect()->route("testimonials.index");
+		return redirect()->route("blogs.index");
 		}
 		else
 		{
@@ -142,8 +167,8 @@ class TestimonialsController extends Controller {
 	{
 		//
 		
-		$testimonial = Testimonials::find($id);
-		return view('dashboard.testimonials.testimonialedit')->with('testimonial',$testimonial);
+		$blog = Blogs::find($id);
+		return view('dashboard.blogs.blogedit')->with('blog',$blog);
 	}
 
 	/**
@@ -156,23 +181,23 @@ class TestimonialsController extends Controller {
 	{
 		$this->validate($request,[
 		
-			'name' => 'required|max:255',
-			'positions' => 'required|max:255',
-			'description' => 'required|max:1000',
+			'title' => 'required|max:255',
+			'bloger' => 'required|max:255',
+			'content' => 'required|max:5000',
 			
 			]);
 		
-		$testimonial = Testimonials::find($id);
+		$blog = Blogs::find($id);
 			
-		$imagePath = public_path() . '/images/testimonials/';
+		$imagePath = public_path() . '/images/blogs/';
 	
 		$directory = $id;
 
 
 		$input = $request->all();
-		$destinationPath = $imagePath . $directory . '/photos';
+		$destinationPath = $imagePath . $directory . '/blogs';
 	
-		$photourl1 = $testimonial->photourl1;
+		$photourl1 = $blog->photourl1;
 		// ini_set('post_max_size', '64M');
 		// ini_set('upload_max_filesize', '64M');
 	
@@ -195,25 +220,25 @@ class TestimonialsController extends Controller {
 				$name =  time() . '-photo' . '.' . $input['photourl1']->getClientOriginalExtension();
 				File::exists($destinationPath) or File::makeDirectory($destinationPath, 0777, true, true);
 				Input::file('photourl1')->move($destinationPath, $name); // uploading file to given path
-				$photourl1 = "/images/testimonials/" . $directory . '/photos/' .  $name;
+				$photourl1 = "/images/blogs/" . $directory . '/photos/' .  $name;
 			 }
 
 		}
 	
 	
-		$testimonial->name = $request->input("name");
-		$testimonial->positions = $request->input("positions");	
-		$testimonial->description = $request->input("description");
+		$blog->title = $request->input("title");
+		$blog->bloger = $request->input("bloger");	
+		$blog->content = $request->input("content");
 
 
-		$testimonial->active = 0;
-		if (Input::get('active') === ""){$testimonial->active = 1;}
+		$blog->active = 0;
+		if (Input::get('active') === ""){$blog->active = 1;}
 
 		
-		$testimonial->photourl1 = $photourl1;
+		$blog->photourl1 = $photourl1;
 		
-		$testimonial->save();
-		return redirect()->route("testimonials.index");
+		$blog->save();
+		return redirect()->route("blogs.index");
 	}
 
 	/**
@@ -225,9 +250,9 @@ class TestimonialsController extends Controller {
 	public function destroy($id)
 	{
 		//
-			$testimonial = Testimonials::find($id);
+			$blog = Blogs::find($id);
 
-		$photourl1 = $testimonial->photourl1;
+		$photourl1 = $blog->photourl1;
 	
 			if($photourl1!="")
 				{
@@ -239,9 +264,9 @@ class TestimonialsController extends Controller {
 
 
 		
-		Testimonials::destroy($id);
+		Blogs::destroy($id);
 
-		return redirect()->route("testimonials.index");
+		return redirect()->route("blogs.index");
 	}
 
 	public function rrmdir($dir) {

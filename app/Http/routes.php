@@ -17,6 +17,7 @@
 		use App\Professors;
 		use App\Ourgallerys;
 		use App\Partners;
+		use App\Blogs;
 
 		Route::get('/', 'WelcomeController@index');
 		Route::get('home', 'HomeController@index');
@@ -269,6 +270,10 @@ $partners = Partners::where('active',1)
 		'uses' => 'CoursesController@coursedetails'
 		]);
 
+		Route::get('blogdetails/{blogid}', [
+		'uses' => 'BlogsController@blogdetails'
+		]);
+
 	Route::get('eventdetails/{eventid}', [
 		'uses' => 'EventsController@eventdetails'
 		]);
@@ -296,6 +301,32 @@ $partners = Partners::where('active',1)
 			
 		}]);
 
+	Route::get('bloglists', function () {
+			
+
+			$categorys = Category::orderBy('id', 'desc')
+								->take(7)
+								->get();
+
+			$bloglists = Blogs::where('active',1)
+					->orderBy('id','DESC')
+					->get();
+
+				
+		$blolists = Blogs::orderBy('id', 'desc')
+						->where('active',1)
+						->take(6)
+						->get();
+			
+			return view('pages.bloglists')
+			->with('bloglists', $bloglists)
+			->with('blolists', $blolists)
+			->with('categorys', $categorys);
+			
+			
+			
+		});
+
 	Route::get('visitorinfo/{courseid}', [
 		'uses' => 'VisitorController@createvisitor'
 		]);
@@ -315,6 +346,9 @@ $partners = Partners::where('active',1)
 		
 		Route::get('yourtestimonials', [
 		'uses' => 'TestimonialsController@createtestimonial'
+		]);
+		Route::get('yourblogs', [
+		'uses' => 'BlogsController@createblog'
 		]);
 			Route::resource('comments','CommentsController');
 		Route::resource('replycomments','ReplycommentsController');
@@ -349,6 +383,7 @@ $partners = Partners::where('active',1)
 					Route::resource('mainslides','MainslideController');
 					
 					Route::resource('testimonials','TestimonialsController');
+					Route::resource('blogs','BlogsController');
 					Route::resource('professors','ProfessorsController');
 					Route::resource('partners','PartnersController');
 					
