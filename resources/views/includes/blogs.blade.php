@@ -39,7 +39,7 @@
                                 <!--/ .entry-title-->
                                 <div class="entry-body">
                                    
-                                     <p style="color:#050930;">{{ substr($blog->aboutcourse,0, 150) }}...</p>
+                                     <p style="color:#050930;">{{ substr($blog->content,0, 150) }}...</p>
                                 </div>
 
                                 <!--/ .entry-body-->
