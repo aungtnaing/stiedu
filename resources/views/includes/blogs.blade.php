@@ -37,7 +37,8 @@
                                     <a href="{{ url('/blogdetails', $blog->id) }}">{{ $blog->title }}</a>
                                 </h2>
                                 <!--/ .entry-title-->
-                                <div class="entry-body">
+ <p style="color:#050930;">by {{ $blog->bloger }}</p>                               
+                         <div class="entry-body">
                                    
                                      <p style="color:#050930;">{{ substr($blog->content,0, 150) }}...</p>
                                 </div>
