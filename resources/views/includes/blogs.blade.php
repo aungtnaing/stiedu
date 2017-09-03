@@ -38,8 +38,10 @@
                                 </h2>
                                 <!--/ .entry-title-->
                                 <div class="entry-body">
-                                    <p> {{ substr($blog->content,0, 150) }}... </p>
+                                   
+                                     <p style="color:#050930;">{{ substr($blog->aboutcourse,0, 150) }}...</p>
                                 </div>
+
                                 <!--/ .entry-body-->
                             </article>
                             <!--/ .entry-->
