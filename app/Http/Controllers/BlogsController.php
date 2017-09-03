@@ -195,7 +195,7 @@ class BlogsController extends Controller {
 
 
 		$input = $request->all();
-		$destinationPath = $imagePath . $directory . '/blogs';
+		$destinationPath = $imagePath . $directory . '/photos';
 	
 		$photourl1 = $blog->photourl1;
 		// ini_set('post_max_size', '64M');
