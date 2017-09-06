@@ -352,6 +352,10 @@ $partners = Partners::where('active',1)
 
 	Route::resource('visitors','VisitorController');
 
+	Route::get('getexamresults', [
+		'uses' => 'ExamresultsController@getexamresults'
+		]);
+
 	Route::group(['middleware' => 'auth'],function()
 	{
 		
@@ -361,9 +365,7 @@ $partners = Partners::where('active',1)
 		'uses' => 'TestimonialsController@createtestimonial'
 		]);
 
-		Route::get('getexamresults', [
-		'uses' => 'ExamresultsController@getexamresults'
-		]);
+		
 
 		Route::get('yourblogs', [
 		'uses' => 'BlogsController@createblog'
