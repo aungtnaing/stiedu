@@ -28,6 +28,7 @@
            <li><a href="{{ url('/visitors') }}"><i class="icon icon-th"></i> <span>visitors Pannel</span></a></li>
 
    <li><a href="{{ url('/blogs') }}"><i class="icon icon-th"></i> <span>blogs Pannel</span></a></li>
+ <li><a href="{{ url('/examresults') }}"><i class="icon icon-th"></i> <span>exam results Pannel</span></a></li>
 
  
   </ul>

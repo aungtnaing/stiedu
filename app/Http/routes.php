@@ -19,6 +19,7 @@
 		use App\Partners;
 		use App\Blogs;
 
+
 		Route::get('/', 'WelcomeController@index');
 		Route::get('home', 'HomeController@index');
 		
@@ -344,9 +345,16 @@ $partners = Partners::where('active',1)
 	Route::group(['middleware' => 'auth'],function()
 	{
 		
+		Route::resource('examresults','ExamresultsController');
+
 		Route::get('yourtestimonials', [
 		'uses' => 'TestimonialsController@createtestimonial'
 		]);
+
+		Route::get('getexamresults', [
+		'uses' => 'ExamresultsController@getexamresults'
+		]);
+
 		Route::get('yourblogs', [
 		'uses' => 'BlogsController@createblog'
 		]);

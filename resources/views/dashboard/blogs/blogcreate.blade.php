@@ -22,7 +22,7 @@
 				@endif	
 				<div class="widget-box">
 					<div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-						<h5>Testimonial-info</h5>
+						<h5>Blog-info</h5>
 					</div>
 					<div class="widget-content nopadding">
 						<form action="{{ route("blogs.store") }}" method="POST" enctype="multipart/form-data">
