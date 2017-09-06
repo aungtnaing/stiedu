@@ -95,7 +95,7 @@ src="https://www.facebook.com/tr?id=450642131975254&ev=PageView&noscript=1"
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZZ44ZV"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
+<!-- 
 	<div class="preloader">
 		<div class="sk-folding-cube">
 			<div class="sk-cube1 sk-cube"></div>
@@ -103,7 +103,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="sk-cube4 sk-cube"></div>
 			<div class="sk-cube3 sk-cube"></div>
 		</div>
-	</div>
+	</div> -->
 	
 	<!-- - - - - - - - - - - - - - Wrapper - - - - - - - - - - - - - - - - -->
 	<div id="wrapper">

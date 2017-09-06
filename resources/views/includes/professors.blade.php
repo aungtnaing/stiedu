@@ -7,7 +7,7 @@
                             <hgroup class="section-title align-center opacity">
                                 <h1 class="header-title" style="color:#050930;">our Faculty</h1>
                                 <!-- <h2 >We are great Faculty in a university</h2>  -->
-                                <h4 style="color:#050930;">STI faculty members are diverse with different cultural backgrounds from different parts of Myanmar and the world. They are experienced, honourable and visionary players bringing with them their excellent knowledge and experiences from various fields of studies. Our professionals from overseas include Emeritus University Professors, as well as American and British English and business teachers. STI also brings in various professionals from around the world for seminars and workshops. The renowned speakers are masters in Teacher Training, Business Management, Economics, Marketing, English, IT, Finance, HR and Entrepreneurship. The STI administrative team is solid and all STI staff members are amiable and properly trained ethical professionals.</h2>
+                                <h4 style="color:#050930;text-align: left;">STI faculty members are diverse with different cultural backgrounds from different parts of Myanmar and the world. They are experienced, honourable and visionary players bringing with them their excellent knowledge and experiences from various fields of studies. Our professionals from overseas include Emeritus University Professors, as well as American and British English and business teachers. STI also brings in various professionals from around the world for seminars and workshops. The renowned speakers are masters in Teacher Training, Business Management, Economics, Marketing, English, IT, Finance, HR and Entrepreneurship. The STI administrative team is solid and all STI staff members are amiable and properly trained ethical professionals.</h4>
                             </hgroup>
                         </div>
                     </div>
@@ -29,18 +29,29 @@
                                                 </div>
                                                 <hgroup class="team-group">
                                                     @if(strlen($professor->name) > 13)
-                                                    <h4 class="team-title" style="color:#050930;">  
+                                                    <a href="{{ url('/facultyprofile', $professor->id) }}"><h4 class="team-title" style="color:#050930;">  
                                                     {{ $professor->name }}
-                                                    </h4>
+                                                    </h4></a>
+                                                    
                                                      @else
-                                                      <h4 class="team-title" style="color:#050930;">
+                                                     <a href="{{ url('/facultyprofile', $professor->id) }}"><h4 class="team-title" style="color:#050930;">
                                                     {{ $professor->name }}
-                                                    </h4>
-                                                    <br>
+                                                    </h4></a>
+                                                      <br>
                                                      @endif
                                                     
                                                     <h5 class="team-position" style="color:#050930;">{{ $professor->positions }}</h5>
-                                                     <h5><p class="opacity" style="color:#050930;"><?php echo $professor->description; ?> </p></h4>
+
+                                                     @if(strlen($professor->description) > 40)
+                                                     <h5><p class="opacity" style="color:#050930;"><?php echo substr($professor->description,0, 40); ?> 
+                                                    ...</p></h5>
+                                                    @else
+                                                         <h5><p class="opacity" style="color:#050930;"><?php echo $professor->description; ?> 
+                                                    </p></h5>
+
+                                                    @endif
+                                                    <a href="{{ url('/facultyprofile', $professor->id) }}"">readmore..</a>
+
                                                 </hgroup>
                                                
                                             </div>

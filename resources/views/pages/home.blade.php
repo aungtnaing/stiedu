@@ -14,7 +14,7 @@
 @include('includes.ourgallerys') 
 @include('includes.partners') 
 
-@include('includes.contact') 
+
 
 
 @stop

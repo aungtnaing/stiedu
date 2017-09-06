@@ -42,11 +42,12 @@
 			
 		});
 
-		Route::get('fbtest', function() {
+
+		Route::get('contactus', function() {
 
 			$categorys = Category::All();
 			
-			return view('pages.fbtest')
+			return view('pages.contactus')
 			->with('categorys', $categorys);
 			
 			
@@ -245,12 +246,21 @@ $partners = Partners::where('active',1)
 
 		Route::get('facultyprofile/{facultyid}', function($facultyid) {
 
-			
+			$categorys = Category::orderBy('id', 'desc')
+								->take(7)
+								->get();
+		
+		
+		$bloglists = Blogs::orderBy('id', 'desc')
+						->take(6)
+						->get();
 
 			$faculty = Professors::find($facultyid);
 			
 			return view('pages.facultyprofile')
-			->with('faculty', $faculty);
+			->with('faculty', $faculty)
+			->with('categorys', $categorys)
+			->with('bloglists', $bloglists);
 			
 			
 		});

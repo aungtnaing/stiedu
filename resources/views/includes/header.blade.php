@@ -5,7 +5,7 @@
         <div class="navbar-header page-scroll">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="xs-menu-bar"></span> <span class="xs-menu-bar"></span> <span class="xs-menu-bar"></span> </button>
             <h1 id="logo">
-                <a class="navbar-brand page-scroll" href="#page-top"><img alt="" class="ls-bg" src="<?php echo url(); ?>/images/logo.png"></a>
+                <a class="navbar-brand page-scroll" href="/"><img alt="" class="ls-bg" src="<?php echo url(); ?>/images/logo.png"></a>
             </h1> 
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -71,7 +71,7 @@
                
                   
                     
-                    <li><a href="#contacts" class="page-scroll">Contact</a></li>
+                    <li><a href="{{ url('/contactus') }}" class="page-scroll">Contact</a></li>
                     @if (Auth::guest())
                     <li><a href="{{ url('/auth/login') }}" style="color: #dfe880;"><span class="glyphicon glyphicon-log-in"></span></a></li>   
                     @else
