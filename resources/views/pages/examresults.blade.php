@@ -77,7 +77,12 @@
                                     <div class="entry-meta"> <span class="date">{{ $bloglist->created_at }}</span><!--  <span>0 Comments</span>  --></div>
                                     <!--/ .entry-meta-->
                                     <h6 class="entry-title">
-                                     <a href="{{ url('/blogdetails', $bloglist->id) }}">{{ substr($bloglist->content,0, 70) }}...</a>
+                                    @if(strlen($bloglist->title>=70))
+                                     <a href="{{ url('/blogdetails', $bloglist->id) }}">{{ substr($bloglist->title,0, 70) }}...</a>
+                                     @else
+                                     <a href="{{ url('/blogdetails', $bloglist->id) }}">{{ $bloglist->title }}...</a>
+
+                                     @endif
                                  </h6> 
                              </div>
                              <!--/ .post-holder-->
