@@ -60,6 +60,22 @@
 									<input type="text" class="span11" id="" name="positions" placeholder="Enter positions" value="{{ old('positions') }}" required>
 								</div>
 							</div> 
+
+							      <!--  <div class="control-group">
+         <label class="control-label">Faculty Type:</label>
+          <div class="controls">
+               <select name="facultytype">
+                 
+                  <option value="facultyofbusiness">faculty of business</option>
+                  <option value="facultyofengineering">faculty of engineering</option>
+                  <option value="facultyofhealthscience">faculty of health science</option>
+                  <option value="facultyofeducationandlinguistics">faculty of education and linguistics</option>
+                
+               </select>
+          </div>
+        </div> -->
+
+
 							<div class="control-group">
 								<label class="control-label">Description:</label>
 								<div class="controls">

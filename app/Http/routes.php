@@ -359,6 +359,32 @@ $partners = Partners::where('active',1)
 			
 		});
 
+
+	Route::get('facultylists', function () {
+			
+
+			$categorys = Category::orderBy('id', 'desc')
+								->take(7)
+								->get();
+
+			$facultylists = Professors::where('active',1)
+						->get();
+
+				
+		$blolists = Blogs::orderBy('id', 'desc')
+						->where('active',1)
+						->take(6)
+						->get();
+			
+			return view('pages.facultylists')
+			->with('facultylists', $facultylists)
+			->with('blolists', $blolists)
+			->with('categorys', $categorys);
+			
+			
+			
+		});
+
 	Route::get('visitorinfo/{courseid}', [
 		'uses' => 'VisitorController@createvisitor'
 		]);

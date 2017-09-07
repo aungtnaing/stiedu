@@ -25,8 +25,13 @@
                               <li><a href="{{ url('/ourfaculty') }}" class="page-scroll">OUR FACULTY</a></li>
                               <li><a href="{{ url('/ourgraduates') }}" class="page-scroll">OUR GRADUATES</a></li>
                               <li><a href="{{ url('/stimugovernance') }}" class="page-scroll">STIMU GOVERNANCE AND <br>MANAGEMENT STRUCTURE</a></li>
+
+                               <li><a href="{{ url('/facultylists') }}" class="page-scroll">OUR FACULTY LISTS</a></li>
+                               
                             <li><a href="{{ url('/officalvideo') }}" class="page-scroll">Corporate Video Link</a></li>
                             <li><a href="{{ url('/organisationcharts') }}" class="page-scroll">Organisation Structure</a></li>
+
+
                             
                             
                         </ul>
