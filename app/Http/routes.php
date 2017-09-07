@@ -42,6 +42,27 @@
 			
 		});
 
+		Route::get('organisationcharts', function() {
+
+			$categorys = Category::All();
+			
+			return view('pages.chart')
+			->with('categorys', $categorys);
+			
+			
+		});
+
+		Route::get('officalvideo', function() {
+
+			$categorys = Category::All();
+			
+			return view('pages.ytube')
+			->with('categorys', $categorys);
+			
+			
+		});
+
+
 
 		Route::get('contactus', function() {
 

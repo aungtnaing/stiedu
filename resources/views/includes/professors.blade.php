@@ -28,7 +28,7 @@
                                                     <a class="single-image team-plus-icon" href="{{ url('/facultyprofile', $professor->id) }}"><img src="{{ $professor->photourl1 }}" alt="" /></a>
                                                 </div>
                                                 <hgroup class="team-group">
-                                                    @if(strlen($professor->name) > 13)
+                                                    @if(strlen($professor->name) >= 13)
                                                     <a href="{{ url('/facultyprofile', $professor->id) }}"><h4 class="team-title" style="color:#050930;">  
                                                     {{ $professor->name }}
                                                     </h4></a>

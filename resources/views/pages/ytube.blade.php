@@ -1,3 +1,5 @@
+  @extends('layouts.defaultp')
+  @section('content')
 
   <section id="" class="page">
     <section class="section padding-bottom-off">
@@ -17,3 +19,5 @@
   
 </section>
        
+@stop
+
