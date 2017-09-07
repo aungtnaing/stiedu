@@ -39,8 +39,11 @@
                                 <!--/ .entry-title-->
  <p style="color:#050930;">by {{ $blog->bloger }}</p>                               
                          <div class="entry-body">
-                                   
-                                     <p style="color:#050930;">{{ substr($blog->content,0, 150) }}...</p>
+                                    @if(strlen($blog->content>=150))
+                                     <p style="color:#050930;"><?php echo substr($blog->content,0, 150); ?>...</p>
+                                     @else
+                                     <p style="color:#050930;"><?php echo $blog->content; ?>...</p>
+                                     @endif
                                 </div>
 
                                 <!--/ .entry-body-->

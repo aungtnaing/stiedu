@@ -93,6 +93,14 @@
 			
 		});
 
+		Route::get('learningandstudying', function() {
+
+			return view('pages.learningandstudying');
+			
+			
+			
+		});
+
 		Route::get('stimumission', function() {
 
 			return view('pages.stimission');
