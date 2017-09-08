@@ -31,6 +31,7 @@
                             <li><a href="{{ url('/officalvideo') }}" class="page-scroll">Corporate Video Link</a></li>
                             <li><a href="{{ url('/organisationcharts') }}" class="page-scroll">Organisation Structure</a></li>
 
+                             <li><a href="{{ url('/learningandstudying') }}" class="page-scroll">Learning / Studying</a></li>
 
                             
                             
