@@ -69,8 +69,6 @@ class HomeController extends Controller {
 						->get();
 
 		$professors = Professors::where('active',1)
-						->orderBy('id','DESC')
-						->take(8)
 						->get();				
 
 			$blogs = Blogs::where('active',1)

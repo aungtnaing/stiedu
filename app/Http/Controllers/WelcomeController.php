@@ -73,8 +73,6 @@ $testimonials = Testimonials::where('active',1)
 						->get();
 
 		$professors = Professors::where('active',1)
-						->orderBy('id','DESC')
-						->take(8)
 						->get();				
 
 
