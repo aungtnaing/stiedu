@@ -35,7 +35,7 @@
                                         <div class="work-item"> 
 
                                       
-                                          <img src="{{ $event->photourl1 }}" alt="" />
+                                          <img src="{{ $event->photourl1 }}" alt="" style="width: 270;height: 180px;"/>
                                            <div class="image-extra">
                                             <div class="extra-content">
                                                 <div class="inner-extra">
