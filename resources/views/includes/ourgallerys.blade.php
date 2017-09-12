@@ -20,7 +20,7 @@
 
                
                   <div class="work-item"> 
-                    <img src="{{ $ourgallery->photourl1 }}" alt="" style="width: 466px;height: 250px;"/>
+                    <img src="{{ $ourgallery->photourl1 }}" alt="" style="width: 466px;height: 311px;"/>
 
                     <div class="image-extra">
                         <div class="extra-content">
