@@ -73,16 +73,7 @@ national and international relationships that will enhance its ability and enabl
 a leading university role. Adhere to the internal key performance indicators measures meeting
 standard of benchmarking and making sure the quality is assured at the faculty member, graduate attributes, physical resources, administration tasks and employability percentage of
 the graduates.
-Josephine is an IT and Telecom veteran and computer engineer by training. She has her
-undergraduate and postgraduate academic training in Yangon, Singapore and USA in the
-University of Computer Studies(Yangon), Nanyang Technological University and
-Massachusetts Institute of Technology. Her substantial experience in implementing the
-nationwide projects such as the country’s largest coverage network in telecom transport
-network across the country including the metro transport networks, the backbones, internet
-service provider POPs, TV transmission stations and many leading ICT projects.
-Josephine is an auditor and executive committee member of Myanmar Computer Federation
-and she has served as an executive committee member and treasurer of Myanmar Computer
-Professionals Association for 10 years.</p></h4>
+</p></h4>
 
 <h4><p class="opacity" style="color:#050930;">Josephine is an IT and Telecom veteran and computer engineer by training. She has her
 undergraduate and postgraduate academic training in Yangon, Singapore and USA in the
