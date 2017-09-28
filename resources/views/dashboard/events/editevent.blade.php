@@ -95,6 +95,19 @@
 
 					</div>
 
+					 <div class="control-group">
+         <label class="control-label">post type:</label>
+          <div class="controls">
+               <select name="posttype">
+                 	 <option value="{{ $event->posttype }}">{{ $event->posttype }}</option>
+                  <option value="event">event</option>
+                  <option value="news">news</option>
+                  <option value="class">class</option>
+                  
+               </select>
+          </div>
+        </div>
+
 								<div class="control-group">
 									<label class="control-label">Youtubelink:</label>
 									<div class="controls">
@@ -158,25 +171,25 @@
 							<div class="control-group">
 								<label class="control-label">About Event:</label>
 								<div class="controls">
-									<textarea class="textarea_editor span12" name="aboutevent" placeholder="" class="span11" rows="5">{{ $event->aboutevent }}</textarea>
+									<textarea class="textarea_editor span12" name="aboutevent" placeholder="" class="span11" rows="7">{{ $event->aboutevent }}</textarea>
 
 								</div>
 							</div>
 
 
 							<div class="control-group">
-								<label class="control-label">Start date :</label>
+								<label class="control-label">date : mm/dd/yyyy</label>
 								<div class="controls">
-									<input type="datetime" placeholder="start date" name="startdate" class="span11" value="{{ $event->startdate }}"/>
+									<input type="text" placeholder="start date" name="startdate" class="span11" value="{{ $event->startdate }}"/>
 									
 								</div>
 							</div>
 
 
 							<div class="control-group">
-								<label class="control-label">End date :</label>
+								<label class="control-label">display date : myanmar/english</label>
 								<div class="controls">
-									<input type="datetime" placeholder="end date" name="enddate" class="span11" value="{{ $event->enddate }}"/>
+									<input type="text" placeholder="end date" name="enddate" class="span11" value="{{ $event->enddate }}"/>
 									
 								</div>
 							</div>

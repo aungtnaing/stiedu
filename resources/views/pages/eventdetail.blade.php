@@ -29,6 +29,7 @@
 
 							<!--/ .entry-image-->
 							<!-- Speakers -->
+							@if($eventdetail->posttype==='event')
 							<div class="speakers-list">
 								<h4 style="color:#050930;"><i class="fa fa-microphone"></i>Speakers</h4>
 								<div class="row">
@@ -63,8 +64,8 @@
 									<div class="col-sm-6">
 										<div class="time-address">
 											<h4 style="color:#050930;"><i class="fa fa-clock-o"></i>Time</h4>
-											<p style="color:#050930;">Start: {{ $eventdetail->startdate }}</p>
-											<p style="color:#050930;">End: {{ $eventdetail->enddate }}</p>
+											<!-- <p style="color:#050930;">Start: {{ $eventdetail->startdate }}</p> -->
+											<p style="color:#050930;"> {{ $eventdetail->enddate }}</p>
 										</div>
 									</div>
 									<div class="col-sm-6">
@@ -76,6 +77,41 @@
 									</div>
 								</div>
 							</div>
+							@elseif($eventdetail->posttype==='class')
+								<div class="speakers-list">
+								<h4 style="color:#050930;"><i class="fa fa-user"></i>Trainers</h4>
+								<div class="row">
+									<div class="col-sm-4">
+										
+										<div class="aurthor-name style-2"> <span>{{ $eventdetail->firstspeaker }}</span>
+										</div>
+										
+									
+									</div>
+									<div class="col-sm-4">
+										<div class="aurthor-name style-2"> <span>{{ $eventdetail->secondspeaker }}</span>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="aurthor-name style-2"> <span>{{ $eventdetail->thirdspeaker }}</span>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="aurthor-name style-2"> <span>{{ $eventdetail->fourthspeaker }}</span>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="aurthor-name style-2"> <span>{{ $eventdetail->fifthspeaker }}</span>
+										</div>
+									</div>
+
+								</div>
+						
+							</div>
+
+							@endif
 							<!-- Speakers -->
 							<div class="entry-body">
 								<!-- Description -->

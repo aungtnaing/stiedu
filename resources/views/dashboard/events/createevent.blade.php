@@ -75,6 +75,20 @@
 
 					</div>
 
+					         <div class="control-group">
+         <label class="control-label">post type:</label>
+          <div class="controls">
+               <select name="posttype">
+                 
+                  <option value="event">event</option>
+                  <option value="news">news</option>
+                  <option value="class">class</option>
+                  
+               </select>
+          </div>
+        </div>
+
+
 							<div class="control-group">
 								<label class="control-label">Youtubelink:</label>
 								<div class="controls">
@@ -131,25 +145,25 @@
 							<div class="control-group">
 								<label class="control-label">About Event:</label>
 								<div class="controls">
-									<textarea class="textarea_editor span12" name="aboutevent" placeholder="Enter your about event" class="span11" rows="3"></textarea>
+									<textarea class="textarea_editor span12" name="aboutevent" placeholder="Enter your about event" class="span11" rows="7"></textarea>
 
 								</div>
 							</div>
 
 
 							<div class="control-group">
-								<label class="control-label">Start date :</label>
+								<label class="control-label">date : mm/dd/yyyy</label>
 								<div class="controls">
-									<input type="datetime-local" placeholder="start date" name="startdate" class="span11" />
+									<input type="text" placeholder="start date" name="startdate" class="span11" />
 									
 								</div>
 							</div>
 
 
 							<div class="control-group">
-								<label class="control-label">End date :</label>
+								<label class="control-label">date : (myanmar/english)</label>
 								<div class="controls">
-									<input type="datetime-local" placeholder="end date" name="enddate" class="span11" />
+									<input type="text" placeholder="end date" name="enddate" class="span11" />
 									
 								</div>
 							</div>

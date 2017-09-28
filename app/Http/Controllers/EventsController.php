@@ -192,6 +192,7 @@ class EventsController extends Controller {
 		// if($request->input("fifthspeakerid") != 0)
 		// { $event->fifthspeakerid = $request->input("fifthspeakerid");
 		// }
+				$event->posttype = $request->input("posttype");
 
 		$event->firstspeaker = $request->input("firstspeaker");	
 		$event->secondspeaker = $request->input("secondspeaker");	
@@ -325,6 +326,7 @@ class EventsController extends Controller {
 
 
 		
+        				$event->posttype = $request->input("posttype");
 
 		$event->photourl1 = $photourl1;
 		$event->photourl2 = $photourl2;
