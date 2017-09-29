@@ -58,8 +58,14 @@
 										<div class="aurthor-name style-2"> <span>{{ $eventdetail->fifthspeaker }}</span>
 										</div>
 									</div>
+									<div class="col-sm-4">
+										<div class="aurthor-name style-2"> <span>{{ $eventdetail->sixspeaker }}</span>
+										</div>
+									</div>
+							
 
 								</div>
+								
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="time-address">
@@ -77,39 +83,7 @@
 									</div>
 								</div>
 							</div>
-							@elseif($eventdetail->posttype==='class')
-								<div class="speakers-list">
-								<h4 style="color:#050930;"><i class="fa fa-user"></i>Trainers</h4>
-								<div class="row">
-									<div class="col-sm-4">
-										
-										<div class="aurthor-name style-2"> <span>{{ $eventdetail->firstspeaker }}</span>
-										</div>
-										
-									
-									</div>
-									<div class="col-sm-4">
-										<div class="aurthor-name style-2"> <span>{{ $eventdetail->secondspeaker }}</span>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="aurthor-name style-2"> <span>{{ $eventdetail->thirdspeaker }}</span>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-4">
-										<div class="aurthor-name style-2"> <span>{{ $eventdetail->fourthspeaker }}</span>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="aurthor-name style-2"> <span>{{ $eventdetail->fifthspeaker }}</span>
-										</div>
-									</div>
-
-								</div>
-						
-							</div>
+							
 
 							@endif
 							<!-- Speakers -->
@@ -136,9 +110,88 @@
 										</ul>
 								<!-- 	</div> <a class="button turquoise large  full-width" href="#">Join this event</a> </div> -->
 									<!-- Join Event Option -->
+
+
+							@if($eventdetail->posttype==='class')
+								<div class="speakers-list">
+								<h4 style="color:#050930;"><i class="fa fa-user"></i>Our Trainers</h4>
+								<div class="row">
+									<div class="col-sm-4">
+										
+										<div class="aurthor-name style-2"> <span style="color:#050930;">{{ $eventdetail->firstspeaker }}</span>
+										</div>
+										
+									
+									</div>
+									<div class="col-sm-4">
+										<div class="aurthor-name style-2"> <span style="color:#050930;">{{ $eventdetail->secondspeaker }}</span>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="aurthor-name style-2"> <span style="color:#050930;">{{ $eventdetail->thirdspeaker }}</span>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="aurthor-name style-2"> <span style="color:#050930;">{{ $eventdetail->fourthspeaker }}</span>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="aurthor-name style-2"> <span style="color:#050930;">{{ $eventdetail->fifthspeaker }}</span>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="aurthor-name style-2"> <span style="color:#050930;">{{ $eventdetail->sixspeaker }}</span>
+										</div>
+									</div>
+							
+								</div>
+
+								<div class="row">
+									<div class="col-sm-4">
+										
+										<div class="aurthor-name style-2"> <span style="color:#050930;">{{ $eventdetail->sevenspeaker }}</span>
+										</div>
+										
+									
+									</div>
+									<div class="col-sm-4">
+										<div class="aurthor-name style-2"> <span style="color:#050930;">{{ $eventdetail->eightspeaker }}</span>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="aurthor-name style-2"> <span style="color:#050930;">{{ $eventdetail->ninespeaker }}</span>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="aurthor-name style-2"> <span style="color:#050930;">{{ $eventdetail->elevenspeaker }}</span>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="aurthor-name style-2"> <span style="color:#050930;">{{ $eventdetail->twelespeaker }}</span>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="aurthor-name style-2"> <span style="color:#050930;">{{ $eventdetail->sixspeaker }}</span>
+										</div>
+									</div>
+							
+								</div>
+						
+							</div>
+
+							@endif
+
 								</div>
 								<!--/ .entry-body-->
+
 							</div>
+							</div>
+
+							
 						</article>
 						<!--/ .entry-->
 					</section>

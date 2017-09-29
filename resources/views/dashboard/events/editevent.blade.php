@@ -167,6 +167,70 @@
 
 							</div>
 
+
+							<div class="control-group">
+								<label class="control-label">Six Speaker/techer</label>
+								<br>
+							
+								<div class="controls">
+										<input type="text" class="span11" id="" name="sixspeaker" placeholder="Enter Speaker" value="{{ $event->sixspeaker }}">
+								</div>
+							</div>
+
+							<div class="control-group">
+								<label class="control-label">Seven Speaker/techer</label>
+								<br>
+							
+								<div class="controls">
+										<input type="text" class="span11" id="" name="sevenspeaker" placeholder="Enter Speaker" value="{{ $event->sevenspeaker }}">
+								</div>
+							</div>
+
+							<div class="control-group">
+								<label class="control-label">Eight Speaker/techer</label>
+								<br>
+								
+								<div class="controls">
+										<input type="text" class="span11" id="" name="eightspeaker" placeholder="Enter Speaker" value="{{ $event->eightspeaker }}">
+								</div>
+							</div>
+
+							<div class="control-group">
+								<label class="control-label">Nine Speaker/techer</label>
+								<br>
+							
+								<div class="controls">
+										<input type="text" class="span11" id="" name="ninespeaker" placeholder="Enter Speaker" value="{{ $event->ninespeaker }}">
+								</div>
+							</div>
+
+							<div class="control-group">
+								<label class="control-label">Ten Speaker/techer</label>
+								<br>
+							
+								<div class="controls">
+										<input type="text" class="span11" id="" name="tenspeaker" placeholder="Enter Speaker" value="{{ $event->tenspeaker }}">
+								</div>
+							</div>	
+
+							<div class="control-group">
+								<label class="control-label">Eleven Speaker/techer</label>
+								<br>
+							
+								<div class="controls">
+										<input type="text" class="span11" id="" name="elevenspeaker" placeholder="Enter Speaker" value="{{ $event->elevenspeaker }}">
+								</div>
+							</div>
+
+							<div class="control-group">
+								<label class="control-label">Twele Speaker/techer</label>
+								<br>
+							
+								<div class="controls">
+										<input type="text" class="span11" id="" name="twelespeaker" placeholder="Enter Speaker" value="{{ $event->twelespeaker }}">
+								</div>
+							</div>	
+
 							
 							<div class="control-group">
 								<label class="control-label">About Event:</label>

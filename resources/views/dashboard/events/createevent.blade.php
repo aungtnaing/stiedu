@@ -97,7 +97,7 @@
 							</div>
 
 							<div class="control-group">
-								<label class="control-label">First Speaker</label>
+								<label class="control-label">First Speaker/teacher</label>
 								<br>
 							
 								<div class="controls">
@@ -106,7 +106,7 @@
 							</div>
 
 							<div class="control-group">
-								<label class="control-label">Second Speaker</label>
+								<label class="control-label">Second Speaker/techer</label>
 								<br>
 							
 								<div class="controls">
@@ -115,7 +115,7 @@
 							</div>
 
 							<div class="control-group">
-								<label class="control-label">Third Speaker</label>
+								<label class="control-label">Third Speaker/techer</label>
 								<br>
 								
 								<div class="controls">
@@ -124,7 +124,7 @@
 							</div>
 
 							<div class="control-group">
-								<label class="control-label">Fourth Speaker</label>
+								<label class="control-label">Fourth Speaker/techer</label>
 								<br>
 							
 								<div class="controls">
@@ -133,11 +133,75 @@
 							</div>
 
 							<div class="control-group">
-								<label class="control-label">Fifth Speaker</label>
+								<label class="control-label">Fifth Speaker/techer</label>
 								<br>
 							
 								<div class="controls">
 										<input type="text" class="span11" id="" name="fifthspeaker" placeholder="Enter Speaker" value="{{ old('fifthspeaker') }}">
+								</div>
+							</div>	
+
+
+							<div class="control-group">
+								<label class="control-label">Six Speaker/techer</label>
+								<br>
+							
+								<div class="controls">
+										<input type="text" class="span11" id="" name="sixspeaker" placeholder="Enter Speaker" value="{{ old('sixspeaker') }}">
+								</div>
+							</div>
+
+							<div class="control-group">
+								<label class="control-label">Seven Speaker/techer</label>
+								<br>
+							
+								<div class="controls">
+										<input type="text" class="span11" id="" name="sevenspeaker" placeholder="Enter Speaker" value="{{ old('sevenspeaker') }}">
+								</div>
+							</div>
+
+							<div class="control-group">
+								<label class="control-label">Eight Speaker/techer</label>
+								<br>
+								
+								<div class="controls">
+										<input type="text" class="span11" id="" name="eightspeaker" placeholder="Enter Speaker" value="{{ old('eightspeaker') }}">
+								</div>
+							</div>
+
+							<div class="control-group">
+								<label class="control-label">Nine Speaker/techer</label>
+								<br>
+							
+								<div class="controls">
+										<input type="text" class="span11" id="" name="ninespeaker" placeholder="Enter Speaker" value="{{ old('ninespeaker') }}">
+								</div>
+							</div>
+
+							<div class="control-group">
+								<label class="control-label">Ten Speaker/techer</label>
+								<br>
+							
+								<div class="controls">
+										<input type="text" class="span11" id="" name="tenspeaker" placeholder="Enter Speaker" value="{{ old('tenspeaker') }}">
+								</div>
+							</div>	
+
+							<div class="control-group">
+								<label class="control-label">Eleven Speaker/techer</label>
+								<br>
+							
+								<div class="controls">
+										<input type="text" class="span11" id="" name="elevenspeaker" placeholder="Enter Speaker" value="{{ old('elevenspeaker') }}">
+								</div>
+							</div>
+
+							<div class="control-group">
+								<label class="control-label">Twele Speaker/techer</label>
+								<br>
+							
+								<div class="controls">
+										<input type="text" class="span11" id="" name="twelespeaker" placeholder="Enter Speaker" value="{{ old('twelespeaker') }}">
 								</div>
 							</div>	
 

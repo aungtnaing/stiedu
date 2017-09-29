@@ -199,6 +199,16 @@ class EventsController extends Controller {
 		$event->thirdspeaker = $request->input("thirdspeaker");	
 		$event->fourthspeaker = $request->input("fourthspeaker");	
 		$event->fifthspeaker = $request->input("fifthspeaker");	
+
+		$event->sixspeaker = $request->input("sixspeaker");	
+		$event->sevenspeaker = $request->input("sevenspeaker");	
+		$event->eightspeaker = $request->input("eightspeaker");	
+		$event->ninespeaker = $request->input("ninespeaker");	
+		$event->tenspeaker = $request->input("tenspeaker");
+
+		$event->elevenspeaker = $request->input("elevenspeaker");	
+		$event->twelespeaker = $request->input("twelespeaker");	
+			
 		
 		$event->userid = $request->user()->id;
 
@@ -357,6 +367,17 @@ class EventsController extends Controller {
 		$event->thirdspeaker = $request->input("thirdspeaker");	
 		$event->fourthspeaker = $request->input("fourthspeaker");	
 		$event->fifthspeaker = $request->input("fifthspeaker");	
+
+		
+		$event->sixspeaker = $request->input("sixspeaker");	
+		$event->sevenspeaker = $request->input("sevenspeaker");	
+		$event->eightspeaker = $request->input("eightspeaker");	
+		$event->ninespeaker = $request->input("ninespeaker");	
+		$event->tenspeaker = $request->input("tenspeaker");
+
+		$event->elevenspeaker = $request->input("elevenspeaker");	
+		$event->twelespeaker = $request->input("twelespeaker");	
+
 		
 		$event->userid = $request->user()->id;
 
