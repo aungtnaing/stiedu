@@ -383,6 +383,8 @@ class EventsController extends Controller {
 
 		$event->photourl1 = $photourl1;
 		$event->photourl2 = $photourl2;
+				$event->photourl2 = $photourl3;
+
 		
 		$event->name = $request->input("name");
 

@@ -25,10 +25,8 @@
 							
 							     @if($eventdetail->photourl3==="")
 									<div class="entry-image"> <img src="<?php echo url(); ?>{{ $eventdetail->photourl1 }}" alt="" style="width: 777px;height: 504;"/> </div>
-									<span>hell</span>
 								 @else
-														<div class="entry-image"> <img src="<?php echo url(); ?>{{ $eventdetail->photourl3 }}" alt="" style="width: 777px;height: 504;"/> </div>
-														<span>hello</span>
+									<div class="entry-image"> <img src="<?php echo url(); ?>{{ $eventdetail->photourl3 }}" alt="" style="width: 777px;height: 504;"/> </div>
 								@endif
 							@endif
 
