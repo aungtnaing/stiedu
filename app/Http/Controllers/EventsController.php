@@ -137,7 +137,8 @@ class EventsController extends Controller {
 	
 		$photourl1 = "";
 			$photourl2 = "";
-	
+				$photourl3 = "";
+
 	
 		
 		if(Input::file('photourl1')!="")
@@ -154,6 +155,22 @@ class EventsController extends Controller {
 			}
 
 		}
+
+		if(Input::file('photourl3')!="")
+		{
+			if(Input::file('photourl3')->isValid())
+			{
+				$name =  time()  . '-main' . '.' . $input['photourl3']->getClientOriginalExtension();
+				File::exists($destinationPath) or File::makeDirectory($destinationPath, 0777, true, true);
+				
+				Input::file('photourl3')->move($destinationPath, $name); // uploading file to given path
+				$photourl3 = "/images/events/" . $directory . '/photos/' .  $name;
+
+			
+			}
+
+		}
+
 
 		if(Input::file('photourl2')!="")
 		{
@@ -172,6 +189,8 @@ class EventsController extends Controller {
 
 		$event->photourl1 = $photourl1;
 		$event->photourl2 = $photourl2;
+				$event->photourl3 = $photourl3;
+
 		$event->name = $request->input("name");
 
 		$event->type = $request->input("type");	
@@ -285,6 +304,7 @@ class EventsController extends Controller {
 		
 		$photourl1 = $event->photourl1;
 		$photourl2 = $event->photourl2;
+		$photourl3 = $event->photourl3;
 
 		
 		if(Input::file('photourl1')!="")
@@ -305,6 +325,29 @@ class EventsController extends Controller {
 				$name =  time()  . '-photo' . '.' . $input['photourl1']->getClientOriginalExtension();
 				Input::file('photourl1')->move($destinationPath, $name); // uploading file to given path
 				$photourl1 = "/images/events/" . $directory . '/photos/' .  $name;
+			
+			}
+
+		}
+
+		if(Input::file('photourl3')!="")
+		{
+			if(Input::file('photourl3')->isValid())
+			{
+			
+				if($photourl3!="")
+				{
+					if(file_exists(public_path().$photourl3))
+					{
+						unlink(public_path() . $photourl3);
+					}
+				}
+
+
+
+				$name =  time()  . '-main' . '.' . $input['photourl3']->getClientOriginalExtension();
+				Input::file('photourl3')->move($destinationPath, $name); // uploading file to given path
+				$photourl3 = "/images/events/" . $directory . '/photos/' .  $name;
 			
 			}
 

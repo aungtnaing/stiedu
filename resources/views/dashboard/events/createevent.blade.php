@@ -33,8 +33,18 @@
 								<li class="span3"> <a> 
 									<input style="display:none;" id="file-input1" name="photourl1" type='file' onchange="readURL(this);"/>                    
 									<label for="file-input1">
-										<i class="icon-camera"></i>.Main 360x248 or<br>
+										<i class="icon-camera"></i>.Thum 360x248 or<br>
 										<img id="blah" src="//placehold.it/100" alt="avatar" alt="your image" />
+
+									</label>
+									<div class="actions"><a id="preview1" class="lightbox_trigger" herf=""><i class="icon-search"></i></a> </div>
+
+								</li>
+								<li class="span3"> <a> 
+									<input style="display:none;" id="file-input3" name="photourl3" type='file' onchange="readURL1(this);"/>                    
+									<label for="file-input3">
+										<i class="icon-camera"></i>.Main 777x504 <br>
+										<img id="blah1" src="//placehold.it/100" alt="avatar" alt="your image" />
 
 									</label>
 									<div class="actions"><a id="preview1" class="lightbox_trigger" herf=""><i class="icon-search"></i></a> </div>
@@ -300,4 +310,24 @@
 
 
 </script>
+
+<script type="text/javascript">
+	function readURL1(input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+
+			reader.onload = function (e) {
+				$('#blah1')
+				.attr('src', e.target.result)
+				.width(100)
+				.height(100);
+			};
+
+			reader.readAsDataURL(input.files[0]);
+		}
+	}
+
+
+</script>
+
 @stop

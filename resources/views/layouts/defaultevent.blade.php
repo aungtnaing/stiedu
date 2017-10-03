@@ -10,7 +10,11 @@
   <meta property="og:type"          content="article" />
   <meta property="og:title"         content="{{ $eventdetail->name }}" />
   <meta property="og:description"   content="{{ $eventdetail->aboutevent }}" />
+    <meta property="og:image"         content="<?php echo url(); ?>{{ $eventdetail->photourl3 }}" />
+
+  @if($eventdetail->photourl3==="")
   <meta property="og:image"         content="<?php echo url(); ?>{{ $eventdetail->photourl1 }}" />
+  @endif
 <meta property="fb:app_id" content="132711514007187" />
 
   <title>{{ $eventdetail->name }}</title>

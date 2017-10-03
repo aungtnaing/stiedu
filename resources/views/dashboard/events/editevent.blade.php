@@ -38,7 +38,7 @@
 									<li class="span3"> <a> 
 										<input style="display:none;" id="file-input1" name="photourl1" type='file' onchange="readURL(this);"/>                    
 										<label for="file-input1">
-											<i class="icon-camera"></i>.Main 360 X 248<br>
+											<i class="icon-camera"></i>.Thum 360 X 248<br>
 											
 											@if($event->photourl1!="")
 											<img id="blah" src= "<?php echo url(); ?>{{ $event->photourl1 }}" width="100" height="100">
@@ -51,6 +51,24 @@
 										<div class="actions"><a id="preview1" class="lightbox_trigger" herf=""><i class="icon-search"></i></a> </div>
 
 									</li>
+
+									<li class="span3"> <a> 
+										<input style="display:none;" id="file-input3" name="photourl3" type='file' onchange="readURL1(this);"/>                    
+										<label for="file-input3">
+											<i class="icon-camera"></i>.Main 700 X 504<br>
+											
+											@if($event->photourl1!="")
+											<img id="blah1" src= "<?php echo url(); ?>{{ $event->photourl3 }}" width="100" height="100">
+											@else
+											<img id="blah1" src="//placehold.it/100" alt="avatar" alt="your image" />
+											@endif
+
+											
+										</label>
+										<div class="actions"><a id="preview1" class="lightbox_trigger" herf=""><i class="icon-search"></i></a> </div>
+
+									</li>
+
 
 									<li class="span3"> <a> 
 										<input style="display:none;" id="file-input2" name="photourl2" type='file' />                    
@@ -324,6 +342,33 @@ function readURL(input) {
 
 		reader.onload = function (e) {
 			$('#blah')
+			.attr('src', e.target.result)
+			.width(100)
+			.height(100);
+
+		};
+
+		reader.readAsDataURL(input.files[0]);
+	}
+}
+
+
+
+
+
+</script>
+
+<script type="text/javascript">
+
+
+function readURL1(input) {
+
+
+	if (input.files && input.files[0]) {
+		var reader = new FileReader();
+
+		reader.onload = function (e) {
+			$('#blah1')
 			.attr('src', e.target.result)
 			.width(100)
 			.height(100);
