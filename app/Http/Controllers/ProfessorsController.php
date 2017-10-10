@@ -50,7 +50,7 @@ class ProfessorsController extends Controller {
 			'photourl1' => 'required',
 			'name' => 'required|max:255',
 			'positions' => 'required|max:255',
-			'description' => 'required|max:1000',
+			'description' => 'required|max:10000',
 			]);
 
 
@@ -139,7 +139,7 @@ class ProfessorsController extends Controller {
 		
 			'name' => 'required|max:255',
 			'positions' => 'required|max:255',
-			'description' => 'required|max:1000',
+			'description' => 'required|max:10000',
 			
 			]);
 		
