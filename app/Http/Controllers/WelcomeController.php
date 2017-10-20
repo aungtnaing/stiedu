@@ -73,6 +73,7 @@ $testimonials = Testimonials::where('active',1)
 						->get();
 
 		$professors = Professors::where('active',1)
+		                ->take(10)
 						->get();				
 
 

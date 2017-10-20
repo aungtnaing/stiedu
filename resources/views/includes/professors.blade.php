@@ -71,3 +71,8 @@
                 <!--/ .team-member-->
             </section>
             <!--/ .section-->
+            <div class="row">
+                        <div class="col-xs-12">
+                        <div class="align-center opacityRun view-more-wrap"> <a class="button large success" href="{{ url('/facultylists') }}">Our Faculty List</a> </div>
+                        </div>
+                    </div>

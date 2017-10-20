@@ -69,6 +69,7 @@ class HomeController extends Controller {
 						->get();
 
 		$professors = Professors::where('active',1)
+		                ->take(10)
 						->get();				
 
 			$blogs = Blogs::where('active',1)
