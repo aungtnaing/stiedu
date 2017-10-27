@@ -13,8 +13,7 @@
 							<!--/ .entry-title-->
 							@if($eventdetail->type==='video')
 							<video width="777px" height="504px" controls>
-								<source src="<?php echo url(); ?>{{ $eventdetail->photourl1 }}" type="video/mp4">
-									<!-- <source src="{{ $eventdetail->photourl1 }}" type="video/ogg"> -->
+								<source src="<?php echo url(); ?>{{ $eventdetail->photourl2 }}" type="video/mp4">
 									Your browser does not support the video tag.
 								</video> 
 							@elseif($eventdetail->type==='youtubelink')
