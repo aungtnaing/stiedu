@@ -12,7 +12,7 @@
 							<h2 class="entry-title" style="color:#050930;">{{ $eventdetail->name }}</h2>
 							<!--/ .entry-title-->
 							@if($eventdetail->type==='video')
-							<video width="777px" height="504px" controls>
+							<video width="400px" height="400px" controls>
 								<source src="<?php echo url(); ?>{{ $eventdetail->photourl2 }}" type="video/mp4">
 									Your browser does not support the video tag.
 								</video> 
