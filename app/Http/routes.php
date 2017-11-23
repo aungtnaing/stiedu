@@ -74,6 +74,16 @@
 			
 		});
 
+		Route::get('applyus', function() {
+
+			$categorys = Category::All();
+			
+			return view('pages.applyevent')
+			->with('categorys', $categorys);
+			
+			
+		});
+
 		Route::get('aboutusmyanmar', function() {
 
 			$categorys = Category::All();
@@ -406,6 +416,8 @@ $partners = Partners::where('active',1)
 		]);
 
 	Route::resource('visitors','VisitorController');
+		Route::resource('applys','ApplyController');
+
 
 	Route::get('getexamresults', [
 		'uses' => 'ExamresultsController@getexamresults'

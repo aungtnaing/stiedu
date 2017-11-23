@@ -1,0 +1,80 @@
+  @extends('layouts.defaultp')
+@section('content')
+
+ <section id="contacts" class="page">
+            <section class="section padding-bottom-off">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <hgroup class="section-title align-center opacity">
+                                <h1 class="header-title" style="color:#050930;">Apply Form</h1>
+                                <h2 style="color:#050930;">Call Now - 09955 1234 46-9</h2>
+                                <h2 style="color:#050930;">Email - info@stiedu.net</h2>
+                                <h2 style="color:#050930;">We look forward to hearing from you</h2> 
+                            </hgroup>
+                        </div>
+                    </div>
+                    <!--/ .row-->
+                </div>
+                <!--/ .container-->
+            </section>
+           
+        </section>
+
+         <section class="section parallax parallax-bg-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 opacity">
+                            <!-- START CONTACT FORM DESIGN AREA -->
+                            <div class="inner contact">
+                                <!-- Form Area -->
+                                <div class="contact-form">
+                                    <!-- Form -->
+                                  
+                                    <form id="contact-us" action="{{ route("applys.store") }}" method="POST" enctype="multiGet Brochurespart/form-data">
+
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                        <div class="row">
+                                            <!-- Left Inputs -->
+                                            <div class="col-xs-12 col-sm-6 col-md-6 wow animated slideInLeft" data-wow-delay=".5s">
+                                                <!-- Name -->
+                                                <input type="text" name="name" id="name" required="required" class="form" placeholder="Enter Your Name" style="color:#1b1f44;background-color:#d8b1b11a;    border-color: rgba(135, 38, 38, 0.73);"/>
+                                                <!-- Email -->
+                                                <input type="text" name="email" id="mail" required="required" class="form" placeholder="Enter Your Email" style="color:#1b1f44;background-color:#d8b1b11a;    border-color: rgba(135, 38, 38, 0.73);"/>
+                                                <!-- Subject -->
+                                                <input type="text" name="phone" id="subject" required="required" class="form" placeholder="Enter Your Phone" style="color:#1b1f44;background-color:#d8b1b11a;    border-color: rgba(135, 38, 38, 0.73);"/> </div>
+                                            <!-- End Left Inputs -->
+                                            <!-- Right Inputs -->
+                                            <div class="col-xs-12 col-sm-6 col-md-6 wow animated slideInRight" style="display:none;" data-wow-delay=".5s">
+                                                <!-- Message -->
+                                                <textarea name="contentmessage" id="message" class="form textarea" placeholder="Enter Your Message" style="color:#1b1f44;background-color:#d8b1b11a;    border-color: rgba(135, 38, 38, 0.73);"></textarea>
+                                            </div>
+                                            <!-- End Right Inputs -->
+                                        </div>
+                                        <input type="text" name="like" value="-" style="display:none">
+                                        <input type="text" name="type" value="contact" style="display:none">
+                                        <input type="text" name="courseid" value="0" style="display:none">
+                                        <div class="row">
+                                            <!-- Bottom Submit -->
+                                            <div class="relative fullwidth col-xs-12 col-sm-12 col-md-12 text-center">
+                                                <!-- Send Button -->
+                                       
+                                                <input class="button turquoise large opacityRun" name="submittype" type="submit" value="Apply Now"> 
+                                            </div>
+                                            <!-- End Bottom Submit -->
+                                        </div>
+                                        <!-- Clear -->
+                                        <div class="clear"></div>
+                                    </form>
+                                </div>
+                                <!-- End Contact Form Area -->
+                            </div>
+                            <!-- / END CONTACT FORM DESIGN AREA -->
+                        </div>
+                    </div>
+                </div>
+                <!--/ .container-->
+            </section>
+
+
+@stop

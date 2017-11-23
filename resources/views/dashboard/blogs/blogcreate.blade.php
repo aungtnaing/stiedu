@@ -1,4 +1,4 @@
-@extends('dashboard.default')
+@extends('layouts.default')
 @section('content')
 <!-- MAIN CONTENT -->
 <div id="content">

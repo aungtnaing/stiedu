@@ -16,18 +16,16 @@ class CreateUsersTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('name');
-			$table->string('mname');
+			
 			$table->string('email')->unique();
 			$table->string('password', 60);
 			$table->string('photourl');
-			$table->integer('mediaid');
-			$table->string('about');
 			$table->string('fburl');	
 			$table->string('ph1');
 			$table->string('ph2');
 			$table->string('address');
 			$table->integer('roleid');
-			$table->string('bio',2000);
+			$table->string('bio',10000);
 
 			$table->rememberToken();
 			$table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
