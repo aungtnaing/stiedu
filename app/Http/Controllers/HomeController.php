@@ -60,7 +60,7 @@ class HomeController extends Controller {
 		
 		$mainslides = Mainslide::where('active',1)
 		->orderBy('slideno','asc')
-		->take(4)
+		->take(10)
 		->get();
 	
 		$testimonials = Testimonials::where('active',1)
