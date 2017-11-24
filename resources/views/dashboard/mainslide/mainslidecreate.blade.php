@@ -60,6 +60,15 @@
 									<input type="text" class="span11" id="" name="stitle" placeholder="Enter second title" value="{{ old('stitle') }}" required>
 								</div>
 							</div> 
+
+
+							<div class="control-group">
+								<label class="control-label">aherf link :</label>
+								<div class="controls">
+									<input type="text" class="span11" id="" name="aherfdata" placeholder="Enter aherf link" value="{{ old('aherfdata') }}">
+								</div>
+							</div> 
+
 							<div class="control-group">
 								<label class="control-label">Description:</label>
 								<div class="controls">

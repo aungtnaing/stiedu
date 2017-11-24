@@ -90,6 +90,7 @@ class MainslideController extends Controller {
 		$mainslide->stitle = $request->input("stitle");	
 		$mainslide->description = $request->input("description");
 		$mainslide->mdescription = $request->input("mdescription");
+		$mainslide->aherfdata = $request->input("aherfdata");
 
 		$mainslide->slideno = $request->input("slideno");
 
@@ -187,6 +188,7 @@ class MainslideController extends Controller {
 		$mainslide->stitle = $request->input("stitle");	
 		$mainslide->description = $request->input("description");
 		$mainslide->mdescription = $request->input("mdescription");
+		$mainslide->aherfdata = $request->input("aherfdata");
 
 		$mainslide->slideno = $request->input("slideno");
 

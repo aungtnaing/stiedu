@@ -11,7 +11,12 @@
                     </h1>
                     <h1 class="ls-s2 align-center" style="top: 57%; left: 260px; slidedirection : bottom; slideoutdirection : fade; scaleout : 0.75; durationin : 2000; durationout : 1000; easingin : easeInOutQuint; easingout : easeInOutQuint; color:#fff6;">
                         {{ $mainslide->stitle }}
+                        <br>
+                        @if($mainslide->aherfdata!="")
+                         <a href="{{ $mainslide->aherfdata }}" class="btn btn-primary btn-lg">MORE DETAILS</a>
+                         @endif
                     </h1> 
+
                 </div>
                 @endforeach
             </div>

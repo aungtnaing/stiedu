@@ -13,7 +13,27 @@
             <ul class="nav navbar-nav">
                 <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                 <li><a href="#page-top" class="page-scroll"><span class="glyphicon glyphicon-home"></span></a></li>
-               
+                  <li class="dropdown"><a href="#course" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle">Programs <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ url('/courselists', 19) }}" class="page-scroll">FACULTY OF BUSINESS</a></li>
+                            <li><a href="{{ url('/courselists', 20) }}" class="page-scroll">FACULTY OF ENGINEERING</a></li>
+                            <li><a href="{{ url('/courselists', 21) }}" class="page-scroll">FACULTY OF HEALTH <br>SCIENCE</a></li>
+                            <li><a href="{{ url('/courselists', 22) }}" class="page-scroll">Faculty of Education <br>& Linguistics</a></li>
+                        </ul>
+                    </li>
+                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Admission<b class="caret"></b></a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="{{ url('/graduatelists', 1) }}" class="page-scroll">Post Graduate <br>Program</a>
+                            
+                            </li>
+                            <li><a href="{{ url('/graduatelists', 0) }}" class="page-scroll">Undergraduate <br>Program</a>
+                           
+                            </li>
+                          
+
+                            
+                        </ul>
+                    </li>
                 <li class="dropdown"><a href="#about" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle">About <b class="caret"></b></a>
                         <ul class="dropdown-menu pull-right">
                             <li><a href="{{ url('/stimuvision') }}" class="page-scroll">STIMU VISION</a></li>
@@ -39,28 +59,9 @@
                     </li>
                
                 <li><a href="#team" class="page-scroll">Faculty</a></li>
-                 <li class="dropdown"><a href="#course" class="page-scroll" data-toggle="dropdown" class="dropdown-toggle">Programs <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ url('/courselists', 19) }}" class="page-scroll">FACULTY OF BUSINESS</a></li>
-                            <li><a href="{{ url('/courselists', 20) }}" class="page-scroll">FACULTY OF ENGINEERING</a></li>
-                            <li><a href="{{ url('/courselists', 21) }}" class="page-scroll">FACULTY OF HEALTH <br>SCIENCE</a></li>
-                            <li><a href="{{ url('/courselists', 22) }}" class="page-scroll">Faculty of Education <br>& Linguistics</a></li>
-                        </ul>
-                    </li>
+               
                     <!-- <li><a href="#gallery" class="page-scroll">Gallery</a></li> -->
-                <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Admission<b class="caret"></b></a>
-                        <ul class="dropdown-menu pull-right">
-                            <li><a href="{{ url('/graduatelists', 1) }}" class="page-scroll">Post Graduate <br>Program</a>
-                            
-                            </li>
-                            <li><a href="{{ url('/graduatelists', 0) }}" class="page-scroll">Undergraduate <br>Program</a>
-                           
-                            </li>
-                          
-
-                            
-                        </ul>
-                    </li>
+               
 
                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">link<b class="caret"></b></a>
                         <ul class="dropdown-menu pull-right">
