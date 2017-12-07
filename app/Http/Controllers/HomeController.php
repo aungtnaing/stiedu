@@ -59,7 +59,7 @@ class HomeController extends Controller {
 		$categorys = Category::All();
 		
 		$mainslides = Mainslide::where('active',1)
-		->orderBy('slideno','asc')
+		->orderBy('slideno','asec')
 		->take(10)
 		->get();
 	

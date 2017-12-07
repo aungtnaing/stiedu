@@ -2,10 +2,11 @@
 @section('content')
 
 @include('includes.mainslides') 
+@include('includes.about') 
+
 @include('includes.courses')
 @include('includes.professors') 
 
-@include('includes.about') 
 @include('includes.testimonials')
 
 @include('includes.events') 
