@@ -108,7 +108,7 @@ class CoursesController extends Controller {
 		$this->validate($request,[
 			'photourl1' => 'required',
 			'name' => 'required|max:255',
-			'aboutcourse' => 'required|max:1000',
+			'aboutcourse' => 'required|max:5000',
 			
 			]);
 
@@ -217,7 +217,7 @@ class CoursesController extends Controller {
 	$this->validate($request,[
 		
 		'name' => 'required|max:255',
-			'aboutcourse' => 'required|max:1000',
+			'aboutcourse' => 'required|max:5000',
 			
 			]);
 
