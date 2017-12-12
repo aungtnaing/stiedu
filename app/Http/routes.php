@@ -305,7 +305,23 @@ $partners = Partners::where('active',1)
 		});
 
 		
-	
+	Route::get('scholarships', function() {
+
+			
+		
+		$categorys = Category::orderBy('id', 'desc')
+								->take(7)
+								->get();
+		
+		$courselists = Courses::All();
+		
+
+		return view("pages.scholarships")
+					->with('courselists',$courselists)
+					->with('categorys',$categorys);
+			
+			
+		});
 	
 	Route::resource('profiles','ProfilesController');
 
