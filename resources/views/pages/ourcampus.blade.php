@@ -18,7 +18,10 @@ Each course program is carefully designed to provide the students with the intel
 
 Our students are part of our local community with the belief of giving back to the society and they are given the opportunities for the realization of their belief.</p></h4>
 
-                         
+<p>Yangon - Address</p> 
+<p>Block-10, MICT Park Hlaing University <br> Campus Road, Hlaing Township, <br>
+Yangon 11052 <br>
+0 99 55 1234 46 -9</p>              
 
 </section>
 

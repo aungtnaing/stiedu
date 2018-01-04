@@ -68,7 +68,7 @@
                             <li><a href="https://login.bluehost.com/hosting/webmail" class="page-scroll">EMAIL</a></li>
                             <li><a href="http://ole.ouhk.edu.hk" class="page-scroll">OLE</a></li>
                             <li><a href="https://breo.beds.ac.uk" class="page-scroll">BREO</a></li>
-                             <li ><a href="{{ url('/getexamresults') }}" class="page-scroll" class="page-scroll">Exam <br>Result</a></li>
+                             <!-- <li ><a href="{{ url('/getexamresults') }}" class="page-scroll" class="page-scroll">Exam <br>Result</a></li> -->
                             
                         </ul>
                     </li>
