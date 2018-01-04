@@ -25,7 +25,7 @@
                         <h2 class="entry-title">{{ $blogdetail->title }}</h2>
                         <!--/ .entry-title-->
                         <div class="entry-body">
-                            <p>{{ $blogdetail->content }}</p>
+                            <p><?php echo  $blogdetail->content; ?></p>
                         </div>
                         <!--/ .entry-body-->
                        <!--  <span class="tags">
