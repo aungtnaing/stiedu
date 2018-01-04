@@ -18,10 +18,20 @@ Each course program is carefully designed to provide the students with the intel
 
 Our students are part of our local community with the belief of giving back to the society and they are given the opportunities for the realization of their belief.</p></h4>
 
-<p>Yangon - Address</p> 
+<div><b><p>STIMU (MICT Campus)</p> 
 <p>Block-10, MICT Park Hlaing University <br> Campus Road, Hlaing Township, <br>
 Yangon 11052 <br>
-0 99 55 1234 46 -9</p>              
+09 955 1234 46 ~ 9</p>              
+
+<p>STIMU (Downtown Campus)</p>
+<p>No (377, 387, 397), Shwe Bone Thar Street (upper), <br>Pabedan Township, <br>Yangon</p>
+<p>No (186, 188), 28th Street (upper), <br>Pabedan Township, <br>Yangon</p>
+
+<p>STIMU (Mandalay Campus)</p>
+<p>B15/16,Corner of 66th & Thazin Street, <br>Chan Mya Tharzi Township,Mandalay. <br> Contact No. 09-783800062 ~ 64</p>
+  
+
+</b></div>
 
 </section>
 
