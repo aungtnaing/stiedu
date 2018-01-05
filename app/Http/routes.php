@@ -172,7 +172,17 @@ $partners = Partners::where('active',1)
 
 		Route::get('ourprogram', function() {
 
-			return view('pages.ourprogram');
+			
+
+			$courselists = Courses::where('active',1)
+			->orderBy('categoryid','asc')
+			->get();
+
+			
+			
+			
+			
+			return view('pages.ourprogram')->with('courselists', $courselists);
 			
 			
 			
