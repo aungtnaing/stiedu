@@ -190,7 +190,12 @@ $partners = Partners::where('active',1)
 
 		Route::get('ourfaculty', function() {
 
-			return view('pages.ourfaculty');
+
+			$facultylists = Professors::where('active',1)
+						->paginate(8);
+						
+
+			return view('pages.ourfaculty')->with('facultylists', $facultylists);
 			
 			
 			
@@ -412,7 +417,8 @@ $partners = Partners::where('active',1)
 								->get();
 
 			$facultylists = Professors::where('active',1)
-						->get();
+						->paginate(8);
+						
 
 				
 		$blolists = Blogs::orderBy('id', 'desc')
