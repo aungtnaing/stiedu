@@ -34,9 +34,7 @@
 											<div class="event_des">
 												<ul class="post-option">
 												<br>
-													<!-- <li><a href="#"> {{ $courselist->professor->name }}</a></li>
-													<li> -->
-														<h2><a href="{{ url('/coursedetails', $courselist->id) }}" style="color: #1e26b0;">{{ $courselist->name }}</a></h2>
+													<h2><a href="{{ url('/coursedetails', $courselist->id) }}" style="color: #1e26b0;">{{ $courselist->name }}</a></h2>
 													</li>
 													<li><p style="color:#050930;">
 														{{ substr($courselist->aboutcourse,0, 150) }}

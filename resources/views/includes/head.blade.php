@@ -10,6 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
   <!-- Facebook Pixel Code -->
+  <meta name="keywords" content="Myanmar University, Education, Business, Engineering, Public Health, Linguistics, Science">
 
   <base href="http://stiedu.net/sitemap">
 <script>
